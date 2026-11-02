@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: hc itself, or a problem the protocol cannot express
+    url: https://github.com/MorePeanuts/handcoding/issues
+    about: Bugs of hc and gaps in the problem protocol belong to handcoding.

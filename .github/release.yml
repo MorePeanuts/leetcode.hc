@@ -1,0 +1,12 @@
+# Groups the notes of `gh release create --generate-notes` by the labels of
+# the merged pull requests (see CONTRIBUTING.md).
+changelog:
+  categories:
+    - title: Breaking changes
+      labels: [breaking]
+    - title: New problems
+      labels: [problems]
+    - title: Fixes
+      labels: [problem-bug, bug]
+    - title: Other changes
+      labels: ["*"]

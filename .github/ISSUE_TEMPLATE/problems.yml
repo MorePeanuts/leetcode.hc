@@ -1,0 +1,25 @@
+name: Add problems
+description: Problems to add to the pack, one or a batch
+labels: [problems]
+body:
+  - type: textarea
+    id: problems
+    attributes:
+      label: Problems
+      description: One per line, as a checklist, with LeetCode's id and slug. Premium problems cannot be added.
+      placeholder: |
+        - [ ] 1. two-sum
+        - [ ] 49. group-anagrams
+    validations:
+      required: true
+  - type: input
+    id: groups
+    attributes:
+      label: Groups
+      description: The topic groups of pack.yaml they go into
+      placeholder: arrays-hashing
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Where the list comes from, problems that may not fit the protocol, anything else

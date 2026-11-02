@@ -19,6 +19,17 @@ change problems in `problems/`.
 
 <!-- Your own notes for agents go here. hc rewrites only the block between its markers below. -->
 
+## Pack conventions
+
+CONTRIBUTING.md holds this pack's rules on top of hc's skills; follow it.
+Where they overlap, it narrows the skills, never loosens them:
+
+- Commit messages are Conventional Commits, one problem per commit:
+  `feat: add 0001-two-sum`, with its group changes in the same commit;
+  `fix(0146-lru-cache): …` for a fix to a problem.
+- Fetch with `hc fetch --site cn <slug>`, which writes both locales.
+- Bump `version`, tag and release only when asked, as CONTRIBUTING.md says.
+
 <!-- hc:begin -->
 ## hc skills
 

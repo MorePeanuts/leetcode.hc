@@ -25,6 +25,10 @@ There is no fixed problem list: problems are added over time, and every problem 
 
 The [releases](https://github.com/MorePeanuts/leetcode.hc/releases) say what each version added, fixed or removed.
 
+## Contributing
+
+Problems are added in batches tracked in the issues and milestones. [CONTRIBUTING.md](CONTRIBUTING.md) says how to add or fix one, and how versions are numbered.
+
 ## License
 
 The pack's own content (test cases, reference solutions, checkers, signatures, judge rules, groups) is under the [MIT license](LICENSE). The problem statements are not: see [NOTICE](NOTICE).

@@ -1,0 +1,32 @@
+name: Problem bug
+description: A problem's statement, cases, reference solutions or judge rule is wrong
+labels: [problem-bug]
+body:
+  - type: input
+    id: problem
+    attributes:
+      label: Problem
+      description: Its slug or directory
+      placeholder: 0001-two-sum
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: For a case, its id, the expected output and what you think it should be; for a judge rule, an answer that is judged wrongly
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Your solution
+      description: The solution and language that show it, if any
+      render: text
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Output of `hc --version` and the pack's version or commit (`hc pack list`)
+    validations:
+      required: true

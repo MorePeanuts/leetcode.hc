@@ -25,6 +25,10 @@ hc list --group arrays-hashing                                                 #
 
 每个版本新增、修复或删除了哪些题，见 [Releases](https://github.com/MorePeanuts/leetcode.hc/releases)。
 
+## 参与贡献
+
+题目按批次加入，进度见 issues 和 milestones。如何新增或修复题目、版本号如何确定，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 ## 许可
 
 题目包自身的内容（测试用例、参考解、checker、签名、判题规则、分组）采用 [MIT 许可](LICENSE)，题面不在其列，见 [NOTICE](NOTICE)。
