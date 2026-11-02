@@ -1,0 +1,19 @@
+leetcode.hc
+Copyright (c) 2026 MorePeanuts
+
+This pack is not affiliated with, endorsed by or sponsored by LeetCode.
+"LeetCode" and "力扣" are trademarks of their respective owners.
+
+The MIT license in LICENSE covers only this pack's own content: its test
+cases, reference solutions, checkers, signatures (problem.yaml), templates,
+judge rules, groups and the files that build and check the pack.
+
+It does not cover the problem statements, that is every problem's
+description.md and description.<locale>.md, its title and titles, and the
+files of its assets/ directory. They are taken from LeetCode
+(https://leetcode.com, https://leetcode.cn) and remain the property of their
+owners. They are included only so that the problems can be practiced
+offline.
+
+The pack contains no premium problems, and no LeetCode test data beyond the
+examples given in the statements.

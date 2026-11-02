@@ -1,0 +1,48 @@
+# The manifest of this hc pack: `hc docs protocol packyaml` describes its fields.
+protocol: 1
+name: leetcode
+title: LeetCode
+version: 0.1.0
+description: LeetCode problems with Go and Python references, statements in English and Chinese. Not affiliated with LeetCode.
+authors: [MorePeanuts]
+license: MIT
+homepage: https://github.com/MorePeanuts/leetcode.hc
+languages: [go, python]
+locales: [en, zh-CN]
+groups:
+  - name: arrays-hashing
+    title: Arrays & Hashing
+  - name: two-pointers
+    title: Two Pointers
+  - name: sliding-window
+    title: Sliding Window
+  - name: stack
+    title: Stack
+  - name: binary-search
+    title: Binary Search
+  - name: linked-list
+    title: Linked List
+  - name: trees
+    title: Trees
+  - name: heap-priority-queue
+    title: Heap / Priority Queue
+  - name: backtracking
+    title: Backtracking
+  - name: tries
+    title: Tries
+  - name: graphs
+    title: Graphs
+  - name: advanced-graphs
+    title: Advanced Graphs
+  - name: 1d-dynamic-programming
+    title: 1-D Dynamic Programming
+  - name: 2d-dynamic-programming
+    title: 2-D Dynamic Programming
+  - name: greedy
+    title: Greedy
+  - name: intervals
+    title: Intervals
+  - name: bit-manipulation
+    title: Bit Manipulation
+  - name: math-geometry
+    title: Math & Geometry
