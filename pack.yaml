@@ -18,6 +18,7 @@ groups:
       - valid-anagram
       - group-anagrams
       - top-k-frequent-elements
+      - product-of-array-except-self
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window
