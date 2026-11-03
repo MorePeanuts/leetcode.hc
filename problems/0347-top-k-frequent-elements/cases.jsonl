@@ -1,0 +1,37 @@
+{"input":{"k":2,"nums":[1,1,1,2,2,3]},"expected":[1,2],"example":true}
+{"input":{"k":1,"nums":[1]},"expected":[1],"example":true}
+{"input":{"k":2,"nums":[1,2,1,2,1,2,3,1,3,2]},"expected":[1,2],"example":true}
+{"input":{"k":2,"nums":[5,-5]},"expected":[5,-5],"note":"k equals the number of distinct values, each once"}
+{"input":{"k":1,"nums":[-1,-1,2]},"expected":[-1],"note":"the most frequent value is negative"}
+{"input":{"k":1,"nums":[10000,10000,-10000]},"expected":[10000],"note":"value 10^4 is the most frequent"}
+{"input":{"k":2,"nums":[-10000,-10000,-10000,10000,10000,0]},"expected":[-10000,10000],"note":"values -10^4 and 10^4 are the top two"}
+{"input":{"k":2,"nums":[4,1,-1,2,-1,2,3]},"expected":[-1,2],"note":"unsorted, two values tie for first place"}
+{"input":{"k":1,"nums":[3,0,1,0]},"expected":[0],"note":"zero is the most frequent"}
+{"input":{"k":1,"nums":[1,2,3,4,5,5]},"expected":[5],"note":"the most frequent value comes last"}
+{"input":{"k":1,"nums":[7,7,7,7]},"expected":[7],"note":"a single distinct value"}
+{"input":{"k":2,"nums":[9,9,9,8,8,1,2,3]},"expected":[9,8],"note":"the k-th most frequent is followed by singletons"}
+{"input":{"k":3,"nums":[2,2,1,1,1,3,3,3,3]},"expected":[3,1,2],"note":"k is all three distinct values, frequencies 3, 2, 4"}
+{"input":{"k":3,"nums":[5,1,5,2,5,2,4,4,3,5,3,5,4,4,3]},"expected":[5,4,3],"note":"frequencies 1 to 5, shuffled"}
+{"input":{"k":2,"nums":[10,20,20,20,20,20,30,30,40,40,40,40,50,50,50]},"expected":[20,40],"note":"grouped, the frequencies not in value order"}
+{"input":{"k":2,"nums":[-3,-2,-2,-3,-3,-1,-1,-2,0,-3]},"expected":[-3,-2],"note":"negative values with distinct frequencies"}
+{"input":{"k":1,"nums":[6,5,6,5,6,4,4,4,4]},"expected":[4],"note":"the most frequent value is not the first seen"}
+{"input":{"k":2,"nums":[1,1,2,2,3]},"expected":[1,2],"note":"two tied at the top, the third is less frequent"}
+{"input":{"k":1,"nums":[-10000]},"expected":[-10000],"note":"a single element, the minimum value"}
+{"input":{"k":1,"nums":[10000,10000,-1,-1,2,2,2]},"expected":[2],"note":"-1 and 10^4 collide in a count array indexed by value without an offset"}
+{"input":{"k":1,"nums":[5,5,5,1,2,1,2,1,2,1]},"expected":[1],"note":"the longest run (5) is not the most frequent value (1): counting runs of unsorted input"}
+{"input":{"k":1,"nums":[2,1,3,3,3]},"expected":[3],"note":"after sorting, the most frequent value is the last run: forgetting to count it"}
+{"input":{"k":3,"nums":[4,4,5,5,6,6,7]},"expected":[4,5,6],"note":"the top three tie: a map from frequency to one value loses two of them"}
+{"input":{"k":1,"nums":[1,1,1,2,3,4,5]},"expected":[1],"note":"many values tie below the answer: quickselect with equal frequencies"}
+{"input":{"k":3,"nums":[3,1,2]},"expected":[3,1,2],"note":"every value once and k = n"}
+{"input":{"k":1,"nums":[2,1,1,1,1,1]},"expected":[1],"note":"a frequency (5) above the number of distinct values: buckets sized by distinct count"}
+{"input":{"k":2,"nums":[9,3,2,3,2,-9,2,3,2]},"expected":[2,3],"note":"neither the k smallest nor the k largest values"}
+{"input":{"k":3,"nums":[8,8,7,7,6,6,5,4,3]},"expected":[8,7,6],"note":"the k-th is twice, the (k+1)-th once"}
+{"input":{"k":1,"nums":[1,1,1,3]},"expected":[1],"note":"the answer's frequency (3) is another value of nums: returning the frequency instead of the value"}
+{"input":{"k":5,"nums":[3,1,4,1,5,2,6,1,2,3,4,1,2,3,1,2,1,2,3,4,5]},"expected":[1,2,3,4,5],"note":"frequencies 6 down to 1 for the values 1 to 6, k = 5 leaves out only 6"}
+{"input":{"k":1,"nums":[-2,-2,2,2,2]},"expected":[2],"note":"-2 and 2: counting by absolute value"}
+{"generate":{"name":"distinct_freqs","args":{"k":50,"m":400},"seed":1},"digest":"sha256:2572184c656818a9a307a935481ace75175d3e49ae281ee1bd9f90bcd12633a0","note":"large: 400 values with frequencies 1 to 400, shuffled, k = 50"}
+{"generate":{"name":"distinct_freqs","args":{"k":446,"m":446},"seed":2},"digest":"sha256:5cdf2ecd2a9e25ea61dcc69dd182bf425a2bf6febf05af5b7e3074d50489e8cc","note":"large: 446 values with frequencies 1 to 446, k is every distinct value"}
+{"generate":{"name":"every_value","args":{"k":2},"seed":3},"digest":"sha256:8347363216fa31fb88e47f76c76ea67d82d2a263eb658f05ec57dea80d3f5174","note":"every value from -10^4 to 10^4 once, two of them repeated"}
+{"generate":{"name":"every_value","args":{"k":100},"seed":4},"digest":"sha256:f32828a5039f5035584f4371ebc3f20e2a04b0f4fca1009b045af0060c6d3813","note":"every value from -10^4 to 10^4 once, k = 100 of them repeated 1 to 100 more times"}
+{"generate":{"name":"two_values","args":{"k":2,"n":100000},"seed":5},"digest":"sha256:04088d10a309d05c016677caa2265d9d00aba133f869f7adb682e38ef68d932d","note":"maximum length, two distinct values, k = 2"}
+{"generate":{"name":"near_tie","args":{"k":2,"m":4000,"n":100000},"seed":6},"digest":"sha256:e0230b04ae7c53c6adcecbae9c1f7415d0544a97a1f2fae7333c57f919f9172f","note":"maximum length, 4000 values of frequency 24, the top two once more"}

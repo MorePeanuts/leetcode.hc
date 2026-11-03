@@ -17,6 +17,7 @@ groups:
       - contains-duplicate
       - valid-anagram
       - group-anagrams
+      - top-k-frequent-elements
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window
