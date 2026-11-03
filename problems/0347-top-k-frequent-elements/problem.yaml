@@ -1,0 +1,29 @@
+id: "347"
+slug: top-k-frequent-elements
+title: Top K Frequent Elements
+titles:
+  zh-CN: 前 K 个高频元素
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - divide-and-conquer
+  - bucket-sort
+  - counting
+  - quickselect
+  - sorting
+  - heap-priority-queue
+kind: function
+function:
+  name: topKFrequent
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/top-k-frequent-elements/
+judge:
+  compare: unordered
