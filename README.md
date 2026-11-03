@@ -9,7 +9,7 @@ LeetCode problems for [handcoding (hc)](https://github.com/MorePeanuts/handcodin
 
 ## Install
 
-You need hc v0.1.0-alpha.7 or later.
+You need hc v0.1.0-alpha.9 or later.
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # follow main
