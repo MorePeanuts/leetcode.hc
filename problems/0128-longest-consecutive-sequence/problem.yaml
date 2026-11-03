@@ -1,0 +1,22 @@
+id: "128"
+slug: longest-consecutive-sequence
+title: Longest Consecutive Sequence
+titles:
+  zh-CN: 最长连续序列
+difficulty: medium
+tags:
+  - union-find
+  - array
+  - hash-table
+kind: function
+function:
+  name: longestConsecutive
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-consecutive-sequence/
+judge:
+  compare: exact

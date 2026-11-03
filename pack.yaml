@@ -20,6 +20,7 @@ groups:
       - top-k-frequent-elements
       - product-of-array-except-self
       - valid-sudoku
+      - longest-consecutive-sequence
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window

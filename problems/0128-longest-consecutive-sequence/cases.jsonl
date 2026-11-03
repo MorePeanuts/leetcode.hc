@@ -1,0 +1,40 @@
+{"input":{"nums":[100,4,200,1,3,2]},"expected":4,"example":true}
+{"input":{"nums":[0,3,7,2,5,8,4,6,0,1]},"expected":9,"example":true}
+{"input":{"nums":[1,0,1,2]},"expected":3,"example":true}
+{"input":{"nums":[]},"expected":0,"note":"empty array"}
+{"input":{"nums":[5]},"expected":1,"note":"a single element"}
+{"input":{"nums":[7,7,7]},"expected":1,"note":"all equal"}
+{"input":{"nums":[1,3]},"expected":1,"note":"two elements, not consecutive"}
+{"input":{"nums":[2,1]},"expected":2,"note":"two consecutive elements, reversed"}
+{"input":{"nums":[-1,0,1]},"expected":3,"note":"a run crossing zero"}
+{"input":{"nums":[-3,-1,-2,-5]},"expected":3,"note":"negative values"}
+{"input":{"nums":[1000000000,-1000000000]},"expected":1,"note":"the extremes, not consecutive"}
+{"input":{"nums":[1000000000,999999999,-1000000000,-999999999,-999999998]},"expected":3,"note":"runs at both extremes"}
+{"input":{"nums":[1,2,2,3]},"expected":3,"note":"a duplicate inside the run"}
+{"input":{"nums":[1,1,2,2,3,3,4,4]},"expected":4,"note":"every value twice"}
+{"input":{"nums":[10,5,12,3,55,30,4,11,2]},"expected":4,"note":"two runs of length 3 and 4, interleaved"}
+{"input":{"nums":[9,1,4,7,3,-1,0,5,8,-1,6]},"expected":7,"note":"a long run with a duplicate outside it"}
+{"input":{"nums":[1,2,3,10,11,12,13]},"expected":4,"note":"the longest run comes last in sorted order"}
+{"input":{"nums":[1,2,3,4,10,11,12]},"expected":4,"note":"the longest run comes first in sorted order"}
+{"input":{"nums":[5,4,3,2,1]},"expected":5,"note":"reverse sorted, one run"}
+{"input":{"nums":[0,2,4,6,8]},"expected":1,"note":"gaps of two: every run has length 1"}
+{"input":{"nums":[1,2,4,5,6,8,9]},"expected":3,"note":"runs of 2, 3 and 2"}
+{"input":{"nums":[-1000000000]},"expected":1,"note":"a single element, the minimum value"}
+{"input":{"nums":[3,3]},"expected":1,"note":"two equal elements: a duplicate does not extend a run"}
+{"input":{"nums":[0,-1]},"expected":2,"note":"two consecutive negative elements, reversed"}
+{"input":{"nums":[1000000000,999999998,5,999999999]},"expected":3,"note":"a run ending at the maximum value"}
+{"input":{"nums":[1,2,3,7,8,9]},"expected":3,"note":"two runs of equal length"}
+{"input":{"nums":[1,2,3,10,11]},"expected":3,"note":"two runs: summing their links instead of taking the longest gives 4"}
+{"input":{"nums":[1,1,1,1,2,3]},"expected":3,"note":"the run's start repeated: counting duplicates as run steps gives more than 3"}
+{"input":{"nums":[1,2,3,4,4,4]},"expected":4,"note":"sorted, with duplicates at the end of the run"}
+{"input":{"nums":[-2,-1,-1,0,0,1]},"expected":4,"note":"duplicates inside a run crossing zero"}
+{"input":{"nums":[-5,-4,-3,-2,10,11,12]},"expected":4,"note":"the longest run is all negative"}
+{"input":{"nums":[4,100,3,200,2,300,1,0]},"expected":5,"note":"the longest run's elements far apart in the array"}
+{"input":{"nums":[0,1,1,2,3]},"expected":4,"note":"a duplicate right after the start: resetting the run on a duplicate gives 3"}
+{"generate":{"name":"shuffled_run","args":{"n":100000,"start":-50000},"seed":1},"digest":"sha256:c07a4f56261c4ae0f03defb2a23262931323324a66e3b1216d3eefcd7d5e74d5","note":"maximum length, one run of 10^5 shuffled"}
+{"generate":{"name":"shuffled_run","args":{"n":100000,"start":999900001},"seed":2},"digest":"sha256:c9ac75f6ccbd70fe57445e05596b183d9e07c0821f31a8fd1555ca8e325cde22","note":"maximum length, one run of 10^5 ending at 10^9"}
+{"generate":{"name":"random_values","args":{"n":100000},"seed":3},"digest":"sha256:54f6db568e0b9b3bc56defbcfa628a8b443495827483b143fd92713aa621c51c","note":"10^5 random distinct values over the whole range, short runs"}
+{"generate":{"name":"runs_with_noise","args":{"n":100000,"runs":[30000,29999,25000]},"seed":4},"digest":"sha256:6d4cb92a04976deeb0dab8e3bf6e38e4abcd532914158b85e42ef7051289c7f6","note":"runs of 30000, 29999 and 25000 with duplicates, among isolated noise"}
+{"generate":{"name":"all_equal","args":{"n":100000,"value":0}},"digest":"sha256:ac89dd60b80954c841563aba4bd4e50004f9a58040691b32dc35977c65e31891","note":"maximum length, all zero"}
+{"generate":{"name":"evens_then_odds","args":{"n":100000}},"digest":"sha256:05c2bc3cf5a7d784458ffd8c0a21b50b71e20824bcd7f7cb6b9ec9f5a7992334","note":"evens then odds: one run of 10^5"}
+{"generate":{"name":"repeated_start","args":{"n":100000},"seed":5},"digest":"sha256:4b1aabccb4647fee4332d7406ca6f558ec694089a0e78bd2983ad6f0eb4e9f28","note":"a run of 5 * 10^4 whose start appears 5 * 10^4 times: walking from every occurrence is quadratic"}
