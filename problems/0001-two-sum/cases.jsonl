@@ -1,0 +1,32 @@
+{"input":{"nums":[2,7,11,15],"target":9},"expected":[0,1],"example":true}
+{"input":{"nums":[3,2,4],"target":6},"expected":[1,2],"example":true}
+{"input":{"nums":[3,3],"target":6},"expected":[0,1],"example":true}
+{"input":{"nums":[1,2],"target":3},"expected":[0,1],"note":"minimum length, the whole array"}
+{"input":{"nums":[-3,-7],"target":-10},"expected":[0,1],"note":"two negatives"}
+{"input":{"nums":[0,4,3,0],"target":0},"expected":[0,3],"note":"two zeros summing to target 0"}
+{"input":{"nums":[-1,-2,-3,-4,-5],"target":-8},"expected":[2,4],"note":"all negative"}
+{"input":{"nums":[5,75,25],"target":100},"expected":[1,2],"note":"answer at the last two indices"}
+{"input":{"nums":[3,2,3],"target":6},"expected":[0,2],"note":"equal values; the middle 3 must not be used twice"}
+{"input":{"nums":[1,3,4,2],"target":6},"expected":[2,3],"note":"x + x = target is a trap: 3 appears once"}
+{"input":{"nums":[2,5,5,11],"target":10},"expected":[1,2],"note":"duplicate values form the answer"}
+{"input":{"nums":[1000000000,-1000000000,7],"target":0},"expected":[0,1],"note":"extreme values summing to 0"}
+{"input":{"nums":[1000000000,1,-1,2],"target":1},"expected":[2,3],"note":"a 10^9 element that pairs with nothing; the answer is -1 + 2"}
+{"input":{"nums":[-1000000000,5,-999999997,9],"target":-999999992},"expected":[1,2],"note":"large negative plus a small positive"}
+{"input":{"nums":[999999999,1,3,4],"target":1000000000},"expected":[0,1],"note":"sum reaches 10^9"}
+{"input":{"nums":[-999999999,-1,2,5],"target":-1000000000},"expected":[0,1],"note":"sum reaches -10^9"}
+{"input":{"nums":[0,1],"target":1},"expected":[0,1],"note":"zero with one"}
+{"input":{"nums":[4,4,1],"target":8},"expected":[0,1],"note":"same value at indices 0 and 1, target is twice it"}
+{"input":{"nums":[1,4,6],"target":7},"expected":[0,2],"note":"first and last element"}
+{"input":{"nums":[5,1,4,2],"target":3},"expected":[1,3],"note":"unsorted: sorting then two pointers must map back to the original indices"}
+{"input":{"nums":[5,1,9],"target":10},"expected":[1,2],"note":"5 + 5 = target: inserting nums[i] before looking up its complement pairs it with itself"}
+{"input":{"nums":[4,9,1,5],"target":9},"expected":[0,3],"note":"complement at index 0: a truthiness test on the stored index misses it"}
+{"input":{"nums":[1,5,2,5],"target":10},"expected":[1,3],"note":"equal values not adjacent: looking both up with nums.index returns the same index twice"}
+{"input":{"nums":[-1000000000,3,999999997],"target":1000000000},"expected":[1,2],"note":"complement of -10^9 is 2*10^9, outside the value range"}
+{"input":{"nums":[6,6,1,4],"target":5},"expected":[2,3],"note":"duplicate values that are not the answer"}
+{"input":{"nums":[0,-5,3,-4],"target":-5},"expected":[0,1],"note":"negative target, zero in the answer"}
+{"generate":{"name":"distinct","args":{"at":"ends","n":10000},"seed":1},"digest":"sha256:278304e007f6591879c41492217c451d0c860c8c4556732cd2cbcfb02d6f9ec1","note":"10^4 distinct values, the answer at the first and last index"}
+{"generate":{"name":"distinct","args":{"at":"front","n":10000},"seed":2},"digest":"sha256:f381a9721b5f5e9d8d7f20d6f052e453cef292de0e9eeece1a7da2c34c7da5f2","note":"10^4 distinct values, the answer at indices 0 and 1"}
+{"generate":{"name":"distinct","args":{"at":"back","n":10000},"seed":3},"digest":"sha256:7e610502de80b1e651bb1779e8ec11f30981c646539db2f205807b9eb0093e2c","note":"10^4 distinct values, the answer at the last two indices: the worst case of a nested loop"}
+{"generate":{"name":"distinct","args":{"at":"random","n":10000},"seed":4},"digest":"sha256:b2f93370053f4de50dcc85583318b91d283d1cf38b9d828fc00407d649283f8f","note":"10^4 distinct values over the full range, the answer at random indices"}
+{"generate":{"name":"all_equal","args":{"n":10000},"seed":5},"digest":"sha256:d57ee10d702ced4992b939457b4e0902f4d4eccda3b3873fc2c09841486f77f8","note":"10^4 elements, 9998 copies of 7 and the answer at the end"}
+{"generate":{"name":"sorted_extremes","args":{"n":10000},"seed":6},"digest":"sha256:ea955832f651ec02a03af89491d4626894eaaf18d9cabaaaef05680a925f78f4","note":"10^4 sorted values, the extremes -999999998 and 999999997 pair"}

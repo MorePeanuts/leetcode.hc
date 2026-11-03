@@ -1,0 +1,23 @@
+id: "1"
+slug: two-sum
+title: Two Sum
+titles:
+  zh-CN: 两数之和
+difficulty: easy
+tags:
+  - array
+  - hash-table
+kind: function
+function:
+  name: twoSum
+  params:
+    - name: nums
+      type: integer[]
+    - name: target
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/two-sum/
+judge:
+  compare: unordered
