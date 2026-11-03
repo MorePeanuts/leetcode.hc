@@ -1,0 +1,35 @@
+{"input":{"s":"anagram","t":"nagaram"},"expected":true,"example":true}
+{"input":{"s":"rat","t":"car"},"expected":false,"example":true}
+{"input":{"s":"a","t":"a"},"expected":true,"note":"single equal letter"}
+{"input":{"s":"a","t":"b"},"expected":false,"note":"single different letters"}
+{"input":{"s":"a","t":"aa"},"expected":false,"note":"same letter, different lengths"}
+{"input":{"s":"ab","t":"abc"},"expected":false,"note":"t has an extra letter"}
+{"input":{"s":"abc","t":"ab"},"expected":false,"note":"s has an extra letter"}
+{"input":{"s":"aab","t":"abb"},"expected":false,"note":"same letters, different counts, same length"}
+{"input":{"s":"ad","t":"bc"},"expected":false,"note":"same sum of letter codes, different letters"}
+{"input":{"s":"listen","t":"silent"},"expected":true,"note":"a classic anagram"}
+{"input":{"s":"abc","t":"abc"},"expected":true,"note":"identical strings"}
+{"input":{"s":"abcd","t":"dcba"},"expected":true,"note":"reversed"}
+{"input":{"s":"aacc","t":"ccac"},"expected":false,"note":"counts differ for a and c"}
+{"input":{"s":"zz","t":"zz"},"expected":true,"note":"the letter z"}
+{"input":{"s":"az","t":"za"},"expected":true,"note":"first and last letters of the alphabet"}
+{"input":{"s":"ab","t":"ba"},"expected":true,"note":"two letters swapped"}
+{"input":{"s":"aaaaaaaaab","t":"aaaaaaaaaa"},"expected":false,"note":"one letter differs among repeats"}
+{"input":{"s":"aa","t":"bb"},"expected":false,"note":"XOR of all letters is 0 on both sides"}
+{"input":{"s":"ab","t":"aa"},"expected":false,"note":"every letter of t is in s, but not the reverse"}
+{"input":{"s":"aa","t":"ab"},"expected":false,"note":"every letter of s is in t, but not the reverse"}
+{"input":{"s":"abc","t":"abd"},"expected":false,"note":"only the last letter differs"}
+{"input":{"s":"xbc","t":"ybc"},"expected":false,"note":"only the first letter differs"}
+{"input":{"s":"abcde","t":"cdeab"},"expected":true,"note":"a rotation"}
+{"input":{"s":"aabbcc","t":"abcabc"},"expected":true,"note":"an anagram with repeated letters"}
+{"input":{"s":"aabbc","t":"abbcc"},"expected":false,"note":"same set of letters and length, counts differ"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyz","t":"zyxwvutsrqponmlkjihgfedcba"},"expected":true,"note":"the whole alphabet, reversed"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyz","t":"abcdefghijklmnopqrstuvwxyy"},"expected":false,"note":"the whole alphabet, z replaced by y"}
+{"input":{"s":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","t":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},"expected":false,"note":"counts of 256 overflow an 8-bit counter to 0"}
+{"input":{"s":"adfg","t":"bceh"},"expected":false,"note":"same sum and same sum of squares of letter codes"}
+{"generate":{"name":"anagram","args":{"n":50000},"seed":7},"digest":"sha256:eb8402920f208ffb06ff9cbb49c88372f42b3a0d50a8549c2661332f46bde392","note":"maximum length, a random anagram"}
+{"generate":{"name":"one_changed","args":{"n":50000},"seed":7},"digest":"sha256:5183a2810013a97676d3839cf1c08582496710a6c128cedb0235fe18192cce97","note":"maximum length, one letter changed"}
+{"generate":{"name":"one_shorter","args":{"n":50000},"seed":7},"digest":"sha256:23b785fbf919f13682de1f733efe4945cbbc950397bf8707d48b57e8f70c47ef","note":"s of maximum length, t one letter shorter"}
+{"generate":{"name":"same_letter","args":{"n":50000}},"digest":"sha256:b02f93bce8e9634b3c29747d22c6205f06b298b52d17efcc383c1b541aa56e38","note":"maximum length, all the same letter"}
+{"generate":{"name":"odd_letter_moved","args":{"n":50000}},"digest":"sha256:8b1319b2c3ef0b2fbd425551dd07818b8c974c161a9e231146e44d86c82f744e","note":"maximum length, the odd letter moved from the front to the back"}
+{"generate":{"name":"counts_off_by_one","args":{"n":50000}},"digest":"sha256:4ec9198829b5e9ed392ea6599a8a00451b780c1c2f336e0f8fdd845b58674701","note":"maximum length, two letters, counts off by one"}
