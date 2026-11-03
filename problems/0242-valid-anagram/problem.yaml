@@ -1,0 +1,24 @@
+id: "242"
+slug: valid-anagram
+title: Valid Anagram
+titles:
+  zh-CN: 有效的字母异位词
+difficulty: easy
+tags:
+  - hash-table
+  - string
+  - sorting
+kind: function
+function:
+  name: isAnagram
+  params:
+    - name: s
+      type: string
+    - name: t
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/valid-anagram/
+judge:
+  compare: exact

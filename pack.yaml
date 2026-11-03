@@ -15,6 +15,7 @@ groups:
     problems:
       - two-sum
       - contains-duplicate
+      - valid-anagram
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window
