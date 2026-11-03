@@ -1,0 +1,21 @@
+id: "238"
+slug: product-of-array-except-self
+title: Product of Array Except Self
+titles:
+  zh-CN: 除了自身以外数组的乘积
+difficulty: medium
+tags:
+  - array
+  - prefix-sum
+kind: function
+function:
+  name: productExceptSelf
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/product-of-array-except-self/
+judge:
+  compare: exact
