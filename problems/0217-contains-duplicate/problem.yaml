@@ -1,0 +1,22 @@
+id: "217"
+slug: contains-duplicate
+title: Contains Duplicate
+titles:
+  zh-CN: 存在重复元素
+difficulty: easy
+tags:
+  - array
+  - hash-table
+  - sorting
+kind: function
+function:
+  name: containsDuplicate
+  params:
+    - name: nums
+      type: integer[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/contains-duplicate/
+judge:
+  compare: exact
