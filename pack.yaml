@@ -12,6 +12,8 @@ locales: [en, zh-CN]
 groups:
   - name: arrays-hashing
     title: Arrays & Hashing
+    problems:
+      - two-sum
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window
