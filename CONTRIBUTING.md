@@ -20,9 +20,10 @@ hc pack check                  # the whole pack, as CI checks it
 - **What lands.** A problem lands only when `hc pack check` passes: it is ready (`judge.compare` is set), has Go and Python references, and has a statement and a title in every locale of `pack.yaml` (`en` and `zh-CN`). `hc fetch --site cn` writes both; nobody translates one, so a problem LeetCode lacks a statement for stays out. No premium problems, and no LeetCode test data beyond the statements' examples.
 - **Groups.** Add the slug to every topic group of `pack.yaml` it fits, in the same commit as the problem. Group `name`s are what users filter by, so change a group's `title` or order rather than its `name`.
 - **Identity.** `slug` and `id` are LeetCode's, and are frozen once published: never rename a slug or a directory, never change an `id`, never reuse the slug of a removed problem. When a problem has to change that much, it becomes a new problem with a new slug.
-- **Case size.** Keep each `cases.jsonl` small (under about 2 MB). Generate large inputs with a fixed seed, and do not regenerate them without need: every version stays in the history that `hc pack install` clones.
+- **Cases.** Aim for 30 to 40 cases per problem, fewer for a simple one and more for a tricky one. Small inputs are stored in `cases.jsonl`, where a reader can see them; a stored case over 100 KB fails `hc pack check`. Large inputs are generated cases: functions of the problem's `generator.py` (`hc docs protocol generators`), a few near the constraint limits. Stored data stays in the history that `hc pack install` clones, so never commit large inputs, even in a commit that a later one removes.
 - **Protocol gaps.** If the protocol cannot express a problem, do not work around it: open an issue at [handcoding](https://github.com/MorePeanuts/handcoding/issues) saying what is missing, label the problem's issue here `blocked:upstream` with a link to it, and leave the problem out.
-- Commit only the pack's files: never `solutions/`, `.hc/`, `hc.yaml` or `pyrightconfig.json` (`.gitignore` keeps them out).
+- Commit only the pack's files: never `solutions/`, `.hc/`, `hc.yaml` or `pyrightconfig.json` (`.gitignore` keeps them out). Throwaway scripts go in `.hc/scratch/`.
+- **Review.** A pack is code that runs on its users' machines: review every `reference/`, `checker.py` and `generator.py` a pull request changes, as `hc pack install` asks its users to.
 
 ## Branches and pull requests
 

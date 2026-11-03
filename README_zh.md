@@ -9,7 +9,7 @@
 
 ## 安装
 
-需要 hc v0.1.0-alpha.7 或更高版本。
+需要 hc v0.1.0-alpha.9 或更高版本。
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # 跟随 main
