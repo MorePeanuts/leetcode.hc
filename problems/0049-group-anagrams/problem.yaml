@@ -1,0 +1,23 @@
+id: "49"
+slug: group-anagrams
+title: Group Anagrams
+titles:
+  zh-CN: 字母异位词分组
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - string
+  - sorting
+kind: function
+function:
+  name: groupAnagrams
+  params:
+    - name: strs
+      type: string[]
+  returns: string[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/group-anagrams/
+judge:
+  compare: unordered_deep
