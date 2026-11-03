@@ -1,0 +1,36 @@
+{"input":{"strs":["eat","tea","tan","ate","nat","bat"]},"expected":[["eat","tea","ate"],["tan","nat"],["bat"]],"example":true}
+{"input":{"strs":[""]},"expected":[[""]],"example":true}
+{"input":{"strs":["a"]},"expected":[["a"]],"example":true}
+{"input":{"strs":["",""]},"expected":[["",""]],"note":"two empty strings form one group"}
+{"input":{"strs":["","b",""]},"expected":[["",""],["b"]],"note":"empty strings and a letter"}
+{"input":{"strs":["a","a"]},"expected":[["a","a"]],"note":"duplicate strings stay in one group, both kept"}
+{"input":{"strs":["a","b"]},"expected":[["a"],["b"]],"note":"two single letters, two groups"}
+{"input":{"strs":["abc","bca","cab","acb","bac","cba"]},"expected":[["abc","bca","cab","acb","bac","cba"]],"note":"all permutations, one group"}
+{"input":{"strs":["aab","abb","bab","aba"]},"expected":[["aab","aba"],["abb","bab"]],"note":"same letters, different counts"}
+{"input":{"strs":["ab","aab","abb"]},"expected":[["ab"],["aab"],["abb"]],"note":"same set of letters, different lengths"}
+{"input":{"strs":["ad","bc","da"]},"expected":[["ad","da"],["bc"]],"note":"same sum of letter codes, different letters"}
+{"input":{"strs":["abbbbbbbbbbb","aaaaaaaaaaab","bbbbbbbbbbba"]},"expected":[["abbbbbbbbbbb","bbbbbbbbbbba"],["aaaaaaaaaaab"]],"note":"counts 1,11 and 11,1 collide when concatenated without separators"}
+{"input":{"strs":["abc","def","ghi"]},"expected":[["abc"],["def"],["ghi"]],"note":"all distinct groups"}
+{"input":{"strs":["z","zz","zzz","z"]},"expected":[["z","z"],["zz"],["zzz"]],"note":"repeated letter, different lengths"}
+{"input":{"strs":["eat","tea","eat","ate"]},"expected":[["eat","tea","eat","ate"]],"note":"a repeated string inside a group"}
+{"input":{"strs":["bdddddddddd","bbbbbbbbbbc"]},"expected":[["bdddddddddd"],["bbbbbbbbbbc"]],"note":"two strings of length 11, not anagrams"}
+{"input":{"strs":["clndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn","usylbgbauyerrvjyctxdlewtcbiasimakrnpcexuwmmpknqgnowijhizkpwktqtwxmdvscyiynwhlytnwehgbrbcrkybxtrnrpvl","remnjkxanvnxiykdbrwrlcactgyxqtmupabbbdcuwhrwerwkvhtpiymnkwqwztpbvirxcptykyhtoclluygrejwmssginbelnsiy"]},"expected":[["clndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn","usylbgbauyerrvjyctxdlewtcbiasimakrnpcexuwmmpknqgnowijhizkpwktqtwxmdvscyiynwhlytnwehgbrbcrkybxtrnrpvl","remnjkxanvnxiykdbrwrlcactgyxqtmupabbbdcuwhrwerwkvhtpiymnkwqwztpbvirxcptykyhtoclluygrejwmssginbelnsiy"]],"note":"strings of the maximum length 100, one group"}
+{"input":{"strs":["clndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn","alndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn"]},"expected":[["clndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn"],["alndkyrqzbvbyxieoxburqhtjslmahxednxmkyliumttbvnwrtguycsirtrkephkisntpwwpymiywrareagcjcbwwlwvbnkcpgyn"]],"note":"maximum length, one letter differs"}
+{"input":{"strs":["aef","bcg","fea"]},"expected":[["aef","fea"],["bcg"]],"note":"same length, sum and sum of squares of letters, not anagrams: a sum-of-powers key fails"}
+{"input":{"strs":["aa","bb","","cc"]},"expected":[["aa"],["bb"],[""],["cc"]],"note":"XOR of the letters is 0 for each: an XOR key merges them"}
+{"input":{"strs":["ad","bb","","a","aa","da"]},"expected":[["ad","da"],["bb"],[""],["a"],["aa"]],"note":"product of letter values with a = 1 collides (ad and bb, the empty string and runs of a)"}
+{"input":{"strs":["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]},"expected":[["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],["baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]],"note":"a prime-product key with a = 2 overflows 64 bits to 0 for 64 or more a"}
+{"input":{"strs":["az","za","z","a","","ab","b"]},"expected":[["az","za"],["z"],["a"],[""],["ab"],["b"]],"note":"strings that differ only in a or z: a count array off by one at either end merges them"}
+{"input":{"strs":["abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba","abcdefghijklmnopqrstuvwxyy","bcdefghijklmnopqrstuvwxyza"]},"expected":[["abcdefghijklmnopqrstuvwxyz","zyxwvutsrqponmlkjihgfedcba","bcdefghijklmnopqrstuvwxyza"],["abcdefghijklmnopqrstuvwxyy"]],"note":"all 26 letters, and one string missing z"}
+{"input":{"strs":["abc","abc","abc","abc","abc"]},"expected":[["abc","abc","abc","abc","abc"]],"note":"all strings identical, one group keeping every copy"}
+{"input":{"strs":["qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxc"]},"expected":[["qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxc"]],"note":"a single string of the maximum length 100"}
+{"input":{"strs":["ab","cd","ef","ba","dc","fe"]},"expected":[["ab","ba"],["cd","dc"],["ef","fe"]],"note":"interleaved pairs: grouping only adjacent strings or only against the last group fails"}
+{"input":{"strs":["","a","","aa","a",""]},"expected":[["","",""],["a","a"],["aa"]],"note":"empty strings scattered among runs of one letter"}
+{"input":{"strs":["listen","silent","enlist","google","gogole","inlets","banana"]},"expected":[["listen","silent","enlist","inlets"],["google","gogole"],["banana"]],"note":"words, groups of sizes 4, 2 and 1"}
+{"input":{"strs":["abc","abd"]},"expected":[["abc"],["abd"]],"note":"same length, one letter differs"}
+{"generate":{"name":"short_strings","args":{"letters":5,"max_len":8,"n":10000},"seed":1},"digest":"sha256:23effbb13ed3731c6d6a7498436f58c8665da07d98f6c5d0d5f2c99503d8440d","note":"10^4 short strings over five letters, many groups, empty strings included"}
+{"generate":{"name":"permuted_words","args":{"max_len":12,"n":10000,"words":500},"seed":2},"digest":"sha256:09e9a3f59db9ef28750c325b6fdb3783cc2588673c980e66691a971d49ece147","note":"10^4 strings, shuffles of 500 words"}
+{"generate":{"name":"random_strings","args":{"length":20,"n":10000},"seed":3},"digest":"sha256:c8e61925d30aa259826b4e40ea344b9ca7a9498ca8f99d8ef68e74ec43c53b75","note":"10^4 random strings, nearly all groups of one"}
+{"generate":{"name":"one_word","args":{"length":10,"n":10000},"seed":4},"digest":"sha256:1cede4dfb111a5c79ae7ceb5d90bb32f03a7db8db358503b2e406b9f56d863c8","note":"10^4 shuffles of one word, one big group"}
+{"generate":{"name":"empty_strings","args":{"n":10000}},"digest":"sha256:f7bdf85ccc0906419a1f1568eed1ab091079ff6c41f78f4a343632c50a2a8f4f","note":"10^4 empty strings"}
+{"generate":{"name":"long_strings","args":{"groups":3,"length":100,"n":10000},"seed":5},"digest":"sha256:436eabf6e8374ca52532376b7a0a71e45e5d60c40af8c3325fe4cb3ae1f8574a","note":"10^4 strings of the maximum length 100, three groups"}
