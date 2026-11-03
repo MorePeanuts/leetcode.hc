@@ -19,6 +19,7 @@ groups:
       - group-anagrams
       - top-k-frequent-elements
       - product-of-array-except-self
+      - valid-sudoku
   - name: two-pointers
     title: Two Pointers
   - name: sliding-window

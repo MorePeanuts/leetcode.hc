@@ -1,0 +1,22 @@
+id: "36"
+slug: valid-sudoku
+title: Valid Sudoku
+titles:
+  zh-CN: 有效的数独
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - matrix
+kind: function
+function:
+  name: isValidSudoku
+  params:
+    - name: board
+      type: character[][]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/valid-sudoku/
+judge:
+  compare: exact
