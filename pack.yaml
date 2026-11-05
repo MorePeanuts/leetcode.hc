@@ -47,6 +47,8 @@ groups:
       - merge-k-sorted-lists
   - name: trees
     title: Trees
+    problems:
+      - validate-binary-search-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
   - name: backtracking
