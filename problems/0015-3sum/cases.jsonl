@@ -1,0 +1,40 @@
+{"input":{"nums":[-1,0,1,2,-1,-4]},"expected":[[-1,-1,2],[-1,0,1]],"example":true}
+{"input":{"nums":[0,1,1]},"expected":[],"example":true}
+{"input":{"nums":[0,0,0]},"expected":[[0,0,0]],"example":true}
+{"input":{"nums":[0,0,0,0]},"expected":[[0,0,0]],"note":"four zeros: one triplet, reported once"}
+{"input":{"nums":[1,2,3]},"expected":[],"note":"all positive: no triplet"}
+{"input":{"nums":[-1,-2,-3]},"expected":[],"note":"all negative: no triplet"}
+{"input":{"nums":[-1,0,1]},"expected":[[-1,0,1]],"note":"the minimum length, one triplet"}
+{"input":{"nums":[3,-2,-1]},"expected":[[-2,-1,3]],"note":"the minimum length, unsorted"}
+{"input":{"nums":[0,0,1]},"expected":[],"note":"two zeros and a positive: no triplet"}
+{"input":{"nums":[1,1,-2]},"expected":[[-2,1,1]],"note":"the triplet uses a repeated value"}
+{"input":{"nums":[-4,2,2]},"expected":[[-4,2,2]],"note":"two equal largest values"}
+{"input":{"nums":[-2,-2,4]},"expected":[[-2,-2,4]],"note":"two equal smallest values"}
+{"input":{"nums":[-2,1,1,1,1]},"expected":[[-2,1,1]],"note":"a value repeated beyond what the triplet uses"}
+{"input":{"nums":[-1,-1,-1,2,2,2]},"expected":[[-1,-1,2]],"note":"many copies of a triplet with a repeated value"}
+{"input":{"nums":[-1,0,1,0]},"expected":[[-1,0,1]],"note":"a duplicate zero: the triplet reported once"}
+{"input":{"nums":[0,0,0,1,-1]},"expected":[[-1,0,1],[0,0,0]],"note":"zeros give two triplets"}
+{"input":{"nums":[0,-1,1,0,0]},"expected":[[-1,0,1],[0,0,0]],"note":"the zero triplet and a mixed one"}
+{"input":{"nums":[-2,0,1,1,2]},"expected":[[-2,0,2],[-2,1,1]],"note":"two triplets sharing the smallest value"}
+{"input":{"nums":[3,0,-2,-1,1,2]},"expected":[[-2,-1,3],[-2,0,2],[-1,0,1]],"note":"three triplets"}
+{"input":{"nums":[-6,1,2,3,4,5]},"expected":[[-6,1,5],[-6,2,4]],"note":"two triplets, 3 + 3 is not available"}
+{"input":{"nums":[-6,3,3,1,5]},"expected":[[-6,1,5],[-6,3,3]],"note":"3 + 3 is available once"}
+{"input":{"nums":[5,-5,0,5,-5,0]},"expected":[[-5,0,5]],"note":"every value twice, one triplet"}
+{"input":{"nums":[1,-1,0,1,-1,0,1,-1]},"expected":[[-1,0,1]],"note":"three values repeated: a single triplet"}
+{"input":{"nums":[-7,3,4,-7,3,4]},"expected":[[-7,3,4]],"note":"the same triplet twice in the array"}
+{"input":{"nums":[1,2,-3,4,-1]},"expected":[[-3,-1,4],[-3,1,2]],"note":"two triplets sharing -3"}
+{"input":{"nums":[100000,-100000,0]},"expected":[[-100000,0,100000]],"note":"the extremes of the range"}
+{"input":{"nums":[100000,100000,-100000]},"expected":[],"note":"extremes that do not sum to 0"}
+{"input":{"nums":[-100000,50000,50000]},"expected":[[-100000,50000,50000]],"note":"the minimum and two halves"}
+{"input":{"nums":[99999,-100000,1,0,-99999,100000]},"expected":[[-100000,0,100000],[-100000,1,99999],[-99999,0,99999]],"note":"triplets at the extremes of the range"}
+{"input":{"nums":[0,0,0,0,0,0,0]},"expected":[[0,0,0]],"note":"seven zeros"}
+{"input":{"nums":[-1,-1,2,2,-4]},"expected":[[-4,2,2],[-1,-1,2]],"note":"two triplets each with a repeated value"}
+{"input":{"nums":[2,2,-4,-4,2,8,-4]},"expected":[[-4,-4,8],[-4,2,2]],"note":"duplicates on both sides of the triplets"}
+{"input":{"nums":[-3,-3,-3,6,6]},"expected":[[-3,-3,6]],"note":"-3 + -3 + 6 with no other triplet"}
+{"input":{"nums":[-4,-10,6,-9,-5,-3,-10,-9,-6,1,-3,-7,0,4,1,-2,2,-2,1,-3]},"expected":[[-10,4,6],[-7,1,6],[-6,0,6],[-6,2,4],[-5,1,4],[-4,-2,6],[-4,0,4],[-3,-3,6],[-3,1,2],[-2,-2,4],[-2,0,2],[-2,1,1]],"note":"20 random values in [-10, 10]"}
+{"input":{"nums":[-3,-1,6,-1,-3,-2,5,2,0,-3,3,1,0,1,-5,1,3,6,-1,1,3,-1,5,4,1,0,6,6,-5,1]},"expected":[[-5,-1,6],[-5,0,5],[-5,1,4],[-5,2,3],[-3,-3,6],[-3,-2,5],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-2,1,1],[-1,-1,2],[-1,0,1],[0,0,0]],"note":"30 random values in [-6, 6], many duplicates"}
+{"input":{"nums":[30,23,-29,-18,-22,4,-19,9,30,20,14,24,16,-29,-12,3,1,-21,26,24,-24,27,-23,-5,-27,-26,-1,16,23,28,5,-12,-5,29,2,-16,-19,4,30,2]},"expected":[[-29,-1,30],[-29,1,28],[-29,2,27],[-29,3,26],[-29,5,24],[-29,9,20],[-27,-1,28],[-27,1,26],[-27,3,24],[-27,4,23],[-26,-1,27],[-26,2,24],[-26,3,23],[-24,-5,29],[-24,1,23],[-24,4,20],[-23,-5,28],[-23,-1,24],[-23,3,20],[-23,9,14],[-22,-5,27],[-22,-1,23],[-22,2,20],[-21,-5,26],[-21,1,20],[-21,5,16],[-19,-5,24],[-19,-1,20],[-19,3,16],[-19,5,14],[-18,-12,30],[-18,-5,23],[-18,2,16],[-18,4,14],[-16,-12,28],[-16,2,14],[-12,-12,24],[-12,3,9],[-5,1,4],[-5,2,3]],"note":"40 random values in [-30, 30]"}
+{"generate":{"name":"random_values","args":{"n":3000},"seed":1},"digest":"sha256:0a5c75805f2ae8a55cdb481a240f5e2ba2e97ea266a0a0c608d88e88a0ede1d7","note":"maximum length, distinct values over the whole range"}
+{"generate":{"name":"odd_values","args":{"n":3000},"seed":2},"digest":"sha256:014dd1be45417a4dd850284f88965065e8abd13f5fca7ce893e08bcef300e828","note":"maximum length, distinct odd values: no triplet, the worst case of checking every triple"}
+{"generate":{"name":"random_values","args":{"n":3000},"seed":3},"digest":"sha256:6cc371da195d8b6f602c52958c69b53cb2ccc293f7877bc5075c60f099c5b2ed","note":"maximum length, distinct values over the whole range, another draw"}
+{"generate":{"name":"odd_values","args":{"n":3000},"seed":4},"digest":"sha256:87e15dcfeae554468742c6de29e877699c38b52212fb9621457a15b0686275f6","note":"maximum length, distinct odd values, another draw: no triplet"}

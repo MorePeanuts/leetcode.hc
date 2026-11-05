@@ -1,0 +1,22 @@
+id: "15"
+slug: 3sum
+title: 3Sum
+titles:
+  zh-CN: 三数之和
+difficulty: medium
+tags:
+  - array
+  - two-pointers
+  - sorting
+kind: function
+function:
+  name: threeSum
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/3sum/
+judge:
+  compare: unordered_deep
