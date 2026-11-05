@@ -1,0 +1,39 @@
+{"input":{"s":"abcabcbb"},"expected":3,"example":true}
+{"input":{"s":"bbbbb"},"expected":1,"example":true}
+{"input":{"s":"pwwkew"},"expected":3,"example":true}
+{"input":{"s":""},"expected":0,"note":"the empty string"}
+{"input":{"s":" "},"expected":1,"note":"a single space"}
+{"input":{"s":"a"},"expected":1,"note":"a single character"}
+{"input":{"s":"au"},"expected":2,"note":"two distinct characters"}
+{"input":{"s":"aa"},"expected":1,"note":"two equal characters"}
+{"input":{"s":"xyxz"},"expected":3,"note":"the window restarts after the first repeat, not at it"}
+{"input":{"s":"pqqp"},"expected":2,"note":"the window start must not move back to an old occurrence"}
+{"input":{"s":"kllmnok"},"expected":5,"note":"the longest window starts after a repeat and ends at the end"}
+{"input":{"s":"abcdef"},"expected":6,"note":"all distinct: the whole string"}
+{"input":{"s":"abcdea"},"expected":5,"note":"the first character repeats at the end"}
+{"input":{"s":"aab"},"expected":2,"note":"a repeat at the start"}
+{"input":{"s":"abb"},"expected":2,"note":"a repeat at the end"}
+{"input":{"s":"abcbdef"},"expected":5,"note":"the window restarts in the middle"}
+{"input":{"s":"abcdeafghij"},"expected":10,"note":"the longest window is after the first repeat"}
+{"input":{"s":"a b c"},"expected":3,"note":"spaces repeat"}
+{"input":{"s":"  "},"expected":1,"note":"two spaces"}
+{"input":{"s":"0123456789"},"expected":10,"note":"all ten digits"}
+{"input":{"s":"!@#$%^&*()"},"expected":10,"note":"symbols, all distinct"}
+{"input":{"s":"aA"},"expected":2,"note":"case matters: a and A differ"}
+{"input":{"s":"aAbBcCaA"},"expected":6,"note":"upper and lower case letters"}
+{"input":{"s":"abcabcabcd"},"expected":4,"note":"the longest window at the very end"}
+{"input":{"s":"dabcabcabc"},"expected":4,"note":"the longest window at the very start"}
+{"input":{"s":"ababababab"},"expected":2,"note":"two characters alternating"}
+{"input":{"s":"zyxwvutsrqponmlkjihgfedcba"},"expected":26,"note":"26 distinct letters in reverse"}
+{"input":{"s":"ab12ab12ab12xy"},"expected":6,"note":"a repeating block, then two new characters"}
+{"input":{"s":"hello world"},"expected":6,"note":"a sentence with a space"}
+{"input":{"s":"aaaabcdaaaa"},"expected":4,"note":"a distinct run inside a run of one character"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"},"expected":95,"note":"all 95 allowed characters once"}
+{"input":{"s":"bpfbhmipx"},"expected":7,"note":"a repeat far back inside the window"}
+{"input":{"s":"cdd"},"expected":2,"note":"the repeat is the last two characters"}
+{"generate":{"name":"random_chars","args":{"alphabet":"printable","n":100000},"seed":1},"digest":"sha256:7bf19f6100da44b225c27f8b32b65aa53198607e7b71e10a30bef8434f9f9d2a","note":"maximum length, random allowed characters"}
+{"generate":{"name":"random_chars","args":{"alphabet":"lower","n":100000},"seed":2},"digest":"sha256:b2cccaea521490b57942704e519a9b17e792cb127663efa3fb7b8516501a7d6a","note":"maximum length, random lowercase letters"}
+{"generate":{"name":"random_chars","args":{"alphabet":"digits","n":100000},"seed":3},"digest":"sha256:3b52b485690d33caa766560ebd5ef34028d0bf95240e4fa503b1a1375ff18827","note":"maximum length, random digits"}
+{"generate":{"name":"cycle","args":{"n":100000}},"digest":"sha256:6e51500897c8c909f7cb750bd86697c8755b8bdd3867f155c9b60d6e3c4a4e8c","note":"maximum length, all 95 characters cycling: every check of a window runs 95 steps"}
+{"generate":{"name":"all_equal","args":{"n":100000}},"digest":"sha256:1e0b55889ecdab6ae495242d38a8be6fcd415f2446facae12a8c6b3f1ba7ba2c","note":"maximum length, one character"}
+{"generate":{"name":"distinct_at_end","args":{"n":100000}},"digest":"sha256:10674139c28be507fab2b46663132746ead0dea8b52f0728c9d49d487de62aca","note":"maximum length, the only window of 95 at the very end"}
