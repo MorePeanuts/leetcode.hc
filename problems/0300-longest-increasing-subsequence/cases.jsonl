@@ -1,0 +1,38 @@
+{"input":{"nums":[10,9,2,5,3,7,101,18]},"expected":4,"example":true}
+{"input":{"nums":[0,1,0,3,2,3]},"expected":4,"example":true}
+{"input":{"nums":[7,7,7,7,7,7,7]},"expected":1,"example":true}
+{"input":{"nums":[5]},"expected":1,"note":"a single element"}
+{"input":{"nums":[-10000]},"expected":1,"note":"a single element, the minimum value"}
+{"input":{"nums":[1,2]},"expected":2,"note":"two elements, increasing"}
+{"input":{"nums":[2,1]},"expected":1,"note":"two elements, decreasing"}
+{"input":{"nums":[3,3]},"expected":1,"note":"two equal elements: equal is not strictly increasing"}
+{"input":{"nums":[1,2,3,4,5,6,7,8,9,10]},"expected":10,"note":"sorted: the whole array"}
+{"input":{"nums":[10,9,8,7,6,5,4,3,2,1]},"expected":1,"note":"reverse sorted: answer 1"}
+{"input":{"nums":[1,1,2,2,3,3]},"expected":3,"note":"non-decreasing with duplicates: counting equal values gives 6"}
+{"input":{"nums":[-10000,10000]},"expected":2,"note":"the extremes, increasing"}
+{"input":{"nums":[10000,-10000]},"expected":1,"note":"the extremes, decreasing"}
+{"input":{"nums":[-3,-2,-1,0,-5]},"expected":4,"note":"negative values"}
+{"input":{"nums":[4,10,4,3,8,9]},"expected":3,"note":"the answer skips a larger early element"}
+{"input":{"nums":[3,5,6,2,5,4,19,5,6,7,12]},"expected":6,"note":"the answer restarts from a smaller value in the middle"}
+{"input":{"nums":[1,3,6,7,9,4,10,5,6]},"expected":6,"note":"the best tail is not the last element"}
+{"input":{"nums":[10,22,9,33,21,50,41,60,80]},"expected":6,"note":"classic: answer 6"}
+{"input":{"nums":[0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15]},"expected":6,"note":"van der Corput order of 0..15"}
+{"input":{"nums":[2,2,2,2,1,3]},"expected":2,"note":"duplicates then a smaller value"}
+{"input":{"nums":[5,6,7,1,2,3,4]},"expected":4,"note":"a short run first, a longer run after"}
+{"input":{"nums":[1,2,3,4,0,1,2]},"expected":4,"note":"a longer run first, a shorter run after"}
+{"input":{"nums":[1,5,2,6,3,7,4,8]},"expected":5,"note":"two interleaved increasing runs"}
+{"input":{"nums":[9,1,8,2,7,3,6,4,5]},"expected":5,"note":"zigzag converging inward"}
+{"input":{"nums":[7,7,7,7,1,2,3]},"expected":3,"note":"the answer avoids a block of duplicates"}
+{"input":{"nums":[1,9,2,8,3,7]},"expected":4,"note":"the answer is the low half"}
+{"input":{"nums":[3,1,2]},"expected":2,"note":"the first element is not in the answer"}
+{"input":{"nums":[1,2,0]},"expected":2,"note":"the last element is not in the answer"}
+{"input":{"nums":[2,5,3,7,11,8,10,13,6]},"expected":6,"note":"replacing tails: patience sorting with a wrong bisect side fails"}
+{"input":{"nums":[4,5,6,3]},"expected":3,"note":"returning the length of the tails at the wrong time"}
+{"generate":{"name":"random_values","args":{"n":2500},"seed":1},"digest":"sha256:620873a4cffe008903850db08db4422dd1b37b0f51eddf5b902b1c9d1d702ee8","note":"maximum length, random values over the full range"}
+{"generate":{"name":"random_values","args":{"hi":5,"lo":-5,"n":2500},"seed":2},"digest":"sha256:0719903a13ab0900b2f0cbd3e769b0ddd0f724493f60ceeb18481f5d51303533","note":"maximum length, values in [-5, 5]: many duplicates"}
+{"generate":{"name":"increasing","args":{"n":2500}},"digest":"sha256:9c454032ce9c2b19d680232a341c5bf18a703da13379101b5f730d0856b3164c","note":"maximum length, strictly increasing: the worst case of an exponential recursion"}
+{"generate":{"name":"decreasing","args":{"n":2500}},"digest":"sha256:a6b950d7108f8a222c2a6674d369983fb7f1d6f5c2f9e0cce45a0f4a924b9567","note":"maximum length, strictly decreasing"}
+{"generate":{"name":"all_equal","args":{"n":2500,"value":10000}},"digest":"sha256:b3088cde9c225270beca98a4bb1a86f54522c24a31a4f47ad4894f970d7cec20","note":"maximum length, all equal"}
+{"generate":{"name":"non_decreasing","args":{"n":2500}},"digest":"sha256:6530781633442049dba82140c4a1020f50f9246c5d85e27dc9dc9ec052628c0c","note":"maximum length, every value twice: a non-strict comparison gives 2500"}
+{"generate":{"name":"interleaved","args":{"n":2500}},"digest":"sha256:9164661d8e401901bf228ea9ff7ac8f263861379fc1555c22471b3ef86a48d82","note":"maximum length, two increasing runs interleaved"}
+{"generate":{"name":"noisy_increasing","args":{"n":2500,"noise":40},"seed":3},"digest":"sha256:a5696a4cbedfac0a347ab5c716744f0ae9a0e379e1c8eb12a75b58af63f6428c","note":"maximum length, an increasing trend with noise"}
