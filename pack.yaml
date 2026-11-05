@@ -37,6 +37,8 @@ groups:
       - largest-rectangle-in-histogram
   - name: binary-search
     title: Binary Search
+    problems:
+      - search-in-rotated-sorted-array
   - name: linked-list
     title: Linked List
   - name: trees
