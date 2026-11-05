@@ -27,7 +27,7 @@ jobs:
       # with `hc docs protocol protocol-versions`, then run `hc skill install`
       # and commit the refreshed skills with the bump.
       - name: Install hc
-        run: go install github.com/MorePeanuts/handcoding/cmd/hc@v0.1.0-alpha.9
+        run: go install github.com/MorePeanuts/handcoding/cmd/hc@v0.1.0-alpha.10
       # hc.yaml is not committed (.gitignore): it holds the settings of a
       # checkout, here the Python set up above instead of a virtual
       # environment of hc's.
