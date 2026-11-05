@@ -1,0 +1,39 @@
+{"input":{"h":8,"piles":[3,6,7,11]},"expected":4,"example":true}
+{"input":{"h":5,"piles":[30,11,23,4,20]},"expected":30,"example":true}
+{"input":{"h":6,"piles":[30,11,23,4,20]},"expected":23,"example":true}
+{"input":{"h":1,"piles":[1]},"expected":1,"note":"one pile of one banana"}
+{"input":{"h":1,"piles":[1000000000]},"expected":1000000000,"note":"one huge pile, one hour"}
+{"input":{"h":1000000000,"piles":[1000000000]},"expected":1,"note":"one huge pile, one banana an hour"}
+{"input":{"h":2,"piles":[1000000000]},"expected":500000000,"note":"one huge pile, two hours"}
+{"input":{"h":3,"piles":[7]},"expected":3,"note":"one pile: ceil(7 / 3) = 3"}
+{"input":{"h":3,"piles":[5,5,5]},"expected":5,"note":"h equals the number of piles: the largest pile"}
+{"input":{"h":15,"piles":[5,5,5]},"expected":1,"note":"exactly one banana an hour"}
+{"input":{"h":1000000000,"piles":[5,5,5]},"expected":1,"note":"far more hours than bananas"}
+{"input":{"h":4,"piles":[3,6,7,11]},"expected":11,"note":"h equals the number of piles"}
+{"input":{"h":5,"piles":[3,6,7,11]},"expected":7,"note":"one extra hour"}
+{"input":{"h":27,"piles":[3,6,7,11]},"expected":1,"note":"h equals the total: speed 1"}
+{"input":{"h":26,"piles":[3,6,7,11]},"expected":2,"note":"one hour less than the total"}
+{"input":{"h":4,"piles":[1,1,1,1]},"expected":1,"note":"all ones"}
+{"input":{"h":2,"piles":[2,2]},"expected":2,"note":"two piles of 2, two hours"}
+{"input":{"h":3,"piles":[2,2]},"expected":2,"note":"two piles of 2, three hours"}
+{"input":{"h":3,"piles":[10,1]},"expected":5,"note":"a big pile and a small one"}
+{"input":{"h":3,"piles":[1000000000,1000000000]},"expected":1000000000,"note":"two huge piles, three hours"}
+{"input":{"h":1000000000,"piles":[1000000000,1]},"expected":2,"note":"one huge pile and one banana"}
+{"input":{"h":312884469,"piles":[312884470]},"expected":2,"note":"just under one hour per banana: speed 2"}
+{"input":{"h":968709470,"piles":[312884470]},"expected":1,"note":"more hours than bananas, one pile"}
+{"input":{"h":6,"piles":[4,9,11,17]},"expected":9,"note":"a speed between pile sizes"}
+{"input":{"h":9,"piles":[9,8,7,6,5,4,3,2,1]},"expected":9,"note":"descending piles, h = n"}
+{"input":{"h":20,"piles":[9,8,7,6,5,4,3,2,1]},"expected":3,"note":"descending piles, a middling h"}
+{"input":{"h":7,"piles":[30,11,23,4,20]},"expected":20,"note":"the examples' piles, seven hours"}
+{"input":{"h":88,"piles":[30,11,23,4,20]},"expected":1,"note":"the examples' piles, h = the total"}
+{"input":{"h":1000000000,"piles":[805306368,805306368,805306368]},"expected":3,"note":"large piles, the speed near 2.4"}
+{"input":{"h":5,"piles":[1,1000000000,1,1000000000]},"expected":1000000000,"note":"two huge piles and two small"}
+{"input":{"h":12,"piles":[6,6,6,6,6,6]},"expected":3,"note":"equal piles, two hours each"}
+{"input":{"h":13,"piles":[6,6,6,6,6,6]},"expected":3,"note":"equal piles, one hour to spare does not lower the speed enough"}
+{"input":{"h":599,"piles":[100,200,300]},"expected":2,"note":"one hour less than the total"}
+{"generate":{"name":"random_piles","args":{"h":1000000000,"n":10000},"seed":1},"digest":"sha256:2e898fc9e0fbb667a5f407f5bdb7e08e0ac4cb75bef91a2bcbd720964d7b9911","note":"10^4 random piles, h = 10^9"}
+{"generate":{"name":"random_piles","args":{"h":10000,"n":10000},"seed":2},"digest":"sha256:52cbfd0a18e899e8045e2719f55b050319ba44b8ef873cdf71103aa11254e26f","note":"10^4 random piles, h = n: the largest pile"}
+{"generate":{"name":"all_max","args":{"h":10000,"n":10000}},"digest":"sha256:21cb99d74d327700205494c35b1bfb5992d12676440e7da7f68a94db1b9122d2","note":"10^4 piles of 10^9, h = n: the answer is 10^9, the worst case of trying speeds upward"}
+{"generate":{"name":"all_max","args":{"h":10001,"n":10000}},"digest":"sha256:763c2febac3f1643c397541f0a9ba56a4e99aaf73f88ee2ab187e51d79a41581","note":"10^4 piles of 10^9, one hour to spare"}
+{"generate":{"name":"planted_speed","args":{"k":123456,"n":10000},"seed":3},"digest":"sha256:1dfbeaef6218e1d26171a753f7efd84cc961f6dc9cd4a2491e3dbb0faa96f6d1","note":"10^4 random piles, h tight for a speed near 123456"}
+{"generate":{"name":"small_piles","args":{"h":1000000000,"n":10000},"seed":4},"digest":"sha256:ec7509cb61ac5c9ff919ff9d61792a6d799181ec4073ef81ac39cbee72da896d","note":"10^4 small piles, h far above the total: speed 1"}
