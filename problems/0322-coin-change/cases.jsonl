@@ -1,0 +1,38 @@
+{"input":{"amount":11,"coins":[1,2,5]},"expected":3,"example":true}
+{"input":{"amount":3,"coins":[2]},"expected":-1,"example":true}
+{"input":{"amount":0,"coins":[1]},"expected":0,"example":true}
+{"input":{"amount":1,"coins":[1]},"expected":1,"note":"one coin, amount equal to it"}
+{"input":{"amount":1,"coins":[2]},"expected":-1,"note":"the only coin is larger than the amount"}
+{"input":{"amount":10000,"coins":[2147483647]},"expected":-1,"note":"the maximum coin value, larger than the amount"}
+{"input":{"amount":0,"coins":[2147483647]},"expected":0,"note":"amount 0 with a huge coin"}
+{"input":{"amount":10000,"coins":[5]},"expected":2000,"note":"a single coin dividing the maximum amount"}
+{"input":{"amount":10000,"coins":[3]},"expected":-1,"note":"a single coin not dividing the maximum amount"}
+{"input":{"amount":6,"coins":[1,3,4]},"expected":2,"note":"greedy takes 4+1+1, optimal is 3+3"}
+{"input":{"amount":11,"coins":[1,5,6,9]},"expected":2,"note":"greedy takes 9+1+1, optimal is 5+6"}
+{"input":{"amount":27,"coins":[2,5,10,1]},"expected":4,"note":"unsorted coins"}
+{"input":{"amount":6249,"coins":[186,419,83,408]},"expected":20,"note":"no coin 1, large answer mixing every coin"}
+{"input":{"amount":5,"coins":[3,7]},"expected":-1,"note":"unreachable small amount"}
+{"input":{"amount":13,"coins":[3,7]},"expected":3,"note":"13 = 3 + 3 + 7: neither coin alone divides it"}
+{"input":{"amount":9999,"coins":[2,4,6]},"expected":-1,"note":"even coins, odd amount: unreachable"}
+{"input":{"amount":2,"coins":[4,6]},"expected":-1,"note":"amount smaller than every coin"}
+{"input":{"amount":10000,"coins":[1,2]},"expected":5000,"note":"maximum amount, answer 5000"}
+{"input":{"amount":13,"coins":[7,7,3]},"expected":3,"note":"duplicate denominations"}
+{"input":{"amount":10000,"coins":[10000]},"expected":1,"note":"one coin equal to the maximum amount"}
+{"input":{"amount":10000,"coins":[9999,2]},"expected":5000,"note":"the large coin does not fit with the small one: 5000 twos"}
+{"input":{"amount":10000,"coins":[9999,1]},"expected":2,"note":"the large coin plus one"}
+{"input":{"amount":1,"coins":[2,3]},"expected":-1,"note":"amount 1 unreachable"}
+{"input":{"amount":7,"coins":[5,3]},"expected":-1,"note":"7 cannot be made from 3 and 5"}
+{"input":{"amount":8,"coins":[5,3]},"expected":2,"note":"8 = 5 + 3"}
+{"input":{"amount":100,"coins":[1,2,5]},"expected":20,"note":"twenty fives"}
+{"input":{"amount":30,"coins":[25,10,5]},"expected":2,"note":"canonical coins, no 1"}
+{"input":{"amount":3,"coins":[2,5]},"expected":-1,"note":"3 is unreachable, but 5 - 2 is: subtraction is not allowed"}
+{"input":{"amount":1,"coins":[3,5,7,11,13]},"expected":-1,"note":"amount below every coin"}
+{"input":{"amount":2,"coins":[1,2147483647]},"expected":2,"note":"a huge coin next to 1: adding it to the amount overflows 32 bits"}
+{"input":{"amount":9825,"coins":[470,35,120,81,121]},"expected":30,"note":"no coin 1, a large mixed answer"}
+{"generate":{"name":"random_coins","args":{"amount":10000,"hi":10000,"k":12,"lo":1},"seed":1},"digest":"sha256:ceba9d595c0640c4db771c2bcfbfddd812cbac97900c8e58ec86c74e7713884b","note":"12 random denominations, maximum amount"}
+{"generate":{"name":"random_coins","args":{"amount":10000,"hi":500,"k":12,"lo":100},"seed":2},"digest":"sha256:95c44197f5dcd433faa74fe7c0f5aa390d010e137e1b7c95f7eaa1eaab4483c4","note":"12 denominations in [100, 500], maximum amount"}
+{"generate":{"name":"unreachable","args":{"amount":9999,"k":12,"lo":50},"seed":3},"digest":"sha256:30449644eda2079a1ed6603c55c2b66cec058991b365cf228dbfd20a1d1d1420","note":"12 even denominations, odd amount: unreachable, every combination fails"}
+{"generate":{"name":"ones","args":{"amount":10000}},"digest":"sha256:eda3e3871ef8c387f7c9006a8818158c1a6168525300898e87b032886d437b55","note":"only the coin 1, maximum amount: answer 10^4"}
+{"generate":{"name":"greedy_trap","args":{"amount":9999}},"digest":"sha256:f9896c21676cb57d12b7feb409063e57a93b1aa7e6f689d79c649f75d686e94f","note":"greedy fails with coins 1, 3, 4, 997, 1000"}
+{"generate":{"name":"with_huge","args":{"amount":10000,"k":12},"seed":4},"digest":"sha256:25679723439854b36eb8d0eccec5ea83d1b82923bcfb9390ae35e3f5e0bfbc1f","note":"small denominations among values near 2^31 - 1"}
+{"generate":{"name":"random_coins","args":{"amount":10000,"hi":30,"k":12,"lo":2},"seed":5},"digest":"sha256:5cd94ce81366a1f498021aa34ff9f7fad66aabd583a2e6669ff6b50a459391f8","note":"12 small denominations, maximum amount: many ways to reach it"}
