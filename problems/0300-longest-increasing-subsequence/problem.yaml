@@ -1,0 +1,23 @@
+id: "300"
+slug: longest-increasing-subsequence
+title: Longest Increasing Subsequence
+titles:
+  zh-CN: 最长递增子序列
+difficulty: medium
+tags:
+  - array
+  - binary-search
+  - dynamic-programming
+  - longest-increasing-subsequence
+kind: function
+function:
+  name: lengthOfLIS
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-increasing-subsequence/
+judge:
+  compare: exact
