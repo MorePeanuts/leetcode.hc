@@ -25,6 +25,7 @@ groups:
     title: Two Pointers
     problems:
       - 3sum
+      - container-with-most-water
   - name: sliding-window
     title: Sliding Window
   - name: stack
