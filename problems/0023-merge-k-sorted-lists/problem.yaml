@@ -1,0 +1,24 @@
+id: "23"
+slug: merge-k-sorted-lists
+title: Merge k Sorted Lists
+titles:
+  zh-CN: 合并 K 个升序链表
+difficulty: hard
+tags:
+  - linked-list
+  - divide-and-conquer
+  - heap-priority-queue
+  - merge-sort
+  - tournament-sort
+kind: function
+function:
+  name: mergeKLists
+  params:
+    - name: lists
+      type: ListNode[]
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/merge-k-sorted-lists/
+judge:
+  compare: exact
