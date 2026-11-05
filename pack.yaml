@@ -49,6 +49,7 @@ groups:
     title: Trees
     problems:
       - validate-binary-search-tree
+      - binary-tree-maximum-path-sum
   - name: heap-priority-queue
     title: Heap / Priority Queue
   - name: backtracking
