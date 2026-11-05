@@ -1,0 +1,26 @@
+id: "207"
+slug: course-schedule
+title: Course Schedule
+titles:
+  zh-CN: 课程表
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - topological-sort
+  - directed-acyclic-graph
+kind: function
+function:
+  name: canFinish
+  params:
+    - name: numCourses
+      type: integer
+    - name: prerequisites
+      type: integer[][]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/course-schedule/
+judge:
+  compare: exact

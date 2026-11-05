@@ -62,6 +62,7 @@ groups:
     title: Graphs
     problems:
       - number-of-islands
+      - course-schedule
   - name: advanced-graphs
     title: Advanced Graphs
   - name: 1d-dynamic-programming
