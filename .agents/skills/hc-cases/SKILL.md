@@ -66,9 +66,10 @@ Then the options:
 - In-place problems: `judge.output` and `output_length` belong to the
   definition and combine with every mode, `checker` included. Keep them
   (`hc docs protocol in-place-output`).
-- `judge.timeout` guards against hangs, not slow solutions
-  (`hc docs protocol timeout`). Leave it unset; if the reference needs a
-  large part of the default on your largest case, make the case smaller.
+- A run has a wall-clock limit that guards against hangs, not slow
+  solutions (`hc docs protocol run-limit`). It is the user's setting, not
+  the problem's: if the reference needs a large part of the default (10s)
+  on your largest case, make the case smaller.
 
 ## Reference solutions
 
@@ -77,23 +78,37 @@ Read `hc docs protocol solution-abi`, and `hc docs protocol python` or
 from running the reference, never from you, so the reference must be
 right.
 
+**Write a reference in every language the pack is solved in.** A solution
+is judged only in a language the problem has a reference in
+(`hc docs protocol readiness`). The languages are `languages` in
+`pack.yaml`, every language when it has none, and every language for the
+workspace's own problems; `hc validate <slug>` names a missing reference.
+
 - Write `reference/solution.py` first. It must run on Python 3.10, the
   oldest version hc supports (`hc docs protocol language-versions`); import
   only the public names of `hc_runtime` and the standard library.
-- Prefer a simple, obviously correct algorithm. If it is too slow for the
-  largest inputs, also write a brute force and cross-check the two on small
-  random inputs with a throwaway script before you trust the fast one.
+- Write an idiomatic implementation of the complexity the problem accepts,
+  the way a good solution would: solutions are timed against it
+  ([Time limits](#time-limits)), so neither a slow-constant version nor a
+  hyper-optimized one. A slow constant raises the limit of every solution
+  and can let a worse complexity pass: of the usual solutions, take the
+  one with the least work per step (two pointers rather than a hash set
+  for each element). If it is not obviously correct, also write a brute
+  force and cross-check the two on small random inputs with a throwaway
+  script before you trust it.
 - A Go reference starts with `package main` (LeetCode's Go template omits
   it) and must build with Go 1.22: no newer language features or standard
   library functions (`slices.Sorted`, `maps.Keys`, range over a function).
   `hc validate --run` checks this and names what is too new.
 
-**Prove the rule with a second reference.** When more than one output is
-acceptable, also write `reference/solution.go` so that it returns a
+**Prove the rule with the second reference.** When more than one output is
+acceptable, write `reference/solution.go` so that it returns a
 *different* valid answer than the Python one wherever the rule allows:
 another order, another valid answer, another (correct) random algorithm.
 `hc validate --run` runs both against the same expected outputs, so a rule
-that is too strict fails there.
+that is too strict fails there. Make it differ in what it returns, not in
+its cost: it times the Go solutions, so it follows the bullet on the
+complexity and constant above.
 
 **Round trips:** give the Go reference another encoding than the Python
 one (preorder instead of level order, a hash instead of a counter), so the
@@ -164,8 +179,11 @@ case inputs must satisfy their rules as well as the statement's.
   - tricky structures (skewed trees, one node, all equal, sorted and
     reverse sorted; for structure inputs, no cycle, no intersection, a
     node at the root or the tail);
-  - a few large inputs near the constraint limits, to catch quadratic
-    solutions, as [generated cases](#generated-cases).
+  - large inputs near the constraint limits, as
+    [generated cases](#generated-cases); when the problem tests
+    complexity, most of them in the worst shape of a slower solution, so
+    that those take most of the reference's time
+    ([Time limits](#time-limits)).
 - Every input must satisfy the stated constraints and guarantees ("exactly
   one solution", "all values are unique"), by construction: for "exactly
   one solution", build the answer in and keep every other pair from
@@ -187,8 +205,7 @@ place, and run `hc validate <slug> --run`: some case must fail. If none
 does, add a case that catches it, with a `note` naming the mistake. Restore
 the real reference before anything else, and never run `hc cases build`
 while a wrong solution is in place: it would write wrong expected outputs.
-A slow but correct solution need not fail (the timeout does not judge
-complexity).
+A slow but correct solution is a matter of [time limits](#time-limits).
 
 ## Generated cases
 
@@ -204,7 +221,7 @@ function of the problem's `generator.py`, and the case only names the call:
   [by construction](#test-cases).
 - To check that the inputs meet the constraints, pipe them into a script
   that prints only its verdict:
-  `hc cases list <slug> --expand --json | python3 .hc/scratch/check.py`
+  `hc cases list <slug> --expand --json | python3 .hc/scratch/<slug>/check.py`
   (`--expand` runs generator.py as hc does, `--json` prints one case per
   line). Never print the expanded inputs themselves: a large input costs
   far more to read than to check. `hc_runtime` cannot be imported outside
@@ -214,12 +231,62 @@ function of the problem's `generator.py`, and the case only names the call:
   `hc cases add <slug> --generate <name> --args '{"n": 100000}' --seed 7`,
   or as `generate` lines in `cases.jsonl`, each with a `note` saying what
   it targets. Never write `digest`: `hc cases build` writes it.
-- Keep generated cases for size: a few near the constraint limits. Small
-  inputs stay stored, where a reader can see them.
+- Keep generated cases for size: large inputs only. Small inputs stay
+  stored, where a reader can see them.
 - A generated case has no `expected`, so a problem judged with `any_of`
   has none: if it needs large inputs, it needs `unordered` or a checker.
 - After changing `generator.py`, run `hc cases build <slug>` again: the
   changed inputs get new digests.
+
+## Time limits
+
+A run may take 40 times what the reference in its language takes on the
+same cases, in total (that time counted as at least 1.25ms), timed on the
+user's machine; beyond that it is Time Limit Exceeded
+(`hc docs protocol time-limit`). The factor is hc's, not the problem's:
+the cases decide whether a solution of a worse complexity fails.
+
+- A problem tests complexity when the statement requires one, a naive
+  solution exceeds about 10^8 operations at the constraint limits, or
+  there is a well-known brute force. Then its large cases must make that
+  slower solution exceed the limit with room to spare: about 80 times the
+  reference, twice the factor, since timings vary.
+- The ratio of the totals is the average of the ratios of the cases,
+  weighted by the reference's time on each. Small cases weigh almost
+  nothing: write as many as the edge cases need. The large cases decide
+  the ratio.
+- Make most large cases the slower solution's worst shape at the
+  constraint limits (for a scan over pairs, the answer at the end; for a
+  recursion without memoization, no early exit), varied in values and
+  layout, so that they take most of the reference's time: the ratio of
+  the totals is then close to their ratio. They need not outnumber the
+  small cases.
+- Stop adding large cases once the slower solution takes about 200 times
+  the reference in total, or as much as its largest ratio on one case
+  allows: more of them only slow every run down, the users' included.
+- A large input the slower solution gets through quickly (its answer
+  found early, an order it likes) adds to the reference's time, not to the
+  gap, and pulls the ratio down. Give it the worst shape as well, unless it
+  targets something only a large input shows (overflow, deep recursion),
+  and keep such cases few. What a small input shows (an early answer, a
+  length mismatch, a difference in the first letters) belongs in a small
+  case.
+- When the reference takes less than 1.25ms on all the cases (often in
+  Go), the limit is 50ms whatever the ratio: the slower solution must
+  spend that much in total, so give it enough worst-shape cases.
+- No number of cases takes the ratio past the largest ratio on one case:
+  if the worst shape at the limits stays under the gap, more cases cannot
+  fix it.
+- Check it: write the slower solution in `.hc/scratch/<slug>/`, and run
+  `hc test <slug> --all --file .hc/scratch/<slug>/slow.py`, or on one
+  candidate input `hc test <slug> --generate <name> --args '{"n": 100000}' --file .hc/scratch/<slug>/slow.py`.
+  It must be Time Limit Exceeded, and the reference, run the same way with
+  `--file reference/solution.py`, Accepted.
+- When the constraints are too small for the gap (the slower solution
+  stays within the factor at the largest input they allow), leave it:
+  LeetCode accepts it too. Say so in the [summary](#summary).
+- A problem that does not test complexity needs nothing more: the factor
+  leaves room for any reasonable solution.
 
 ## Workflow: generate test cases
 
@@ -232,10 +299,11 @@ function of the problem's `generator.py`, and the case only names the call:
    report them, and never translate a statement or a title.
 2. [Decide the judge rule](#decide-the-judge-rule) and write it to
    problem.yaml.
-3. Write `reference/solution.py` ([Reference solutions](#reference-solutions)).
-4. If more than one output is acceptable, write the second reference in
-   `reference/solution.go`. For `checker`, write `checker.py`
-   ([Checkers](#checkers)).
+3. Write `reference/solution.py`, then a reference in every other
+   language the pack is solved in, `reference/solution.go`
+   ([Reference solutions](#reference-solutions)). If more than one output
+   is acceptable, make the Go one return a different valid answer.
+4. For `checker`, write `checker.py` ([Checkers](#checkers)).
 5. Add the inputs to `cases.jsonl` ([Test cases](#test-cases)), and the
    large ones as [generated cases](#generated-cases).
 6. Run `hc cases build <slug> --lang python` to compute `expected` with the
@@ -249,11 +317,14 @@ function of the problem's `generator.py`, and the case only names the call:
    added cases, run `hc cases build <slug> --lang python` again (with
    `any_of`, write their `expected` yourself). Then run
    `hc validate <slug> --run` once more with the real reference restored.
-9. In a pack checkout (the workspace has `pack.yaml`), run `hc pack check`
+9. If the problem tests complexity, check that a slower solution exceeds
+   the [time limit](#time-limits), and strengthen the large cases if it
+   does not.
+10. In a pack checkout (the workspace has `pack.yaml`), run `hc pack check`
    once you are done with every problem you were asked for: it checks the
    whole pack as its CI does, and must pass. The `hc-pack` skill says how
    a problem lands in the pack (groups, commits).
-10. Write the [summary](#summary).
+11. Write the [summary](#summary).
 
 ## Workflow: fix a test case
 
@@ -269,6 +340,11 @@ lines that hold a case) and the user's complaint.
      are valid), or `judge.compare` is unset: decide it as in
      [Decide the judge rule](#decide-the-judge-rule);
    - `checker.py` rejects a valid answer or accepts a wrong one;
+   - a solution of the complexity the problem accepts is Time Limit
+     Exceeded: the reference is hyper-optimized, or a case favors it; a
+     slower one passes where the constraints allow a gap: the large cases
+     miss its worst shape, or the reference in its language has a slow
+     constant ([Time limits](#time-limits));
    - the definition is wrong (signature, structure inputs): fix it with
      `hc-problem`;
    - nothing: the case is right and the user's solution is wrong. Then say
@@ -291,7 +367,9 @@ Report:
 - the judge rule, with the sentence of the statement it rests on;
 - for a checker, what it verifies, and for a randomized problem its
   false-reject probability per case;
-- what the second reference does differently, if there is one;
+- what the Go reference does differently, when more than one output is acceptable;
+- whether the problem tests complexity, and if so the slower solution you
+  timed and its result, or why the constraints cannot separate it;
 - anything the statement requires that hc does not judge.
 
 ## Useful commands
@@ -304,5 +382,7 @@ Report:
 - `hc pack check`: in a pack checkout, check the whole pack as its CI does
   (every problem valid, ready and passing `--run`); run it when you have
   finished the problems you were asked for
+- `hc test <slug> --all --file <path>`: run a solution file, such as a
+  slower one in `.hc/scratch/<slug>/`, against the time limit
 - `hc test <slug> --lang python`: run the user's solution (only when diagnosing)
 - `hc docs protocol <section>`: one section of the spec
