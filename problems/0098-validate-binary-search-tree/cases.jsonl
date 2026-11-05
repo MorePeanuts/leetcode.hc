@@ -1,0 +1,40 @@
+{"input":{"root":[2,1,3]},"expected":true,"example":true}
+{"input":{"root":[5,1,4,null,null,3,6]},"expected":false,"example":true}
+{"input":{"root":[0]},"expected":true,"note":"a single node"}
+{"input":{"root":[-2147483648]},"expected":true,"note":"a single node, the minimum value: a sentinel of -2^31 for 'no previous value' rejects it"}
+{"input":{"root":[2147483647]},"expected":true,"note":"a single node, the maximum value"}
+{"input":{"root":[-2147483648,null,2147483647]},"expected":true,"note":"the extremes as root and right child"}
+{"input":{"root":[2147483647,-2147483648]},"expected":true,"note":"the extremes as root and left child"}
+{"input":{"root":[2147483647,2147483647]},"expected":false,"note":"a duplicate of the maximum as left child"}
+{"input":{"root":[-2147483648,null,-2147483648]},"expected":false,"note":"a duplicate of the minimum as right child"}
+{"input":{"root":[1,1]},"expected":false,"note":"equal left child: values must be strictly less"}
+{"input":{"root":[1,null,1]},"expected":false,"note":"equal right child: values must be strictly greater"}
+{"input":{"root":[2,2,2]},"expected":false,"note":"all values equal"}
+{"input":{"root":[5,4,6,null,null,3,7]},"expected":false,"note":"a grandchild smaller than the root in its right subtree"}
+{"input":{"root":[10,5,15,null,null,6,20]},"expected":false,"note":"6 under 15 is right of the root but smaller than it"}
+{"input":{"root":[3,1,5,0,2,4,6]},"expected":true,"note":"a perfect BST of seven nodes"}
+{"input":{"root":[32,26,47,19,null,null,56,null,27]},"expected":false,"note":"27 under 19 is in the left subtree of 26 but larger than it"}
+{"input":{"root":[1,null,2,null,3,null,4]},"expected":true,"note":"an ascending right chain"}
+{"input":{"root":[4,3,null,2,null,1]},"expected":true,"note":"a descending left chain"}
+{"input":{"root":[0,-1]},"expected":true,"note":"a negative left child"}
+{"input":{"root":[0,null,-1]},"expected":false,"note":"a smaller right child"}
+{"input":{"root":[5,3,8,1,4,7,9,0,2,null,null,6]},"expected":true,"note":"a valid BST of eleven nodes"}
+{"input":{"root":[5,3,8,1,4,7,9,0,2,null,6]},"expected":false,"note":"6, right child of 4, is in the left subtree of 5 but larger than it"}
+{"input":{"root":[120,70,140,50,100,130,160,20,55,75,110,119,135,150,200]},"expected":false,"note":"119, left child of 130, is right of the root but smaller than it"}
+{"input":{"root":[3,null,30,10,null,null,15,null,45]},"expected":false,"note":"45 deep in the left subtree of 30 is larger than it"}
+{"input":{"root":[2147483646,2147483645,2147483647]},"expected":true,"note":"values next to the maximum"}
+{"input":{"root":[-2147483647,-2147483648,-2147483646]},"expected":true,"note":"values next to the minimum"}
+{"input":{"root":[0,-2147483648,2147483647]},"expected":true,"note":"zero with the extremes as children"}
+{"input":{"root":[10,5,15,3,7,13,18,1,null,6]},"expected":true,"note":"a valid BST with a deep left child"}
+{"input":{"root":[10,5,15,3,7,13,18,1,null,10]},"expected":false,"note":"10 in the left subtree equals the root"}
+{"input":{"root":[3,1,5,null,2,4,null]},"expected":true,"note":"a valid BST with inner grandchildren"}
+{"input":{"root":[1,null,3,2,null,null,4]},"expected":false,"note":"a right chain with a valid left turn"}
+{"input":{"root":[1,null,3,0]},"expected":false,"note":"0 left of 3 is right of the root but smaller than it"}
+{"generate":{"name":"right_chain","args":{"broken":false,"n":10000}},"digest":"sha256:dfaa3dc7d1c0ceabb947274f5274c09ebca48da694364f07270ed0807d340845","note":"10^4 nodes ascending down a right-skewed path, ending at 2^31 - 1: valid, and the worst case of checking each node against its whole subtree"}
+{"generate":{"name":"right_chain","args":{"broken":true,"n":10000}},"digest":"sha256:fe2dd939a9684cde464043c28e5f3c91847b6a7350832ca7b2335da8be28a8b7","note":"10^4 nodes down a right-skewed path, the deepest smaller than the root but not its parent: invalid at the very bottom"}
+{"generate":{"name":"left_chain","args":{"n":10000}},"digest":"sha256:01f1c7c6c69c9bbb7fcdf3e1a284af3fe6cf1b8d14b796e55431332a8b2d22bd","note":"10^4 nodes descending down a left-skewed path from 2^31 - 1 to -2^31: valid"}
+{"generate":{"name":"zigzag","args":{"n":10000}},"digest":"sha256:2a209bfdbe8787c26bae70841b15aa8cc82f9a62f80cf002108653d61f652634","note":"a 10^4-node path that turns at every node, each bounded by two ancestors: valid"}
+{"generate":{"name":"complete","args":{"dup":false,"gap":400000,"n":10000}},"digest":"sha256:7364246386852e3c598d653d3be30ba1c1f0e1c275e735b08c9e5f7260943f9c","note":"a complete tree of 10^4 nodes from -2^31 on: valid"}
+{"generate":{"name":"complete","args":{"dup":true,"gap":400000,"n":10000}},"digest":"sha256:2d024d85ed1425ae12b05be36af876c6833257fbd21126b26674435483d124a4","note":"a complete tree of 10^4 nodes whose largest value repeats the one before it: invalid"}
+{"generate":{"name":"random_bst","args":{"n":10000,"swap":false},"seed":1},"digest":"sha256:fdc8c85007bcc8342db1b68e42d8d5f86569292cef8ea6b04fe17a22cfc9cfe9","note":"a random BST of 10^4 distinct values over the whole range"}
+{"generate":{"name":"random_bst","args":{"n":10000,"swap":true},"seed":2},"digest":"sha256:a2b4393eb1f95f7f5f7bceb54047f825adedbd6bc4c481cff59aec2b4f535920","note":"a random BST of 10^4 values with two nodes swapped: invalid"}

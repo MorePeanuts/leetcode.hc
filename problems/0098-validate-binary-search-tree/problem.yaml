@@ -1,0 +1,23 @@
+id: "98"
+slug: validate-binary-search-tree
+title: Validate Binary Search Tree
+titles:
+  zh-CN: 验证二叉搜索树
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - binary-search-tree
+  - binary-tree
+kind: function
+function:
+  name: isValidBST
+  params:
+    - name: root
+      type: TreeNode
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/validate-binary-search-tree/
+judge:
+  compare: exact
