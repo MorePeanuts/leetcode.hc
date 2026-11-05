@@ -1,0 +1,22 @@
+id: "11"
+slug: container-with-most-water
+title: Container With Most Water
+titles:
+  zh-CN: 盛最多水的容器
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - two-pointers
+kind: function
+function:
+  name: maxArea
+  params:
+    - name: height
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/container-with-most-water/
+judge:
+  compare: exact
