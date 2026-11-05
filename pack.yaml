@@ -28,6 +28,8 @@ groups:
       - container-with-most-water
   - name: sliding-window
     title: Sliding Window
+    problems:
+      - longest-substring-without-repeating-characters
   - name: stack
     title: Stack
   - name: binary-search
