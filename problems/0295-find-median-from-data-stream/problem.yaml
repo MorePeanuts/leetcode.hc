@@ -1,0 +1,31 @@
+id: "295"
+slug: find-median-from-data-stream
+title: Find Median from Data Stream
+titles:
+  zh-CN: 数据流的中位数
+difficulty: hard
+tags:
+  - design
+  - two-pointers
+  - data-stream
+  - sorting
+  - heap-priority-queue
+kind: class
+class:
+  name: MedianFinder
+  constructor: []
+  methods:
+    - name: addNum
+      params:
+        - name: num
+          type: integer
+      returns: void
+    - name: findMedian
+      params: []
+      returns: double
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-median-from-data-stream/
+judge:
+  compare: exact
+  tolerance: 0.00001

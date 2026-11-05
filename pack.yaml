@@ -52,6 +52,8 @@ groups:
       - binary-tree-maximum-path-sum
   - name: heap-priority-queue
     title: Heap / Priority Queue
+    problems:
+      - find-median-from-data-stream
   - name: backtracking
     title: Backtracking
   - name: tries
