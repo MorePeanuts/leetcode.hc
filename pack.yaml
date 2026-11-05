@@ -23,6 +23,8 @@ groups:
       - longest-consecutive-sequence
   - name: two-pointers
     title: Two Pointers
+    problems:
+      - 3sum
   - name: sliding-window
     title: Sliding Window
   - name: stack
