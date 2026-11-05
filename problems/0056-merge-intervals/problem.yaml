@@ -1,0 +1,22 @@
+id: "56"
+slug: merge-intervals
+title: Merge Intervals
+titles:
+  zh-CN: 合并区间
+difficulty: medium
+tags:
+  - array
+  - sorting
+  - quicksort
+kind: function
+function:
+  name: merge
+  params:
+    - name: intervals
+      type: integer[][]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/merge-intervals/
+judge:
+  compare: unordered
