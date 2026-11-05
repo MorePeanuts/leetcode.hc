@@ -73,6 +73,8 @@ groups:
       - longest-increasing-subsequence
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
+    problems:
+      - longest-common-subsequence
   - name: greedy
     title: Greedy
   - name: intervals
