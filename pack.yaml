@@ -80,6 +80,8 @@ groups:
     title: Greedy
   - name: intervals
     title: Intervals
+    problems:
+      - merge-intervals
   - name: bit-manipulation
     title: Bit Manipulation
   - name: math-geometry

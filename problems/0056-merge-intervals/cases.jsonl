@@ -1,0 +1,38 @@
+{"input":{"intervals":[[1,3],[2,6],[8,10],[15,18]]},"expected":[[1,6],[8,10],[15,18]],"example":true}
+{"input":{"intervals":[[1,4],[4,5]]},"expected":[[1,5]],"example":true}
+{"input":{"intervals":[[4,7],[1,4]]},"expected":[[1,7]],"example":true}
+{"input":{"intervals":[[1,4]]},"expected":[[1,4]],"note":"a single interval"}
+{"input":{"intervals":[[0,0]]},"expected":[[0,0]],"note":"a single point at zero"}
+{"input":{"intervals":[[1,2],[3,4]]},"expected":[[1,2],[3,4]],"note":"two disjoint intervals: adjacent integers do not overlap"}
+{"input":{"intervals":[[3,4],[1,2]]},"expected":[[1,2],[3,4]],"note":"two disjoint intervals, unsorted"}
+{"input":{"intervals":[[1,10],[2,3]]},"expected":[[1,10]],"note":"the second inside the first: keeping the later end shrinks it"}
+{"input":{"intervals":[[2,3],[1,10]]},"expected":[[1,10]],"note":"a contained interval first"}
+{"input":{"intervals":[[1,4],[0,4]]},"expected":[[0,4]],"note":"same end, different starts"}
+{"input":{"intervals":[[1,4],[1,5]]},"expected":[[1,5]],"note":"same start, different ends"}
+{"input":{"intervals":[[1,4],[0,0]]},"expected":[[0,0],[1,4]],"note":"a point before an interval"}
+{"input":{"intervals":[[1,4],[0,1]]},"expected":[[0,4]],"note":"touching at the start"}
+{"input":{"intervals":[[1,4],[2,3],[5,5]]},"expected":[[1,4],[5,5]],"note":"a contained interval then a disjoint point"}
+{"input":{"intervals":[[5,5],[5,5],[5,5]]},"expected":[[5,5]],"note":"the same point three times"}
+{"input":{"intervals":[[2,2],[2,5]]},"expected":[[2,5]],"note":"a point at the start of an interval"}
+{"input":{"intervals":[[2,5],[5,5]]},"expected":[[2,5]],"note":"a point at the end of an interval"}
+{"input":{"intervals":[[0,10000]]},"expected":[[0,10000]],"note":"the full range"}
+{"input":{"intervals":[[0,0],[10000,10000]]},"expected":[[0,0],[10000,10000]],"note":"the extremes as points"}
+{"input":{"intervals":[[1,3],[2,4],[3,5],[4,6]]},"expected":[[1,6]],"note":"a chain of overlaps"}
+{"input":{"intervals":[[1,4],[5,6],[4,5]]},"expected":[[1,6]],"note":"the bridge comes last"}
+{"input":{"intervals":[[1,2],[3,4],[5,6],[0,7]]},"expected":[[0,7]],"note":"one interval covers all the others, listed last"}
+{"input":{"intervals":[[6,8],[1,9],[2,4],[4,7]]},"expected":[[1,9]],"note":"everything inside the second"}
+{"input":{"intervals":[[2,3],[4,5],[6,7],[8,9],[1,10]]},"expected":[[1,10]],"note":"a cover after many disjoint ones"}
+{"input":{"intervals":[[1,4],[2,3],[3,3]]},"expected":[[1,4]],"note":"merging must keep the larger end, not the last end"}
+{"input":{"intervals":[[0,2],[3,5],[6,8],[1,7]]},"expected":[[0,8]],"note":"a bridge across three intervals"}
+{"input":{"intervals":[[10,12],[1,3],[5,7],[2,6]]},"expected":[[1,7],[10,12]],"note":"unsorted, two groups"}
+{"input":{"intervals":[[4,5],[1,4],[0,1]]},"expected":[[0,5]],"note":"touching endpoints in reverse order"}
+{"input":{"intervals":[[1,1],[2,2],[3,3],[4,4]]},"expected":[[1,1],[2,2],[3,3],[4,4]],"note":"consecutive points do not merge"}
+{"input":{"intervals":[[1,5],[2,3],[4,6],[7,8],[8,9],[10,10]]},"expected":[[1,6],[7,9],[10,10]],"note":"mixed containment, touching and isolated"}
+{"input":{"intervals":[[3,5],[0,0],[4,6],[1,2],[0,1]]},"expected":[[0,2],[3,6]],"note":"two groups, each built from unsorted pieces"}
+{"generate":{"name":"random_intervals","args":{"max_len":3,"n":10000},"seed":1},"digest":"sha256:01a97ddbe06d03c58a08715a7a16b3609cd2fa2c9bc6175e7a0146107d4ba341","note":"maximum length, short random intervals: many groups"}
+{"generate":{"name":"random_intervals","args":{"max_len":10000,"n":10000},"seed":2},"digest":"sha256:a6687602eae1f25d2078f36162bb6ddfe85f1bc0e2f98c75a750bcbaa209b8ac","note":"maximum length, long random intervals: few groups"}
+{"generate":{"name":"disjoint_points","args":{"n":10000},"seed":3},"digest":"sha256:c4dd8f1a49c2c6c9abba0a58687e07fed7f0a044895a3e41eed26f58c444a00f","note":"maximum length, distinct points: nothing merges, the worst case of merging into a growing list"}
+{"generate":{"name":"chain","args":{"n":10000},"seed":4},"digest":"sha256:2ba597b2adc1f011f2c8b3a323cbe3db9fcdf8168970aa014226df9857893183","note":"maximum length, a shuffled chain of touching intervals: one interval"}
+{"generate":{"name":"nested","args":{"n":10000},"seed":5},"digest":"sha256:386b06f13cf3baa664a54ada7d2ab3ae40509488512e22a7a70089524d033b68","note":"maximum length, nested intervals shuffled"}
+{"generate":{"name":"all_equal","args":{"end":10000,"n":10000,"start":0}},"digest":"sha256:ddf5f114363b8402b21a3647deb5fc36c6ae654830741055475fa5af2cd92a0f","note":"maximum length, the full range 10^4 times"}
+{"generate":{"name":"gaps","args":{"n":10000},"seed":6},"digest":"sha256:d12fc04fe75704714be551010c817f5f53e4609fe9b56b4079bc61b0a79415f9","note":"maximum length, pairs merging into intervals separated by gaps of one"}
