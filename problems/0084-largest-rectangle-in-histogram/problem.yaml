@@ -1,0 +1,23 @@
+id: "84"
+slug: largest-rectangle-in-histogram
+title: Largest Rectangle in Histogram
+titles:
+  zh-CN: 柱状图中最大的矩形
+difficulty: hard
+tags:
+  - stack
+  - array
+  - monotonic-stack
+  - range-minimum-maximum-query
+kind: function
+function:
+  name: largestRectangleArea
+  params:
+    - name: heights
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/largest-rectangle-in-histogram/
+judge:
+  compare: exact
