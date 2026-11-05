@@ -1,14 +1,12 @@
 package main
 
-import "sort"
-
 func containsDuplicate(nums []int) bool {
-	s := append([]int(nil), nums...)
-	sort.Ints(s)
-	for i := 1; i < len(s); i++ {
-		if s[i] == s[i-1] {
+	seen := make(map[int]bool, len(nums))
+	for _, x := range nums {
+		if seen[x] {
 			return true
 		}
+		seen[x] = true
 	}
 	return false
 }
