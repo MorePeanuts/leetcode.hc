@@ -1,0 +1,40 @@
+{"input":{"word1":"horse","word2":"ros"},"expected":3,"example":true}
+{"input":{"word1":"intention","word2":"execution"},"expected":5,"example":true}
+{"input":{"word1":"","word2":""},"expected":0,"note":"both empty"}
+{"input":{"word1":"","word2":"abc"},"expected":3,"note":"word1 empty: insert everything"}
+{"input":{"word1":"abc","word2":""},"expected":3,"note":"word2 empty: delete everything"}
+{"input":{"word1":"a","word2":"a"},"expected":0,"note":"one equal character"}
+{"input":{"word1":"a","word2":"b"},"expected":1,"note":"one substitution"}
+{"input":{"word1":"abc","word2":"abc"},"expected":0,"note":"identical: distance 0"}
+{"input":{"word1":"ab","word2":"ba"},"expected":2,"note":"a swap costs 2, there is no transposition"}
+{"input":{"word1":"abc","word2":"abcd"},"expected":1,"note":"one insertion at the end"}
+{"input":{"word1":"abc","word2":"zabc"},"expected":1,"note":"one insertion at the start"}
+{"input":{"word1":"abcd","word2":"abd"},"expected":1,"note":"one deletion in the middle"}
+{"input":{"word1":"kitten","word2":"sitting"},"expected":3,"note":"classic: two substitutions and an insertion"}
+{"input":{"word1":"sunday","word2":"saturday"},"expected":3,"note":"classic: distance 3"}
+{"input":{"word1":"abc","word2":"def"},"expected":3,"note":"no common character: all substitutions"}
+{"input":{"word1":"a","word2":"aaaaa"},"expected":4,"note":"one character against many copies"}
+{"input":{"word1":"aaaaa","word2":"a"},"expected":4,"note":"many copies against one"}
+{"input":{"word1":"abcdef","word2":"azced"},"expected":3,"note":"mixed operations"}
+{"input":{"word1":"plasma","word2":"altruism"},"expected":6,"note":"lengths differ, scattered matches"}
+{"input":{"word1":"zoologicoarchaeologist","word2":"zoogeologist"},"expected":10,"note":"a long deletion inside"}
+{"input":{"word1":"abcdxabcde","word2":"abcdeabcdx"},"expected":2,"note":"shifted blocks"}
+{"input":{"word1":"pneumonoultramicroscopicsilicovolcanoconiosis","word2":"ultramicroscopically"},"expected":27,"note":"the longer word contains most of the shorter one"}
+{"input":{"word1":"dinitrophenylhydrazine","word2":"acetylphenylhydrazine"},"expected":6,"note":"a common suffix"}
+{"input":{"word1":"ab","word2":"bc"},"expected":2,"note":"shifted by one: delete the a and append the c"}
+{"input":{"word1":"mart","word2":"karma"},"expected":3,"note":"distance 3"}
+{"input":{"word1":"aab","word2":"abb"},"expected":1,"note":"duplicates: one substitution"}
+{"input":{"word1":"x","word2":""},"expected":1,"note":"a single deletion"}
+{"input":{"word1":"","word2":"y"},"expected":1,"note":"a single insertion"}
+{"input":{"word1":"teacher","word2":"cheater"},"expected":4,"note":"anagrams"}
+{"input":{"word1":"abcdefghijklmnopqrstuvwxyz","word2":"zyxwvutsrqponmlkjihgfedcba"},"expected":26,"note":"the alphabet against its reverse"}
+{"input":{"word1":"aaaaaaaaaa","word2":"bbbbbbbbbb"},"expected":10,"note":"equal lengths, nothing in common: 10 substitutions"}
+{"input":{"word1":"intention","word2":""},"expected":9,"note":"a word against the empty string"}
+{"generate":{"name":"random_pair","args":{"alphabet":"abcdefghijklmnopqrstuvwxyz","m":500,"n":500},"seed":1},"digest":"sha256:0ad32ce83fea63d75c8e0170397467f19578a58505a0e623464bf0f309a8f99f","note":"maximum lengths, random over 26 letters"}
+{"generate":{"name":"random_pair","args":{"alphabet":"ab","m":500,"n":500},"seed":2},"digest":"sha256:0419318e84af2499c5a5ee4fb37259c40753a2843c8d266924c962ba6402f453","note":"maximum lengths, random over two letters"}
+{"generate":{"name":"disjoint","args":{"m":500,"n":500},"seed":3},"digest":"sha256:f47e78c511c0f2750a255ce0a3f533defe42b432a617ac217146001d1029676a","note":"maximum lengths, no common character: the worst case of a recursion without memoization"}
+{"generate":{"name":"few_edits","args":{"edits":10,"n":500},"seed":4},"digest":"sha256:52dfb070ff455ddac3ede8d33f5f0db487b23a701db511623e28e9451d3b5c87","note":"maximum length, word2 ten random edits away"}
+{"generate":{"name":"reversed_pair","args":{"alphabet":"abc","n":500},"seed":5},"digest":"sha256:222aa99c22a442d7c1f5f3bcbb88f4dbe8cb26822c9c7d30045071d1a8aa5a8c","note":"maximum lengths, a word against its reverse"}
+{"generate":{"name":"identical","args":{"n":500},"seed":6},"digest":"sha256:479124d2771d00770b551cda65b12400a76bdb4835d34945c69d379347be523c","note":"maximum lengths, identical: distance 0"}
+{"generate":{"name":"one_empty","args":{"n":500},"seed":7},"digest":"sha256:0915c8231d1374d71bcb66c46d1ff2c0ae650b56eb517ba199a2487437050d9c","note":"500 characters against the empty string"}
+{"generate":{"name":"random_pair","args":{"alphabet":"abcdefghijklmnopqrstuvwxyz","m":500,"n":37},"seed":8},"digest":"sha256:940a3cd688e4a68ab983c4ce0e3be766fb775186784d5cce535c44a11c09267d","note":"maximum length against a short word"}

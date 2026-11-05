@@ -1,0 +1,23 @@
+id: "72"
+slug: edit-distance
+title: Edit Distance
+titles:
+  zh-CN: 编辑距离
+difficulty: medium
+tags:
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: minDistance
+  params:
+    - name: word1
+      type: string
+    - name: word2
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/edit-distance/
+judge:
+  compare: exact

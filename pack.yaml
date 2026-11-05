@@ -75,6 +75,7 @@ groups:
     title: 2-D Dynamic Programming
     problems:
       - longest-common-subsequence
+      - edit-distance
   - name: greedy
     title: Greedy
   - name: intervals
