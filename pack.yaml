@@ -21,6 +21,7 @@ groups:
       - product-of-array-except-self
       - valid-sudoku
       - longest-consecutive-sequence
+      - subarray-sum-equals-k
   - name: two-pointers
     title: Two Pointers
     problems:

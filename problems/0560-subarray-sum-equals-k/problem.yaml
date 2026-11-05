@@ -1,0 +1,24 @@
+id: "560"
+slug: subarray-sum-equals-k
+title: Subarray Sum Equals K
+titles:
+  zh-CN: 和为 K 的子数组
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - prefix-sum
+kind: function
+function:
+  name: subarraySum
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/subarray-sum-equals-k/
+judge:
+  compare: exact
