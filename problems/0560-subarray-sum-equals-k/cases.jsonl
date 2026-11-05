@@ -1,0 +1,37 @@
+{"input":{"k":2,"nums":[1,1,1]},"expected":2,"example":true}
+{"input":{"k":3,"nums":[1,2,3]},"expected":2,"example":true}
+{"input":{"k":1,"nums":[1]},"expected":1,"note":"a single element equal to k"}
+{"input":{"k":0,"nums":[1]},"expected":0,"note":"a single element, k = 0: the empty subarray does not count"}
+{"input":{"k":0,"nums":[0]},"expected":1,"note":"a single zero, k = 0"}
+{"input":{"k":0,"nums":[0,0,0]},"expected":6,"note":"all zeros: every subarray, 6"}
+{"input":{"k":0,"nums":[1,-1,0]},"expected":3,"note":"zero sums from a pair, a single zero and the whole"}
+{"input":{"k":0,"nums":[-1,-1,1]},"expected":1,"note":"negative values, k = 0"}
+{"input":{"k":7,"nums":[1,2,3]},"expected":0,"note":"k larger than any sum"}
+{"input":{"k":6,"nums":[1,2,3]},"expected":1,"note":"only the whole array"}
+{"input":{"k":7,"nums":[3,4,7,2,-3,1,4,2]},"expected":4,"note":"classic: 4 subarrays"}
+{"input":{"k":-3,"nums":[-1,-2,-3]},"expected":2,"note":"negative k"}
+{"input":{"k":0,"nums":[1,-1,1,-1]},"expected":4,"note":"alternating signs: overlapping zero sums"}
+{"input":{"k":1000,"nums":[1000,1000,-1000]},"expected":3,"note":"the extreme values"}
+{"input":{"k":-1000,"nums":[-1000]},"expected":1,"note":"a single minimum value"}
+{"input":{"k":5,"nums":[5,-5,5,-5,5]},"expected":6,"note":"many overlapping answers"}
+{"input":{"k":3,"nums":[1,1,1,1,1]},"expected":3,"note":"all ones: n - k + 1 answers"}
+{"input":{"k":3,"nums":[2,2,2]},"expected":0,"note":"no subarray: every sum is even"}
+{"input":{"k":3,"nums":[1,2,1,2,1]},"expected":4,"note":"four windows of two"}
+{"input":{"k":1,"nums":[0,0,1,0,0]},"expected":9,"note":"zeros around the answer extend it: 9 subarrays"}
+{"input":{"k":1,"nums":[1,-1,1]},"expected":3,"note":"the whole array, both singles and nothing else"}
+{"input":{"k":-10,"nums":[10,2,-2,-20,10]},"expected":3,"note":"negative k from mixed signs"}
+{"input":{"k":-1,"nums":[-1,1,-1,1]},"expected":3,"note":"alternating, k = -1"}
+{"input":{"k":0,"nums":[100,-100,100,-100,100,-100]},"expected":9,"note":"a long alternating run summing to zero"}
+{"input":{"k":4,"nums":[4,-4,4]},"expected":3,"note":"a sliding window gives the wrong count with negatives"}
+{"input":{"k":-7,"nums":[7]},"expected":0,"note":"k of the opposite sign"}
+{"input":{"k":0,"nums":[1,2,3,-3,-2,-1]},"expected":3,"note":"the zero sums are nested"}
+{"input":{"k":3,"nums":[3,0,0,3]},"expected":6,"note":"zeros next to each answer"}
+{"input":{"k":9,"nums":[1,2,3,4,5]},"expected":2,"note":"two windows: 2+3+4 and 4+5"}
+{"input":{"k":0,"nums":[-5,10,-5]},"expected":1,"note":"the whole array and nothing else sums to 0"}
+{"generate":{"name":"random_values","args":{"hi":1,"k":1,"lo":-1,"n":20000},"seed":1},"digest":"sha256:7ff585204a299d3c5e3221e6079124c8ded64280e332a2903842a1c0ed2f54dd","note":"maximum length, values in [-1, 1], k = 1: few distinct prefix sums, each seen many times"}
+{"generate":{"name":"random_values","args":{"hi":3,"k":2,"lo":-3,"n":20000},"seed":2},"digest":"sha256:28410374e42afec6e5b988c96dd0cf885a084c347644681b060b52430710e3e6","note":"maximum length, small values: many repeated prefix sums"}
+{"generate":{"name":"all_equal","args":{"k":0,"n":20000,"value":0}},"digest":"sha256:dbf9826af95c58707a84455bf03e9c99c32304a1bd655fb9dfbde9472759b9c7","note":"maximum length, all zeros, k = 0: 2 * 10^8 subarrays"}
+{"generate":{"name":"all_equal","args":{"k":-10000000,"n":20000,"value":-1000}},"digest":"sha256:c47f2f13e3dc4e7a2736c6931cc1877d9f3c8c2ff5cf18b33aa6a23f1b122cbd","note":"maximum length, all -1000, k = -10^7"}
+{"generate":{"name":"alternating","args":{"k":0,"n":20000}},"digest":"sha256:93dafb81a81ca9c48855ca514f638b5c3112fe07c393eaa6bb073ed5ec429ed4","note":"maximum length, 1 and -1 alternating, k = 0"}
+{"generate":{"name":"planted_max","args":{"n":20000},"seed":3},"digest":"sha256:64736f5fced500d59e1a8ce51b606091356637cfac96e54597bde0694e4dc2ae","note":"maximum length, k = 10^7 reached by one run of 10^4 copies of 1000"}
+{"generate":{"name":"random_values","args":{"hi":10,"k":-5,"lo":-10,"n":20000},"seed":4},"digest":"sha256:0d5c109bc7688b38f2c3faee692d7a01238411e113769837435160ffc24f5d41","note":"maximum length, values in [-10, 10], k = -5"}
