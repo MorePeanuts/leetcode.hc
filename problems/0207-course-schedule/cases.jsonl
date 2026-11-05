@@ -1,0 +1,39 @@
+{"input":{"numCourses":2,"prerequisites":[[1,0]]},"expected":true,"example":true}
+{"input":{"numCourses":2,"prerequisites":[[1,0],[0,1]]},"expected":false,"example":true}
+{"input":{"numCourses":1,"prerequisites":[]},"expected":true,"note":"one course, no prerequisites"}
+{"input":{"numCourses":5,"prerequisites":[]},"expected":true,"note":"no prerequisites at all"}
+{"input":{"numCourses":1,"prerequisites":[[0,0]]},"expected":false,"note":"a course that needs itself"}
+{"input":{"numCourses":3,"prerequisites":[[1,1],[2,1]]},"expected":false,"note":"a self-loop among valid pairs"}
+{"input":{"numCourses":2,"prerequisites":[[0,1]]},"expected":true,"note":"one pair, the other direction from the example"}
+{"input":{"numCourses":3,"prerequisites":[[0,1],[1,2],[2,0]]},"expected":false,"note":"a cycle of three"}
+{"input":{"numCourses":3,"prerequisites":[[0,1],[1,2]]},"expected":true,"note":"a chain of three"}
+{"input":{"numCourses":4,"prerequisites":[[1,0],[2,0],[3,1],[3,2]]},"expected":true,"note":"a diamond: two paths to the same course"}
+{"input":{"numCourses":4,"prerequisites":[[1,0],[2,1],[3,2],[1,3]]},"expected":false,"note":"a cycle that does not include course 0"}
+{"input":{"numCourses":5,"prerequisites":[[1,0],[2,1],[4,3],[3,4]]},"expected":false,"note":"a cycle in a second component"}
+{"input":{"numCourses":6,"prerequisites":[[1,0],[2,1],[3,2],[4,3],[5,4]]},"expected":true,"note":"a chain through every course"}
+{"input":{"numCourses":6,"prerequisites":[[1,0],[2,1],[3,2],[4,3],[5,4],[0,5]]},"expected":false,"note":"a cycle through every course"}
+{"input":{"numCourses":3,"prerequisites":[[0,1],[0,2],[1,2]]},"expected":true,"note":"a course needing two, one of which needs the other"}
+{"input":{"numCourses":4,"prerequisites":[[0,1],[2,3],[1,2],[3,1]]},"expected":false,"note":"a cycle reached through a prerequisite"}
+{"input":{"numCourses":2000,"prerequisites":[[1999,0]]},"expected":true,"note":"the maximum number of courses, one pair at the ends"}
+{"input":{"numCourses":2000,"prerequisites":[[0,1999],[1999,0]]},"expected":false,"note":"a cycle between the first and the last course"}
+{"input":{"numCourses":7,"prerequisites":[[1,0],[2,0],[3,1],[4,1],[5,2],[6,2]]},"expected":true,"note":"a tree of prerequisites"}
+{"input":{"numCourses":7,"prerequisites":[[1,0],[2,0],[3,1],[4,1],[5,2],[6,2],[0,6]]},"expected":false,"note":"a tree with one pair back to the root: a cycle"}
+{"input":{"numCourses":5,"prerequisites":[[0,1],[1,2],[0,2],[2,3],[3,4],[1,4]]},"expected":true,"note":"many paths, no cycle"}
+{"input":{"numCourses":5,"prerequisites":[[0,1],[1,2],[0,2],[2,3],[3,4],[4,1]]},"expected":false,"note":"many paths and a cycle at the end"}
+{"input":{"numCourses":4,"prerequisites":[[0,1],[1,0],[2,3]]},"expected":false,"note":"a two-course cycle and a separate valid pair"}
+{"input":{"numCourses":3,"prerequisites":[[2,0],[2,1]]},"expected":true,"note":"one course needing two others"}
+{"input":{"numCourses":3,"prerequisites":[[0,2],[1,2]]},"expected":true,"note":"two courses needing the same one"}
+{"input":{"numCourses":8,"prerequisites":[[1,0],[2,1],[3,2],[5,4],[6,5],[7,6],[4,3]]},"expected":true,"note":"two chains joined end to end"}
+{"input":{"numCourses":6,"prerequisites":[[0,1],[1,2],[2,3],[3,1],[4,5]]},"expected":false,"note":"a cycle in the middle of a chain"}
+{"input":{"numCourses":10,"prerequisites":[[1,0],[1,8],[2,8],[4,2],[4,3],[4,8],[5,0],[5,8],[6,3],[6,5],[6,9],[7,0],[7,5],[9,4],[9,5]]},"expected":true,"note":"a random DAG of 10 courses and 15 pairs"}
+{"input":{"numCourses":30,"prerequisites":[[0,5],[0,9],[0,15],[0,16],[1,7],[1,9],[1,17],[2,10],[2,11],[2,15],[2,17],[2,18],[2,26],[3,4],[3,14],[3,16],[3,18],[4,16],[5,15],[6,10],[6,27],[8,5],[8,13],[8,23],[10,18],[11,17],[12,11],[12,17],[12,23],[12,24],[13,7],[13,11],[13,21],[13,24],[13,25],[13,28],[14,4],[14,5],[14,16],[14,23],[15,26],[15,28],[17,16],[18,26],[19,1],[19,4],[19,6],[19,15],[19,20],[20,6],[20,21],[21,7],[21,16],[21,18],[21,24],[29,2],[29,13],[29,16],[29,25],[29,28]]},"expected":true,"note":"a random DAG of 30 courses and 60 pairs"}
+{"generate":{"name":"chain","args":{"cycle":false,"n":2000}},"digest":"sha256:93748c817c8abe48b18a0b9b33c0fdb99be668b1a9fab8641675025eb25ef292","note":"2000 courses in one chain: a search 2000 deep"}
+{"generate":{"name":"chain","args":{"cycle":true,"n":2000}},"digest":"sha256:0dd0e7748abe9dcf0326254df4da042df7ac2f7d23263fcc970c89aab91a7af9","note":"2000 courses in one cycle"}
+{"generate":{"name":"random_dag","args":{"back":false,"e":5000,"n":2000},"seed":1},"digest":"sha256:ad440f92a2a9d03ed9f80ac9de154d3bcfb22df3448782a8fcebbc489734c5d2","note":"a random DAG of 2000 courses and 5000 pairs, with a path through every course"}
+{"generate":{"name":"random_dag","args":{"back":true,"e":5000,"n":2000},"seed":2},"digest":"sha256:c209633ec143f3095e457cf9cdbaa1d324995044fd17f1a8ee0605fd9599cdf0","note":"a random DAG of 2000 courses and 4999 pairs plus one closing a cycle through every course"}
+{"generate":{"name":"layers","args":{"layers":1000,"width":2}},"digest":"sha256:fe11dd0f92eed832d976f7c129f435224f96647ea74b456f5273e8c61fe4cca6","note":"1000 layers of 2 courses, each needing both of the next: 2^999 paths, the worst case of a search that does not remember finished courses"}
+{"generate":{"name":"layers","args":{"layers":200,"width":5}},"digest":"sha256:0cc9b3c53c3ec04c3f4f5c61ed32c2e3d1c9b532b8adddded97b21f1f81e25f1","note":"200 layers of 5 courses, 4975 pairs: 5^199 paths"}
+{"generate":{"name":"layers_cycle","args":{"layers":1000,"width":2}},"digest":"sha256:7b7a987d3dab2ba80c6b8b717496ebd49cf2f387a27fd5ba00d3b671c07c4cef","note":"the 1000 layers with one pair from the last course to the first: a cycle at the far end"}
+{"generate":{"name":"star","args":{"inward":true,"n":2000}},"digest":"sha256:52e1ff029fa2d051b6f6b24f81d0f5fa7392db23aca551cc42dcc1232c6223b9","note":"1999 courses all needing course 0"}
+{"generate":{"name":"star","args":{"inward":false,"n":2000}},"digest":"sha256:287e369fe7ab787c6f8356dbb91689513d1a0a748e4bca134107deaefc098c04","note":"course 0 needing all 1999 others"}
+{"generate":{"name":"no_prerequisites","args":{"n":2000}},"digest":"sha256:fc91072d47c43ab394198455371dc6b04139fbb4d6acb05cffcb10f655a0b805","note":"2000 courses, no pairs"}
