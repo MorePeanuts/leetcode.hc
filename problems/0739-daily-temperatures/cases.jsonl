@@ -1,0 +1,39 @@
+{"input":{"temperatures":[73,74,75,71,69,72,76,73]},"expected":[1,1,4,2,1,1,0,0],"example":true}
+{"input":{"temperatures":[30,40,50,60]},"expected":[1,1,1,0],"example":true}
+{"input":{"temperatures":[30,60,90]},"expected":[1,1,0],"example":true}
+{"input":{"temperatures":[50]},"expected":[0],"note":"a single day"}
+{"input":{"temperatures":[30,30]},"expected":[0,0],"note":"two equal days"}
+{"input":{"temperatures":[30,31]},"expected":[1,0],"note":"two days, warmer second"}
+{"input":{"temperatures":[31,30]},"expected":[0,0],"note":"two days, colder second"}
+{"input":{"temperatures":[100,100,100]},"expected":[0,0,0],"note":"all at the maximum"}
+{"input":{"temperatures":[30,30,30,30]},"expected":[0,0,0,0],"note":"all at the minimum"}
+{"input":{"temperatures":[100,99,98,97]},"expected":[0,0,0,0],"note":"strictly decreasing: no warmer day"}
+{"input":{"temperatures":[30,31,32,33,34]},"expected":[1,1,1,1,0],"note":"strictly increasing"}
+{"input":{"temperatures":[50,50,51]},"expected":[2,1,0],"note":"equal days are not warmer: both wait for the last"}
+{"input":{"temperatures":[50,49,49,51]},"expected":[3,2,1,0],"note":"a plateau inside a descent"}
+{"input":{"temperatures":[70,60,50,80]},"expected":[3,2,1,0],"note":"a descent ended by one warm day"}
+{"input":{"temperatures":[70,60,50,65,80]},"expected":[4,2,1,1,0],"note":"a partial recovery"}
+{"input":{"temperatures":[30,100,30,100,30]},"expected":[1,0,1,0,0],"note":"alternating"}
+{"input":{"temperatures":[100,30,30,30,30,30,99]},"expected":[0,5,4,3,2,1,0],"note":"a warmer day far ahead for most, never for the first"}
+{"input":{"temperatures":[60,40,50,45,55,70]},"expected":[5,1,2,1,1,0],"note":"nested waits"}
+{"input":{"temperatures":[90,80,70,60,50,40,95]},"expected":[6,5,4,3,2,1,0],"note":"every day waits for the last"}
+{"input":{"temperatures":[40,50,40,50,40]},"expected":[1,0,1,0,0],"note":"equal peaks: a peak is not warmer than an equal one"}
+{"input":{"temperatures":[80,34,80,80,80,34,34,34,34,80]},"expected":[0,1,0,0,0,4,3,2,1,0],"note":"the colder days wait, the 80s never do"}
+{"input":{"temperatures":[55,38,53,81,61,93,97,32,43,78]},"expected":[3,1,1,2,1,1,0,1,1,0],"note":"mixed"}
+{"input":{"temperatures":[45,45,46,45,46,47]},"expected":[2,1,3,1,1,0],"note":"equal temperatures around small rises"}
+{"input":{"temperatures":[30,60,30,60,90,30,90,100]},"expected":[1,3,1,1,3,1,1,0],"note":"several levels"}
+{"input":{"temperatures":[99,100,30,31,32]},"expected":[1,0,1,1,0],"note":"the warmest day early"}
+{"input":{"temperatures":[73,72,71,70,69,74]},"expected":[5,4,3,2,1,0],"note":"the last day ends a long wait"}
+{"input":{"temperatures":[35,36,35,34,33,37,32,38]},"expected":[1,4,3,2,1,2,1,0],"note":"nested descents, each ended by a new high"}
+{"input":{"temperatures":[100,99,100]},"expected":[0,1,0],"note":"the middle day waits one, the first never"}
+{"input":{"temperatures":[31,30,31,30,31,30,32]},"expected":[6,1,4,1,2,1,0],"note":"a zigzag ended by a new high"}
+{"input":{"temperatures":[50,40,45,40,45,40,55,50,60]},"expected":[6,1,4,1,2,1,2,1,0],"note":"repeated values while waiting"}
+{"input":{"temperatures":[65,70,62,49,70,64,74,46,79,88]},"expected":[1,5,2,1,2,1,2,1,1,0],"note":"mixed, with an equal value later"}
+{"input":{"temperatures":[100,30]},"expected":[0,0],"note":"the maximum then the minimum"}
+{"input":{"temperatures":[30,100]},"expected":[1,0],"note":"the minimum then the maximum"}
+{"generate":{"name":"random_temps","args":{"n":100000},"seed":1},"digest":"sha256:d61a11ce75a59488c7d92369eeb50d9eca71b9b7513203a6d1fa5efba7350682","note":"maximum length, random temperatures"}
+{"generate":{"name":"all_equal","args":{"n":100000,"value":100}},"digest":"sha256:8928264d216cb53ff63044bdc9f92e9e0ad918e5156dcb0bf1e7e5f39e232902","note":"maximum length, all 100: no day is warmer, scanning ahead reaches the end every time"}
+{"generate":{"name":"warm_at_end","args":{"n":100000}},"digest":"sha256:e0742128ed3e1eea376ca5f55f05f36bb9e4cf0b69207cb3082f7acfbc1b2c2d","note":"maximum length, every day waits for the last one"}
+{"generate":{"name":"sawtooth","args":{"n":100000}},"digest":"sha256:c7fea3cc46bb3ac069f9eb8a88b7fe7302f5f5c6a9e29be31b8508b0480d0c29","note":"maximum length, 100 down to 30 repeated"}
+{"generate":{"name":"rising","args":{"n":100000}},"digest":"sha256:7437a77f8fb30e3c6e3cad4b9d2cf984d397ad1b7c03c6a3d4b068f3fd183920","note":"maximum length, slowly rising in runs"}
+{"generate":{"name":"valleys","args":{"n":100000},"seed":2},"digest":"sha256:2f8e6e98596238fec455be9a2011cd688415becc9e1d1a28138ff917b12b870f","note":"maximum length, random descents each ended by a warmer day"}

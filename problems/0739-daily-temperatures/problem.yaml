@@ -1,0 +1,22 @@
+id: "739"
+slug: daily-temperatures
+title: Daily Temperatures
+titles:
+  zh-CN: 每日温度
+difficulty: medium
+tags:
+  - stack
+  - array
+  - monotonic-stack
+kind: function
+function:
+  name: dailyTemperatures
+  params:
+    - name: temperatures
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/daily-temperatures/
+judge:
+  compare: exact

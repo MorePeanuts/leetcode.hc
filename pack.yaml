@@ -32,6 +32,8 @@ groups:
       - longest-substring-without-repeating-characters
   - name: stack
     title: Stack
+    problems:
+      - daily-temperatures
   - name: binary-search
     title: Binary Search
   - name: linked-list
