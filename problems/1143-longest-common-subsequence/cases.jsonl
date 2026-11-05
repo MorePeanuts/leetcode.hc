@@ -1,0 +1,39 @@
+{"input":{"text1":"abcde","text2":"ace"},"expected":3,"example":true}
+{"input":{"text1":"abc","text2":"abc"},"expected":3,"example":true}
+{"input":{"text1":"abc","text2":"def"},"expected":0,"example":true}
+{"input":{"text1":"a","text2":"a"},"expected":1,"note":"one equal character each"}
+{"input":{"text1":"a","text2":"b"},"expected":0,"note":"one different character each"}
+{"input":{"text1":"a","text2":"bbbbab"},"expected":1,"note":"a single character found late in the other string"}
+{"input":{"text1":"abcdef","text2":"f"},"expected":1,"note":"the common character is the last"}
+{"input":{"text1":"bsbininm","text2":"jmjkbkjkv"},"expected":1,"note":"one common character out of order"}
+{"input":{"text1":"abc","text2":"cba"},"expected":1,"note":"reversed: answer 1"}
+{"input":{"text1":"aaaa","text2":"aa"},"expected":2,"note":"repeated characters: limited by the shorter string"}
+{"input":{"text1":"aab","text2":"azb"},"expected":2,"note":"duplicates in one string: counting a character twice gives 3"}
+{"input":{"text1":"abcba","text2":"abcbcba"},"expected":5,"note":"a palindrome inside a longer one"}
+{"input":{"text1":"oxcpqrsvwf","text2":"shmtulqrypy"},"expected":2,"note":"common characters scattered"}
+{"input":{"text1":"zabc","text2":"abcz"},"expected":3,"note":"greedy matching of the first common character loses: matching z first gives 1"}
+{"input":{"text1":"abcde","text2":"edcba"},"expected":1,"note":"fully reversed alphabet run"}
+{"input":{"text1":"pmjghexybyrgzczy","text2":"hafcdqbgncrcbihkd"},"expected":4,"note":"longer random strings"}
+{"input":{"text1":"bl","text2":"yby"},"expected":1,"note":"one match in the middle"}
+{"input":{"text1":"abab","text2":"baba"},"expected":3,"note":"alternating, shifted by one"}
+{"input":{"text1":"mhunuzqrkzsnidwbun","text2":"szulspmhwpazoxijwbq"},"expected":6,"note":"medium random strings"}
+{"input":{"text1":"zzzzzzzzzz","text2":"zazazazaza"},"expected":5,"note":"one string all one character"}
+{"input":{"text1":"abcdefghij","text2":"jihgfedcbaabcdefghij"},"expected":10,"note":"text1 is a suffix of text2"}
+{"input":{"text1":"xaybzc","text2":"abc"},"expected":3,"note":"text2 is a subsequence of text1"}
+{"input":{"text1":"abc","text2":"xaybzc"},"expected":3,"note":"text1 is a subsequence of text2"}
+{"input":{"text1":"acbd","text2":"abcd"},"expected":3,"note":"two LCS of equal length"}
+{"input":{"text1":"yxabcd","text2":"abcdyx"},"expected":4,"note":"the LCS skips a prefix of one string and a suffix of the other"}
+{"input":{"text1":"bbbaaa","text2":"aaabbb"},"expected":3,"note":"blocks swapped: answer 3"}
+{"input":{"text1":"abcdefghijklmnopqrstuvwxyz","text2":"zyxwvutsrqponmlkjihgfedcba"},"expected":1,"note":"the alphabet against its reverse"}
+{"input":{"text1":"abcdefghijklmnopqrstuvwxyz","text2":"abcdefghijklmnopqrstuvwxyz"},"expected":26,"note":"the whole alphabet, identical"}
+{"input":{"text1":"aaaaab","text2":"baaaaa"},"expected":5,"note":"matching the b first loses five a"}
+{"input":{"text1":"q","text2":"qqqqqqqqqq"},"expected":1,"note":"a single character against many copies"}
+{"input":{"text1":"abcabcabc","text2":"cbacbacba"},"expected":5,"note":"periodic strings"}
+{"generate":{"name":"random_pair","args":{"alphabet":"abcdefghijklmnopqrstuvwxyz","m":1000,"n":1000},"seed":1},"digest":"sha256:f01f9d19ab7e8320757db9aa9453427408102b921089982aaf7ab909e4f8932c","note":"maximum lengths, random over 26 letters"}
+{"generate":{"name":"random_pair","args":{"alphabet":"ab","m":1000,"n":1000},"seed":2},"digest":"sha256:bb471173a087743b572808435619890476e9ad14977203b060b41d70a32b2a81","note":"maximum lengths, random over two letters: a long answer"}
+{"generate":{"name":"disjoint","args":{"m":1000,"n":1000},"seed":3},"digest":"sha256:6ba3a26c4098730e29586e6716a02b738b781e41d5dfce82c4898b35f6792060","note":"maximum lengths, no common character: answer 0, the worst case of a recursion without memoization"}
+{"generate":{"name":"identical","args":{"alphabet":"abcdefghijklmnopqrstuvwxyz","n":1000},"seed":4},"digest":"sha256:7fedc88cb26752ccad533624f03e95461bc4da4d92664854dbf80edc7cbb7137","note":"maximum lengths, identical strings"}
+{"generate":{"name":"subsequence","args":{"k":500,"n":1000},"seed":5},"digest":"sha256:89948aa084dba14962592535e107deec11e54409b44663417003293390fbd105","note":"text2 a subsequence of 500 of text1"}
+{"generate":{"name":"reversed_pair","args":{"alphabet":"abc","n":1000},"seed":6},"digest":"sha256:c0729ae207dbcbbd2018606164dd6d55fcda91d13ff5a4f670d3063cf9a1a87f","note":"maximum lengths, a string against its reverse over three letters"}
+{"generate":{"name":"repeated","args":{"m":1000,"n":1}},"digest":"sha256:3d9f4df36f64a79192e02d6098b7db7d1adb14f7d4a0f1a6b25c01f7fd1e239f","note":"1000 against 1: the most unbalanced lengths"}
+{"generate":{"name":"repeated","args":{"m":1000,"n":1000}},"digest":"sha256:c4765c4bcff1a4e9918ee6ca711651ecd08aab84fde3eeca24b061076e26aab6","note":"maximum lengths, all 'a'"}
