@@ -1,0 +1,38 @@
+{"input":{"s":"babad"},"expected":"bab","example":true}
+{"input":{"s":"cbbd"},"expected":"bb","example":true}
+{"input":{"s":"a"},"expected":"a","note":"a single character"}
+{"input":{"s":"ab"},"expected":"a","note":"two different characters: any one character"}
+{"input":{"s":"aa"},"expected":"aa","note":"two equal characters"}
+{"input":{"s":"abc"},"expected":"a","note":"no palindrome longer than 1"}
+{"input":{"s":"aba"},"expected":"aba","note":"the whole string, odd length"}
+{"input":{"s":"abba"},"expected":"abba","note":"the whole string, even length"}
+{"input":{"s":"racecar"},"expected":"racecar","note":"a classic odd palindrome"}
+{"input":{"s":"abacdfgdcaba"},"expected":"aba","note":"the reverse shares a substring that is not a palindrome: the longest common substring of s and its reverse is wrong"}
+{"input":{"s":"forgeeksskeegfor"},"expected":"geeksskeeg","note":"an even palindrome in the middle"}
+{"input":{"s":"aaaa"},"expected":"aaaa","note":"all equal, even length"}
+{"input":{"s":"aaaaa"},"expected":"aaaaa","note":"all equal, odd length"}
+{"input":{"s":"abcba12"},"expected":"abcba","note":"the palindrome at the start"}
+{"input":{"s":"12abcba"},"expected":"abcba","note":"the palindrome at the end"}
+{"input":{"s":"xyzzyx1"},"expected":"xyzzyx","note":"an even palindrome at the start"}
+{"input":{"s":"1xyzzyx"},"expected":"xyzzyx","note":"an even palindrome at the end"}
+{"input":{"s":"Aa"},"expected":"A","note":"case matters: 'A' and 'a' differ"}
+{"input":{"s":"AbcbA"},"expected":"AbcbA","note":"uppercase letters"}
+{"input":{"s":"1221"},"expected":"1221","note":"digits only"}
+{"input":{"s":"a1b2b1a"},"expected":"a1b2b1a","note":"letters and digits mixed"}
+{"input":{"s":"aab"},"expected":"aa","note":"an even palindrome at the start of an odd string"}
+{"input":{"s":"baa"},"expected":"aa","note":"an even palindrome at the end"}
+{"input":{"s":"abcdcbe"},"expected":"bcdcb","note":"an odd palindrome not at either end"}
+{"input":{"s":"aaabaaaa"},"expected":"aaabaaa","note":"the longest palindrome is centered on the b, not the run of a"}
+{"input":{"s":"aaaabaaa"},"expected":"aaabaaa","note":"the longest palindrome is centered on the b, shifted left"}
+{"input":{"s":"bananas"},"expected":"anana","note":"overlapping palindromes ana, nan, anana"}
+{"input":{"s":"abcdefgfedcbaz"},"expected":"abcdefgfedcba","note":"a long odd palindrome next to a different last character"}
+{"input":{"s":"qwertyyt"},"expected":"tyyt","note":"an even center must be tried: odd centers give length 1"}
+{"input":{"s":"ccc"},"expected":"ccc","note":"three equal: the whole string"}
+{"input":{"s":"abcda"},"expected":"a","note":"equal ends but no palindrome: answer length 1"}
+{"generate":{"name":"all_same","args":{"ch":"a","n":1000}},"digest":"sha256:968af06f8397ad3216f293ec90d40d4bde6888f85ad500032e41d3e66cd8c6c3","note":"maximum length, all equal: every substring is a palindrome"}
+{"generate":{"name":"nearly_same","args":{"at":700,"n":1000}},"digest":"sha256:79f639e0cddd876abdcd035c7f4874e283766f7dd9d31afb6f46ed9f18696f83","note":"maximum length, all 'a' but one 'b' off center"}
+{"generate":{"name":"alternating","args":{"n":1000}},"digest":"sha256:8e9348924559c938dd10d4eee925ea6711c38e7368af0ec0f1071d4cc5ee2fe8","note":"maximum length, 'abab...': the longest palindrome has length 999"}
+{"generate":{"name":"random_string","args":{"alphabet":"ab","n":1000},"seed":1},"digest":"sha256:7daa04fb925587e93dabb05f793072b5d48abb82642281f7012b50d420cee9d1","note":"maximum length, random over two letters: many palindromes"}
+{"generate":{"name":"all_same","args":{"ch":"Z","n":1000}},"digest":"sha256:0f989a043453c715f7547986c43bdcb9902be29c57d0687bca854d1f09c423db","note":"maximum length, all 'Z': every substring is a palindrome"}
+{"generate":{"name":"planted","args":{"at":650,"length":301,"n":1000},"seed":3},"digest":"sha256:9eea40d445cb955f6cdbe678f27f19f8472cbd1d87c5e532a7e6920608289e2e","note":"maximum length, an odd palindrome of 301 planted near the end"}
+{"generate":{"name":"nearly_same","args":{"at":300,"n":1000}},"digest":"sha256:fd9d5c1f357828a7c3bd95ee03f9c431b0f7666a98229047fa769ef452427665","note":"maximum length, all 'a' but one 'b' left of center"}
