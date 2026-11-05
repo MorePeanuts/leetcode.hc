@@ -42,6 +42,8 @@ groups:
       - search-in-rotated-sorted-array
   - name: linked-list
     title: Linked List
+    problems:
+      - lru-cache
   - name: trees
     title: Trees
   - name: heap-priority-queue
