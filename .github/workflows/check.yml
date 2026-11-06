@@ -1,8 +1,13 @@
-# Checks the pack on every push and pull request. Written by `hc pack init`.
+# Checks the pack on every push to main and every pull request. Written by
+# `hc pack init`.
 name: Check
 
+# Not on pushes to other branches or of tags: a pull request's branch is
+# checked by its pull_request run, and a tag is pushed only on a commit of
+# main that passed.
 on:
   push:
+    branches: [main]
   pull_request:
 
 permissions:
@@ -13,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      # Any Go builds hc; hc pack check vets the Go references against the
+      # Builds and runs the Go references; hc pack check vets them against the
       # oldest Go the protocol supports itself.
       - uses: actions/setup-go@v7
         with:
@@ -23,11 +28,23 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.10"
-      # The hc the pack is checked with. Bump it on purpose: read what changed
-      # with `hc docs protocol protocol-versions`, then run `hc skill install`
-      # and commit the refreshed skills with the bump.
+      # The hc the pack is checked with: its released linux_amd64 binary,
+      # checked against the SHA-256 that its release's checksums.txt lists.
+      # Bump both on purpose: read what changed with
+      # `hc docs protocol protocol-versions`, then run `hc skill install` and
+      # commit the refreshed skills with the bump.
       - name: Install hc
-        run: go install github.com/MorePeanuts/handcoding/cmd/hc@v0.1.0-alpha.10
+        env:
+          HC_VERSION: 0.1.0-alpha.10
+          HC_SHA256: 16a92a98de096123c337223e39cbd32b52d74f12025be191838d06c5d8376f2c
+        run: |
+          archive="handcoding_${HC_VERSION}_linux_amd64.tar.gz"
+          curl -fsSL -o "$RUNNER_TEMP/$archive" \
+            "https://github.com/MorePeanuts/handcoding/releases/download/v${HC_VERSION}/$archive"
+          echo "$HC_SHA256  $RUNNER_TEMP/$archive" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/hc"
+          tar -xzf "$RUNNER_TEMP/$archive" -C "$RUNNER_TEMP/hc" hc
+          echo "$RUNNER_TEMP/hc" >> "$GITHUB_PATH"
       # hc.yaml is not committed (.gitignore): it holds the settings of a
       # checkout, here the Python set up above instead of a virtual
       # environment of hc's.

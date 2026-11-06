@@ -75,7 +75,7 @@ To release:
 CI installs a pinned hc, and checks that the committed skills (`.claude/skills/`, `.agents/skills/`, hc's block of `AGENTS.md`) are exactly that hc's. Bump the pin when a newer hc brings something the pack wants: a fix to its checks, or a feature of a newer protocol.
 
 1. Install the new hc locally, and read what changed: its release notes and `hc docs protocol protocol-versions`.
-2. Change the version in `.github/workflows/check.yml`.
+2. Change `HC_VERSION` in `.github/workflows/check.yml`, and `HC_SHA256` to the SHA-256 of the `linux_amd64` archive that the release's `checksums.txt` lists.
 3. Run `hc skill install`, and review the diff of the skills: agents follow the new versions from now on.
 4. Run `hc pack check`.
 5. Land it as one PR of its own (`chore: bump hc to vX`, label `hc-bump`), separate from problems.
