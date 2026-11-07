@@ -9,7 +9,7 @@
 
 ## 安装
 
-需要 hc v0.1.0-alpha.9 或更高版本。
+需要 hc v0.1.0-alpha.11 或更高版本，以及 Python 3.12 或更高版本；装有 [uv](https://docs.astral.sh/uv/) 时，hc 会自行配置 Python。
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # 跟随 main

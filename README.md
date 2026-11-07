@@ -9,7 +9,7 @@ LeetCode problems for [handcoding (hc)](https://github.com/MorePeanuts/handcodin
 
 ## Install
 
-You need hc v0.1.0-alpha.9 or later.
+You need hc v0.1.0-alpha.11 or later, and Python 3.12 or later, which hc sets up itself when [uv](https://docs.astral.sh/uv/) is installed.
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # follow main
