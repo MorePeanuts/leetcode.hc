@@ -8,7 +8,7 @@ Open an issue before starting on anything non-trivial. Problems are added in bat
 
 ## Adding problems
 
-You need hc at the version CI pins (`.github/workflows/check.yml`), Go and Python 3.10+.
+You need hc at the version CI pins (`.github/workflows/check.yml`), Go and Python 3.12+ ([uv](https://docs.astral.sh/uv/) recommended: hc then sets Python up itself).
 
 ```sh
 hc fetch --site cn two-sum     # statement in English and Chinese, signature, templates, examples

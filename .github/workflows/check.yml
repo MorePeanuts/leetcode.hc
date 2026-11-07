@@ -27,7 +27,7 @@ jobs:
       # checkers must run on it.
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       # The hc the pack is checked with: its released linux_amd64 binary,
       # checked against the SHA-256 that its release's checksums.txt lists.
       # Bump both on purpose: read what changed with
@@ -35,8 +35,8 @@ jobs:
       # commit the refreshed skills with the bump.
       - name: Install hc
         env:
-          HC_VERSION: 0.1.0-alpha.10
-          HC_SHA256: 16a92a98de096123c337223e39cbd32b52d74f12025be191838d06c5d8376f2c
+          HC_VERSION: 0.1.0-alpha.11
+          HC_SHA256: 43d92149703c47e7577f771a39c1fe46e29006527dfcc119416b50dafc8fa67d
         run: |
           archive="handcoding_${HC_VERSION}_linux_amd64.tar.gz"
           curl -fsSL -o "$RUNNER_TEMP/$archive" \
