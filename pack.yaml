@@ -22,6 +22,7 @@ groups:
       - valid-sudoku
       - longest-consecutive-sequence
       - subarray-sum-equals-k
+      - sort-an-array
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -56,6 +57,7 @@ groups:
     title: Heap / Priority Queue
     problems:
       - find-median-from-data-stream
+      - sort-an-array
   - name: backtracking
     title: Backtracking
   - name: tries
