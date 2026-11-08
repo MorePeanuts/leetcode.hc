@@ -1,0 +1,27 @@
+id: "912"
+slug: sort-an-array
+title: Sort an Array
+titles:
+  zh-CN: 排序数组
+difficulty: medium
+tags:
+  - array
+  - divide-and-conquer
+  - bucket-sort
+  - counting-sort
+  - radix-sort
+  - sorting
+  - heap-priority-queue
+  - merge-sort
+kind: function
+function:
+  name: sortArray
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[]
+judge:
+  compare: exact
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sort-an-array/
