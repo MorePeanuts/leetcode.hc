@@ -1,0 +1,23 @@
+id: "704"
+slug: binary-search
+title: Binary Search
+titles:
+  zh-CN: 二分查找
+difficulty: easy
+tags:
+  - array
+  - binary-search
+kind: function
+function:
+  name: search
+  params:
+    - name: nums
+      type: integer[]
+    - name: target
+      type: integer
+  returns: integer
+judge:
+  compare: exact
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-search/
