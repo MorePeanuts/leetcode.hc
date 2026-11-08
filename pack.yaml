@@ -39,6 +39,7 @@ groups:
   - name: binary-search
     title: Binary Search
     problems:
+      - binary-search
       - koko-eating-bananas
       - search-in-rotated-sorted-array
   - name: linked-list
