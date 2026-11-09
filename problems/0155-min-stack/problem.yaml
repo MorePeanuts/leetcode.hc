@@ -1,0 +1,33 @@
+id: "155"
+slug: min-stack
+title: Min Stack
+titles:
+  zh-CN: 最小栈
+difficulty: medium
+tags:
+  - stack
+  - design
+kind: class
+class:
+  name: MinStack
+  constructor: []
+  methods:
+    - name: push
+      params:
+        - name: value
+          type: integer
+      returns: void
+    - name: pop
+      params: []
+      returns: void
+    - name: top
+      params: []
+      returns: integer
+    - name: getMin
+      params: []
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/min-stack/
+judge:
+  compare: exact
