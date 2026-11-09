@@ -1,0 +1,28 @@
+id: "142"
+slug: linked-list-cycle-ii
+title: Linked List Cycle II
+titles:
+  zh-CN: 环形链表 II
+difficulty: medium
+tags:
+  - hash-table
+  - linked-list
+  - two-pointers
+  - floyds-cycle-finding-algorithm
+kind: function
+function:
+  name: detectCycle
+  params:
+    - name: head
+      type: ListNode
+      cycle: pos
+  hidden:
+    - name: pos
+      type: integer
+  returns: ListNode
+  returns_ref: head
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/linked-list-cycle-ii/
+judge:
+  compare: exact

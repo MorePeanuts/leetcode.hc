@@ -52,6 +52,7 @@ groups:
       - reverse-linked-list
       - merge-two-sorted-lists
       - linked-list-cycle
+      - linked-list-cycle-ii
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
