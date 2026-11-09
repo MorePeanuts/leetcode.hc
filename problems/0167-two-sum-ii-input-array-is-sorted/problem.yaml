@@ -1,0 +1,24 @@
+id: "167"
+slug: two-sum-ii-input-array-is-sorted
+title: "Two Sum II - Input Array Is Sorted"
+titles:
+  zh-CN: "两数之和 II - 输入有序数组"
+difficulty: medium
+tags:
+  - array
+  - two-pointers
+  - binary-search
+kind: function
+function:
+  name: twoSum
+  params:
+    - name: numbers
+      type: integer[]
+    - name: target
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/
+judge:
+  compare: exact
