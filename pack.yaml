@@ -59,6 +59,7 @@ groups:
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
+      - kth-largest-element-in-a-stream
       - find-median-from-data-stream
       - sort-an-array
   - name: backtracking

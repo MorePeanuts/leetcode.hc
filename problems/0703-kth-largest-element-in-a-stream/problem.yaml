@@ -1,0 +1,32 @@
+id: "703"
+slug: kth-largest-element-in-a-stream
+title: Kth Largest Element in a Stream
+titles:
+  zh-CN: 数据流中的第 K 大元素
+difficulty: easy
+tags:
+  - tree
+  - design
+  - binary-search-tree
+  - binary-tree
+  - data-stream
+  - heap-priority-queue
+kind: class
+class:
+  name: KthLargest
+  constructor:
+    - name: k
+      type: integer
+    - name: nums
+      type: integer[]
+  methods:
+    - name: add
+      params:
+        - name: val
+          type: integer
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/kth-largest-element-in-a-stream/
+judge:
+  compare: exact
