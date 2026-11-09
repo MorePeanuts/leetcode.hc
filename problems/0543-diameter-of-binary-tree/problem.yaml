@@ -1,0 +1,23 @@
+id: "543"
+slug: diameter-of-binary-tree
+title: Diameter of Binary Tree
+titles:
+  zh-CN: 二叉树的直径
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - binary-tree
+  - dp-on-trees
+kind: function
+function:
+  name: diameterOfBinaryTree
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/diameter-of-binary-tree/
+judge:
+  compare: exact
