@@ -1,0 +1,25 @@
+id: "567"
+slug: permutation-in-string
+title: Permutation in String
+titles:
+  zh-CN: 字符串的排列
+difficulty: medium
+tags:
+  - hash-table
+  - two-pointers
+  - string
+  - sliding-window
+kind: function
+function:
+  name: checkInclusion
+  params:
+    - name: s1
+      type: string
+    - name: s2
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/permutation-in-string/
+judge:
+  compare: exact
