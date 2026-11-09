@@ -46,6 +46,7 @@ groups:
     problems:
       - valid-parentheses
       - min-stack
+      - evaluate-reverse-polish-notation
       - daily-temperatures
       - largest-rectangle-in-histogram
   - name: binary-search

@@ -1,0 +1,22 @@
+id: "150"
+slug: evaluate-reverse-polish-notation
+title: Evaluate Reverse Polish Notation
+titles:
+  zh-CN: 逆波兰表达式求值
+difficulty: medium
+tags:
+  - stack
+  - array
+  - math
+kind: function
+function:
+  name: evalRPN
+  params:
+    - name: tokens
+      type: string[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/evaluate-reverse-polish-notation/
+judge:
+  compare: exact
