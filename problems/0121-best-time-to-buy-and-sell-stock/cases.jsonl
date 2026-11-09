@@ -1,0 +1,33 @@
+{"input":{"prices":[7,1,5,3,6,4]},"expected":5,"example":true}
+{"input":{"prices":[7,6,4,3,1]},"expected":0,"example":true}
+{"input":{"prices":[5]},"expected":0,"note":"a single day: no trade"}
+{"input":{"prices":[0]},"expected":0,"note":"a single day at price 0"}
+{"input":{"prices":[1,2]},"expected":1,"note":"two days, rising"}
+{"input":{"prices":[2,1]},"expected":0,"note":"two days, falling: no trade"}
+{"input":{"prices":[3,3]},"expected":0,"note":"two equal days: profit 0"}
+{"input":{"prices":[3,3,3,3,3]},"expected":0,"note":"all equal"}
+{"input":{"prices":[1,2,3,4,5]},"expected":4,"note":"ascending: first to last"}
+{"input":{"prices":[10,1,10]},"expected":9,"note":"a dip in the middle"}
+{"input":{"prices":[9,1,2]},"expected":1,"note":"the global maximum is before the minimum"}
+{"input":{"prices":[3,8,1,2]},"expected":5,"note":"the best trade does not use the global minimum"}
+{"input":{"prices":[2,4,1]},"expected":2,"note":"the global minimum is last"}
+{"input":{"prices":[1,4,2,7]},"expected":6,"note":"the best sale is after a lower peak"}
+{"input":{"prices":[7,1,5,3,6,4,0]},"expected":5,"note":"a new minimum on the last day changes nothing"}
+{"input":{"prices":[2,1,2,1,0,1,2]},"expected":2,"note":"a later lower minimum gives the best trade"}
+{"input":{"prices":[0,10000]},"expected":10000,"note":"the largest profit"}
+{"input":{"prices":[10000,0]},"expected":0,"note":"the largest fall: no trade"}
+{"input":{"prices":[10000,0,10000]},"expected":10000,"note":"the largest profit after the largest fall"}
+{"input":{"prices":[0,0,0,0]},"expected":0,"note":"all zero"}
+{"input":{"prices":[5,4,3,2,1,6]},"expected":5,"note":"descending, then the maximum on the last day"}
+{"input":{"prices":[6,1,3,2,4,7]},"expected":6,"note":"the best trade spans several dips"}
+{"input":{"prices":[2,6,1,4]},"expected":4,"note":"two rises, the first larger"}
+{"input":{"prices":[4,7,2,9,1,3]},"expected":7,"note":"each new minimum is followed by a different rise"}
+{"input":{"prices":[1,1,1,2,1,1]},"expected":1,"note":"one rise of 1 among ties"}
+{"input":{"prices":[3,2,6,5,0,3]},"expected":4,"note":"the global minimum's rise is smaller than an earlier one"}
+{"generate":{"name":"random_prices","args":{"n":100000},"seed":1},"digest":"sha256:1144f9abb8058f382cdec4d13e0c40214d784bb82d529afa3b195c7852282727","note":"maximum length, random prices"}
+{"generate":{"name":"random_prices","args":{"n":100000,"top":50},"seed":2},"digest":"sha256:b543c848a6f5cfd5a27ed0f20c338b0c3caf56d2a51289faa242929272b015cc","note":"maximum length, low random prices with many ties"}
+{"generate":{"name":"descending","args":{"n":100000}},"digest":"sha256:ec0f6ea2ccadda6dc5b2d28c2c53c19b2f93f8bf3636ef86eccc2271a2d11bfa","note":"maximum length, descending: answer 0"}
+{"generate":{"name":"ascending","args":{"n":100000}},"digest":"sha256:ad892bba57d3db840163801021267e69ff5ad362d155ddda6948283b8a2755b5","note":"maximum length, ascending: the largest answer"}
+{"generate":{"name":"all_equal","args":{"n":100000},"seed":3},"digest":"sha256:2df12d6561a68aa45ddd65af3d9aed83bc663990338114f7c41258cbd4b7063f","note":"maximum length, all equal"}
+{"generate":{"name":"low_after_high","args":{"n":100000},"seed":4},"digest":"sha256:14cc00ac3c3f581a30d6a7a394176ae7f6f340eb4de4638b5ce54e0ce6a2c5c4","note":"maximum length, the global maximum before the global minimum"}
+{"generate":{"name":"zigzag","args":{"n":100000},"seed":5},"digest":"sha256:b79be0c13cb946487145dfe7e349eae8e7845cb1d810fa1c9a75e8d3920d0e1d","note":"maximum length, falling with small rises and one larger one"}

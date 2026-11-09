@@ -1,0 +1,21 @@
+id: "121"
+slug: best-time-to-buy-and-sell-stock
+title: Best Time to Buy and Sell Stock
+titles:
+  zh-CN: 买卖股票的最佳时机
+difficulty: easy
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: maxProfit
+  params:
+    - name: prices
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/
+judge:
+  compare: exact
