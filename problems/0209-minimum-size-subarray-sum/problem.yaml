@@ -1,0 +1,25 @@
+id: "209"
+slug: minimum-size-subarray-sum
+title: Minimum Size Subarray Sum
+titles:
+  zh-CN: 长度最小的子数组
+difficulty: medium
+tags:
+  - array
+  - binary-search
+  - prefix-sum
+  - sliding-window
+kind: function
+function:
+  name: minSubArrayLen
+  params:
+    - name: target
+      type: integer
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-size-subarray-sum/
+judge:
+  compare: exact

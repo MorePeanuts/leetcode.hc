@@ -38,6 +38,7 @@ groups:
       - longest-substring-without-repeating-characters
       - longest-repeating-character-replacement
       - permutation-in-string
+      - minimum-size-subarray-sum
   - name: stack
     title: Stack
     problems:
