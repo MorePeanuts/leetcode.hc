@@ -50,6 +50,7 @@ groups:
     title: Linked List
     problems:
       - reverse-linked-list
+      - merge-two-sorted-lists
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
