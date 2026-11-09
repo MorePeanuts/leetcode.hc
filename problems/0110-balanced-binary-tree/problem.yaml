@@ -1,0 +1,22 @@
+id: "110"
+slug: balanced-binary-tree
+title: Balanced Binary Tree
+titles:
+  zh-CN: 平衡二叉树
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - binary-tree
+kind: function
+function:
+  name: isBalanced
+  params:
+    - name: root
+      type: TreeNode
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/balanced-binary-tree/
+judge:
+  compare: exact
