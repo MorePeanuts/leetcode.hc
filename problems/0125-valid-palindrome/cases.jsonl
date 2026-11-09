@@ -1,0 +1,38 @@
+{"input":{"s":"A man, a plan, a canal: Panama"},"expected":true,"example":true}
+{"input":{"s":"race a car"},"expected":false,"example":true}
+{"input":{"s":" "},"expected":true,"example":true}
+{"input":{"s":"a"},"expected":true,"note":"one letter"}
+{"input":{"s":"."},"expected":true,"note":"one non-alphanumeric character"}
+{"input":{"s":".,!?:;"},"expected":true,"note":"punctuation only: empty after filtering"}
+{"input":{"s":"ab"},"expected":false,"note":"two different letters"}
+{"input":{"s":"aa"},"expected":true,"note":"two equal letters"}
+{"input":{"s":"Aa"},"expected":true,"note":"the same letter in two cases"}
+{"input":{"s":"AbBa"},"expected":true,"note":"case-insensitive even palindrome"}
+{"input":{"s":"abca"},"expected":false,"note":"mismatch in the middle pair"}
+{"input":{"s":"abcba"},"expected":true,"note":"odd palindrome"}
+{"input":{"s":"abcda"},"expected":false,"note":"odd length, mismatch next to the center"}
+{"input":{"s":"0P"},"expected":false,"note":"'0' and 'P' are 32 apart: a check that treats a difference of 32 as the same letter calls them equal"}
+{"input":{"s":"1a2"},"expected":false,"note":"digits count: dropping them would leave a palindrome"}
+{"input":{"s":"12321"},"expected":true,"note":"digits only, palindrome"}
+{"input":{"s":"123421"},"expected":false,"note":"digits only, not a palindrome"}
+{"input":{"s":"a1b1a"},"expected":true,"note":"letters and digits mixed"}
+{"input":{"s":"_a"},"expected":true,"note":"underscore is not alphanumeric (\\w would keep it)"}
+{"input":{"s":"a`"},"expected":true,"note":"backquote, just below 'a', is not alphanumeric"}
+{"input":{"s":"[a"},"expected":true,"note":"'[', between 'Z' and 'a', is not alphanumeric"}
+{"input":{"s":"@Z"},"expected":true,"note":"'@', just below 'A', is not alphanumeric"}
+{"input":{"s":"z{"},"expected":true,"note":"'{', just above 'z', is not alphanumeric"}
+{"input":{"s":"/9:"},"expected":true,"note":"'/' and ':' around the digits are not alphanumeric"}
+{"input":{"s":"a@A"},"expected":true,"note":"'@', just below 'A', between one letter in two cases"}
+{"input":{"s":"9Y"},"expected":false,"note":"'9' and 'Y' are 32 apart as well"}
+{"input":{"s":"  a  b  a  "},"expected":true,"note":"spaces around a palindrome"}
+{"input":{"s":"a.  ,b"},"expected":false,"note":"not a palindrome with punctuation between"}
+{"input":{"s":"No 'x' in Nixon"},"expected":true,"note":"classic phrase palindrome"}
+{"input":{"s":"Was it a car or a cat I saw?"},"expected":true,"note":"phrase palindrome, question mark"}
+{"input":{"s":"ab.ba!c"},"expected":false,"note":"palindrome prefix, an extra letter at the end"}
+{"input":{"s":"~a~b~~"},"expected":false,"note":"punctuation on both ends, two letters that differ"}
+{"generate":{"name":"palindrome","args":{"alnum":200000,"n":200000},"seed":1},"digest":"sha256:877be5e48351b9f55f43cc90a95727e36e1e1dd29ac881c6f38ec07f0362fc2d","note":"maximum length, a palindrome of letters and digits only, mixed case"}
+{"generate":{"name":"palindrome","args":{"alnum":60001,"n":200000},"seed":2},"digest":"sha256:af0982f5f5f66fc4804e0c0cc32f1040ad1fb6a9812873513ace686b797a2e4b","note":"maximum length, an odd palindrome inside punctuation"}
+{"generate":{"name":"middle_mismatch","args":{"alnum":200000,"n":200000},"seed":3},"digest":"sha256:23743239569fc745b14b52f113abd62c3781add1b9185607e6c92bd862a5da50","note":"maximum length, the only mismatch at the middle"}
+{"generate":{"name":"middle_mismatch","args":{"alnum":50000,"n":200000},"seed":4},"digest":"sha256:81275a80d21856eb56f227c3a1c8900ca5b91687a4e58ae11eab95b851987e17","note":"maximum length, punctuation, the only mismatch at the middle"}
+{"generate":{"name":"all_other","args":{"n":200000},"seed":5},"digest":"sha256:0946d148c3e5af12a6c93d70df0888c0dc138c402bf9ce6d7494fc67b48821f1","note":"maximum length, no letter or digit"}
+{"generate":{"name":"one_letter","args":{"n":200000},"seed":6},"digest":"sha256:23e8895a81bc351bf27f025e7b7c76885d9ee1da940330b893462c8baaa117bc","note":"maximum length, one letter in both cases"}
