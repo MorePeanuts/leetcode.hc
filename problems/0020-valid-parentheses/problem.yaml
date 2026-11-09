@@ -1,0 +1,22 @@
+id: "20"
+slug: valid-parentheses
+title: Valid Parentheses
+titles:
+  zh-CN: 有效的括号
+difficulty: easy
+tags:
+  - stack
+  - string
+  - bracket-sequences
+kind: function
+function:
+  name: isValid
+  params:
+    - name: s
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/valid-parentheses/
+judge:
+  compare: exact

@@ -1,0 +1,39 @@
+{"input":{"s":"()"},"expected":true,"example":true}
+{"input":{"s":"()[]{}"},"expected":true,"example":true}
+{"input":{"s":"(]"},"expected":false,"example":true}
+{"input":{"s":"([])"},"expected":true,"example":true}
+{"input":{"s":"([)]"},"expected":false,"example":true}
+{"input":{"s":"("},"expected":false,"note":"one opener"}
+{"input":{"s":")"},"expected":false,"note":"one closer, nothing to match"}
+{"input":{"s":"]"},"expected":false,"note":"one closing square bracket"}
+{"input":{"s":"{"},"expected":false,"note":"one opening brace"}
+{"input":{"s":"(("},"expected":false,"note":"two openers, never closed"}
+{"input":{"s":"))"},"expected":false,"note":"two closers"}
+{"input":{"s":")("},"expected":false,"note":"balanced counts, closer before its opener"}
+{"input":{"s":"}{"},"expected":false,"note":"balanced counts, closer before its opener, braces"}
+{"input":{"s":"(()"},"expected":false,"note":"an opener left on the stack at the end"}
+{"input":{"s":"())"},"expected":false,"note":"a closer when the stack is empty"}
+{"input":{"s":"{]"},"expected":false,"note":"brace closed by a square bracket"}
+{"input":{"s":"[}"},"expected":false,"note":"square bracket closed by a brace"}
+{"input":{"s":"{)"},"expected":false,"note":"brace closed by a parenthesis"}
+{"input":{"s":"[)"},"expected":false,"note":"square bracket closed by a parenthesis"}
+{"input":{"s":"{[]}"},"expected":true,"note":"nested, valid"}
+{"input":{"s":"([{}])"},"expected":true,"note":"three kinds nested, valid"}
+{"input":{"s":"{[()()]}[]()"},"expected":true,"note":"nested and side by side, valid"}
+{"input":{"s":"((([[[{{{}}}]]])))"},"expected":true,"note":"deep nesting, valid"}
+{"input":{"s":"(){}}{"},"expected":false,"note":"every kind balanced in count, a brace closed before it opens"}
+{"input":{"s":")()("},"expected":false,"note":"balanced counts, starts with a closer"}
+{"input":{"s":"([]){"},"expected":false,"note":"valid prefix, an opener left at the end"}
+{"input":{"s":"[({})](]"},"expected":false,"note":"valid prefix, then a mismatch"}
+{"input":{"s":"([)]{}"},"expected":false,"note":"interleaved kinds: counts balanced but not nested"}
+{"input":{"s":"[(])"},"expected":false,"note":"interleaved kinds, square brackets outside"}
+{"input":{"s":"(([]){})"},"expected":true,"note":"siblings inside a pair, valid"}
+{"input":{"s":"(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((("},"expected":false,"note":"openers only"}
+{"input":{"s":"{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{]"},"expected":false,"note":"many pairs, the last one mismatched"}
+{"generate":{"name":"nested","args":{"n":10000},"seed":1},"digest":"sha256:3c8702b9afa85d2261c9ffabb1daacbac32d82e672ff2c2065a85e0adc5be65e","note":"maximum length, nested as deep as it goes, valid"}
+{"generate":{"name":"nested","args":{"n":10000},"seed":2},"digest":"sha256:76411ecca7cb032d7fecdc5a3dcabee8f04ef7cf4111b077719b0557023984c8","note":"maximum length, nested as deep as it goes, valid"}
+{"generate":{"name":"nested","args":{"n":9998},"seed":3},"digest":"sha256:bb9387ee585a4648999bee3fa385b2d2ed121e0457c8d894ff8879527ffa4e9a","note":"near maximum length, nested as deep as it goes, valid"}
+{"generate":{"name":"nested_wrong_last","args":{"n":10000},"seed":4},"digest":"sha256:0cfe078d226a5972ddceb06c822df7dcbdc4663cc4787af5dfe454ac4b881f27","note":"maximum length, nested, the outermost pair mismatched"}
+{"generate":{"name":"nested_wrong_last","args":{"n":10000},"seed":5},"digest":"sha256:5000d3658ad01ac2a9cd1031945e02e57f0d01735ae683af271b77ffcf8c7b96","note":"maximum length, nested, the outermost pair mismatched"}
+{"generate":{"name":"random_valid","args":{"depth":5000,"n":10000},"seed":6},"digest":"sha256:8a6b459042fafc9e98e4a8f12b41c9e3a69fef82a1e2e3fc277d5604f69f1f97","note":"maximum length, random valid string"}
+{"generate":{"name":"all_open","args":{"n":10000},"seed":7},"digest":"sha256:ab2b3856ce9891301582608b42a1867a68d519e23cae9037b558fb6d60a1aeaa","note":"maximum length, openers only"}

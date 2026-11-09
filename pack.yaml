@@ -38,6 +38,7 @@ groups:
   - name: stack
     title: Stack
     problems:
+      - valid-parentheses
       - daily-temperatures
       - largest-rectangle-in-histogram
   - name: binary-search
