@@ -1,0 +1,23 @@
+{"input":{"root":[3,9,20,null,null,15,7]},"expected":3,"example":true}
+{"input":{"root":[1,null,2]},"expected":2,"example":true}
+{"input":{"root":[1]},"expected":1,"note":"a single node: depth 1"}
+{"input":{"root":[-100]},"expected":1,"note":"a single node of the minimum value"}
+{"input":{"root":[1,2]},"expected":2,"note":"a root with only a left child"}
+{"input":{"root":[0,0,0]},"expected":2,"note":"a root with two leaves: depth 2, not 3"}
+{"input":{"root":[1,2,3,4,null,null,null,5]},"expected":4,"note":"the deepest leaf is on the left"}
+{"input":{"root":[1,2,3,null,null,4,null,null,5]},"expected":4,"note":"the deepest leaf is on the right, under a left child"}
+{"input":{"root":[1,2,3,4,5,6,7]},"expected":3,"note":"a perfect tree of 3 levels"}
+{"input":{"root":[1,null,2,null,3,null,4,null,5]},"expected":5,"note":"a right-skewed path of 5 nodes"}
+{"input":{"root":[1,2,null,null,3,4,null,null,5]},"expected":5,"note":"a zigzag path of 5 nodes"}
+{"input":{"root":[1,2,3,null,4,5,null,6,null,null,7]},"expected":4,"note":"two branches of equal depth"}
+{"input":{"root":[100,-100,100,-100]},"expected":3,"note":"boundary values"}
+{"input":{"root":[-95,-50,87,-42,97,null,0,null,-16,null,null,-99,-68,null,82]},"expected":5,"note":"a random tree of 10 nodes"}
+{"input":{"root":[-49,48,-35,-54,0,60,37,null,43,-18,-57,null,null,null,null,null,null,59,45,-91,4,-75,-24,null,-69,null,null,null,14,53,null,19,-90,null,6,-34,-13,null,null,null,-59,null,-38,-11,null,null,-36,null,null,null,null,-90,null,null,null,null,-82]},"expected":9,"note":"a random tree of 30 nodes"}
+{"input":{"root":[78,-38,58,-69,32,61,99,20,-82,51,-92,22,84,null,-98,43,40,100,83,null,null,null,null,-94,null,24,33,76,81,-38,36,null,null,67,-95,-52,6,-58,-50,61,null,48,87,null,null,null,26,-59,-78,-87,-69,null,87,null,24,-94,95,-21,10,null,62,null,null,null,82,-39,-36,6,-77,null,null,null,null,null,null,null,null,-79,-78,null,1,-82,-82,-22,-50,51,-43,85,-16,-96,77,null,-46,-49,null,null,null,-46,-79,null,null,38,null,40,null,56,null,null,null,null,null,null,null,-53,null,-51,67,null,null,null,null,15,null,null,null,24,null,-93,null,-2,null,80,null,null,22,null,null,null,29,null,null,76,-40,null,null,null,60,-55,null,0,null,-98,null,48,null,null,null,null,30,null,null,-26,null,null,null,null,null,null,null,null,null,null,null,null,null,-37,-74,null,null,null,null,null,-42,44,null,null,null,null,-82,-1,35,44,-42,null,null,-86]},"expected":16,"note":"a random tree of 100 nodes"}
+{"input":{"root":[95,39,57,-91,-63,6,-69,55,39,-38,-78,6,-6,89,-38,68,66,-59,32,-49,-70,32,72,-18,20,-33,11,75,-18,20,79,-86,63,15,97,-31,58,67,51,99,-88,1,-19,71,28,72,100,-58,-1,-73,-16,-35,74,39,64,82,-67,58,-91,-22,-97,25,-87]},"expected":6,"note":"a perfect tree of 63 nodes"}
+{"generate":{"name":"chain","args":{"n":10000,"shape":"left"},"seed":1},"digest":"sha256:70470dbf3083b2b992a3d095ca5c0d44dc52012a60c2d53f0797934ad9e81439","note":"a left-skewed path of 10^4 nodes: depth 10^4, deep recursion"}
+{"generate":{"name":"chain","args":{"n":10000,"shape":"right"},"seed":2},"digest":"sha256:ced37786e24bd83471a319ec825394fca545b40feed62d598f7edddf982e85fb","note":"a right-skewed path of 10^4 nodes"}
+{"generate":{"name":"chain","args":{"n":10000,"shape":"zigzag"},"seed":3},"digest":"sha256:11c87a132d03da13b19cda65fc616c47b63169b4f1b991d80cb1b08632a1113a","note":"a zigzag path of 10^4 nodes"}
+{"generate":{"name":"complete","args":{"n":10000},"seed":4},"digest":"sha256:faada7909e069889ac5cc52c13ad287c37dc841f26a18ddca2cbe3bb0490acc0","note":"a complete tree of 10^4 nodes: depth 14"}
+{"generate":{"name":"random_shape","args":{"n":10000},"seed":5},"digest":"sha256:37d820f3460c6395086d69edc305de8985b1c8397be5813aafcb52b5ad4e8dba","note":"a random tree of 10^4 nodes"}
+{"generate":{"name":"comb","args":{"depth":5000,"n":10000},"seed":6},"digest":"sha256:41e0bacbc6d254e36d564b4868c89f20d05bbe187af0740be60422e413ffb963","note":"a complete tree of 5000 nodes with a 5000-node path hanging from its last leaf"}
