@@ -1,0 +1,31 @@
+{"input":{"nums":[3,4,5,1,2]},"expected":1,"example":true}
+{"input":{"nums":[4,5,6,7,0,1,2]},"expected":0,"example":true}
+{"input":{"nums":[11,13,15,17]},"expected":11,"example":true}
+{"input":{"nums":[1]},"expected":1,"note":"one element"}
+{"input":{"nums":[-5000]},"expected":-5000,"note":"one element, the smallest value allowed"}
+{"input":{"nums":[1,2]},"expected":1,"note":"two elements, not rotated"}
+{"input":{"nums":[2,1]},"expected":1,"note":"two elements, rotated: the minimum is last"}
+{"input":{"nums":[1,2,3]},"expected":1,"note":"three elements, not rotated"}
+{"input":{"nums":[3,1,2]},"expected":1,"note":"three elements, the minimum in the middle"}
+{"input":{"nums":[2,3,1]},"expected":1,"note":"three elements, the minimum last"}
+{"input":{"nums":[5,1,2,3,4]},"expected":1,"note":"rotated once: the minimum at index 1"}
+{"input":{"nums":[2,3,4,5,1]},"expected":1,"note":"rotated n - 1 times: the minimum last"}
+{"input":{"nums":[1,2,3,4,5,6]},"expected":1,"note":"even length, not rotated"}
+{"input":{"nums":[4,5,6,1,2,3]},"expected":1,"note":"even length, rotated by half"}
+{"input":{"nums":[6,1,2,3,4,5]},"expected":1,"note":"even length, the minimum at index 1"}
+{"input":{"nums":[2,3,4,5,6,1]},"expected":1,"note":"even length, the minimum last"}
+{"input":{"nums":[3,4,5,6,1,2]},"expected":1,"note":"even length, the minimum right of the middle"}
+{"input":{"nums":[5,6,1,2,3,4]},"expected":1,"note":"even length, the minimum left of the middle"}
+{"input":{"nums":[-1,-5000,-3000]},"expected":-5000,"note":"negative values"}
+{"input":{"nums":[5000,-5000]},"expected":-5000,"note":"the extremes, rotated"}
+{"input":{"nums":[-5000,5000]},"expected":-5000,"note":"the extremes, not rotated"}
+{"input":{"nums":[0,1000,5000,-4999,-20,-1]},"expected":-4999,"note":"negative minimum after positive values"}
+{"input":{"nums":[10,20,30,40,50,60,70,80,90,-10]},"expected":-10,"note":"ten elements, the minimum last"}
+{"input":{"nums":[90,-10,10,20,30,40,50,60,70,80]},"expected":-10,"note":"ten elements, the minimum at index 1"}
+{"input":{"nums":[40,50,60,70,80,90,-10,10,20,30]},"expected":-10,"note":"ten elements, the minimum at index 6"}
+{"generate":{"name":"rotated","args":{"k":0,"n":5000},"seed":1},"digest":"sha256:63521ef148b195cd462bdd103022d3bd1ae83c267582a2f9568c0af434f8b569","note":"5000 elements, not rotated"}
+{"generate":{"name":"rotated","args":{"k":1,"n":5000},"seed":2},"digest":"sha256:fc38a1c85b21aa9cb70948e698a16125cb08d8188a33850b25e1a53a132ab390","note":"5000 elements, the minimum at index 1"}
+{"generate":{"name":"rotated","args":{"k":4999,"n":5000},"seed":3},"digest":"sha256:03d194d755a91cf27668a7484912358eed8918d3d90a22625c54ed226dde2b87","note":"5000 elements, the minimum last"}
+{"generate":{"name":"rotated","args":{"k":2500,"n":5000},"seed":4},"digest":"sha256:704983ff01fc9686906654b1ede77b27d3aca402d33db5358c5fc228590758bf","note":"5000 elements, the minimum in the middle"}
+{"generate":{"name":"rotated_random","args":{"n":5000},"seed":5},"digest":"sha256:975802c7984e3ad2b2f30ee8cda1b1fe1b070af775428a3436ebf01b1299610d","note":"5000 elements, the minimum at a random index"}
+{"generate":{"name":"rotated_random","args":{"n":4999},"seed":6},"digest":"sha256:7d5c7c882a2bf5ccee66fd0cb310ddbf4a495a304e02c32942c7a24044075aea","note":"4999 elements, the minimum at a random index"}

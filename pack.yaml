@@ -46,6 +46,7 @@ groups:
       - binary-search
       - search-a-2d-matrix
       - koko-eating-bananas
+      - find-minimum-in-rotated-sorted-array
       - search-in-rotated-sorted-array
   - name: linked-list
     title: Linked List

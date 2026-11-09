@@ -1,0 +1,21 @@
+id: "153"
+slug: find-minimum-in-rotated-sorted-array
+title: Find Minimum in Rotated Sorted Array
+titles:
+  zh-CN: 寻找旋转排序数组中的最小值
+difficulty: medium
+tags:
+  - array
+  - binary-search
+kind: function
+function:
+  name: findMin
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
+judge:
+  compare: exact
