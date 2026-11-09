@@ -60,6 +60,7 @@ groups:
     title: Heap / Priority Queue
     problems:
       - kth-largest-element-in-a-stream
+      - last-stone-weight
       - find-median-from-data-stream
       - sort-an-array
   - name: backtracking
