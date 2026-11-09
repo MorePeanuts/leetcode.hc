@@ -1,0 +1,25 @@
+id: "4"
+slug: median-of-two-sorted-arrays
+title: Median of Two Sorted Arrays
+titles:
+  zh-CN: 寻找两个正序数组的中位数
+difficulty: hard
+tags:
+  - array
+  - binary-search
+  - divide-and-conquer
+kind: function
+function:
+  name: findMedianSortedArrays
+  params:
+    - name: nums1
+      type: integer[]
+    - name: nums2
+      type: integer[]
+  returns: double
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/median-of-two-sorted-arrays/
+judge:
+  compare: exact
+  tolerance: 1e-9
