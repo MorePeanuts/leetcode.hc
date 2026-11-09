@@ -1,0 +1,21 @@
+id: "125"
+slug: valid-palindrome
+title: Valid Palindrome
+titles:
+  zh-CN: 验证回文串
+difficulty: easy
+tags:
+  - two-pointers
+  - string
+kind: function
+function:
+  name: isPalindrome
+  params:
+    - name: s
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/valid-palindrome/
+judge:
+  compare: exact

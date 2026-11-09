@@ -26,6 +26,7 @@ groups:
   - name: two-pointers
     title: Two Pointers
     problems:
+      - valid-palindrome
       - 3sum
       - container-with-most-water
   - name: sliding-window
