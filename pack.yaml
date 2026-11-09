@@ -30,6 +30,7 @@ groups:
       - two-sum-ii-input-array-is-sorted
       - 3sum
       - container-with-most-water
+      - trapping-rain-water
   - name: sliding-window
     title: Sliding Window
     problems:

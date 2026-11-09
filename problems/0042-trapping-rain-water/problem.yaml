@@ -1,0 +1,24 @@
+id: "42"
+slug: trapping-rain-water
+title: Trapping Rain Water
+titles:
+  zh-CN: 接雨水
+difficulty: hard
+tags:
+  - stack
+  - array
+  - two-pointers
+  - dynamic-programming
+  - monotonic-stack
+kind: function
+function:
+  name: trap
+  params:
+    - name: height
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/trapping-rain-water/
+judge:
+  compare: exact
