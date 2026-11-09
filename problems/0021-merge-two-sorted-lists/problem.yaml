@@ -1,0 +1,23 @@
+id: "21"
+slug: merge-two-sorted-lists
+title: Merge Two Sorted Lists
+titles:
+  zh-CN: 合并两个有序链表
+difficulty: easy
+tags:
+  - recursion
+  - linked-list
+kind: function
+function:
+  name: mergeTwoLists
+  params:
+    - name: list1
+      type: ListNode
+    - name: list2
+      type: ListNode
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/merge-two-sorted-lists/
+judge:
+  compare: exact
