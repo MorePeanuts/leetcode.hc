@@ -1,0 +1,23 @@
+id: "226"
+slug: invert-binary-tree
+title: Invert Binary Tree
+titles:
+  zh-CN: 翻转二叉树
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: invertTree
+  params:
+    - name: root
+      type: TreeNode
+  returns: TreeNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/invert-binary-tree/
+judge:
+  compare: exact
