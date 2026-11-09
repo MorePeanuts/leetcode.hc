@@ -1,0 +1,22 @@
+id: "138"
+slug: copy-list-with-random-pointer
+title: Copy List with Random Pointer
+titles:
+  zh-CN: 随机链表的复制
+difficulty: medium
+tags:
+  - hash-table
+  - linked-list
+kind: function
+function:
+  name: copyRandomList
+  params:
+    - name: head
+      type: RandomListNode
+  returns: RandomListNode
+  returns_copy: head
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/copy-list-with-random-pointer/
+judge:
+  compare: exact
