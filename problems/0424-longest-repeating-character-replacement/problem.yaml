@@ -1,0 +1,24 @@
+id: "424"
+slug: longest-repeating-character-replacement
+title: Longest Repeating Character Replacement
+titles:
+  zh-CN: 替换后的最长重复字符
+difficulty: medium
+tags:
+  - hash-table
+  - string
+  - sliding-window
+kind: function
+function:
+  name: characterReplacement
+  params:
+    - name: s
+      type: string
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-repeating-character-replacement/
+judge:
+  compare: exact
