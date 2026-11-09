@@ -1,0 +1,29 @@
+id: "973"
+slug: k-closest-points-to-origin
+title: K Closest Points to Origin
+titles:
+  zh-CN: 最接近原点的 K 个点
+difficulty: medium
+tags:
+  - geometry
+  - array
+  - math
+  - divide-and-conquer
+  - quickselect
+  - sorting
+  - heap-priority-queue
+  - k-d-tree
+kind: function
+function:
+  name: kClosest
+  params:
+    - name: points
+      type: integer[][]
+    - name: k
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/k-closest-points-to-origin/
+judge:
+  compare: unordered

@@ -87,6 +87,7 @@ groups:
     problems:
       - kth-largest-element-in-a-stream
       - last-stone-weight
+      - k-closest-points-to-origin
       - find-median-from-data-stream
       - sort-an-array
   - name: backtracking

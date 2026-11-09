@@ -1,0 +1,34 @@
+{"input":{"k":1,"points":[[1,3],[-2,2]]},"expected":[[-2,2]],"example":true}
+{"input":{"k":2,"points":[[3,3],[5,-1],[-2,4]]},"expected":[[3,3],[-2,4]],"example":true}
+{"input":{"k":1,"points":[[0,0]]},"expected":[[0,0]],"note":"one point at the origin"}
+{"input":{"k":1,"points":[[-10000,10000]]},"expected":[[-10000,10000]],"note":"one point at a corner"}
+{"input":{"k":2,"points":[[1,1],[2,2]]},"expected":[[1,1],[2,2]],"note":"k = n: every point"}
+{"input":{"k":1,"points":[[3,4],[1,0]]},"expected":[[1,0]],"note":"the closer point second"}
+{"input":{"k":3,"points":[[5,0],[0,5],[-3,-4],[6,0]]},"expected":[[5,0],[0,5],[-3,-4]],"note":"three points at equal distance 5, all in the answer"}
+{"input":{"k":2,"points":[[1,1],[1,1],[2,2]]},"expected":[[1,1],[1,1]],"note":"a duplicate point, both copies in the answer"}
+{"input":{"k":3,"points":[[2,2],[1,1],[1,1],[1,1]]},"expected":[[1,1],[1,1],[1,1]],"note":"three copies of the closest point"}
+{"input":{"k":3,"points":[[7,7],[7,7],[7,7]]},"expected":[[7,7],[7,7],[7,7]],"note":"all points equal, k = n"}
+{"input":{"k":1,"points":[[3,0],[2,2]]},"expected":[[2,2]],"note":"Manhattan distance picks the wrong point: (3,0) 3 < (2,2) 4, Euclidean 9 > 8"}
+{"input":{"k":1,"points":[[0,5],[4,4]]},"expected":[[0,5]],"note":"max(|x|,|y|) picks the wrong point: 5 > 4, but 25 < 32"}
+{"input":{"k":2,"points":[[-1,-1],[-2,-3],[4,1],[0,-2]]},"expected":[[-1,-1],[0,-2]],"note":"negative coordinates"}
+{"input":{"k":2,"points":[[1,2],[2,1],[3,3]]},"expected":[[1,2],[2,1]],"note":"points mirrored across y = x"}
+{"input":{"k":1,"points":[[10000,10000],[-10000,-10000],[10000,-9999]]},"expected":[[10000,-9999]],"note":"coordinates at the limits"}
+{"input":{"k":2,"points":[[10000,10000],[-10000,9999],[0,0]]},"expected":[[0,0],[-10000,9999]],"note":"a corner (squared distance 2 * 10^8) just beyond the k-th"}
+{"input":{"k":3,"points":[[10000,10000],[-10000,-10000],[0,0]]},"expected":[[0,0],[10000,10000],[-10000,-10000]],"note":"two corners, k = n"}
+{"input":{"k":4,"points":[[9,9],[8,8],[7,7],[6,6],[5,5],[4,4],[3,3],[2,2],[1,1]]},"expected":[[1,1],[2,2],[3,3],[4,4]],"note":"farthest first"}
+{"input":{"k":4,"points":[[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9]]},"expected":[[1,1],[2,2],[3,3],[4,4]],"note":"closest first"}
+{"input":{"k":3,"points":[[1,3],[-2,2],[2,-2],[0,1]]},"expected":[[0,1],[-2,2],[2,-2]],"note":"ties at distance sqrt(8) inside the answer"}
+{"input":{"k":2,"points":[[1,0],[0,0],[0,0]]},"expected":[[0,0],[0,0]],"note":"two copies of the origin, the farther point first"}
+{"input":{"k":4,"points":[[3,3],[5,-1],[-2,4],[0,0],[-1,0]]},"expected":[[0,0],[-1,0],[3,3],[-2,4]],"note":"k = n - 1"}
+{"input":{"k":1,"points":[[100,0],[0,-99],[-98,0],[0,97]]},"expected":[[0,97]],"note":"points on the axes"}
+{"input":{"k":1,"points":[[6,8],[10,0],[0,10],[-8,-6],[1,9]]},"expected":[[1,9]],"note":"four points at distance 10, one closer"}
+{"input":{"k":5,"points":[[2,3],[3,2],[-2,-3],[-3,2],[1,1],[4,0]]},"expected":[[1,1],[2,3],[3,2],[-2,-3],[-3,2]],"note":"four points at sqrt(13) and one closer in the answer, sqrt(16) out"}
+{"generate":{"name":"random_points","args":{"k":1,"n":10000},"seed":1},"digest":"sha256:eab635a5e945c11250ce374fcd673b2e85a4d0598b35841c576e30525b5015e8","note":"10^4 random points, k = 1"}
+{"generate":{"name":"random_points","args":{"k":5000,"n":10000},"seed":2},"digest":"sha256:acb7785f9efe09191fbddf18055e57c65f2ae881d8ecf03c33ca8095f05064d3","note":"10^4 random points, k = 5000"}
+{"generate":{"name":"random_points","args":{"k":9999,"n":10000},"seed":3},"digest":"sha256:b329835d46c23a83b5fb6188e3fb7cabf772553bd90c09f69b1797ed45862876","note":"10^4 random points, k = n - 1"}
+{"generate":{"name":"random_points","args":{"k":10000,"n":10000},"seed":4},"digest":"sha256:2803cb55f6f25c1215019666111701acbb2121b22b6dde30d8cdc639eeaf7abe","note":"10^4 random points, k = n"}
+{"generate":{"name":"descending","args":{"k":5000,"n":10000},"seed":5},"digest":"sha256:a765d1c191aff7426a09213167aebfd277e9e46f2ef9efef2e21e2dbb4d47eeb","note":"10^4 points farthest first, k = 5000: every point read is the closest so far"}
+{"generate":{"name":"descending","args":{"k":2500,"n":10000},"seed":6},"digest":"sha256:77fda2c279c520f3349cf6bf23529818e9502d1880e2478d45b73b51cea8c057","note":"10^4 points farthest first, k = 2500"}
+{"generate":{"name":"small_box","args":{"k":4000,"n":10000,"r":30},"seed":7},"digest":"sha256:8bab5399fbc24ad8cf30389942324af9c1d64c49678194127a2574e9a7011678","note":"10^4 points in [-30, 30]^2: many equal distances and duplicates"}
+{"generate":{"name":"lattice_disk","args":{"r":30},"seed":8},"digest":"sha256:631b89da4060884180660a2d5253dcd7cc61cf9f6978d2bf037f4bd3725dac7d","note":"the lattice [-49, 49]^2, k = the points within distance 30"}
+{"generate":{"name":"duplicates","args":{"groups":20,"n":10000,"take":7},"seed":9},"digest":"sha256:13d60d80602f1cf6054baf88e6ab58bda40463e616330fec0986bd784fcef4c6","note":"20 distinct points repeated 500 times each, k covers the 7 closest"}
