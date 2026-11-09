@@ -1,0 +1,36 @@
+id: "208"
+slug: implement-trie-prefix-tree
+title: Implement Trie (Prefix Tree)
+titles:
+  zh-CN: 实现 Trie (前缀树)
+difficulty: medium
+tags:
+  - design
+  - trie
+  - hash-table
+  - string
+kind: class
+class:
+  name: Trie
+  constructor: []
+  methods:
+    - name: insert
+      params:
+        - name: word
+          type: string
+      returns: void
+    - name: search
+      params:
+        - name: word
+          type: string
+      returns: boolean
+    - name: startsWith
+      params:
+        - name: prefix
+          type: string
+      returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/implement-trie-prefix-tree/
+judge:
+  compare: exact
