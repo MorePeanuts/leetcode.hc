@@ -1,0 +1,25 @@
+id: "100"
+slug: same-tree
+title: Same Tree
+titles:
+  zh-CN: 相同的树
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: isSameTree
+  params:
+    - name: p
+      type: TreeNode
+    - name: q
+      type: TreeNode
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/same-tree/
+judge:
+  compare: exact
