@@ -1,0 +1,31 @@
+{"input":{"args":[[3,[4,5,8,2]],[3],[5],[10],[9],[4]],"ops":["KthLargest","add","add","add","add","add"]},"expected":[null,4,5,5,8,8],"example":true}
+{"input":{"args":[[4,[7,7,7,7,8,3]],[2],[10],[9],[9]],"ops":["KthLargest","add","add","add","add"]},"expected":[null,7,7,7,8],"example":true}
+{"input":{"args":[[1,[]],[5]],"ops":["KthLargest","add"]},"expected":[null,5],"note":"empty nums, k = 1, one add"}
+{"input":{"args":[[1,[]],[-10000],[10000],[0]],"ops":["KthLargest","add","add","add"]},"expected":[null,-10000,10000,10000],"note":"empty nums, k = 1: the maximum so far"}
+{"input":{"args":[[1,[3]],[2]],"ops":["KthLargest","add"]},"expected":[null,3],"note":"one value, k = 1: an add below the maximum leaves it"}
+{"input":{"args":[[2,[3]],[2]],"ops":["KthLargest","add"]},"expected":[null,2],"note":"k = len(nums) + 1: the first add fills the heap to k"}
+{"input":{"args":[[2,[1]],[-1],[1],[-3]],"ops":["KthLargest","add","add","add"]},"expected":[null,-1,1,1],"note":"k = len(nums) + 1, then adds below and at the k-th"}
+{"input":{"args":[[3,[1,2]],[3],[4],[5],[6]],"ops":["KthLargest","add","add","add","add"]},"expected":[null,1,2,3,4],"note":"k = len(nums) + 1, ascending adds: the k-th moves up each time"}
+{"input":{"args":[[3,[10,9,8]],[1],[2],[3]],"ops":["KthLargest","add","add","add"]},"expected":[null,8,8,8],"note":"adds all below the k-th: the answer never changes"}
+{"input":{"args":[[1,[5,5,5]],[5],[5]],"ops":["KthLargest","add","add"]},"expected":[null,5,5],"note":"all equal"}
+{"input":{"args":[[2,[5,5,5]],[6],[6],[4]],"ops":["KthLargest","add","add","add"]},"expected":[null,5,6,6],"note":"ties: two 6s push the 2nd largest to 6"}
+{"input":{"args":[[3,[-5,-1,-3,-2]],[-4],[-1],[0]],"ops":["KthLargest","add","add","add"]},"expected":[null,-3,-2,-1],"note":"negative values"}
+{"input":{"args":[[2,[-10000,-10000]],[-10000],[10000],[10000]],"ops":["KthLargest","add","add","add"]},"expected":[null,-10000,-10000,10000],"note":"the extremes"}
+{"input":{"args":[[4,[1,2,3,4,5]],[0],[6],[6],[6],[6],[6]],"ops":["KthLargest","add","add","add","add","add","add"]},"expected":[null,2,3,4,5,6,6],"note":"k-th largest becomes a duplicate value"}
+{"input":{"args":[[1,[1,2,3,4,5,6,7,8,9,10]],[11],[0],[12]],"ops":["KthLargest","add","add","add"]},"expected":[null,11,11,12],"note":"k = 1 over many values: the maximum"}
+{"input":{"args":[[10,[1,2,3,4,5,6,7,8,9,10]],[0],[11],[11]],"ops":["KthLargest","add","add","add"]},"expected":[null,1,2,3],"note":"k = len(nums): the minimum, then the new minimum"}
+{"input":{"args":[[11,[1,2,3,4,5,6,7,8,9,10]],[0],[20],[-5],[5]],"ops":["KthLargest","add","add","add","add"]},"expected":[null,0,1,1,2],"note":"k = len(nums) + 1: the minimum of all values"}
+{"input":{"args":[[3,[4,5,8,2]],[8],[8],[8]],"ops":["KthLargest","add","add","add"]},"expected":[null,5,8,8],"note":"an add equal to the current maximum, repeated"}
+{"input":{"args":[[2,[0]],[0],[0],[1],[-1]],"ops":["KthLargest","add","add","add","add"]},"expected":[null,0,0,0,0],"note":"zeros"}
+{"input":{"args":[[3,[9,3,7,1,5]],[6],[4],[8],[2],[10]],"ops":["KthLargest","add","add","add","add","add"]},"expected":[null,6,6,7,7,8],"note":"unordered nums and adds"}
+{"input":{"args":[[5,[10,9,8,7,6,5,4,3,2,1]],[5],[5],[6],[11]],"ops":["KthLargest","add","add","add","add"]},"expected":[null,6,6,6,7],"note":"descending nums, adds equal to the k-th"}
+{"input":{"args":[[2,[1,2,3,4,5]],[3]],"ops":["KthLargest","add"]},"expected":[null,4],"note":"an add equal to an element below the k-th"}
+{"input":{"args":[[1,[1,2]]],"ops":["KthLargest"]},"expected":[null],"note":"the constructor alone, no add"}
+{"generate":{"name":"random_stream","args":{"k":5000,"m":10000,"n":10000},"seed":1},"digest":"sha256:19539f8e5c159a5a95a11dd7a15d25bf9bd2d8d88047d54c7408327e046a25c2","note":"10^4 random values and 10^4 random adds, k = 5000"}
+{"generate":{"name":"random_stream","args":{"k":1,"m":10000,"n":10000},"seed":2},"digest":"sha256:2131091262f449ed8397dea3e4e59963524d9002d9f596ff440f72a18c9a3c92","note":"10^4 random values and 10^4 random adds, k = 1"}
+{"generate":{"name":"random_stream","args":{"k":10001,"m":10000,"n":10000},"seed":3},"digest":"sha256:569d482bf46b405aa768c6dce76582788a1d15a92ead4a69325466c44905202d","note":"10^4 random values and 10^4 random adds, k = len(nums) + 1"}
+{"generate":{"name":"ascending_adds","args":{"k":100,"m":10000,"n":10000},"seed":4},"digest":"sha256:4146ae648332a802905d26ef5301fe6825e3d1569a0b17049d874ed1fd28d9ac","note":"10^4 adds ascending above every initial value: each moves the k-th largest"}
+{"generate":{"name":"ascending_adds","args":{"k":9000,"m":10000,"n":10000},"seed":5},"digest":"sha256:d52cc7e7963b0f48e76dec9860f32835577e063f8297858d965c51691ef674f9","note":"10^4 adds ascending above every initial value, k = 9000"}
+{"generate":{"name":"descending_adds","args":{"k":10000,"m":10000,"n":10000},"seed":6},"digest":"sha256:43660fc472ec7bd422cccb1f71a945bb20d98aea8ccc47993f14bf2457ffbc03","note":"10^4 adds descending below every initial value, k = len(nums)"}
+{"generate":{"name":"empty_start","args":{"m":10000},"seed":7},"digest":"sha256:a38e6ed5fba8e7652f733110e9388d620b2134a516731eb3311b50fd1da9e9a2","note":"no initial values, k = 1, 10^4 random adds"}
+{"generate":{"name":"few_values","args":{"k":3000,"m":10000,"n":10000,"values":5},"seed":8},"digest":"sha256:8279d3c5029020bc8eeea2c873348361a5daad5711f9388cc23e9059dd40b69a","note":"10^4 values and adds drawn from 5 distinct ones: ties at the k-th"}
