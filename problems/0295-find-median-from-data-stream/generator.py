@@ -62,3 +62,12 @@ def duplicates(rng, n, every, values):
     k = _count(n, every)
     pool = rng.sample(range(LO, HI + 1), values)
     return _case([rng.choice(pool) for _ in range(k)], every)
+
+
+def descending_stream(rng, n, every):
+    # Distinct random values over the whole range, strictly descending, a
+    # findMedian after every every-th add: every new value is the smallest,
+    # the worst case of inserting into a sorted array (each add shifts every
+    # element already there).
+    k = _count(n, every)
+    return _case(sorted(rng.sample(range(LO, HI + 1), k), reverse=True), every)
