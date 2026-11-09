@@ -1,0 +1,40 @@
+{"input":{"s1":"ab","s2":"eidbaooo"},"expected":true,"example":true}
+{"input":{"s1":"ab","s2":"eidboaoo"},"expected":false,"example":true}
+{"input":{"s1":"a","s2":"a"},"expected":true,"note":"single letters, equal"}
+{"input":{"s1":"a","s2":"b"},"expected":false,"note":"single letters, different"}
+{"input":{"s1":"ab","s2":"a"},"expected":false,"note":"s1 longer than s2"}
+{"input":{"s1":"abc","s2":"cba"},"expected":true,"note":"same length, a permutation"}
+{"input":{"s1":"abc","s2":"abd"},"expected":false,"note":"same length, not a permutation"}
+{"input":{"s1":"abc","s2":"ccccbbbbaaaa"},"expected":false,"note":"the letters are all there, but never together"}
+{"input":{"s1":"ab","s2":"ab"},"expected":true,"note":"s2 is s1"}
+{"input":{"s1":"ab","s2":"xxab"},"expected":true,"note":"the match at the very end"}
+{"input":{"s1":"ab","s2":"baxx"},"expected":true,"note":"the match at the very start"}
+{"input":{"s1":"aab","s2":"abab"},"expected":true,"note":"two a's and a b, interleaved"}
+{"input":{"s1":"aab","s2":"xbaax"},"expected":true,"note":"counts matter: a match with a repeated letter"}
+{"input":{"s1":"abb","s2":"ab"},"expected":false,"note":"s1 longer, same letters"}
+{"input":{"s1":"aa","s2":"aba"},"expected":false,"note":"two equal letters, separated"}
+{"input":{"s1":"aa","s2":"baab"},"expected":true,"note":"two equal letters, adjacent"}
+{"input":{"s1":"adc","s2":"dcda"},"expected":true,"note":"a match that starts after a partial one"}
+{"input":{"s1":"hello","s2":"ooolleoooleh"},"expected":false,"note":"the letters of s1 split across two windows"}
+{"input":{"s1":"abc","s2":"bbbca"},"expected":true,"note":"a match in the last window after near misses"}
+{"input":{"s1":"ab","s2":"ca"},"expected":false,"note":"one letter in the window, one missing"}
+{"input":{"s1":"ad","s2":"bc"},"expected":false,"note":"same letter sum (a+d = b+c), different letters"}
+{"input":{"s1":"ac","s2":"bb"},"expected":false,"note":"same letter sum, a repeated letter"}
+{"input":{"s1":"abc","s2":"abcabc"},"expected":true,"note":"s1 as a substring"}
+{"input":{"s1":"abcd","s2":"xdcbay"},"expected":true,"note":"a reversed copy inside"}
+{"input":{"s1":"aabb","s2":"ab"},"expected":false,"note":"s1 twice as long"}
+{"input":{"s1":"ab","s2":"aaaaaaaaab"},"expected":true,"note":"the match only in the last two letters"}
+{"input":{"s1":"zz","s2":"zazbzcz"},"expected":false,"note":"repeated letters never adjacent"}
+{"input":{"s1":"xyz","s2":"zyxzyx"},"expected":true,"note":"several matches"}
+{"input":{"s1":"abcdefghijklmnopqrstuvwxyz","s2":"zyxwvutsrqponmlkjihgfedcba"},"expected":true,"note":"the whole alphabet, reversed"}
+{"input":{"s1":"abcdefghijklmnopqrstuvwxyz","s2":"zyxwvutsrqponmlkjihgfedcbb"},"expected":false,"note":"the whole alphabet with one letter off"}
+{"input":{"s1":"trinitrophenylmethylnitramine","s2":"dinitrophenylhydrazinetrinitrophenylmethylnitramine"},"expected":true,"note":"a long s1, matched at the end"}
+{"input":{"s1":"ky","s2":"ainwkckifykxlribaypk"},"expected":true,"note":"random letters"}
+{"input":{"s1":"aab","s2":"xabbx"},"expected":false,"note":"a window with the same letters as s1 but other counts"}
+{"generate":{"name":"two_z_apart","args":{"m":5000,"n":10000},"seed":1},"digest":"sha256:44fe40bad067c8191496c466d44d55f7e0af57abddf043d6ed0217a9587035d3","note":"maximum length s2, s1 of half its length, no match: every window is checked"}
+{"generate":{"name":"match_at_end","args":{"m":5000,"n":10000},"seed":2},"digest":"sha256:98104b1ee2ab84453ede121dccc4044e2ce8f62e20d69e14477e7d97b4cfb4db","note":"maximum length s2, s1 of half its length, the only match at the end"}
+{"generate":{"name":"one_short","args":{"m":4000,"n":10000},"seed":3},"digest":"sha256:b55eeb4c1b8a938bc56b5a32f6fb01fd5e4352fd931ecfd953fe3247fe2d3ffe","note":"maximum length s2, every window one letter off s1"}
+{"generate":{"name":"match_at_end","args":{"letters":3,"m":3000,"n":10000},"seed":4},"digest":"sha256:ddccca0c454fed021b4e16389df5257bbaf902a5e4cfb952704e770b84a283bb","note":"maximum length s2, few letters, the only match at the end"}
+{"generate":{"name":"two_z_apart","args":{"m":6000,"n":10000},"seed":5},"digest":"sha256:977fc7dcfdb376f9cb0d5d65fd012df07b46f9adce469abc82a217f08a1bac2f","note":"maximum length s2, a long s1, no match"}
+{"generate":{"name":"match_at_end","args":{"m":10000,"n":10000},"seed":6},"digest":"sha256:19d6d188a8ebe185d714d30a6ba2a216de1ea3eab1e3f4f02c75a2c27be981e0","note":"both at maximum length: s2 is a permutation of s1"}
+{"generate":{"name":"random_pair","args":{"letters":26,"m":10000,"n":9999},"seed":7},"digest":"sha256:76b95e094387d8d1942f7d6c47e76f714c7ff29e9609222733c1c87f315776df","note":"s1 at maximum length, one longer than s2"}
