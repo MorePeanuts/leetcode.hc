@@ -1,0 +1,35 @@
+{"input":{"height":[0,1,0,2,1,0,1,3,2,1,2,1]},"expected":6,"example":true}
+{"input":{"height":[4,2,0,3,2,5]},"expected":9,"example":true}
+{"input":{"height":[0]},"expected":0,"note":"one bar"}
+{"input":{"height":[5]},"expected":0,"note":"one tall bar"}
+{"input":{"height":[3,1]},"expected":0,"note":"two bars: nothing to hold water"}
+{"input":{"height":[2,0,2]},"expected":2,"note":"the smallest pool"}
+{"input":{"height":[0,0,0,0]},"expected":0,"note":"all zeros"}
+{"input":{"height":[3,3,3,3]},"expected":0,"note":"all equal: flat, no water"}
+{"input":{"height":[1,2,3,4,5]},"expected":0,"note":"increasing: no water"}
+{"input":{"height":[5,4,3,2,1]},"expected":0,"note":"decreasing: no water"}
+{"input":{"height":[1,3,5,3,1]},"expected":0,"note":"a mountain: no water"}
+{"input":{"height":[5,3,1,3,5]},"expected":8,"note":"a valley"}
+{"input":{"height":[3,0,5]},"expected":3,"note":"the lower end bounds the pool"}
+{"input":{"height":[5,0,3]},"expected":3,"note":"the lower end on the right bounds the pool"}
+{"input":{"height":[5,2,1,2,1,5]},"expected":14,"note":"uneven pool floor"}
+{"input":{"height":[4,0,0,0,1]},"expected":3,"note":"the right end is low: water only up to 1"}
+{"input":{"height":[0,2,0,4,0,2,0]},"expected":4,"note":"zeros at both ends, two pools around a peak"}
+{"input":{"height":[2,0,2,0,2,0,2]},"expected":6,"note":"equal walls, several pools"}
+{"input":{"height":[5,1,5,1,5,1,0]},"expected":8,"note":"pools between equal walls, a slope at the end"}
+{"input":{"height":[0,1,0,3,0,1,0,5,0,1,0,3,0,1,0]},"expected":18,"note":"nested pools around a central peak"}
+{"input":{"height":[6,4,2,0,3,2,0,3,1,4,5,3,2,7,5,3,0,1,2,1,3,4,6,8,1,3]},"expected":83,"note":"several pools of different levels"}
+{"input":{"height":[100000,0,100000]},"expected":100000,"note":"maximum height"}
+{"input":{"height":[2,1,0,1,3]},"expected":4,"note":"the left wall is lower than the right one"}
+{"input":{"height":[4,2,3]},"expected":1,"note":"a pool at the end bounded by the right bar"}
+{"input":{"height":[1,0,2,1,0,1,3,2,1,2,1,0]},"expected":6,"note":"the first example without its leading zero, a zero at the end"}
+{"generate":{"name":"random_heights","args":{"n":20000},"seed":1},"digest":"sha256:c1c83bae8cdc6ea883d9fb0449e89a158e08153d79d2449ca6dc175600742f9d","note":"maximum length, random heights"}
+{"generate":{"name":"random_heights","args":{"n":20000,"top":10},"seed":2},"digest":"sha256:93bbdc71b164745f72fb74de511709ae24c11ff9700afadb3f240c35fa00ee8d","note":"maximum length, low random heights with many ties"}
+{"generate":{"name":"walls","args":{"n":20000}},"digest":"sha256:2f42d1b109a52474f405433761f040f7373fa0bf95a6d7025222a4ef29207432","note":"maximum length, the two ends at the maximum height: the largest answer, close to 2^31"}
+{"generate":{"name":"valley","args":{"n":20000}},"digest":"sha256:7fe43b368c4a2bcd6d8563a41e6b82c59826fa36a1d299641b72bbc91b8020eb","note":"maximum length, a valley"}
+{"generate":{"name":"mountain","args":{"n":20000}},"digest":"sha256:8451c4311bdaa6b395458ece336c95281d99271ac4ee44f7bffb78775861d62d","note":"maximum length, a mountain: no water"}
+{"generate":{"name":"increasing","args":{"n":20000}},"digest":"sha256:0fd44153e525956fb6cfbd1bdeee8240a3167ad10d7e1d29e429edfc0881a6c3","note":"maximum length, increasing: no water"}
+{"generate":{"name":"decreasing","args":{"n":20000}},"digest":"sha256:0202bafa73e874afad93943a844f17fbfaef92bca4fbc2e270e0f34c7f675b81","note":"maximum length, decreasing: no water"}
+{"generate":{"name":"sawtooth","args":{"n":20000,"period":50},"seed":3},"digest":"sha256:99ef37d38d9c3626c749122804c51935c29c5e446d2581eb1011929b16ee6d81","note":"maximum length, many pools between random teeth"}
+{"generate":{"name":"peak_inside","args":{"n":20000},"seed":4},"digest":"sha256:556e49652ec0abd585ae514e1f7961e0069fd009fd4b7b28a0e1201792062bbc","note":"maximum length, the tallest wall inside, lower walls at the ends"}
+{"generate":{"name":"peak_inside","args":{"n":20000},"seed":5},"digest":"sha256:12a2b58d559e34e8ef533997f39d71b07c161f76d0fc396e7111712d1d81aa54","note":"maximum length, the tallest wall at another place inside"}
