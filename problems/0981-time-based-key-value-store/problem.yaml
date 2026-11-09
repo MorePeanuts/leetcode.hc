@@ -1,0 +1,37 @@
+id: "981"
+slug: time-based-key-value-store
+title: Time Based Key-Value Store
+titles:
+  zh-CN: 基于时间的键值存储
+difficulty: medium
+tags:
+  - design
+  - hash-table
+  - string
+  - binary-search
+kind: class
+class:
+  name: TimeMap
+  constructor: []
+  methods:
+    - name: set
+      params:
+        - name: key
+          type: string
+        - name: value
+          type: string
+        - name: timestamp
+          type: integer
+      returns: void
+    - name: get
+      params:
+        - name: key
+          type: string
+        - name: timestamp
+          type: integer
+      returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/time-based-key-value-store/
+judge:
+  compare: exact
