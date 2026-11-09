@@ -55,6 +55,7 @@ groups:
       - linked-list-cycle-ii
       - reorder-list
       - remove-nth-node-from-end-of-list
+      - copy-list-with-random-pointer
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
