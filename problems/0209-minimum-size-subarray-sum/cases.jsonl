@@ -1,0 +1,35 @@
+{"input":{"nums":[2,3,1,2,4,3],"target":7},"expected":2,"example":true}
+{"input":{"nums":[1,4,4],"target":4},"expected":1,"example":true}
+{"input":{"nums":[1,1,1,1,1,1,1,1],"target":11},"expected":0,"example":true}
+{"input":{"nums":[1],"target":1},"expected":1,"note":"one element equal to target"}
+{"input":{"nums":[1],"target":2},"expected":0,"note":"one element below target: 0"}
+{"input":{"nums":[10000],"target":1},"expected":1,"note":"one element far above target"}
+{"input":{"nums":[1,2,3,4,5],"target":15},"expected":5,"note":"only the whole array reaches target"}
+{"input":{"nums":[1,2,3,4,5],"target":16},"expected":0,"note":"the whole sum is one short: 0"}
+{"input":{"nums":[1,2,3,4,5],"target":11},"expected":3,"note":"the shortest window at the end"}
+{"input":{"nums":[5,4,3,2,1],"target":11},"expected":3,"note":"the shortest window at the start"}
+{"input":{"nums":[1,1,1,1,10],"target":10},"expected":1,"note":"one element reaches target after a long window"}
+{"input":{"nums":[10,1,1,1,1],"target":10},"expected":1,"note":"the first element alone"}
+{"input":{"nums":[1,1,10,1,1],"target":10},"expected":1,"note":"one element in the middle"}
+{"input":{"nums":[2,2,2,2],"target":4},"expected":2,"note":"sum exactly target: greater or equal counts"}
+{"input":{"nums":[2,2,2,2],"target":5},"expected":3,"note":"just over a sum of two"}
+{"input":{"nums":[1,2,3,4,5],"target":1},"expected":1,"note":"target 1: any element"}
+{"input":{"nums":[3,1,1,1,3],"target":6},"expected":4,"note":"the two ends are large, the middle small: one end and the middle"}
+{"input":{"nums":[1,1,1,1,1,1,1,1],"target":8},"expected":8,"note":"all equal, the whole array"}
+{"input":{"nums":[1,4,4,1],"target":8},"expected":2,"note":"two middle elements"}
+{"input":{"nums":[12,28,83,4,25,26,25,2,25,25,25,12],"target":213},"expected":8,"note":"a window found after several shrinks"}
+{"input":{"nums":[2,16,14,15],"target":20},"expected":2,"note":"two windows of length 2"}
+{"input":{"nums":[1,2,3,4,5],"target":9},"expected":2,"note":"the last two elements"}
+{"input":{"nums":[4,3,3,4],"target":7},"expected":2,"note":"windows at both ends"}
+{"input":{"nums":[10000,10000,10000],"target":1000000000},"expected":0,"note":"the largest target, far from reached"}
+{"input":{"nums":[1,1,1,100,1,1,1],"target":101},"expected":2,"note":"a large element plus one neighbour"}
+{"input":{"nums":[5,1,3,5,10,7,4,9,2,8],"target":15},"expected":2,"note":"random values"}
+{"input":{"nums":[1,3,2,7,1,8,1,1,2,6],"target":16},"expected":3,"note":"random values, a window of three"}
+{"input":{"nums":[6,6,6,6,6],"target":18},"expected":3,"note":"all equal: target / value elements"}
+{"generate":{"name":"random_values","args":{"n":100000,"share":50,"top":10000},"seed":1},"digest":"sha256:d9de0d3a9ab53bc6e09dd137e026805f0f00905466a5c79e58079d705cdf1a87","note":"maximum length, target half the total: the answer is about n/2"}
+{"generate":{"name":"random_values","args":{"n":100000,"share":30,"top":10},"seed":2},"digest":"sha256:33d37bb1b2869b9090f57b261b35779bfad6e3322e5eb6b84ca661e95c27aedb","note":"maximum length, small values, target 30% of the total"}
+{"generate":{"name":"random_values","args":{"n":100000,"share":80,"top":10000},"seed":3},"digest":"sha256:2d7974815a7a08090bbdc9cdfbcac10d29773cb9218e0f756af854d2a2fe6747","note":"maximum length, target 80% of the total"}
+{"generate":{"name":"no_answer","args":{"n":100000},"seed":4},"digest":"sha256:0d2856cf405cff687d06923cfd1a183d6f3cf7ca61858be7330abbcb85c69bde","note":"maximum length, target one more than the total: 0"}
+{"generate":{"name":"whole_array","args":{"n":100000},"seed":5},"digest":"sha256:b8d5bf5f62713994039576934b0268c70e62275696f88bbaaab967ecdf649098","note":"maximum length, only the whole array reaches target"}
+{"generate":{"name":"all_max","args":{"n":100000}},"digest":"sha256:bd4ecd7c08d3b1f10023c4149c49b9824c2d4d82045499a271c1540ea7a14d01","note":"maximum length and values, target 10^9: the whole array"}
+{"generate":{"name":"spike_at_end","args":{"n":100000},"seed":6},"digest":"sha256:918e5a7a70a03d178e8c9b08697dc8211459e5688c7452b2063b301020cbc69f","note":"maximum length, small values, the shortest window at the very end"}
