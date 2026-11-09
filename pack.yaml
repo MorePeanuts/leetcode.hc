@@ -44,6 +44,7 @@ groups:
     title: Binary Search
     problems:
       - binary-search
+      - search-a-2d-matrix
       - koko-eating-bananas
       - search-in-rotated-sorted-array
   - name: linked-list

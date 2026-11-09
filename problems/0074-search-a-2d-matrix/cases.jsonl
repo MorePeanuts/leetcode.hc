@@ -1,0 +1,40 @@
+{"input":{"matrix":[[1,3,5,7],[10,11,16,20],[23,30,34,60]],"target":3},"expected":true,"example":true}
+{"input":{"matrix":[[1,3,5,7],[10,11,16,20],[23,30,34,60]],"target":13},"expected":false,"example":true}
+{"input":{"matrix":[[1]],"target":1},"expected":true,"note":"one value, found"}
+{"input":{"matrix":[[1]],"target":0},"expected":false,"note":"one value, target below it"}
+{"input":{"matrix":[[1]],"target":2},"expected":false,"note":"one value, target above it"}
+{"input":{"matrix":[[1,3]],"target":3},"expected":true,"note":"one row, the last value"}
+{"input":{"matrix":[[1,3]],"target":2},"expected":false,"note":"one row, absent between its values"}
+{"input":{"matrix":[[1],[3]],"target":3},"expected":true,"note":"one column, the last value"}
+{"input":{"matrix":[[1],[3]],"target":2},"expected":false,"note":"one column, absent between rows"}
+{"input":{"matrix":[[1],[3]],"target":4},"expected":false,"note":"one column, above every value"}
+{"input":{"matrix":[[1],[2],[3],[4]],"target":4},"expected":true,"note":"one column of four, the last value"}
+{"input":{"matrix":[[-3,-1,0,2,8]],"target":8},"expected":true,"note":"one row of five, the last value"}
+{"input":{"matrix":[[-3,-1,0,2,8]],"target":-3},"expected":true,"note":"one row of five, the first value"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":7},"expected":true,"note":"2 x 3, the first value of the second row"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":5},"expected":true,"note":"2 x 3, the last value of the first row"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":6},"expected":false,"note":"2 x 3, absent between the rows"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":11},"expected":true,"note":"2 x 3, the last value"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":0},"expected":false,"note":"2 x 3, below every value"}
+{"input":{"matrix":[[1,3,5],[7,9,11]],"target":12},"expected":false,"note":"2 x 3, above every value"}
+{"input":{"matrix":[[1,2],[4,6],[8,9]],"target":6},"expected":true,"note":"3 x 2, more rows than columns, a row's last value"}
+{"input":{"matrix":[[1,2],[4,6],[8,9]],"target":8},"expected":true,"note":"3 x 2, the first value of the last row"}
+{"input":{"matrix":[[1,2],[4,6],[8,9]],"target":3},"expected":false,"note":"3 x 2, absent between rows"}
+{"input":{"matrix":[[1,2],[4,6],[8,9]],"target":5},"expected":false,"note":"3 x 2, absent inside a row"}
+{"input":{"matrix":[[1,1,1],[2,2,2]],"target":2},"expected":true,"note":"rows of equal values"}
+{"input":{"matrix":[[1,1,3,3],[5,5,5,7]],"target":4},"expected":false,"note":"duplicates, absent between rows"}
+{"input":{"matrix":[[1,1,3,3],[5,5,5,7]],"target":7},"expected":true,"note":"duplicates, the last value"}
+{"input":{"matrix":[[-10000,10000]],"target":10000},"expected":true,"note":"the extreme values in one row"}
+{"input":{"matrix":[[-10000],[10000]],"target":-10000},"expected":true,"note":"the extreme values in one column"}
+{"input":{"matrix":[[-10000],[10000]],"target":0},"expected":false,"note":"the extreme values, absent between them"}
+{"input":{"matrix":[[-10,-5,-1],[0,3,4]],"target":-5},"expected":true,"note":"negative values, found"}
+{"input":{"matrix":[[-10,-5,-1],[0,3,4]],"target":-2},"expected":false,"note":"negative values, absent"}
+{"generate":{"name":"present","args":{"at":"first","dups":false,"m":100,"n":100},"seed":1},"digest":"sha256:8019e6b833107309b397e09a233e290f648469a6aae4e0673909864bf11f178a","note":"100 x 100, the smallest value"}
+{"generate":{"name":"present","args":{"at":"last","dups":false,"m":100,"n":100},"seed":2},"digest":"sha256:bcd7eb9ed7154215fee11ee68f1b5a7f4dcea175f44d0b36fd4690ac8ef860bc","note":"100 x 100, the largest value"}
+{"generate":{"name":"present","args":{"at":"row_start","dups":true,"m":100,"n":100},"seed":3},"digest":"sha256:8f989c1de1fd74b56cadd6168a6049e919370e3303ef2039fa923c4cf8d3f76e","note":"100 x 100 with duplicates, the first value of a row"}
+{"generate":{"name":"present","args":{"at":"row_end","dups":true,"m":100,"n":100},"seed":4},"digest":"sha256:fe7e149f61105ee8601ee452e4956f57e5974cb349f48601b3ce7f73b5f83561","note":"100 x 100 with duplicates, the last value of a row"}
+{"generate":{"name":"present","args":{"at":"random","dups":true,"m":100,"n":100},"seed":5},"digest":"sha256:5b9fed18845449d24633b6ec32551ca89d2f5081b86a0a57376d94c39dbff7df","note":"100 x 100 with duplicates, a random value"}
+{"generate":{"name":"absent","args":{"at":"between_rows","m":100,"n":100},"seed":6},"digest":"sha256:6fb15c434cce69273b9bf5969f505b47bdf13e7881e0488d82f71780ab7b3d8f","note":"100 x 100, absent between two rows"}
+{"generate":{"name":"absent","args":{"at":"inside","m":100,"n":100},"seed":7},"digest":"sha256:df048d6841bb42b4086370adf9fc98241e238350fea97f1771c947763fc2b1ed","note":"100 x 100, absent inside a row"}
+{"generate":{"name":"absent","args":{"at":"random","m":1,"n":100},"seed":8},"digest":"sha256:991e1db2ac63a03232e578b7d4451ef82e21ced457410620ec361f818a0257fa","note":"one row of 100, absent"}
+{"generate":{"name":"present","args":{"at":"random","dups":false,"m":100,"n":1},"seed":9},"digest":"sha256:9410dff9ec88dde3b3cc45465d61b0bfc7321d6fe0c9ec01f3102008b812e7af","note":"one column of 100, a random value"}
