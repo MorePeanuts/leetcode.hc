@@ -65,6 +65,8 @@ groups:
     title: Backtracking
   - name: tries
     title: Tries
+    problems:
+      - implement-trie-prefix-tree
   - name: graphs
     title: Graphs
     problems:
