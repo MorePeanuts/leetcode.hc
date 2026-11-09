@@ -1,0 +1,24 @@
+{"input":{"head":[3,2,0,-4],"pos":1},"expected":true,"example":true}
+{"input":{"head":[1,2],"pos":0},"expected":true,"example":true}
+{"input":{"head":[1],"pos":-1},"expected":false,"example":true}
+{"input":{"head":[],"pos":-1},"expected":false,"note":"empty list"}
+{"input":{"head":[1],"pos":0},"expected":true,"note":"one node linked to itself"}
+{"input":{"head":[1,2],"pos":-1},"expected":false,"note":"two nodes, no cycle"}
+{"input":{"head":[1,2],"pos":1},"expected":true,"note":"two nodes, the tail linked to itself"}
+{"input":{"head":[1,2,3],"pos":-1},"expected":false,"note":"odd length, no cycle: the fast pointer stops on the tail"}
+{"input":{"head":[1,2,3,4],"pos":-1},"expected":false,"note":"even length, no cycle: the fast pointer runs past the tail"}
+{"input":{"head":[1,2,3,4,5],"pos":4},"expected":true,"note":"the tail linked to itself"}
+{"input":{"head":[1,2,3,4,5],"pos":0},"expected":true,"note":"the tail linked to the head: the whole list is the cycle"}
+{"input":{"head":[1,2,3,4,5,6],"pos":3},"expected":true,"note":"a cycle in the middle"}
+{"input":{"head":[1,1,1,1],"pos":-1},"expected":false,"note":"repeated values, no cycle"}
+{"input":{"head":[5,5],"pos":-1},"expected":false,"note":"two equal values, no cycle"}
+{"input":{"head":[2,2,2],"pos":1},"expected":true,"note":"repeated values with a cycle"}
+{"input":{"head":[-100000,100000,0],"pos":-1},"expected":false,"note":"the extreme values, no cycle"}
+{"input":{"head":[-100000,100000,0],"pos":2},"expected":true,"note":"the extreme values, the tail linked to itself"}
+{"input":{"head":[0,1,2,3,4,5,6,7,8,9],"pos":9},"expected":true,"note":"a cycle of one node at the end of a longer list"}
+{"input":{"head":[3,1,4,1,5,9,2,6,5,3],"pos":-1},"expected":false,"note":"duplicates, no cycle"}
+{"generate":{"name":"random_list","args":{"n":10000,"pos":-1},"seed":1},"digest":"sha256:b44641fbd06e353e7bb5a768edcbeea8d84c3e45e8b0802541aacec0976c1aa5","note":"10^4 nodes, no cycle"}
+{"generate":{"name":"random_list","args":{"n":10000,"pos":0},"seed":2},"digest":"sha256:bfe2671403a17d899c3bfef0a0929f9b423089dc54f8a3801f46b1b5efa135dc","note":"10^4 nodes, the tail linked to the head"}
+{"generate":{"name":"random_list","args":{"n":10000,"pos":9999},"seed":3},"digest":"sha256:9564f44c789c1bfd942fd243b2aa1a73d0a558e1ad06f47fba59a99882a62ff3","note":"10^4 nodes, the tail linked to itself"}
+{"generate":{"name":"random_list","args":{"n":10000,"pos":5000},"seed":4},"digest":"sha256:a8857a953236f3302ec5d05570a98efcfa5046b0ef0684b7acceaf06788952d0","note":"10^4 nodes, a cycle over the second half"}
+{"generate":{"name":"equal_values","args":{"n":10000,"pos":-1}},"digest":"sha256:367015860749bc4b319294e1cac0a3b672254a1f55a096cb45bc74a0bd22097e","note":"10^4 equal values, no cycle"}
