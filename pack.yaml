@@ -63,6 +63,7 @@ groups:
   - name: linked-list
     title: Linked List
     problems:
+      - reverse-linked-list
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
