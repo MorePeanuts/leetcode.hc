@@ -1,0 +1,24 @@
+id: "74"
+slug: search-a-2d-matrix
+title: Search a 2D Matrix
+titles:
+  zh-CN: 搜索二维矩阵
+difficulty: medium
+tags:
+  - array
+  - binary-search
+  - matrix
+kind: function
+function:
+  name: searchMatrix
+  params:
+    - name: matrix
+      type: integer[][]
+    - name: target
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/search-a-2d-matrix/
+judge:
+  compare: exact
