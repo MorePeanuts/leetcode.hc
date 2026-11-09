@@ -1,0 +1,18 @@
+{"input":{"head":[1,2,3,4]},"expected":[1,4,2,3],"example":true}
+{"input":{"head":[1,2,3,4,5]},"expected":[1,5,2,4,3],"example":true}
+{"input":{"head":[1]},"expected":[1],"note":"one node"}
+{"input":{"head":[1,2]},"expected":[1,2],"note":"two nodes: nothing moves"}
+{"input":{"head":[1,2,3]},"expected":[1,3,2],"note":"three nodes: the tail moves to second"}
+{"input":{"head":[1,2,3,4,5,6]},"expected":[1,6,2,5,3,4],"note":"even length"}
+{"input":{"head":[1,2,3,4,5,6,7]},"expected":[1,7,2,6,3,5,4],"note":"odd length"}
+{"input":{"head":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]},"expected":[1,16,2,15,3,14,4,13,5,12,6,11,7,10,8,9],"note":"sixteen nodes"}
+{"input":{"head":[5,5,5,5,5]},"expected":[5,5,5,5,5],"note":"all values equal"}
+{"input":{"head":[1000,1]},"expected":[1000,1],"note":"the extreme values"}
+{"input":{"head":[1,1000,1,1000,1,1000]},"expected":[1,1000,1000,1,1,1000],"note":"alternating extreme values"}
+{"input":{"head":[10,9,8,7,6,5,4,3,2,1]},"expected":[10,1,9,2,8,3,7,4,6,5],"note":"descending values"}
+{"input":{"head":[2,7,1,8,2,8,1,8,2]},"expected":[2,2,7,8,1,1,8,8,2],"note":"duplicates, odd length"}
+{"input":{"head":[3,1,4,1,5,9,2,6]},"expected":[3,6,1,2,4,9,1,5],"note":"duplicates, even length"}
+{"input":{"head":[1,2,3,3,2,1]},"expected":[1,1,2,2,3,3],"note":"a palindrome"}
+{"generate":{"name":"random_list","args":{"n":50000},"seed":1},"digest":"sha256:847f6520c19762b3ec96a0a37b9d89eb3ed1bb081a55598fcd81fd46bf60d822","note":"5 * 10^4 random values"}
+{"generate":{"name":"random_list","args":{"n":49999},"seed":2},"digest":"sha256:2bfade1092303c075af2b75f3bf1eba10e8c3504c73f808dfa285c4a77896ba5","note":"an odd length near the maximum"}
+{"generate":{"name":"positions","args":{"n":50000}},"digest":"sha256:44584ead36c7ab2f3b49cc384a40fc2850a3e4f5e4cf39e618b642e94e83123e","note":"5 * 10^4 nodes numbered in order"}
