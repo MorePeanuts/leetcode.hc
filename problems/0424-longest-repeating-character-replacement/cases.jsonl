@@ -1,0 +1,40 @@
+{"input":{"k":2,"s":"ABAB"},"expected":4,"example":true}
+{"input":{"k":1,"s":"AABABBA"},"expected":4,"example":true}
+{"input":{"k":0,"s":"A"},"expected":1,"note":"a single letter, k = 0"}
+{"input":{"k":1,"s":"A"},"expected":1,"note":"a single letter, k = 1 = length"}
+{"input":{"k":0,"s":"AB"},"expected":1,"note":"two different letters, no replacement"}
+{"input":{"k":1,"s":"AB"},"expected":2,"note":"two different letters, one replacement"}
+{"input":{"k":0,"s":"AAAA"},"expected":4,"note":"all the same, k = 0"}
+{"input":{"k":2,"s":"AAAA"},"expected":4,"note":"all the same: replacements cannot extend past the string"}
+{"input":{"k":0,"s":"ABBBCC"},"expected":3,"note":"k = 0: the longest run"}
+{"input":{"k":0,"s":"ABCDE"},"expected":1,"note":"k = 0, all distinct"}
+{"input":{"k":5,"s":"ABCDE"},"expected":5,"note":"k = length: the whole string"}
+{"input":{"k":4,"s":"ABCDE"},"expected":5,"note":"k = length - 1: the whole string"}
+{"input":{"k":2,"s":"ABCDE"},"expected":3,"note":"all distinct: k + 1"}
+{"input":{"k":1,"s":"AABBB"},"expected":4,"note":"the best window is at the end"}
+{"input":{"k":1,"s":"BBBAA"},"expected":4,"note":"the best window is at the start"}
+{"input":{"k":1,"s":"AAABAAA"},"expected":7,"note":"one hole in the middle"}
+{"input":{"k":1,"s":"AABAABAA"},"expected":5,"note":"two holes, only one can be filled"}
+{"input":{"k":2,"s":"AABAABAA"},"expected":8,"note":"two holes, both filled"}
+{"input":{"k":2,"s":"ABCABCABC"},"expected":4,"note":"three letters cycling"}
+{"input":{"k":1,"s":"ABBB"},"expected":4,"note":"replace a letter before the run"}
+{"input":{"k":2,"s":"BAAAB"},"expected":5,"note":"replacing both ends gives the whole string"}
+{"input":{"k":1,"s":"ABAA"},"expected":4,"note":"the window must include the replaced letter"}
+{"input":{"k":2,"s":"AAABBBBAA"},"expected":6,"note":"the minority of the whole string is two runs"}
+{"input":{"k":3,"s":"AAABBBBAA"},"expected":7,"note":"the B run absorbs one A run"}
+{"input":{"k":2,"s":"ABCDDDDEFG"},"expected":6,"note":"a run in the middle grows on both sides"}
+{"input":{"k":1,"s":"ABBBACCCCD"},"expected":5,"note":"two candidate runs; the longer wins"}
+{"input":{"k":2,"s":"AAAACBBBBBBCAAAA"},"expected":8,"note":"windows of different letters compete"}
+{"input":{"k":3,"s":"ZYXWVUTSRQPONMLKJIHGFEDCBA"},"expected":4,"note":"all 26 letters once"}
+{"input":{"k":2,"s":"KRSCDCSONAJNHLRB"},"expected":4,"note":"random letters"}
+{"input":{"k":4,"s":"EOEMQLLQTRQDDCOERARHGAHE"},"expected":7,"note":"random letters, a larger k"}
+{"input":{"k":0,"s":"ABABABABAB"},"expected":1,"note":"alternating letters, k = 0"}
+{"input":{"k":3,"s":"ABABABABAB"},"expected":7,"note":"alternating letters: 2k + 1"}
+{"generate":{"name":"random_letters","args":{"k":1000,"letters":26,"n":100000},"seed":1},"digest":"sha256:0b6e48129f6f842cacc8987fd646f8388daf6d6cfe0cab2f3bfb9a01dec8491b","note":"maximum length, all 26 letters, k = 1000"}
+{"generate":{"name":"random_letters","args":{"k":10000,"letters":2,"n":100000},"seed":2},"digest":"sha256:6d1261e0bf161e52c8b3e9020ec196f1bfe202d860391fb7e58c924d445bfc1e","note":"maximum length, two letters, k = 10^4: a long best window"}
+{"generate":{"name":"random_letters","args":{"k":30000,"letters":4,"n":100000},"seed":3},"digest":"sha256:02d2f4b30f8d29e674f9d693348ea51a27945fa2de278032b1c807bab25c32a2","note":"maximum length, four letters, large k"}
+{"generate":{"name":"all_same","args":{"k":0,"n":100000}},"digest":"sha256:a702cc1193d294b4b2ebf4f85ad2485ca91fbf61fde97340a23ab6eaad679691","note":"maximum length, one letter, k = 0: the whole string"}
+{"generate":{"name":"mostly_one","args":{"k":20000,"n":100000,"other":40000},"seed":4},"digest":"sha256:3fb62617d9e2a38ce3ff61092161233a33b9aedba934ff6343db0209de94f2f6","note":"maximum length, mostly one letter with 40% others, k = 20000"}
+{"generate":{"name":"cycle","args":{"k":50000,"n":100000}},"digest":"sha256:a4f767d1103a89b79d58589a85d421df3eeedf85ceaf73c3880afbe9cb8a3658","note":"maximum length, 26 letters cycling, k = n/2"}
+{"generate":{"name":"run_at_end","args":{"k":5000,"n":100000},"seed":5},"digest":"sha256:058c06120aa8844be63f405b00af01aa3ef8fb01c8dd8cb9a22d43c6a4ebde7e","note":"maximum length, the best window at the very end"}
+{"generate":{"name":"random_letters","args":{"k":100000,"letters":3,"n":100000},"seed":6},"digest":"sha256:b0468eaa8241a04e16b969f9c9366cf66506a67c0dc3a363c4874bde342d69bb","note":"maximum length, k = length: the whole string"}

@@ -36,6 +36,7 @@ groups:
     problems:
       - best-time-to-buy-and-sell-stock
       - longest-substring-without-repeating-characters
+      - longest-repeating-character-replacement
   - name: stack
     title: Stack
     problems:
