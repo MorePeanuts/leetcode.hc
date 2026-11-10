@@ -100,6 +100,7 @@ groups:
     problems:
       - implement-trie-prefix-tree
       - design-add-and-search-words-data-structure
+      - word-search-ii
   - name: graphs
     title: Graphs
     problems:
