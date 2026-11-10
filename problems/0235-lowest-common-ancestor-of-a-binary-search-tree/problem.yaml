@@ -1,0 +1,32 @@
+id: "235"
+slug: lowest-common-ancestor-of-a-binary-search-tree
+title: Lowest Common Ancestor of a Binary Search Tree
+titles:
+  zh-CN: 二叉搜索树的最近公共祖先
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - binary-search-tree
+  - binary-tree
+  - lowest-common-ancestor
+  - binary-lifting
+kind: function
+function:
+  name: lowestCommonAncestor
+  params:
+    - name: root
+      type: TreeNode
+    - name: p
+      type: TreeNode
+      ref: root
+    - name: q
+      type: TreeNode
+      ref: root
+  returns: TreeNode
+  returns_ref: root
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/
+judge:
+  compare: exact

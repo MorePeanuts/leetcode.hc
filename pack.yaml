@@ -86,6 +86,7 @@ groups:
       - balanced-binary-tree
       - same-tree
       - subtree-of-another-tree
+      - lowest-common-ancestor-of-a-binary-search-tree
       - validate-binary-search-tree
       - binary-tree-maximum-path-sum
   - name: heap-priority-queue
