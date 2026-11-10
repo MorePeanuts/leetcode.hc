@@ -40,6 +40,7 @@ groups:
       - permutation-in-string
       - minimum-size-subarray-sum
       - minimum-window-substring
+      - sliding-window-maximum
   - name: stack
     title: Stack
     problems:

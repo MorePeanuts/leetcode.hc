@@ -1,0 +1,33 @@
+{"input":{"k":3,"nums":[1,3,-1,-3,5,3,6,7]},"expected":[3,3,5,5,6,7],"example":true}
+{"input":{"k":1,"nums":[1]},"expected":[1],"example":true}
+{"input":{"k":1,"nums":[-10000]},"expected":[-10000],"note":"one element, the minimum value"}
+{"input":{"k":1,"nums":[4,-2,7,0]},"expected":[4,-2,7,0],"note":"k = 1: the array itself"}
+{"input":{"k":4,"nums":[4,-2,7,0]},"expected":[7],"note":"k = n: one window"}
+{"input":{"k":2,"nums":[1,-1]},"expected":[1],"note":"two elements, one window"}
+{"input":{"k":2,"nums":[9,8,7,6,5]},"expected":[9,8,7,6],"note":"descending: the maximum leaves each window"}
+{"input":{"k":2,"nums":[1,2,3,4,5]},"expected":[2,3,4,5],"note":"ascending: the newest element is the maximum"}
+{"input":{"k":3,"nums":[5,5,5,5,5]},"expected":[5,5,5],"note":"all equal"}
+{"input":{"k":2,"nums":[5,5,1]},"expected":[5,5],"note":"duplicates of the maximum: one leaves, one stays"}
+{"input":{"k":3,"nums":[7,2,7,1,1,1]},"expected":[7,7,7,1],"note":"duplicates of the maximum leaving in turn"}
+{"input":{"k":3,"nums":[-7,-8,7,5,7,1,6,0]},"expected":[7,7,7,7,7,6],"note":"negative values and repeats"}
+{"input":{"k":2,"nums":[1,3,1,2,0,5]},"expected":[3,3,2,2,5],"note":"the maximum changes every window"}
+{"input":{"k":3,"nums":[1,-1,-1,-1,-1]},"expected":[1,-1,-1],"note":"the first maximum leaves, then all equal"}
+{"input":{"k":3,"nums":[-1,-2,-3,-4,-5]},"expected":[-1,-2,-3],"note":"all negative, descending"}
+{"input":{"k":4,"nums":[10000,-10000,-10000,-10000,-10000,10000]},"expected":[10000,-10000,10000],"note":"extreme values: the maximum leaves, another arrives last"}
+{"input":{"k":3,"nums":[9,10,9,-7,-4,-8,2,-6]},"expected":[10,10,9,-4,2,2],"note":"a maximum in the middle of the window leaves"}
+{"input":{"k":2,"nums":[7,2,4]},"expected":[7,4],"note":"a smaller element becomes the maximum"}
+{"input":{"k":5,"nums":[1,3,1,2,0,5,2,8,1,1]},"expected":[3,5,5,8,8,8],"note":"a larger window"}
+{"input":{"k":3,"nums":[4,3,2,1,5,4,3,2,1]},"expected":[4,3,5,5,5,4,3],"note":"two descending runs"}
+{"input":{"k":3,"nums":[1,2,3,1,2,3,1,2,3]},"expected":[3,3,3,3,3,3,3],"note":"a repeating pattern"}
+{"input":{"k":2,"nums":[0,0,-1,0,0]},"expected":[0,0,0,0],"note":"zeros and one negative"}
+{"input":{"k":6,"nums":[2,8,1,9,3,7,4,6,5,0]},"expected":[9,9,9,9,7],"note":"k a little over half the length"}
+{"input":{"k":4,"nums":[6,1,1,1,1,1,1,6]},"expected":[6,1,1,1,6],"note":"a maximum at each end, the middle small"}
+{"generate":{"name":"descending","args":{"k":50000,"n":100000}},"digest":"sha256:18775061d13237fa189d305a8c31f5bcaa196df16374a54ca05ed8ee67dfc2f4","note":"maximum length, descending, k = n/2: the maximum leaves every window"}
+{"generate":{"name":"descending_noisy","args":{"k":40000,"n":100000},"seed":1},"digest":"sha256:742819a6468d4614251c174a072bad5c49ad80c6a2978ad1117112a42c577e50","note":"maximum length, descending with noise and repeats, k = 40000"}
+{"generate":{"name":"descending_noisy","args":{"k":60000,"n":100000},"seed":2},"digest":"sha256:9c00276d836a42070439b7edcb016bcddbf6cb980d6c334f6bd58660127776b9","note":"maximum length, descending with noise, k = 60000"}
+{"generate":{"name":"random_values","args":{"k":50000,"n":100000},"seed":3},"digest":"sha256:4a37c6b99616dcbc90e0b38259c3368ac13c9b74a1b990789d38b859e342b5d2","note":"maximum length, random values, k = n/2"}
+{"generate":{"name":"random_values","args":{"k":30000,"n":100000,"top":3},"seed":4},"digest":"sha256:03a6d91f12f2f856565f2a2d99453d12c8bf166f80b519588541129a0c479549","note":"maximum length, few distinct values, k = 30000"}
+{"generate":{"name":"ascending","args":{"k":50000,"n":100000}},"digest":"sha256:f2223ceac07c443478979213e2f71309b238c707594810f97f573f8596a94d03","note":"maximum length, ascending, k = n/2"}
+{"generate":{"name":"all_equal","args":{"k":50000,"n":100000},"seed":5},"digest":"sha256:d9e4b72fd37e762de928334307197df527e26550b40218e05b8323e93eed26f9","note":"maximum length, all equal, k = n/2"}
+{"generate":{"name":"random_values","args":{"k":1,"n":100000},"seed":6},"digest":"sha256:075676f67c284caaa4f1de65a4c377e7132ff999ed31b14d31e21aac732764bf","note":"maximum length, k = 1"}
+{"generate":{"name":"random_values","args":{"k":100000,"n":100000},"seed":7},"digest":"sha256:742ed4b1762984299bdbdcd699cbb46ce21034bc5abbac9ea156cb7caaa71048","note":"maximum length, k = n: one window"}
