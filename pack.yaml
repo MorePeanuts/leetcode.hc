@@ -57,6 +57,7 @@ groups:
       - remove-nth-node-from-end-of-list
       - copy-list-with-random-pointer
       - add-two-numbers
+      - find-the-duplicate-number
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
