@@ -90,6 +90,7 @@ groups:
       - k-closest-points-to-origin
       - kth-largest-element-in-an-array
       - task-scheduler
+      - design-twitter
       - find-median-from-data-stream
       - sort-an-array
   - name: backtracking
