@@ -62,6 +62,7 @@ groups:
       - lru-cache
       - lfu-cache
       - merge-k-sorted-lists
+      - reverse-nodes-in-k-group
   - name: trees
     title: Trees
     problems:

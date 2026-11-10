@@ -1,0 +1,23 @@
+id: "25"
+slug: reverse-nodes-in-k-group
+title: Reverse Nodes in k-Group
+titles:
+  zh-CN: K 个一组翻转链表
+difficulty: hard
+tags:
+  - recursion
+  - linked-list
+kind: function
+function:
+  name: reverseKGroup
+  params:
+    - name: head
+      type: ListNode
+    - name: k
+      type: integer
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-nodes-in-k-group/
+judge:
+  compare: exact
