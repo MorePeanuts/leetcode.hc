@@ -1,0 +1,26 @@
+id: "105"
+slug: construct-binary-tree-from-preorder-and-inorder-traversal
+title: Construct Binary Tree from Preorder and Inorder Traversal
+titles:
+  zh-CN: 从前序与中序遍历序列构造二叉树
+difficulty: medium
+tags:
+  - tree
+  - array
+  - hash-table
+  - divide-and-conquer
+  - binary-tree
+kind: function
+function:
+  name: buildTree
+  params:
+    - name: preorder
+      type: integer[]
+    - name: inorder
+      type: integer[]
+  returns: TreeNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+judge:
+  compare: exact
