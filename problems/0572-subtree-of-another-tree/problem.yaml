@@ -1,0 +1,26 @@
+id: "572"
+slug: subtree-of-another-tree
+title: Subtree of Another Tree
+titles:
+  zh-CN: 另一棵树的子树
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - binary-tree
+  - string-matching
+  - hash-function
+kind: function
+function:
+  name: isSubtree
+  params:
+    - name: root
+      type: TreeNode
+    - name: subRoot
+      type: TreeNode
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/subtree-of-another-tree/
+judge:
+  compare: exact

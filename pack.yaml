@@ -85,6 +85,7 @@ groups:
       - diameter-of-binary-tree
       - balanced-binary-tree
       - same-tree
+      - subtree-of-another-tree
       - validate-binary-search-tree
       - binary-tree-maximum-path-sum
   - name: heap-priority-queue
