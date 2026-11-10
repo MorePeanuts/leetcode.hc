@@ -1,0 +1,26 @@
+id: "212"
+slug: word-search-ii
+title: Word Search II
+titles:
+  zh-CN: 单词搜索 II
+difficulty: hard
+tags:
+  - trie
+  - array
+  - string
+  - backtracking
+  - matrix
+kind: function
+function:
+  name: findWords
+  params:
+    - name: board
+      type: character[][]
+    - name: words
+      type: string[]
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/word-search-ii/
+judge:
+  compare: unordered
