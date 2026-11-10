@@ -1,0 +1,24 @@
+id: "76"
+slug: minimum-window-substring
+title: Minimum Window Substring
+titles:
+  zh-CN: 最小覆盖子串
+difficulty: hard
+tags:
+  - hash-table
+  - string
+  - sliding-window
+kind: function
+function:
+  name: minWindow
+  params:
+    - name: s
+      type: string
+    - name: t
+      type: string
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-window-substring/
+judge:
+  compare: exact
