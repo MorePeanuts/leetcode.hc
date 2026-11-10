@@ -1,0 +1,24 @@
+{"input":{"nums":[1,3,4,2,2]},"expected":2,"example":true}
+{"input":{"nums":[3,1,3,4,2]},"expected":3,"example":true}
+{"input":{"nums":[3,3,3,3,3]},"expected":3,"example":true}
+{"input":{"nums":[1,1]},"expected":1,"note":"n = 1, the smallest array"}
+{"input":{"nums":[1,1,2]},"expected":1,"note":"the duplicate first"}
+{"input":{"nums":[2,1,2]},"expected":2,"note":"the duplicate at both ends"}
+{"input":{"nums":[2,2,2]},"expected":2,"note":"n = 2, every value the duplicate"}
+{"input":{"nums":[1,2,2]},"expected":2,"note":"the duplicate is the largest value, at the end"}
+{"input":{"nums":[1,1,1,1,2]},"expected":1,"note":"the smallest value four times"}
+{"input":{"nums":[4,4,4,1,4]},"expected":4,"note":"the largest value four times, values 2 and 3 missing"}
+{"input":{"nums":[2,5,9,6,9,3,8,9,7,1]},"expected":9,"note":"the duplicate three times"}
+{"input":{"nums":[1,2,3,4,5,6,7,8,9,5]},"expected":5,"note":"sorted, the duplicate at the end"}
+{"input":{"nums":[9,8,7,6,5,4,3,2,1,1]},"expected":1,"note":"descending, the duplicate is the smallest value"}
+{"input":{"nums":[5,1,2,3,4,5]},"expected":5,"note":"the duplicate at the first and last positions"}
+{"input":{"nums":[2,6,4,1,3,1,5]},"expected":1,"note":"n = 6, the duplicate 1"}
+{"input":{"nums":[1,4,4,2,4]},"expected":4,"note":"three copies next to each other"}
+{"input":{"nums":[1,5,3,2,4,2,2,2,2,2,2]},"expected":2,"note":"n = 10: the duplicate fills the second half, values 6 to 10 missing"}
+{"input":{"nums":[10,1,2,3,4,5,6,7,8,9,10]},"expected":10,"note":"n = 10, the largest value at both ends"}
+{"generate":{"name":"last_pair","args":{"n":100000},"seed":1},"digest":"sha256:f902e558b8631488a156a5ec652ca747d0651c612850ad2028c436a5c7383e15","note":"n = 10^5, the largest value twice at the end"}
+{"generate":{"name":"last_pair","args":{"n":100000},"seed":2},"digest":"sha256:2d3c4fcac20f4fee1b00601d67826631d09956154df3144c9ae4af6ff9061602","note":"n = 10^5, the largest value twice at the end, another order"}
+{"generate":{"name":"last_pair_value","args":{"n":100000},"seed":3},"digest":"sha256:a14e83f108b3f49a849483be98bb76a297822141356482076d18e001f47b26a1","note":"n = 10^5, a random value twice at the end"}
+{"generate":{"name":"last_pair_value","args":{"n":99999},"seed":4},"digest":"sha256:ee9ae64daa087ad6b1494ecfb7956346116c2ab64d219b4d3d8225e79e1207f0","note":"n = 99999, a random value twice at the end"}
+{"generate":{"name":"repeated","args":{"k":50000,"n":100000},"seed":5},"digest":"sha256:6ed68bd8f8ed2dd515f9cec63ad265be18ab8ef117a6dcbdfa3bc1beb02b81f1","note":"n = 10^5, a value repeated 5 * 10^4 times"}
+{"generate":{"name":"repeated","args":{"k":2,"n":100000},"seed":6},"digest":"sha256:6517bdce2e2a3ddcdc3374f5429fb577824a3be1fbddd0b07d822614c7a3be32","note":"n = 10^5, a random value twice, shuffled"}

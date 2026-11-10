@@ -1,0 +1,25 @@
+id: "287"
+slug: find-the-duplicate-number
+title: Find the Duplicate Number
+titles:
+  zh-CN: 寻找重复数
+difficulty: medium
+tags:
+  - bit-manipulation
+  - array
+  - two-pointers
+  - binary-search
+  - floyds-cycle-finding-algorithm
+  - pigeonhole-principle
+kind: function
+function:
+  name: findDuplicate
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-the-duplicate-number/
+judge:
+  compare: exact
