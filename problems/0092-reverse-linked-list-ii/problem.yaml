@@ -1,0 +1,24 @@
+id: "92"
+slug: reverse-linked-list-ii
+title: Reverse Linked List II
+titles:
+  zh-CN: 反转链表 II
+difficulty: medium
+tags:
+  - linked-list
+kind: function
+function:
+  name: reverseBetween
+  params:
+    - name: head
+      type: ListNode
+    - name: left
+      type: integer
+    - name: right
+      type: integer
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-linked-list-ii/
+judge:
+  compare: exact
