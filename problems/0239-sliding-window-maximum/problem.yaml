@@ -1,0 +1,27 @@
+id: "239"
+slug: sliding-window-maximum
+title: Sliding Window Maximum
+titles:
+  zh-CN: 滑动窗口最大值
+difficulty: hard
+tags:
+  - queue
+  - array
+  - sliding-window
+  - monotonic-queue
+  - heap-priority-queue
+  - range-minimum-maximum-query
+kind: function
+function:
+  name: maxSlidingWindow
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sliding-window-maximum/
+judge:
+  compare: exact
