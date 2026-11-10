@@ -39,6 +39,7 @@ groups:
       - longest-repeating-character-replacement
       - permutation-in-string
       - minimum-size-subarray-sum
+      - minimum-window-substring
   - name: stack
     title: Stack
     problems:

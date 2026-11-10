@@ -1,0 +1,39 @@
+{"input":{"s":"ADOBECODEBANC","t":"ABC"},"expected":"BANC","example":true}
+{"input":{"s":"a","t":"a"},"expected":"a","example":true}
+{"input":{"s":"a","t":"aa"},"expected":"","example":true}
+{"input":{"s":"a","t":"b"},"expected":"","note":"one letter each, different: no window"}
+{"input":{"s":"ab","t":"b"},"expected":"b","note":"the answer is the last letter"}
+{"input":{"s":"ab","t":"a"},"expected":"a","note":"the answer is the first letter"}
+{"input":{"s":"ab","t":"A"},"expected":"","note":"case matters: 'a' does not cover 'A'"}
+{"input":{"s":"aA","t":"Aa"},"expected":"aA","note":"upper and lower case of one letter"}
+{"input":{"s":"bba","t":"ab"},"expected":"ba","note":"the window drops a spare letter on the left"}
+{"input":{"s":"abc","t":"cba"},"expected":"abc","note":"t is s reversed: the whole string"}
+{"input":{"s":"aa","t":"aa"},"expected":"aa","note":"t repeats a letter, s has exactly enough"}
+{"input":{"s":"abc","t":"abcd"},"expected":"","note":"t longer than s: no window"}
+{"input":{"s":"abc","t":"ac"},"expected":"abc","note":"the window includes a letter t does not have"}
+{"input":{"s":"ADOBECODEBANC","t":"AABC"},"expected":"ADOBECODEBA","note":"duplicates in t: both A's are needed"}
+{"input":{"s":"ADOBECODEBANC","t":"ABCZ"},"expected":"","note":"a letter of t missing from s"}
+{"input":{"s":"cabwefgewcwaefgcf","t":"cae"},"expected":"cwae","note":"the shortest window in the middle"}
+{"input":{"s":"bdab","t":"ab"},"expected":"ab","note":"a shorter window after a longer one"}
+{"input":{"s":"abcdef","t":"f"},"expected":"f","note":"one letter of t, at the end"}
+{"input":{"s":"xyzabcxyz","t":"cab"},"expected":"abc","note":"a permutation of t in the middle"}
+{"input":{"s":"aaabdabcefaecbef","t":"abc"},"expected":"abc","note":"many candidate windows"}
+{"input":{"s":"abbbbbcdd","t":"abcd"},"expected":"abbbbbcd","note":"a long run inside the only window"}
+{"input":{"s":"bbaac","t":"aba"},"expected":"baa","note":"two a's and a b"}
+{"input":{"s":"aaaaaaaaaaaabbbbbcdd","t":"abcdd"},"expected":"abbbbbcdd","note":"the window starts at the last a"}
+{"input":{"s":"ZzYyXx","t":"zY"},"expected":"zY","note":"mixed case letters"}
+{"input":{"s":"acbbaca","t":"aba"},"expected":"baca","note":"the window at the end"}
+{"input":{"s":"abcabdebac","t":"cea"},"expected":"ebac","note":"the window of length 4 at the end"}
+{"input":{"s":"aaflslflsldkalskaaa","t":"aaa"},"expected":"aaa","note":"three a's together only at the end"}
+{"input":{"s":"ofcourse","t":"or"},"expected":"our","note":"two letters far apart"}
+{"input":{"s":"kgfidhktkjhlkbgjkylgdracfzjduycghkomrbfbkoowqwgaurizliesjnveoxmvjdjaepdqftmvsuyoogobrutahogxnvuuyouumsdgzcrtvvpouwlpcckbjeqwxcbslu","t":"vk"},"expected":"vpouwlpcck","note":"a long random string"}
+{"input":{"s":"aabaabaaab","t":"bb"},"expected":"baab","note":"two b's, the closest pair"}
+{"input":{"s":"AaBbCcDdEe","t":"edcba"},"expected":"aBbCcDdEe","note":"lower case letters among upper case ones"}
+{"generate":{"name":"planted","args":{"at_end":true,"extra":20,"letters":52,"m":100000,"n":10},"seed":1},"digest":"sha256:27a1dcf47e2e452a388900349a1a06007cb5f3903419d755778d6b39dbe2d2c6","note":"maximum length s, a short t, the only window at the end"}
+{"generate":{"name":"planted","args":{"at_end":true,"extra":500,"letters":26,"m":100000,"n":1000},"seed":2},"digest":"sha256:52d4936d0e34b7e5c603dac9d9a3100a611711edd4ca7a00ada599024908a789","note":"maximum length s, t of 1000 letters, the only window at the end"}
+{"generate":{"name":"planted","args":{"at_end":true,"extra":0,"letters":3,"m":100000,"n":3},"seed":3},"digest":"sha256:71981707f1faa81f8e865d8333cc05535f91b7afea757009572eaffc63ecb235","note":"maximum length s, t of three letters, the window at the end"}
+{"generate":{"name":"planted","args":{"at_end":true,"extra":0,"letters":52,"m":100000,"n":1},"seed":4},"digest":"sha256:49fd2d9f6d41f174f4ecb2c3a383c5ee7caf01c7776ba78be6ed0560b1b39dd2","note":"maximum length s, t one letter found only at the end"}
+{"generate":{"name":"planted","args":{"at_end":true,"extra":30000,"letters":52,"m":100000,"n":40},"seed":5},"digest":"sha256:456092e19b52aeaaf530fe6fe029750a3f4ab7ae1b941abc66f62454af6e58ab","note":"maximum length s, a long window at the end"}
+{"generate":{"name":"planted","args":{"at_end":false,"extra":10000,"letters":52,"m":100000,"n":50000},"seed":6},"digest":"sha256:0f0eb81592fb66aab2cfde83595cbe562003a26fed06c5e773cceb4e55192297","note":"maximum length s, t of 50000 letters"}
+{"generate":{"name":"missing_letter","args":{"letters":10,"m":100000,"n":100},"seed":7},"digest":"sha256:ab511c25b9f860c3efe0a335fa57820c4316ee50fcd318498325a262df46050e","note":"maximum length s, t has a letter s lacks: no window"}
+{"generate":{"name":"permutation","args":{"n":100000},"seed":8},"digest":"sha256:2326ad9bfd2c24bb61941a50bf9b5e40470e201daac009ca28d9c116b2a1b6dd","note":"both at maximum length, s a permutation of t: the whole of s"}
