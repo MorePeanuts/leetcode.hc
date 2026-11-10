@@ -1,0 +1,27 @@
+id: "853"
+slug: car-fleet
+title: Car Fleet
+titles:
+  zh-CN: 车队
+difficulty: medium
+tags:
+  - stack
+  - array
+  - sorting
+  - monotonic-stack
+kind: function
+function:
+  name: carFleet
+  params:
+    - name: target
+      type: integer
+    - name: position
+      type: integer[]
+    - name: speed
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/car-fleet/
+judge:
+  compare: exact

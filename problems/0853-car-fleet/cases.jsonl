@@ -1,0 +1,31 @@
+{"input":{"position":[10,8,0,5,3],"speed":[2,4,1,1,3],"target":12},"expected":3,"example":true}
+{"input":{"position":[3],"speed":[3],"target":10},"expected":1,"example":true}
+{"input":{"position":[0,2,4],"speed":[4,2,1],"target":100},"expected":1,"example":true}
+{"input":{"position":[0],"speed":[1],"target":1},"expected":1,"note":"the smallest target, one car"}
+{"input":{"position":[999999],"speed":[1000000],"target":1000000},"expected":1,"note":"the largest target and speed, one car"}
+{"input":{"position":[0,5],"speed":[2,1],"target":10},"expected":1,"note":"the car behind catches up exactly at the target"}
+{"input":{"position":[0,5],"speed":[19,10],"target":10},"expected":2,"note":"the car behind just misses"}
+{"input":{"position":[0,5],"speed":[3,1],"target":10},"expected":1,"note":"the car behind catches up before the target"}
+{"input":{"position":[6,0],"speed":[2,4],"target":10},"expected":2,"note":"times 2 and 2.5: separate, though equal when rounded down"}
+{"input":{"position":[90,80,50],"speed":[1,20,10],"target":100},"expected":1,"note":"the last car catches the fleet, not the faster car it would compare with"}
+{"input":{"position":[1,2,3,4,5],"speed":[1,1,1,1,1],"target":20},"expected":5,"note":"equal speeds, ascending positions: every car a fleet"}
+{"input":{"position":[9,7,5,3,1],"speed":[2,2,2,2,2],"target":10},"expected":5,"note":"equal speeds, descending positions: every car a fleet"}
+{"input":{"position":[0,3,6,9],"speed":[12,9,6,3],"target":12},"expected":1,"note":"every car arrives at time 1: one fleet"}
+{"input":{"position":[0,1,2,3,4],"speed":[10,9,8,7,1],"target":10},"expected":1,"note":"everyone catches the slow car in front"}
+{"input":{"position":[11,6],"speed":[999990,999995],"target":1000000},"expected":2,"note":"times differ by about 5e-12: two fleets, equal in 32-bit floats"}
+{"input":{"position":[6,11],"speed":[999995,999990],"target":1000000},"expected":2,"note":"the same two cars listed the other way"}
+{"input":{"position":[40,70],"speed":[6,3],"target":100},"expected":1,"note":"equal times as different fractions, 60/6 and 30/3"}
+{"input":{"position":[0,50,60],"speed":[3,5,4],"target":100},"expected":2,"note":"one car meets the front car at the target, the last arrives later"}
+{"input":{"position":[0,1,2,3,4],"speed":[1,1,1,1,1],"target":5},"expected":5,"note":"every position taken, equal speeds"}
+{"input":{"position":[0,1,2,3,4],"speed":[1000000,1000000,1000000,1000000,1000000],"target":5},"expected":5,"note":"the fastest speed everywhere"}
+{"input":{"position":[0,4,8,12,16],"speed":[5,1,3,1,1],"target":20},"expected":3,"note":"fleets that form in the middle"}
+{"input":{"position":[5,4,3,2,1,0],"speed":[1,2,3,4,5,6],"target":6},"expected":1,"note":"faster cars behind, all catching the front"}
+{"input":{"position":[3,9,1,7,5],"speed":[3,1,5,2,4],"target":10},"expected":3,"note":"unsorted positions"}
+{"generate":{"name":"all_separate","args":{"n":100000,"target":1000000},"seed":1},"digest":"sha256:78a31e2efcafbef06e507770bf7a83a7c31b97ad70c173edf7912091e4a73b0e","note":"maximum n: no car catches up, n fleets"}
+{"generate":{"name":"all_separate","args":{"n":100000,"target":1000000},"seed":2},"digest":"sha256:99852c3486a3a05049f0a60367fed9b65be819a176db6ba2fa6e402aec0af998","note":"maximum n: no car catches up, n fleets"}
+{"generate":{"name":"all_separate","args":{"n":100000,"target":100000},"seed":3},"digest":"sha256:c34b3cc6fb54b290903086f2ac91655c61df180dc7ce3baba7fc03e48317ea4b","note":"maximum n, every position taken: no car catches up"}
+{"generate":{"name":"random_cars","args":{"max_speed":1000000,"n":100000,"target":1000000},"seed":4},"digest":"sha256:eb57f264b4c12dd6c19b9313f686dbe3d86060c3ab7a30278d21022b85213e95","note":"maximum n, random speeds"}
+{"generate":{"name":"random_cars","args":{"max_speed":10,"n":100000,"target":100000},"seed":5},"digest":"sha256:5334eef2cca89dddf0c0b3c877ddae67ec9af11dd733d28529e37b896137c3f8","note":"maximum n, every position taken, small speeds"}
+{"generate":{"name":"same_time","args":{"n":100000,"target":1000000},"seed":6},"digest":"sha256:ca08fe8f8eaef8e17c768ef8d309c3eea49add5157e9a0cd8bec3856bf954ccb","note":"maximum n: every car arrives at time 1, one fleet"}
+{"generate":{"name":"blocks","args":{"k":1,"n":100000,"target":1000000},"seed":7},"digest":"sha256:021b88017600823c69bc165d382242ee59efd73551565d871464beb6e418608d","note":"maximum n: everyone catches the slow front car"}
+{"generate":{"name":"blocks","args":{"k":300,"n":100000,"target":1000000},"seed":8},"digest":"sha256:a58f67dfe7d14bd4ceff4599e1ddc9819100771204addb075ea4f2950d8d3fc7","note":"maximum n: 300 fleets, some cars arriving with their lead"}
