@@ -1,0 +1,31 @@
+{"input":{"k":2,"nums":[3,2,1,5,6,4]},"expected":5,"example":true}
+{"input":{"k":4,"nums":[3,2,3,1,2,4,5,5,6]},"expected":4,"example":true}
+{"input":{"k":1,"nums":[1]},"expected":1,"note":"one element"}
+{"input":{"k":1,"nums":[-10000]},"expected":-10000,"note":"one element at the minimum"}
+{"input":{"k":1,"nums":[2,1]},"expected":2,"note":"two elements, k = 1: the maximum"}
+{"input":{"k":2,"nums":[2,1]},"expected":1,"note":"two elements, k = n: the minimum"}
+{"input":{"k":2,"nums":[1,2]},"expected":1,"note":"ascending pair, k = n"}
+{"input":{"k":3,"nums":[5,5,5,5]},"expected":5,"note":"all equal"}
+{"input":{"k":2,"nums":[3,3,1]},"expected":3,"note":"the k-th largest is a duplicate of the largest: not the k-th distinct"}
+{"input":{"k":4,"nums":[3,3,3,2,1]},"expected":2,"note":"the k-th distinct would be 1, the k-th largest is 2"}
+{"input":{"k":2,"nums":[-1,-5,-3,-2]},"expected":-2,"note":"negative values"}
+{"input":{"k":2,"nums":[0,-1,1]},"expected":0,"note":"zero in the middle"}
+{"input":{"k":3,"nums":[10000,-10000,10000,-10000]},"expected":-10000,"note":"the extremes"}
+{"input":{"k":7,"nums":[7,6,5,4,3,2,1]},"expected":1,"note":"descending, k = n"}
+{"input":{"k":1,"nums":[1,2,3,4,5,6,7]},"expected":7,"note":"ascending, k = 1"}
+{"input":{"k":4,"nums":[1,2,3,4,5,6,7]},"expected":4,"note":"ascending, the median"}
+{"input":{"k":4,"nums":[7,6,5,4,3,2,1]},"expected":4,"note":"descending, the median"}
+{"input":{"k":5,"nums":[2,1,2,1,2,1,2,1]},"expected":1,"note":"two alternating values, k just past the larger ones"}
+{"input":{"k":4,"nums":[2,1,2,1,2,1,2,1]},"expected":2,"note":"two alternating values, k at the last of the larger ones"}
+{"input":{"k":1,"nums":[99,99]},"expected":99,"note":"two equal elements"}
+{"input":{"k":6,"nums":[3,1,4,1,5,9,2,6,5,3,5]},"expected":4,"note":"unordered with repeats"}
+{"input":{"k":5,"nums":[-7,4,0,4,-7,12,0,4]},"expected":0,"note":"repeats on both sides of the k-th"}
+{"generate":{"name":"random_values","args":{"k":50000,"n":100000},"seed":1},"digest":"sha256:ee06222ac9c479850241f81c4a9a3b1ae97faa234e11f7072319a16e701e5fca","note":"10^5 random values, k = n / 2"}
+{"generate":{"name":"random_values","args":{"k":1,"n":100000},"seed":2},"digest":"sha256:6cca9399a43048eeb1333274e62b3d7dd58a1076cf228d03de7f51c4a8389bfb","note":"10^5 random values, k = 1"}
+{"generate":{"name":"random_values","args":{"k":100000,"n":100000},"seed":3},"digest":"sha256:3fc845bdadecfee55be6d5b7f6889b5df1952c23b5892283590a5cd92dc288ca","note":"10^5 random values, k = n"}
+{"generate":{"name":"ascending","args":{"k":50000,"n":100000},"seed":4},"digest":"sha256:f2223ceac07c443478979213e2f71309b238c707594810f97f573f8596a94d03","note":"10^5 values ascending, k = n / 2: first- or last-element pivots degrade to O(n^2)"}
+{"generate":{"name":"descending","args":{"k":50000,"n":100000},"seed":5},"digest":"sha256:18775061d13237fa189d305a8c31f5bcaa196df16374a54ca05ed8ee67dfc2f4","note":"10^5 values descending, k = n / 2"}
+{"generate":{"name":"all_equal","args":{"k":50000,"n":100000,"v":7},"seed":6},"digest":"sha256:989901f8bbf44f773e83a584156c04b8491542b3074ce106915479498337b90e","note":"10^5 equal values, k = n / 2: a two-way partition degrades to O(n^2)"}
+{"generate":{"name":"all_equal","args":{"k":30000,"n":100000,"v":-10000},"seed":7},"digest":"sha256:c069fe9cf2eceb4770f3377e23cf8ca8c508bb954f8b44f04d91401003f3d674","note":"10^5 copies of -10^4, k = 30000"}
+{"generate":{"name":"few_values","args":{"k":40000,"n":100000,"values":3},"seed":8},"digest":"sha256:c0d862a7076fc01e23e70cc656bc779be8590c01e36859cc92c2a844e1808838","note":"10^5 values drawn from 3 distinct ones, k = 40000"}
+{"generate":{"name":"few_values","args":{"k":60000,"n":100000,"values":2},"seed":9},"digest":"sha256:98a1e154f270aa07564dbce1fc35aaba22e62130c4ce48687539af30b2fefd8b","note":"10^5 values drawn from 2 distinct ones, k = 60000"}
