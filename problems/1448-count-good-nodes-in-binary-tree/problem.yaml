@@ -1,0 +1,23 @@
+id: "1448"
+slug: count-good-nodes-in-binary-tree
+title: Count Good Nodes in Binary Tree
+titles:
+  zh-CN: 统计二叉树中好节点的数目
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: goodNodes
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/count-good-nodes-in-binary-tree/
+judge:
+  compare: exact
