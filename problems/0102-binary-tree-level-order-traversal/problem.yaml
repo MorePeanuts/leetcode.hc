@@ -1,0 +1,22 @@
+id: "102"
+slug: binary-tree-level-order-traversal
+title: Binary Tree Level Order Traversal
+titles:
+  zh-CN: 二叉树的层序遍历
+difficulty: medium
+tags:
+  - tree
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: levelOrder
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-tree-level-order-traversal/
+judge:
+  compare: exact
