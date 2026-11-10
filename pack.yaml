@@ -62,6 +62,7 @@ groups:
       - subtree-of-another-tree
       - lowest-common-ancestor-of-a-binary-search-tree
       - binary-tree-level-order-traversal
+      - binary-tree-right-side-view
       - validate-binary-search-tree
       - binary-tree-maximum-path-sum
   - name: heap-priority-queue

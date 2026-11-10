@@ -1,0 +1,23 @@
+id: "199"
+slug: binary-tree-right-side-view
+title: Binary Tree Right Side View
+titles:
+  zh-CN: 二叉树的右视图
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: rightSideView
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-tree-right-side-view/
+judge:
+  compare: exact
