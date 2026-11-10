@@ -60,6 +60,7 @@ groups:
       - find-the-duplicate-number
       - reverse-linked-list-ii
       - lru-cache
+      - lfu-cache
       - merge-k-sorted-lists
   - name: trees
     title: Trees

@@ -1,0 +1,35 @@
+id: "460"
+slug: lfu-cache
+title: LFU Cache
+titles:
+  zh-CN: LFU 缓存
+difficulty: hard
+tags:
+  - design
+  - hash-table
+  - linked-list
+  - doubly-linked-list
+kind: class
+class:
+  name: LFUCache
+  constructor:
+    - name: capacity
+      type: integer
+  methods:
+    - name: get
+      params:
+        - name: key
+          type: integer
+      returns: integer
+    - name: put
+      params:
+        - name: key
+          type: integer
+        - name: value
+          type: integer
+      returns: void
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/lfu-cache/
+judge:
+  compare: exact
