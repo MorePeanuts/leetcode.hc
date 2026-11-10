@@ -58,6 +58,7 @@ groups:
       - copy-list-with-random-pointer
       - add-two-numbers
       - find-the-duplicate-number
+      - reverse-linked-list-ii
       - lru-cache
       - merge-k-sorted-lists
   - name: trees
