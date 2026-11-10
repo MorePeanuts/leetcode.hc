@@ -1,0 +1,32 @@
+{"input":{"n":2,"tasks":["A","A","A","B","B","B"]},"expected":8,"example":true}
+{"input":{"n":1,"tasks":["A","C","A","B","D","B"]},"expected":6,"example":true}
+{"input":{"n":3,"tasks":["A","A","A","B","B","B"]},"expected":10,"example":true}
+{"input":{"n":0,"tasks":["A"]},"expected":1,"note":"one task, n = 0"}
+{"input":{"n":100,"tasks":["A"]},"expected":1,"note":"one task, n = 100: no idle after the last task"}
+{"input":{"n":0,"tasks":["A","A"]},"expected":2,"note":"two copies, n = 0: no gap needed"}
+{"input":{"n":1,"tasks":["A","A"]},"expected":3,"note":"two copies, n = 1: one idle"}
+{"input":{"n":100,"tasks":["A","A"]},"expected":102,"note":"two copies, n = 100"}
+{"input":{"n":100,"tasks":["A","B"]},"expected":2,"note":"two distinct tasks: no idle at all"}
+{"input":{"n":0,"tasks":["A","A","A","B"]},"expected":4,"note":"n = 0: the number of tasks"}
+{"input":{"n":0,"tasks":["A","A","A","B","B","B"]},"expected":6,"note":"n = 0 with repeats"}
+{"input":{"n":2,"tasks":["A","A","A","B","B","B","C","C"]},"expected":8,"note":"the idle slots are filled by a less frequent task"}
+{"input":{"n":2,"tasks":["A","A","A","B","B","B","C","C","C","D","D"]},"expected":11,"note":"more tasks than the frame: the answer is the number of tasks"}
+{"input":{"n":2,"tasks":["A","A","A","A","A","A","B","C","D","E","F","G"]},"expected":16,"note":"one frequent task and many single ones: 16"}
+{"input":{"n":3,"tasks":["A","A","A","A","B","B","B","B","C","C","C","C"]},"expected":15,"note":"three tasks tied at the maximum count"}
+{"input":{"n":2,"tasks":["A","A","A","B","B","B","C","C","C","D","D","D","E","E","E"]},"expected":15,"note":"five tied tasks with n = 2: no idle"}
+{"input":{"n":100,"tasks":["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]},"expected":26,"note":"every letter once"}
+{"input":{"n":25,"tasks":["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]},"expected":52,"note":"every letter twice, n = 25: no idle"}
+{"input":{"n":26,"tasks":["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]},"expected":53,"note":"every letter twice, n = 26: one idle"}
+{"input":{"n":1,"tasks":["Z","Z","Z","Y","Y","X"]},"expected":6,"note":"letters at the end of the alphabet"}
+{"input":{"n":1,"tasks":["A","A","A","A","B"]},"expected":7,"note":"one task dominates: idles between its copies"}
+{"input":{"n":3,"tasks":["B","A","A","A","A"]},"expected":13,"note":"the dominant task listed last"}
+{"input":{"n":1,"tasks":["A","B","A","B","A","B","A","C"]},"expected":8,"note":"the bound (4 - 1) * 2 + 1 = 7 is below the 8 tasks: the answer is 8"}
+{"input":{"n":2,"tasks":["A","A","A","B","B","C"]},"expected":7,"note":"a schedule that runs the most frequent task first"}
+{"input":{"n":3,"tasks":["A","A","A","A","B","B","B","E","E","F","F","G","G"]},"expected":13,"note":"the idle slots exactly filled: 13 tasks in 13 intervals"}
+{"input":{"n":100,"tasks":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A"]},"expected":10000,"note":"100 copies of one task, n = 100"}
+{"generate":{"name":"random_tasks","args":{"letters":26,"m":10000,"n":50},"seed":1},"digest":"sha256:7307fa292d9ec401cf786a74002c786a60ffc1e2a4d25676163099afa0fa8000","note":"10^4 random tasks over 26 letters, n = 50"}
+{"generate":{"name":"random_tasks","args":{"letters":3,"m":10000,"n":100},"seed":2},"digest":"sha256:8a12d4d39f09bdeb8039be16ad235ff4b3017f32b278e0c6250e36ae5b97e7f8","note":"10^4 random tasks over 3 letters, n = 100: mostly idle"}
+{"generate":{"name":"one_task","args":{"m":10000,"n":100},"seed":3},"digest":"sha256:826749c6d7429217fd95401ca29574160411f963ce77eb07a41a557a11e57cac","note":"10^4 copies of one task, n = 100: the largest answer, 999901"}
+{"generate":{"name":"equal_counts","args":{"letters":26,"m":10000,"n":100},"seed":4},"digest":"sha256:445afeb8644aafca861c39937f5a7f03293b97c8ab1bf848d0214601f8596a9f","note":"10^4 tasks, all 26 letters as evenly as possible, n = 100"}
+{"generate":{"name":"equal_counts","args":{"letters":26,"m":10000,"n":0},"seed":5},"digest":"sha256:7b6edabf5b9de32909fee93b22d2f3ede1f2aebf45e32dfa41efb5df0c1f1b22","note":"10^4 tasks, all 26 letters evenly, n = 0"}
+{"generate":{"name":"dominant","args":{"m":10000,"n":10,"share":20},"seed":6},"digest":"sha256:e8214e49bfa556a8b38d8ebe191d3a0ff907d4ddc3b9440b30fbf9934bfb6c32","note":"10^4 tasks, a fifth of them one letter, n = 10"}
