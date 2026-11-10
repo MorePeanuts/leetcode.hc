@@ -1,0 +1,26 @@
+id: "215"
+slug: kth-largest-element-in-an-array
+title: Kth Largest Element in an Array
+titles:
+  zh-CN: 数组中的第K个最大元素
+difficulty: medium
+tags:
+  - array
+  - divide-and-conquer
+  - quickselect
+  - sorting
+  - heap-priority-queue
+kind: function
+function:
+  name: findKthLargest
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/kth-largest-element-in-an-array/
+judge:
+  compare: exact
