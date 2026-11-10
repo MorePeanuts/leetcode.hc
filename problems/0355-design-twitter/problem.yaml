@@ -1,0 +1,47 @@
+id: "355"
+slug: design-twitter
+title: Design Twitter
+titles:
+  zh-CN: 设计推特
+difficulty: medium
+tags:
+  - design
+  - hash-table
+  - linked-list
+  - heap-priority-queue
+kind: class
+class:
+  name: Twitter
+  constructor: []
+  methods:
+    - name: postTweet
+      params:
+        - name: userId
+          type: integer
+        - name: tweetId
+          type: integer
+      returns: void
+    - name: getNewsFeed
+      params:
+        - name: userId
+          type: integer
+      returns: integer[]
+    - name: follow
+      params:
+        - name: followerId
+          type: integer
+        - name: followeeId
+          type: integer
+      returns: void
+    - name: unfollow
+      params:
+        - name: followerId
+          type: integer
+        - name: followeeId
+          type: integer
+      returns: void
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/design-twitter/
+judge:
+  compare: exact
