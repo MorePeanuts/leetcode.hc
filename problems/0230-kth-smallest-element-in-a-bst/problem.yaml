@@ -1,0 +1,25 @@
+id: "230"
+slug: kth-smallest-element-in-a-bst
+title: Kth Smallest Element in a BST
+titles:
+  zh-CN: 二叉搜索树中第 K 小的元素
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - binary-search-tree
+  - binary-tree
+kind: function
+function:
+  name: kthSmallest
+  params:
+    - name: root
+      type: TreeNode
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/kth-smallest-element-in-a-bst/
+judge:
+  compare: exact
