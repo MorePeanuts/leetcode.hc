@@ -91,6 +91,7 @@ groups:
       - binary-tree-right-side-view
       - count-good-nodes-in-binary-tree
       - validate-binary-search-tree
+      - kth-smallest-element-in-a-bst
       - binary-tree-maximum-path-sum
   - name: heap-priority-queue
     title: Heap / Priority Queue
