@@ -1,0 +1,27 @@
+id: "621"
+slug: task-scheduler
+title: Task Scheduler
+titles:
+  zh-CN: 任务调度器
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - hash-table
+  - counting
+  - sorting
+  - heap-priority-queue
+kind: function
+function:
+  name: leastInterval
+  params:
+    - name: tasks
+      type: character[]
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/task-scheduler/
+judge:
+  compare: exact
