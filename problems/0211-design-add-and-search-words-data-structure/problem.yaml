@@ -1,0 +1,31 @@
+id: "211"
+slug: design-add-and-search-words-data-structure
+title: Design Add and Search Words Data Structure
+titles:
+  zh-CN: "添加与搜索单词 - 数据结构设计"
+difficulty: medium
+tags:
+  - depth-first-search
+  - design
+  - trie
+  - string
+kind: class
+class:
+  name: WordDictionary
+  constructor: []
+  methods:
+    - name: addWord
+      params:
+        - name: word
+          type: string
+      returns: void
+    - name: search
+      params:
+        - name: word
+          type: string
+      returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/design-add-and-search-words-data-structure/
+judge:
+  compare: exact

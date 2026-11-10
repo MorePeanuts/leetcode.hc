@@ -99,6 +99,7 @@ groups:
     title: Tries
     problems:
       - implement-trie-prefix-tree
+      - design-add-and-search-words-data-structure
   - name: graphs
     title: Graphs
     problems:
