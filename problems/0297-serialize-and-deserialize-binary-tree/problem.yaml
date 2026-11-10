@@ -1,0 +1,37 @@
+id: "297"
+slug: serialize-and-deserialize-binary-tree
+title: Serialize and Deserialize Binary Tree
+titles:
+  zh-CN: 二叉树的序列化与反序列化
+difficulty: hard
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - design
+  - string
+  - binary-tree
+kind: class
+class:
+  name: Codec
+  constructor: []
+  methods:
+    - name: serialize
+      params:
+        - name: root
+          type: TreeNode
+      returns: string
+    - name: deserialize
+      params:
+        - name: data
+          type: string
+      returns: TreeNode
+judge:
+  compare: exact
+  round_trip:
+    encode: serialize
+    decode: deserialize
+    instances: separate
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/

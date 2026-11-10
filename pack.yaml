@@ -68,6 +68,7 @@ groups:
       - kth-smallest-element-in-a-bst
       - construct-binary-tree-from-preorder-and-inorder-traversal
       - binary-tree-maximum-path-sum
+      - serialize-and-deserialize-binary-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
