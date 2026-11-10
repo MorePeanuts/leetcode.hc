@@ -48,6 +48,7 @@ groups:
       - min-stack
       - evaluate-reverse-polish-notation
       - daily-temperatures
+      - car-fleet
       - largest-rectangle-in-histogram
   - name: binary-search
     title: Binary Search
