@@ -166,6 +166,7 @@ groups:
       - coin-change
       - longest-increasing-subsequence
       - palindrome-partitioning
+      - climbing-stairs
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
@@ -196,3 +197,4 @@ groups:
     title: Math & Geometry
     problems:
       - unique-paths
+      - climbing-stairs

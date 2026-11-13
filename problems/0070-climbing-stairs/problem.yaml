@@ -1,0 +1,22 @@
+id: "70"
+slug: climbing-stairs
+title: Climbing Stairs
+titles:
+  zh-CN: 爬楼梯
+difficulty: easy
+tags:
+  - memoization
+  - math
+  - dynamic-programming
+kind: function
+function:
+  name: climbStairs
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/climbing-stairs/
+judge:
+  compare: exact
