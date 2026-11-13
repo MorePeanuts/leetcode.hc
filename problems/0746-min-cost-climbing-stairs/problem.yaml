@@ -1,0 +1,21 @@
+id: "746"
+slug: min-cost-climbing-stairs
+title: Min Cost Climbing Stairs
+titles:
+  zh-CN: 使用最小花费爬楼梯
+difficulty: easy
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: minCostClimbingStairs
+  params:
+    - name: cost
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/min-cost-climbing-stairs/
+judge:
+  compare: exact
