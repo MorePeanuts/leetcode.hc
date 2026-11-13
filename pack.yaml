@@ -38,6 +38,7 @@ groups:
       - longest-common-prefix
       - matrix-block-sum
       - find-pivot-index
+      - contiguous-array
   - name: two-pointers
     title: Two Pointers
     problems:

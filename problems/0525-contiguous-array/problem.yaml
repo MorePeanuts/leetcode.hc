@@ -1,0 +1,22 @@
+id: "525"
+slug: contiguous-array
+title: Contiguous Array
+titles:
+  zh-CN: 连续数组
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - prefix-sum
+kind: function
+function:
+  name: findMaxLength
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/contiguous-array/
+judge:
+  compare: exact
