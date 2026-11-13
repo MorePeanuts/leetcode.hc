@@ -1,0 +1,22 @@
+id: "90"
+slug: subsets-ii
+title: Subsets II
+titles:
+  zh-CN: 子集 II
+difficulty: medium
+tags:
+  - bit-manipulation
+  - array
+  - backtracking
+kind: function
+function:
+  name: subsetsWithDup
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/subsets-ii/
+judge:
+  compare: unordered_deep

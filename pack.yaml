@@ -28,6 +28,7 @@ groups:
       - best-time-to-buy-and-sell-stock-with-cooldown
       - subsets
       - permutations
+      - subsets-ii
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -128,6 +129,7 @@ groups:
       - combination-sum
       - combination-sum-ii
       - permutations
+      - subsets-ii
   - name: tries
     title: Tries
     problems:
@@ -180,6 +182,7 @@ groups:
     title: Bit Manipulation
     problems:
       - subsets
+      - subsets-ii
   - name: math-geometry
     title: Math & Geometry
     problems:
