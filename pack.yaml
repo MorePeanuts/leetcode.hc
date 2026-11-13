@@ -282,6 +282,7 @@ groups:
       - palindrome-partitioning
       - valid-parenthesis-string
       - cheapest-flights-within-k-stops
+      - minimum-path-sum
   - name: greedy
     title: Greedy
     problems:
