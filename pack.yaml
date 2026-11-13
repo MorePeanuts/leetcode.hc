@@ -134,6 +134,7 @@ groups:
       - clone-graph
       - rotting-oranges
       - pacific-atlantic-water-flow
+      - surrounded-regions
   - name: advanced-graphs
     title: Advanced Graphs
   - name: 1d-dynamic-programming

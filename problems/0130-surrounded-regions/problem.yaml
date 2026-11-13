@@ -1,0 +1,25 @@
+id: "130"
+slug: surrounded-regions
+title: Surrounded Regions
+titles:
+  zh-CN: 被围绕的区域
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - array
+  - matrix
+kind: function
+function:
+  name: solve
+  params:
+    - name: board
+      type: character[][]
+  returns: void
+judge:
+  compare: exact
+  output: board
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/surrounded-regions/
