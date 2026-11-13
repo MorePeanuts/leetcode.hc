@@ -59,6 +59,7 @@ groups:
       - minimum-size-subarray-sum
       - minimum-window-substring
       - sliding-window-maximum
+      - minimum-operations-to-reduce-x-to-zero
   - name: stack
     title: Stack
     problems:

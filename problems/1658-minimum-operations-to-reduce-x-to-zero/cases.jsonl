@@ -1,0 +1,33 @@
+{"input":{"nums":[1,1,4,2,3],"x":5},"expected":2,"example":true}
+{"input":{"nums":[5,6,7,8,9],"x":4},"expected":-1,"example":true}
+{"input":{"nums":[3,2,20,1,1,3],"x":10},"expected":5,"example":true}
+{"input":{"nums":[1],"x":1},"expected":1,"note":"Remove entire singleton"}
+{"input":{"nums":[1],"x":2},"expected":-1,"note":"Target exceeds total"}
+{"input":{"nums":[10000],"x":9999},"expected":-1,"note":"No partial element removal"}
+{"input":{"nums":[2,3],"x":5},"expected":2,"note":"Must remove entire array"}
+{"input":{"nums":[1,2,3],"x":1},"expected":1,"note":"Left-only optimum"}
+{"input":{"nums":[3,2,1],"x":1},"expected":1,"note":"Right-only optimum"}
+{"input":{"nums":[1,10,1],"x":2},"expected":2,"note":"Both ends required"}
+{"input":{"nums":[5,1,1,1,5],"x":5},"expected":1,"note":"One end beats smaller interior values"}
+{"input":{"nums":[1,1,1,1],"x":3},"expected":3,"note":"Keep shortest positive remainder"}
+{"input":{"nums":[2,2,2],"x":3},"expected":-1,"note":"Parity prevents target"}
+{"input":{"nums":[3,1,2,1,3],"x":6},"expected":2,"note":"Several equal optimal choices"}
+{"input":{"nums":[10000,1,10000],"x":20000},"expected":2,"note":"Large values on both ends"}
+{"input":{"nums":[1,1,4,2,3],"x":11},"expected":5,"note":"Full-array removal"}
+{"input":{"nums":[1,1,4,2,3],"x":12},"expected":-1,"note":"Beyond full sum"}
+{"input":{"nums":[2,4,6,8],"x":8},"expected":1,"note":"Do not greedily choose smaller end"}
+{"input":{"nums":[6,6,7,3,10,3,6,5,9,6,5,3,4,7,5,8],"x":31},"expected":-1,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[6,4,7,2,1,4,4,9],"x":17},"expected":3,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[10,9,10,8,6,7,10,5,6,7,10,10,1,8,7,9,6,8],"x":93},"expected":-1,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[2,8,7,3,7,3,3,6,1,2,7,9,6,2,2],"x":27},"expected":5,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[6,9,9,1,1,6,2,7,8,6,5,3,9,4,1,3,5],"x":81},"expected":15,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[4,7,9,4,5,6],"x":3},"expected":-1,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[2,10,8,2,6,1],"x":17},"expected":4,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[3,3,8,4,9,5,4],"x":32},"expected":6,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[1,4,9],"x":5},"expected":2,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[1,3,9,2,9,2],"x":29},"expected":-1,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[4,7,9,3,5,2,4,1,9,6,6],"x":10},"expected":2,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"input":{"nums":[4,6,7,9],"x":23},"expected":-1,"note":"Deterministic varied lengths and attainable or impossible target"}
+{"generate":{"name":"equal","args":{"n":100000,"value":2,"x":99999},"seed":7},"digest":"sha256:607404ff90445a309063176dd6b5c5fdc3725e93343d16def2f8dc1957a8dc4e","note":"Maximum length; odd target forces exhaustive endpoint search"}
+{"generate":{"name":"equal","args":{"n":100000,"value":3,"x":149999},"seed":7},"digest":"sha256:320d6bb172cb29d77313a4e96c26d08081495b4159e275bfb1009841f394a541","note":"Maximum length; impossible target modulo three"}
+{"generate":{"name":"alternating","args":{"n":100000},"seed":7},"digest":"sha256:53861a72df744d29dd35f0fba27a5e886048e52757eb29020c28c14625f75cb5","note":"Maximum length with varying positive values"}
