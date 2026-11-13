@@ -1,0 +1,26 @@
+id: "1584"
+slug: min-cost-to-connect-all-points
+title: Min Cost to Connect All Points
+titles:
+  zh-CN: 连接所有点的最小费用
+difficulty: medium
+tags:
+  - union-find
+  - graph
+  - array
+  - kruskals-algorithm
+  - minimum-spanning-tree
+  - prims-algorithm
+  - boruvkas-algorithm
+kind: function
+function:
+  name: minCostConnectPoints
+  params:
+    - name: points
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/min-cost-to-connect-all-points/
+judge:
+  compare: exact
