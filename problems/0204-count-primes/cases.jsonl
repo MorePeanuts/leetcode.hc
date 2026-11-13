@@ -1,0 +1,32 @@
+{"input":{"n":10},"expected":4,"example":true}
+{"input":{"n":0},"expected":0,"example":true}
+{"input":{"n":1},"expected":0,"example":true}
+{"input":{"n":2},"expected":0,"note":"Smallest prime excluded by the strict upper bound"}
+{"input":{"n":3},"expected":1,"note":"Exclusive bound, prime square or sieve boundary; n=3"}
+{"input":{"n":4},"expected":2,"note":"Exclusive bound, prime square or sieve boundary; n=4"}
+{"input":{"n":5},"expected":2,"note":"Exclusive bound, prime square or sieve boundary; n=5"}
+{"input":{"n":6},"expected":3,"note":"Exclusive bound, prime square or sieve boundary; n=6"}
+{"input":{"n":7},"expected":3,"note":"Exclusive bound, prime square or sieve boundary; n=7"}
+{"input":{"n":8},"expected":4,"note":"Exclusive bound, prime square or sieve boundary; n=8"}
+{"input":{"n":9},"expected":4,"note":"Exclusive bound, prime square or sieve boundary; n=9"}
+{"input":{"n":11},"expected":4,"note":"Exclusive bound, prime square or sieve boundary; n=11"}
+{"input":{"n":12},"expected":5,"note":"Exclusive bound, prime square or sieve boundary; n=12"}
+{"input":{"n":24},"expected":9,"note":"Exclusive bound, prime square or sieve boundary; n=24"}
+{"input":{"n":25},"expected":9,"note":"Exclusive bound, prime square or sieve boundary; n=25"}
+{"input":{"n":26},"expected":9,"note":"Exclusive bound, prime square or sieve boundary; n=26"}
+{"input":{"n":48},"expected":15,"note":"Exclusive bound, prime square or sieve boundary; n=48"}
+{"input":{"n":49},"expected":15,"note":"Exclusive bound, prime square or sieve boundary; n=49"}
+{"input":{"n":50},"expected":15,"note":"Exclusive bound, prime square or sieve boundary; n=50"}
+{"input":{"n":97},"expected":24,"note":"Exclusive bound, prime square or sieve boundary; n=97"}
+{"input":{"n":98},"expected":25,"note":"Exclusive bound, prime square or sieve boundary; n=98"}
+{"input":{"n":100},"expected":25,"note":"Exclusive bound, prime square or sieve boundary; n=100"}
+{"input":{"n":121},"expected":30,"note":"Exclusive bound, prime square or sieve boundary; n=121"}
+{"input":{"n":122},"expected":30,"note":"Exclusive bound, prime square or sieve boundary; n=122"}
+{"input":{"n":169},"expected":39,"note":"Exclusive bound, prime square or sieve boundary; n=169"}
+{"input":{"n":170},"expected":39,"note":"Exclusive bound, prime square or sieve boundary; n=170"}
+{"input":{"n":997},"expected":167,"note":"Exclusive bound, prime square or sieve boundary; n=997"}
+{"input":{"n":998},"expected":168,"note":"Exclusive bound, prime square or sieve boundary; n=998"}
+{"input":{"n":1000},"expected":168,"note":"Exclusive bound, prime square or sieve boundary; n=1000"}
+{"input":{"n":10000},"expected":1229,"note":"Exclusive bound, prime square or sieve boundary; n=10000"}
+{"input":{"n":4999999},"expected":348512,"note":"Maximum range for sieve versus trial division"}
+{"input":{"n":5000000},"expected":348513,"note":"Maximum range for sieve versus trial division"}

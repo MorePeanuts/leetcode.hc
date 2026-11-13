@@ -323,6 +323,7 @@ groups:
   - name: math-geometry
     title: Math & Geometry
     problems:
+      - count-primes
       - factorial-trailing-zeroes
       - unique-paths
       - climbing-stairs
