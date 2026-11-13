@@ -1,0 +1,34 @@
+{"input":{"n":12},"expected":3,"example":true}
+{"input":{"n":13},"expected":2,"example":true}
+{"input":{"n":1},"expected":1,"note":"Square-count boundary n=1; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":2},"expected":2,"note":"Square-count boundary n=2; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":3},"expected":3,"note":"Square-count boundary n=3; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":4},"expected":1,"note":"Square-count boundary n=4; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":5},"expected":2,"note":"Square-count boundary n=5; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":7},"expected":4,"note":"Square-count boundary n=7; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":8},"expected":2,"note":"Square-count boundary n=8; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":9},"expected":1,"note":"Square-count boundary n=9; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":10},"expected":2,"note":"Square-count boundary n=10; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":11},"expected":3,"note":"Square-count boundary n=11; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":15},"expected":4,"note":"Square-count boundary n=15; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":16},"expected":1,"note":"Square-count boundary n=16; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":17},"expected":2,"note":"Square-count boundary n=17; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":18},"expected":2,"note":"Square-count boundary n=18; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":23},"expected":4,"note":"Square-count boundary n=23; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":24},"expected":3,"note":"Square-count boundary n=24; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":25},"expected":1,"note":"Square-count boundary n=25; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":27},"expected":3,"note":"Square-count boundary n=27; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":28},"expected":4,"note":"Square-count boundary n=28; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":31},"expected":4,"note":"Square-count boundary n=31; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":32},"expected":2,"note":"Square-count boundary n=32; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":43},"expected":3,"note":"Square-count boundary n=43; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":48},"expected":3,"note":"Square-count boundary n=48; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":49},"expected":1,"note":"Square-count boundary n=49; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":50},"expected":2,"note":"Square-count boundary n=50; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":63},"expected":4,"note":"Square-count boundary n=63; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":64},"expected":1,"note":"Square-count boundary n=64; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":99},"expected":3,"note":"Square-count boundary n=99; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":999},"expected":4,"note":"Square-count boundary n=999; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":9999},"expected":4,"note":"Square-count boundary n=9999; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":10000},"expected":1,"note":"Square-count boundary n=10000; includes greedy traps, four-square and repeated-square sums"}
+{"input":{"n":9973},"expected":2,"note":"Square-count boundary n=9973; includes greedy traps, four-square and repeated-square sums"}
