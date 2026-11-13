@@ -129,6 +129,7 @@ groups:
       - all-nodes-distance-k-in-binary-tree
       - insert-into-a-binary-search-tree
       - maximum-width-of-binary-tree
+      - delete-node-in-a-bst
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
