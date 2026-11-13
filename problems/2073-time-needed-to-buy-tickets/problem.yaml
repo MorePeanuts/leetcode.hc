@@ -1,0 +1,24 @@
+id: "2073"
+slug: time-needed-to-buy-tickets
+title: Time Needed to Buy Tickets
+titles:
+  zh-CN: 买票需要的时间
+difficulty: easy
+tags:
+  - queue
+  - array
+  - simulation
+kind: function
+function:
+  name: timeRequiredToBuy
+  params:
+    - name: tickets
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/time-needed-to-buy-tickets/
+judge:
+  compare: exact
