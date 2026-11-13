@@ -1,0 +1,33 @@
+{"input":{"grid":[[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]},"expected":2,"example":true}
+{"input":{"grid":[[0,0,1,0,0],[0,1,0,1,0],[0,1,1,1,0]]},"expected":1,"example":true}
+{"input":{"grid":[[1,1,1,1,1,1,1],[1,0,0,0,0,0,1],[1,0,1,1,1,0,1],[1,0,1,0,1,0,1],[1,0,1,1,1,0,1],[1,0,0,0,0,0,1],[1,1,1,1,1,1,1]]},"expected":2,"example":true}
+{"input":{"grid":[[0]]},"expected":0,"note":"Singleton land touches boundary"}
+{"input":{"grid":[[1]]},"expected":0,"note":"Singleton water"}
+{"input":{"grid":[[0,0,0]]},"expected":0,"note":"Single-row land is open"}
+{"input":{"grid":[[0],[0],[0]]},"expected":0,"note":"Single-column land is open"}
+{"input":{"grid":[[0,0],[0,0]]},"expected":0,"note":"All land on a two-by-two boundary"}
+{"input":{"grid":[[1,1,1],[1,0,1],[1,1,1]]},"expected":1,"note":"One enclosed cell"}
+{"input":{"grid":[[1,0,1],[1,0,1],[1,1,1]]},"expected":0,"note":"Interior land connected to top boundary"}
+{"input":{"grid":[[1,1,1],[0,0,1],[1,1,1]]},"expected":0,"note":"Left boundary connection"}
+{"input":{"grid":[[1,1,1],[1,0,0],[1,1,1]]},"expected":0,"note":"Right boundary connection"}
+{"input":{"grid":[[1,1,1],[1,0,1],[1,0,1]]},"expected":0,"note":"Bottom boundary connection"}
+{"input":{"grid":[[0,1,1],[1,0,1],[1,1,1]]},"expected":1,"note":"Diagonal contact does not open island"}
+{"input":{"grid":[[1,1,1,1,1],[1,0,1,0,1],[1,1,1,1,1]]},"expected":2,"note":"Two enclosed components"}
+{"input":{"grid":[[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]},"expected":1,"note":"Ring-shaped enclosed island"}
+{"input":{"grid":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]},"expected":0,"note":"One boundary-connected component, not nine closed cells"}
+{"input":{"grid":[[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]]},"expected":0,"note":"All water rectangular grid"}
+{"input":{"grid":[[1,1,1,0],[0,1,1,0],[0,1,1,1],[1,1,0,0],[1,1,1,0],[0,0,0,0],[1,1,0,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[1,0],[1,0],[0,0],[0,1],[0,1],[0,0],[1,0],[0,0]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0,0,0,0,0,1,1],[0,1,0,1,0,1,0],[1,1,0,0,0,0,0],[0,1,1,0,0,0,0],[1,1,0,0,1,0,1],[0,1,1,1,0,0,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0],[1],[0],[1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[1,1,1,1],[1,1,0,1],[0,1,0,0],[0,0,0,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0,1,0,1],[0,1,1,1],[0,1,0,0],[0,1,0,1],[1,1,1,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0,0,0,0,0,0,0,0,0]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0],[0],[1],[1],[1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[1,0]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[1,1,1,0,0,1,0,1,0],[0,1,0,0,0,1,1,0,1],[1,1,1,0,1,0,1,0,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"input":{"grid":[[0,1,0,1],[0,0,0,1],[1,1,1,1]]},"expected":0,"note":"Deterministic rectangular boundary and component topology"}
+{"generate":{"name":"all_land","args":{"n":100},"seed":7},"digest":"sha256:716a5b117ab477b13931021bea87d6a716fe66e049be35abf07ca4d43780ee67","note":"Maximum grid; entire land component touches every boundary"}
+{"generate":{"name":"framed","args":{"n":100},"seed":7},"digest":"sha256:1e051883fba9e421fe86defb5c58e255ed03cd59ec2f956c4f48de04ef4259f7","note":"Maximum interior enclosed component"}
+{"generate":{"name":"checkerboard","args":{"n":100},"seed":7},"digest":"sha256:93360718f5c2c71d4b5b75b83d6f82dd7fb2cba3f89ea2d3d4eca14098f01cae","note":"Maximum grid; diagonals must not connect islands"}
+{"generate":{"name":"winding_escape","args":{"n":100},"seed":7},"digest":"sha256:09ce91e561f4ead0b59a6f9369a1f0efb27327356fdc6289cc0ea5e3565637f4","note":"Long narrow component escapes through one boundary cell"}
