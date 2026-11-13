@@ -98,6 +98,7 @@ groups:
       - find-k-closest-elements
       - search-insert-position
       - find-peak-element
+      - search-in-rotated-sorted-array-ii
   - name: linked-list
     title: Linked List
     problems:

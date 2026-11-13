@@ -1,0 +1,23 @@
+id: "81"
+slug: search-in-rotated-sorted-array-ii
+title: Search in Rotated Sorted Array II
+titles:
+  zh-CN: 搜索旋转排序数组 II
+difficulty: medium
+tags:
+  - array
+  - binary-search
+kind: function
+function:
+  name: search
+  params:
+    - name: nums
+      type: integer[]
+    - name: target
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/
+judge:
+  compare: exact
