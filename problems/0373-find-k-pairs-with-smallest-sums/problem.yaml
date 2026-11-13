@@ -1,0 +1,25 @@
+id: "373"
+slug: find-k-pairs-with-smallest-sums
+title: Find K Pairs with Smallest Sums
+titles:
+  zh-CN: 查找和最小的 K 对数字
+difficulty: medium
+tags:
+  - array
+  - heap-priority-queue
+kind: function
+function:
+  name: kSmallestPairs
+  params:
+    - name: nums1
+      type: integer[]
+    - name: nums2
+      type: integer[]
+    - name: k
+      type: integer
+  returns: integer[][]
+judge:
+  compare: checker
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/
