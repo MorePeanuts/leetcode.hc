@@ -1,0 +1,23 @@
+id: "101"
+slug: symmetric-tree
+title: Symmetric Tree
+titles:
+  zh-CN: 对称二叉树
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: isSymmetric
+  params:
+    - name: root
+      type: TreeNode
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/symmetric-tree/
+judge:
+  compare: exact

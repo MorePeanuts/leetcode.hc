@@ -134,6 +134,7 @@ groups:
       - binary-tree-zigzag-level-order-traversal
       - check-completeness-of-a-binary-tree
       - convert-sorted-array-to-binary-search-tree
+      - symmetric-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
