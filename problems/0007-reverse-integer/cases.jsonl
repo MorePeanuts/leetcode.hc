@@ -1,0 +1,36 @@
+{"input":{"x":123},"expected":321,"example":true}
+{"input":{"x":-123},"expected":-321,"example":true}
+{"input":{"x":120},"expected":21,"example":true}
+{"input":{"x":0},"expected":0,"note":"Reverse 0: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1},"expected":1,"note":"Reverse 1: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1},"expected":-1,"note":"Reverse -1: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":9},"expected":9,"note":"Reverse 9: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-9},"expected":-9,"note":"Reverse -9: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":10},"expected":1,"note":"Reverse 10: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-10},"expected":-1,"note":"Reverse -10: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":100},"expected":1,"note":"Reverse 100: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-100},"expected":-1,"note":"Reverse -100: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1000},"expected":1,"note":"Reverse 1000: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1000},"expected":-1,"note":"Reverse -1000: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1000000000},"expected":1,"note":"Reverse 1000000000: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1000000000},"expected":-1,"note":"Reverse -1000000000: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1000000001},"expected":1000000001,"note":"Reverse 1000000001: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1000000001},"expected":-1000000001,"note":"Reverse -1000000001: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":101},"expected":101,"note":"Reverse 101: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1010},"expected":101,"note":"Reverse 1010: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1010},"expected":-101,"note":"Reverse -1010: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1463847412},"expected":2147483641,"note":"Reverse 1463847412: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1463847412},"expected":-2147483641,"note":"Reverse -1463847412: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1563847412},"expected":0,"note":"Reverse 1563847412: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1563847412},"expected":0,"note":"Reverse -1563847412: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1534236469},"expected":0,"note":"Reverse 1534236469: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1534236469},"expected":0,"note":"Reverse -1534236469: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":2147483647},"expected":0,"note":"Reverse 2147483647: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-2147483648},"expected":0,"note":"Reverse -2147483648: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1147483647},"expected":0,"note":"Reverse 1147483647: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1147483648},"expected":0,"note":"Reverse -1147483648: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":2000000002},"expected":2000000002,"note":"Reverse 2000000002: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-2000000002},"expected":-2000000002,"note":"Reverse -2000000002: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":1056389759},"expected":0,"note":"Reverse 1056389759: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":-1056389759},"expected":0,"note":"Reverse -1056389759: sign, trailing/interior zeros or signed32 overflow boundary."}
+{"input":{"x":123456789},"expected":987654321,"note":"Reverse 123456789: sign, trailing/interior zeros or signed32 overflow boundary."}
