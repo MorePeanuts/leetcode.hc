@@ -36,6 +36,7 @@ groups:
       - single-number
       - missing-number
       - longest-common-prefix
+      - matrix-block-sum
   - name: two-pointers
     title: Two Pointers
     problems:

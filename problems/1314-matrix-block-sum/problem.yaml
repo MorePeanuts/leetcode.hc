@@ -1,0 +1,24 @@
+id: "1314"
+slug: matrix-block-sum
+title: Matrix Block Sum
+titles:
+  zh-CN: 矩阵区域和
+difficulty: medium
+tags:
+  - array
+  - matrix
+  - prefix-sum
+kind: function
+function:
+  name: matrixBlockSum
+  params:
+    - name: mat
+      type: integer[][]
+    - name: k
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/matrix-block-sum/
+judge:
+  compare: exact
