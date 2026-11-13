@@ -122,6 +122,7 @@ groups:
       - linked-list-random-node
       - remove-duplicates-from-sorted-list-ii
       - add-two-numbers-ii
+      - swap-nodes-in-pairs
   - name: trees
     title: Trees
     problems:
