@@ -1,0 +1,22 @@
+id: "45"
+slug: jump-game-ii
+title: Jump Game II
+titles:
+  zh-CN: 跳跃游戏 II
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: jump
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/jump-game-ii/
+judge:
+  compare: exact
