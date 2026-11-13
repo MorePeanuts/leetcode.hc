@@ -80,6 +80,7 @@ groups:
       - median-of-two-sorted-arrays
       - kth-smallest-element-in-a-sorted-matrix
       - swim-in-rising-water
+      - minimum-interval-to-include-each-query
   - name: linked-list
     title: Linked List
     problems:
@@ -135,6 +136,7 @@ groups:
       - network-delay-time
       - reconstruct-itinerary
       - swim-in-rising-water
+      - minimum-interval-to-include-each-query
   - name: backtracking
     title: Backtracking
     problems:
@@ -241,6 +243,7 @@ groups:
       - merge-intervals
       - insert-interval
       - non-overlapping-intervals
+      - minimum-interval-to-include-each-query
   - name: bit-manipulation
     title: Bit Manipulation
     problems:

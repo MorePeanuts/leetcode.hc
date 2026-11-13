@@ -1,0 +1,26 @@
+id: "1851"
+slug: minimum-interval-to-include-each-query
+title: Minimum Interval to Include Each Query
+titles:
+  zh-CN: 包含每个查询的最小区间
+difficulty: hard
+tags:
+  - array
+  - binary-search
+  - sorting
+  - sweep-line
+  - heap-priority-queue
+kind: function
+function:
+  name: minInterval
+  params:
+    - name: intervals
+      type: integer[][]
+    - name: queries
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-interval-to-include-each-query/
+judge:
+  compare: exact
