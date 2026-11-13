@@ -1,0 +1,33 @@
+{"input":{"points":[[0,0],[2,2],[3,10],[5,2],[7,0]]},"expected":20,"example":true}
+{"input":{"points":[[3,12],[-2,5],[-4,1]]},"expected":18,"example":true}
+{"input":{"points":[[0,0]]},"expected":0,"note":"singleton has no edge"}
+{"input":{"points":[[-1000000,-1000000],[1000000,1000000]]},"expected":4000000,"note":"maximum coordinate difference"}
+{"input":{"points":[[0,0],[0,1],[0,2]]},"expected":2,"note":"collinear vertical"}
+{"input":{"points":[[2,0],[0,0],[1,0]]},"expected":2,"note":"collinear permuted"}
+{"input":{"points":[[0,0],[1,1]]},"expected":2,"note":"Manhattan rather than Euclidean"}
+{"input":{"points":[[0,0],[0,2],[2,0],[2,2]]},"expected":6,"note":"equal-cost alternatives"}
+{"input":{"points":[[0,0],[100,100],[101,100],[100,101]]},"expected":202,"note":"distant cluster"}
+{"input":{"points":[[-1,-1],[-1,1],[1,-1],[1,1],[0,0]]},"expected":8,"note":"central connection beats perimeter"}
+{"input":{"points":[[0,0],[2,1],[4,0],[2,-1]]},"expected":8,"note":"multiple equal candidate edges"}
+{"input":{"points":[[0,0],[1000,0],[1001,0],[1002,0]]},"expected":1002,"note":"not every point connects to first"}
+{"input":{"points":[[3,5],[4,-3]]},"expected":9,"note":"distinct signed point set 1; compare alternate spanning trees"}
+{"input":{"points":[[-5,3],[1,-3],[-2,2]]},"expected":12,"note":"distinct signed point set 2; compare alternate spanning trees"}
+{"input":{"points":[[4,-1],[-1,5],[-4,-5],[-2,2]]},"expected":22,"note":"distinct signed point set 3; compare alternate spanning trees"}
+{"input":{"points":[[-3,-4],[4,-5],[-4,-3],[-2,2],[-1,5]]},"expected":21,"note":"distinct signed point set 4; compare alternate spanning trees"}
+{"input":{"points":[[3,-3],[-1,-4],[1,-1],[1,3],[-5,3],[2,-2]]},"expected":19,"note":"distinct signed point set 5; compare alternate spanning trees"}
+{"input":{"points":[[0,1],[2,0],[-3,-5],[3,-2],[-4,0],[3,-1],[3,2]]},"expected":20,"note":"distinct signed point set 6; compare alternate spanning trees"}
+{"input":{"points":[[4,2],[3,5],[4,3],[5,-5],[5,-1],[-2,-2],[-3,3],[2,3]]},"expected":25,"note":"distinct signed point set 7; compare alternate spanning trees"}
+{"input":{"points":[[5,5],[-5,-5],[-2,5],[-4,2],[-4,-5],[-3,3],[-1,-5],[-4,1],[-3,-5]]},"expected":23,"note":"distinct signed point set 8; compare alternate spanning trees"}
+{"input":{"points":[[3,-3],[1,-5]]},"expected":4,"note":"distinct signed point set 9; compare alternate spanning trees"}
+{"input":{"points":[[5,4],[0,-1],[4,5]]},"expected":12,"note":"distinct signed point set 10; compare alternate spanning trees"}
+{"input":{"points":[[-5,1],[0,-2],[-3,-2],[-2,-4]]},"expected":11,"note":"distinct signed point set 11; compare alternate spanning trees"}
+{"input":{"points":[[4,5],[1,-3],[3,-4],[-1,-5],[0,-4]]},"expected":17,"note":"distinct signed point set 12; compare alternate spanning trees"}
+{"input":{"points":[[-3,-1],[2,2],[2,-1],[-4,-3],[5,0],[-1,0]]},"expected":17,"note":"distinct signed point set 13; compare alternate spanning trees"}
+{"input":{"points":[[1,-2],[-5,4],[-2,1],[1,0],[0,-5],[0,2],[-1,-2]]},"expected":20,"note":"distinct signed point set 14; compare alternate spanning trees"}
+{"input":{"points":[[3,-2],[-3,-1],[2,3],[-1,-5],[5,-1],[-1,0],[3,0],[-3,3]]},"expected":25,"note":"distinct signed point set 15; compare alternate spanning trees"}
+{"input":{"points":[[-3,-4],[-1,4],[-1,-5],[-5,-2],[-2,1],[-5,-1],[4,-3],[4,1],[-1,-1]]},"expected":29,"note":"distinct signed point set 16; compare alternate spanning trees"}
+{"input":{"points":[[-3,-5],[1,4]]},"expected":13,"note":"distinct signed point set 17; compare alternate spanning trees"}
+{"input":{"points":[[4,1],[-3,-3],[-1,1]]},"expected":11,"note":"distinct signed point set 18; compare alternate spanning trees"}
+{"input":{"points":[[2,1],[-3,5],[4,3],[1,5]]},"expected":13,"note":"distinct signed point set 19; compare alternate spanning trees"}
+{"generate":{"name":"scattered","args":{"n":1000},"seed":39},"digest":"sha256:78d9421b6787d9602a8461ab20506bf780945bcd6603b21c3eddb0e6ede8640b","note":"maximum distinct points with signed coordinate spread"}
+{"generate":{"name":"line","args":{"n":1000},"seed":39},"digest":"sha256:fd17cef7714f811260688c93a5473e1a2e06a51646cc73b31c55812acadf619a","note":"maximum permuted collinear points"}

@@ -171,11 +171,13 @@ groups:
       - longest-increasing-path-in-a-matrix
       - network-delay-time
       - reconstruct-itinerary
+      - min-cost-to-connect-all-points
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
       - network-delay-time
       - reconstruct-itinerary
+      - min-cost-to-connect-all-points
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:
@@ -223,6 +225,7 @@ groups:
       - partition-labels
       - valid-parenthesis-string
       - reconstruct-itinerary
+      - min-cost-to-connect-all-points
   - name: intervals
     title: Intervals
     problems:
@@ -245,3 +248,4 @@ groups:
       - powx-n
       - multiply-strings
       - detect-squares
+      - min-cost-to-connect-all-points
