@@ -130,6 +130,7 @@ groups:
     problems:
       - number-of-islands
       - course-schedule
+      - max-area-of-island
   - name: advanced-graphs
     title: Advanced Graphs
   - name: 1d-dynamic-programming

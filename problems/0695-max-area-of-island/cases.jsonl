@@ -1,0 +1,32 @@
+{"input":{"grid":[[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]},"expected":6,"example":true}
+{"input":{"grid":[[0,0,0,0,0,0,0,0]]},"expected":0,"example":true}
+{"input":{"grid":[[0]]},"expected":0,"note":"single water"}
+{"input":{"grid":[[1]]},"expected":1,"note":"single land"}
+{"input":{"grid":[[1,0],[0,1]]},"expected":1,"note":"diagonal cells do not join"}
+{"input":{"grid":[[1,1,1],[1,0,1],[1,1,1]]},"expected":8,"note":"ring with water hole"}
+{"input":{"grid":[[1,1,0,1,1],[0,0,0,1,1],[1,1,1,0,0]]},"expected":4,"note":"largest island is not first"}
+{"input":{"grid":[[1,0,1,0,1]]},"expected":1,"note":"separate row islands"}
+{"input":{"grid":[[1],[0],[1],[1]]},"expected":2,"note":"vertical islands"}
+{"input":{"grid":[[1,1,1],[1,1,1]]},"expected":6,"note":"full rectangle"}
+{"input":{"grid":[[0,0,0],[0,0,0]]},"expected":0,"note":"water rectangle"}
+{"input":{"grid":[[1,0,1],[1,1,1],[1,0,1]]},"expected":7,"note":"branches share central cells"}
+{"input":{"grid":[[1,1,1,1],[0,0,0,1],[1,1,1,1],[1,0,0,0],[1,1,1,1]]},"expected":14,"note":"winding connected path"}
+{"input":{"grid":[[1,1,1,0,0],[0,0,1,0,0],[0,0,1,1,1]]},"expected":7,"note":"narrow bridge"}
+{"input":{"grid":[[1,0],[1,1]]},"expected":3,"note":"Irregular binary components 1; count each land cell once"}
+{"input":{"grid":[[1,1,0,1,0],[1,1,0,1,0],[1,0,1,0,1]]},"expected":5,"note":"Irregular binary components 2; count each land cell once"}
+{"input":{"grid":[[0,1,1,1,0,0,0,0],[1,0,1,1,0,1,1,1],[1,1,0,1,0,1,0,0],[1,1,0,1,0,1,0,0]]},"expected":7,"note":"Irregular binary components 3; count each land cell once"}
+{"input":{"grid":[[1,1,0,0],[0,1,1,0],[0,1,1,0],[0,1,0,0],[1,0,1,1]]},"expected":7,"note":"Irregular binary components 4; count each land cell once"}
+{"input":{"grid":[[0,1,0,1,0,1,1],[1,0,1,1,0,1,1],[1,1,0,1,1,0,1],[0,1,0,0,1,0,1],[0,1,0,1,0,0,1],[1,0,1,1,1,1,1]]},"expected":13,"note":"Irregular binary components 5; count each land cell once"}
+{"input":{"grid":[[0,1,0],[1,1,0],[0,0,1],[0,1,0],[0,1,1],[0,0,0],[1,1,0]]},"expected":3,"note":"Irregular binary components 6; count each land cell once"}
+{"input":{"grid":[[0,0,1,1,0,1],[0,0,0,0,1,0]]},"expected":2,"note":"Irregular binary components 7; count each land cell once"}
+{"input":{"grid":[[1,0],[1,1],[1,0]]},"expected":4,"note":"Irregular binary components 8; count each land cell once"}
+{"input":{"grid":[[0,1,0,0,0],[1,1,1,0,0],[0,0,1,1,0],[0,1,0,1,0]]},"expected":7,"note":"Irregular binary components 9; count each land cell once"}
+{"input":{"grid":[[0,0,1,0,0,0,1,0],[0,1,1,0,0,1,0,0],[1,0,0,0,0,1,0,0],[0,0,0,0,1,0,0,0],[1,0,1,1,0,0,0,1]]},"expected":3,"note":"Irregular binary components 10; count each land cell once"}
+{"input":{"grid":[[1,0,0,1],[1,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,1],[0,0,0,1]]},"expected":3,"note":"Irregular binary components 11; count each land cell once"}
+{"input":{"grid":[[1,1,1,1,0,1,0],[0,0,1,1,0,0,0],[0,0,1,0,0,0,0],[1,0,0,0,0,0,1],[0,0,1,1,0,1,0],[0,1,0,0,1,0,0],[1,1,1,1,1,0,1]]},"expected":7,"note":"Irregular binary components 12; count each land cell once"}
+{"input":{"grid":[[1,1,1],[1,0,0]]},"expected":4,"note":"Irregular binary components 13; count each land cell once"}
+{"input":{"grid":[[0,0,0,0,1,1],[0,0,0,1,1,1],[0,1,1,0,1,1]]},"expected":7,"note":"Irregular binary components 14; count each land cell once"}
+{"generate":{"name":"all_land","args":{"m":50,"n":50}},"digest":"sha256:cdc2b92b5a92b00e9e7f27c997857815abeb4f4de65b4a2b2f8e49ceaf2b5259","note":"Maximum connected island; repeated flood fills are quadratic"}
+{"generate":{"name":"snake","args":{"m":49,"n":50}},"digest":"sha256:2b5443adf90b794795155bbadd9d2f860f02caf04a10c4362ae8770a48a4a759","note":"Long winding island; avoid recursive depth assumptions"}
+{"input":{"grid":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},"expected":50,"note":"Maximum width single row"}
+{"input":{"grid":[[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1]]},"expected":50,"note":"Maximum height single column"}
