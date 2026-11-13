@@ -1,0 +1,29 @@
+id: "88"
+slug: merge-sorted-array
+title: Merge Sorted Array
+titles:
+  zh-CN: 合并两个有序数组
+difficulty: easy
+tags:
+  - array
+  - two-pointers
+  - sorting
+kind: function
+function:
+  name: merge
+  params:
+    - name: nums1
+      type: integer[]
+    - name: m
+      type: integer
+    - name: nums2
+      type: integer[]
+    - name: "n"
+      type: integer
+  returns: void
+judge:
+  compare: exact
+  output: nums1
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/merge-sorted-array/

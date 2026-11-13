@@ -49,6 +49,7 @@ groups:
       - reverse-words-in-a-string
       - remove-duplicates-from-sorted-array-ii
       - sort-colors
+      - merge-sorted-array
   - name: sliding-window
     title: Sliding Window
     problems:
