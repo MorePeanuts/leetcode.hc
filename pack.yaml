@@ -206,6 +206,7 @@ groups:
       - jump-game-ii
       - gas-station
       - hand-of-straights
+      - merge-triplets-to-form-target-triplet
   - name: intervals
     title: Intervals
     problems:

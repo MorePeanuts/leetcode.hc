@@ -1,0 +1,23 @@
+id: "1899"
+slug: merge-triplets-to-form-target-triplet
+title: Merge Triplets to Form Target Triplet
+titles:
+  zh-CN: 合并若干三元组以形成目标三元组
+difficulty: medium
+tags:
+  - greedy
+  - array
+kind: function
+function:
+  name: mergeTriplets
+  params:
+    - name: triplets
+      type: integer[][]
+    - name: target
+      type: integer[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/merge-triplets-to-form-target-triplet/
+judge:
+  compare: exact
