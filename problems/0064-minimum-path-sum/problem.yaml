@@ -1,0 +1,22 @@
+id: "64"
+slug: minimum-path-sum
+title: Minimum Path Sum
+titles:
+  zh-CN: 最小路径和
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+  - matrix
+kind: function
+function:
+  name: minPathSum
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-path-sum/
+judge:
+  compare: exact
