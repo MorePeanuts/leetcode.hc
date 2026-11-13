@@ -1,0 +1,30 @@
+{"input":{"s":"ababcbacadefegdehijhklij"},"expected":[9,7,8],"example":true}
+{"input":{"s":"eccbbbbdec"},"expected":[10],"example":true}
+{"input":{"s":"a"},"expected":[1],"note":"singleton"}
+{"input":{"s":"z"},"expected":[1],"note":"other endpoint letter"}
+{"input":{"s":"aaaa"},"expected":[4],"note":"one repeated letter"}
+{"input":{"s":"abcd"},"expected":[1,1,1,1],"note":"all independent"}
+{"input":{"s":"abca"},"expected":[4],"note":"one enclosing letter"}
+{"input":{"s":"abccba"},"expected":[6],"note":"nested repeats"}
+{"input":{"s":"aabbcc"},"expected":[2,2,2],"note":"adjacent separate runs"}
+{"input":{"s":"ababcdcd"},"expected":[4,4],"note":"two repeated blocks"}
+{"input":{"s":"abacdef"},"expected":[3,1,1,1,1],"note":"only prefix constrained"}
+{"input":{"s":"abcdece"},"expected":[1,1,5],"note":"only suffix constrained"}
+{"input":{"s":"abacbc"},"expected":[6],"note":"transitive overlap"}
+{"input":{"s":"abcbadce"},"expected":[7,1],"note":"overlap expands endpoint"}
+{"input":{"s":"abxyza"},"expected":[6],"note":"internal unique letters stay inside"}
+{"input":{"s":"aaabccccdeef"},"expected":[3,1,4,1,2,1],"note":"several different sizes"}
+{"input":{"s":"abababab"},"expected":[8],"note":"single alternating block"}
+{"input":{"s":"abacdedf"},"expected":[3,1,3,1],"note":"separate repeated endpoints"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyz"},"expected":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"note":"alphabet in order"}
+{"input":{"s":"zyxwvutsrqponmlkjihgfedcba"},"expected":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"note":"reverse alphabet"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyza"},"expected":[27],"note":"alphabet enclosed by first"}
+{"input":{"s":"aabbccdd"},"expected":[2,2,2,2],"note":"equal group sizes"}
+{"input":{"s":"abcabc"},"expected":[6],"note":"last letter merges earlier groups"}
+{"input":{"s":"abbcc"},"expected":[1,2,2],"note":"boundary after singleton"}
+{"input":{"s":"aabbc"},"expected":[2,2,1],"note":"boundary before singleton"}
+{"input":{"s":"abacbcdefdfe"},"expected":[6,6],"note":"two large disjoint alphabets"}
+{"input":{"s":"abaccbdeffedghg"},"expected":[6,6,3],"note":"three transitive clusters"}
+{"input":{"s":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},"expected":[500],"note":"long one-letter block"}
+{"input":{"s":"aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbccccccccccccccccccccddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeffffffffffffffffffffggggggggggggggggggghhhhhhhhhhhhhhhhhhhiiiiiiiiiiiiiiiiiiijjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkklllllllllllllllllllmmmmmmmmmmmmmmmmmmmnnnnnnnnnnnnnnnnnnnooooooooooooooooooopppppppppppppppppppqqqqqqqqqqqqqqqqqqqrrrrrrrrrrrrrrrrrrrssssssssssssssssssstttttttttttttttttttuuuuuuuuuuuuuuuuuuuvvvvvvvvvvvvvvvvvvvwwwwwwwwwwwwwwwwwwwxxxxxxxxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyzzzzzzzzzzzzzzzzzzz"},"expected":[20,20,20,20,20,20,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19],"note":"maximum independent letter runs"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdef"},"expected":[500],"note":"maximum repeated alphabet forms one block"}

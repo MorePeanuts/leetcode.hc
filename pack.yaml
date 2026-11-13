@@ -32,6 +32,7 @@ groups:
       - word-search
       - detect-squares
       - hand-of-straights
+      - partition-labels
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -42,6 +43,7 @@ groups:
       - trapping-rain-water
       - palindromic-substrings
       - happy-number
+      - partition-labels
   - name: sliding-window
     title: Sliding Window
     problems:
@@ -207,6 +209,7 @@ groups:
       - gas-station
       - hand-of-straights
       - merge-triplets-to-form-target-triplet
+      - partition-labels
   - name: intervals
     title: Intervals
     problems:
