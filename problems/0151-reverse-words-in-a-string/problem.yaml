@@ -1,0 +1,21 @@
+id: "151"
+slug: reverse-words-in-a-string
+title: Reverse Words in a String
+titles:
+  zh-CN: 反转字符串中的单词
+difficulty: medium
+tags:
+  - two-pointers
+  - string
+kind: function
+function:
+  name: reverseWords
+  params:
+    - name: s
+      type: string
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-words-in-a-string/
+judge:
+  compare: exact

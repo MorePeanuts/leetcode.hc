@@ -46,6 +46,7 @@ groups:
       - palindromic-substrings
       - happy-number
       - partition-labels
+      - reverse-words-in-a-string
   - name: sliding-window
     title: Sliding Window
     problems:

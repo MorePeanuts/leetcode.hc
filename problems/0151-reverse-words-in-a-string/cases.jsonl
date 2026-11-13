@@ -1,0 +1,33 @@
+{"input":{"s":"the sky is blue"},"expected":"blue is sky the","example":true}
+{"input":{"s":"  hello world  "},"expected":"world hello","example":true}
+{"input":{"s":"a good   example"},"expected":"example good a","example":true}
+{"input":{"s":"a"},"expected":"a","note":"Whitespace, token length and ordering variation 1"}
+{"input":{"s":" a"},"expected":"a","note":"Whitespace, token length and ordering variation 2"}
+{"input":{"s":"a "},"expected":"a","note":"Whitespace, token length and ordering variation 3"}
+{"input":{"s":"  a  "},"expected":"a","note":"Whitespace, token length and ordering variation 4"}
+{"input":{"s":"a b"},"expected":"b a","note":"Whitespace, token length and ordering variation 5"}
+{"input":{"s":"b a"},"expected":"a b","note":"Whitespace, token length and ordering variation 6"}
+{"input":{"s":"a  b"},"expected":"b a","note":"Whitespace, token length and ordering variation 7"}
+{"input":{"s":"  a   b  "},"expected":"b a","note":"Whitespace, token length and ordering variation 8"}
+{"input":{"s":"one two three four"},"expected":"four three two one","note":"Whitespace, token length and ordering variation 9"}
+{"input":{"s":"a a a"},"expected":"a a a","note":"Whitespace, token length and ordering variation 10"}
+{"input":{"s":"ABC def 012"},"expected":"012 def ABC","note":"Whitespace, token length and ordering variation 11"}
+{"input":{"s":"012 345 678"},"expected":"678 345 012","note":"Whitespace, token length and ordering variation 12"}
+{"input":{"s":"hello"},"expected":"hello","note":"Whitespace, token length and ordering variation 13"}
+{"input":{"s":"   hello   "},"expected":"hello","note":"Whitespace, token length and ordering variation 14"}
+{"input":{"s":"a b c d e"},"expected":"e d c b a","note":"Whitespace, token length and ordering variation 15"}
+{"input":{"s":"same same same"},"expected":"same same same","note":"Whitespace, token length and ordering variation 16"}
+{"input":{"s":"x  x x"},"expected":"x x x","note":"Whitespace, token length and ordering variation 17"}
+{"input":{"s":"abc defgh ij"},"expected":"ij defgh abc","note":"Whitespace, token length and ordering variation 18"}
+{"input":{"s":"1"},"expected":"1","note":"Whitespace, token length and ordering variation 19"}
+{"input":{"s":" 0 1 2 "},"expected":"2 1 0","note":"Whitespace, token length and ordering variation 20"}
+{"input":{"s":"a1 B2 c3"},"expected":"c3 B2 a1","note":"Whitespace, token length and ordering variation 21"}
+{"input":{"s":"  a     b     c   "},"expected":"c b a","note":"Whitespace, token length and ordering variation 22"}
+{"input":{"s":"end starts"},"expected":"starts end","note":"Whitespace, token length and ordering variation 23"}
+{"input":{"s":"abcdefghij z"},"expected":"z abcdefghij","note":"Whitespace, token length and ordering variation 24"}
+{"input":{"s":"z abcdefghij"},"expected":"abcdefghij z","note":"Whitespace, token length and ordering variation 25"}
+{"input":{"s":"word  wordword   word"},"expected":"word wordword word","note":"Whitespace, token length and ordering variation 26"}
+{"input":{"s":"a b a b a"},"expected":"a b a b a","note":"Whitespace, token length and ordering variation 27"}
+{"generate":{"name":"single_word","args":{"n":10000}},"digest":"sha256:9dc6dbf28c27df640cd9dcf34fb8f997f8a57b1899dbda7342ddeb213dc35472","note":"Maximum length: single_word"}
+{"generate":{"name":"many_words","args":{"n":10000}},"digest":"sha256:577fbf353df5460543862af6c4dac35d59631bb494904d16b1af2cabe42f8d83","note":"Maximum length: many_words"}
+{"generate":{"name":"padding","args":{"n":10000}},"digest":"sha256:32bc119fc6f517686dc0144cccf493cbf789c0b91ccb9b67a60b6eafd469193e","note":"Maximum length: padding"}
