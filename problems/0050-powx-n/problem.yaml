@@ -1,0 +1,24 @@
+id: "50"
+slug: powx-n
+title: Pow(x, n)
+titles:
+  zh-CN: Pow(x, n)
+difficulty: medium
+tags:
+  - recursion
+  - math
+kind: function
+function:
+  name: myPow
+  params:
+    - name: x
+      type: double
+    - name: "n"
+      type: integer
+  returns: double
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/powx-n/
+judge:
+  compare: exact
+  tolerance: 0.00001

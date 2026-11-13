@@ -214,3 +214,4 @@ groups:
       - set-matrix-zeroes
       - happy-number
       - plus-one
+      - powx-n
