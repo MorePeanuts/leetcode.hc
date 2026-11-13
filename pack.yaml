@@ -95,6 +95,7 @@ groups:
       - simplify-path
       - decode-string
       - online-stock-span
+      - remove-k-digits
   - name: binary-search
     title: Binary Search
     problems:
