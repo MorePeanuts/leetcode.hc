@@ -1,0 +1,23 @@
+id: "684"
+slug: redundant-connection
+title: Redundant Connection
+titles:
+  zh-CN: 冗余连接
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - graph
+kind: function
+function:
+  name: findRedundantConnection
+  params:
+    - name: edges
+      type: integer[][]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/redundant-connection/
+judge:
+  compare: exact

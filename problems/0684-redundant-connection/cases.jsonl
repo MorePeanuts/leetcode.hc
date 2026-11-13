@@ -1,0 +1,33 @@
+{"input":{"edges":[[1,2],[1,3],[2,3]]},"expected":[2,3],"example":true}
+{"input":{"edges":[[1,2],[2,3],[3,4],[1,4],[1,5]]},"expected":[1,4],"example":true}
+{"input":{"edges":[[1,4],[3,4],[1,3],[1,2]]},"expected":[1,3],"note":"Redundant edge is neither last input edge nor lexicographic maximum"}
+{"input":{"edges":[[1,2],[2,3],[1,3],[3,4],[4,5]]},"expected":[1,3],"note":"Cycle closes before tree branches are added"}
+{"input":{"edges":[[1,3],[2,3],[1,2]]},"expected":[1,2],"note":"Choose last edge of triangle in input order"}
+{"input":{"edges":[[2,3],[1,2],[1,3]]},"expected":[1,3],"note":"Triangle with permuted input"}
+{"input":{"edges":[[1,2],[3,4],[2,3],[1,4]]},"expected":[1,4],"note":"Join separate components before closing long cycle"}
+{"input":{"edges":[[1,5],[2,5],[3,5],[4,5],[1,4]]},"expected":[1,4],"note":"Star leaves form cycle"}
+{"input":{"edges":[[1,2],[2,3],[3,4],[4,5],[2,5]]},"expected":[2,5],"note":"Cycle excludes smallest label"}
+{"input":{"edges":[[1,2],[2,3],[3,4],[2,4]]},"expected":[2,4],"note":"Random tree plus exactly one extra edge 1; input-order tie break"}
+{"input":{"edges":[[2,4],[1,2],[2,5],[2,3],[1,4]]},"expected":[1,4],"note":"Random tree plus exactly one extra edge 2; input-order tie break"}
+{"input":{"edges":[[2,6],[1,5],[1,3],[1,2],[3,4],[2,4]]},"expected":[2,4],"note":"Random tree plus exactly one extra edge 3; input-order tie break"}
+{"input":{"edges":[[1,3],[3,5],[5,7],[1,2],[3,6],[2,3],[1,4]]},"expected":[2,3],"note":"Random tree plus exactly one extra edge 4; input-order tie break"}
+{"input":{"edges":[[2,7],[1,5],[3,6],[2,8],[5,8],[2,3],[3,4],[1,2]]},"expected":[1,2],"note":"Random tree plus exactly one extra edge 5; input-order tie break"}
+{"input":{"edges":[[5,8],[3,8],[1,3],[1,5],[2,6],[3,7],[3,4],[1,2],[7,9]]},"expected":[1,5],"note":"Random tree plus exactly one extra edge 6; input-order tie break"}
+{"input":{"edges":[[5,8],[9,10],[4,5],[3,4],[1,2],[4,7],[5,6],[1,9],[4,9],[1,3]]},"expected":[1,3],"note":"Random tree plus exactly one extra edge 7; input-order tie break"}
+{"input":{"edges":[[6,9],[1,5],[2,3],[1,2],[8,11],[5,7],[3,10],[3,4],[1,8],[4,5],[3,6]]},"expected":[4,5],"note":"Random tree plus exactly one extra edge 8; input-order tie break"}
+{"input":{"edges":[[3,11],[1,2],[1,9],[3,8],[1,10],[5,6],[7,10],[6,12],[1,3],[2,5],[3,7],[3,4]]},"expected":[3,7],"note":"Random tree plus exactly one extra edge 9; input-order tie break"}
+{"input":{"edges":[[1,3],[2,4],[1,2],[1,4]]},"expected":[1,4],"note":"Random tree plus exactly one extra edge 10; input-order tie break"}
+{"input":{"edges":[[1,2],[3,5],[1,3],[2,3],[3,4]]},"expected":[2,3],"note":"Random tree plus exactly one extra edge 11; input-order tie break"}
+{"input":{"edges":[[1,6],[3,4],[1,2],[2,3],[1,5],[1,4]]},"expected":[1,4],"note":"Random tree plus exactly one extra edge 12; input-order tie break"}
+{"input":{"edges":[[1,4],[1,3],[1,5],[3,5],[1,2],[3,6],[1,7]]},"expected":[3,5],"note":"Random tree plus exactly one extra edge 13; input-order tie break"}
+{"input":{"edges":[[3,6],[1,3],[1,8],[1,2],[2,4],[2,7],[2,8],[2,5]]},"expected":[2,8],"note":"Random tree plus exactly one extra edge 14; input-order tie break"}
+{"input":{"edges":[[1,9],[3,4],[4,7],[2,5],[5,6],[1,3],[2,8],[1,2],[1,7]]},"expected":[1,7],"note":"Random tree plus exactly one extra edge 15; input-order tie break"}
+{"input":{"edges":[[2,4],[1,2],[2,6],[2,8],[3,7],[6,7],[2,3],[2,9],[5,10],[4,5]]},"expected":[2,3],"note":"Random tree plus exactly one extra edge 16; input-order tie break"}
+{"input":{"edges":[[4,9],[2,11],[2,3],[2,8],[1,2],[2,5],[3,4],[2,7],[1,6],[3,10],[8,11]]},"expected":[8,11],"note":"Random tree plus exactly one extra edge 17; input-order tie break"}
+{"input":{"edges":[[1,5],[6,11],[2,7],[3,6],[1,3],[8,12],[1,2],[1,4],[4,10],[4,5],[1,9],[7,8]]},"expected":[4,5],"note":"Random tree plus exactly one extra edge 18; input-order tie break"}
+{"input":{"edges":[[1,2],[2,3],[1,4],[1,3]]},"expected":[1,3],"note":"Random tree plus exactly one extra edge 19; input-order tie break"}
+{"input":{"edges":[[1,2],[1,5],[1,4],[3,5],[1,3]]},"expected":[1,3],"note":"Random tree plus exactly one extra edge 20; input-order tie break"}
+{"input":{"edges":[[1,3],[1,4],[2,6],[2,5],[1,2],[2,4]]},"expected":[2,4],"note":"Random tree plus exactly one extra edge 21; input-order tie break"}
+{"generate":{"name":"chain","args":{"n":1000}},"digest":"sha256:819385f94394d0d47dc7988ddb1eeaee3a8a3922a5f946ed1f55fcc2f81c4b6e","note":"Maximum chain; incremental DFS repeatedly traverses growing component"}
+{"generate":{"name":"chain","args":{"n":1000,"shuffle":true},"seed":684},"digest":"sha256:384537777a6499a865848712a877f554c053016ea424b99f7c855995b03cd518","note":"Maximum shuffled simple cycle"}
+{"generate":{"name":"star","args":{"n":1000},"seed":684},"digest":"sha256:beb810937f1104270e4180c5e993c93bc8d06e674d79de775821f616bd2fabe9","note":"Maximum degree with cycle among leaves"}
