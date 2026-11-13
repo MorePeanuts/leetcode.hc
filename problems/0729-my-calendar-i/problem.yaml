@@ -1,0 +1,29 @@
+id: "729"
+slug: my-calendar-i
+title: My Calendar I
+titles:
+  zh-CN: 我的日程安排表 I
+difficulty: medium
+tags:
+  - design
+  - segment-tree
+  - array
+  - binary-search
+  - ordered-set
+kind: class
+class:
+  name: MyCalendar
+  constructor: []
+  methods:
+    - name: book
+      params:
+        - name: startTime
+          type: integer
+        - name: endTime
+          type: integer
+      returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/my-calendar-i/
+judge:
+  compare: exact
