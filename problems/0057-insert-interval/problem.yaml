@@ -1,0 +1,22 @@
+id: "57"
+slug: insert-interval
+title: Insert Interval
+titles:
+  zh-CN: 插入区间
+difficulty: medium
+tags:
+  - array
+kind: function
+function:
+  name: insert
+  params:
+    - name: intervals
+      type: integer[][]
+    - name: newInterval
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/insert-interval/
+judge:
+  compare: exact
