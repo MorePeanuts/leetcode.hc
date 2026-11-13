@@ -1,0 +1,29 @@
+id: "658"
+slug: find-k-closest-elements
+title: Find K Closest Elements
+titles:
+  zh-CN: 找到 K 个最接近的元素
+difficulty: medium
+tags:
+  - array
+  - two-pointers
+  - binary-search
+  - sorting
+  - sliding-window
+  - heap-priority-queue
+kind: function
+function:
+  name: findClosestElements
+  params:
+    - name: arr
+      type: integer[]
+    - name: k
+      type: integer
+    - name: x
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-k-closest-elements/
+judge:
+  compare: exact

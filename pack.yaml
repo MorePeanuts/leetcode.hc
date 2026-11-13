@@ -90,6 +90,7 @@ groups:
       - missing-number
       - search-a-2d-matrix-ii
       - is-subsequence
+      - find-k-closest-elements
   - name: linked-list
     title: Linked List
     problems:
