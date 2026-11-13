@@ -1,0 +1,23 @@
+id: "22"
+slug: generate-parentheses
+title: Generate Parentheses
+titles:
+  zh-CN: 括号生成
+difficulty: medium
+tags:
+  - string
+  - dynamic-programming
+  - backtracking
+  - bracket-sequences
+kind: function
+function:
+  name: generateParenthesis
+  params:
+    - name: "n"
+      type: integer
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/generate-parentheses/
+judge:
+  compare: unordered
