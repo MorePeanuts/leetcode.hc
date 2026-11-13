@@ -1,0 +1,34 @@
+{"input":{"nums":[4,6,7,7]},"expected":[[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]],"example":true}
+{"input":{"nums":[4,4,3,2,1]},"expected":[[4,4]],"example":true}
+{"input":{"nums":[1]},"expected":[],"note":"Singleton has no answer"}
+{"input":{"nums":[-100]},"expected":[],"note":"Minimum singleton"}
+{"input":{"nums":[100]},"expected":[],"note":"Maximum singleton"}
+{"input":{"nums":[1,1]},"expected":[[1,1]],"note":"Equal values are non-decreasing"}
+{"input":{"nums":[1,2]},"expected":[[1,2]],"note":"Increasing pair"}
+{"input":{"nums":[2,1]},"expected":[],"note":"Decreasing pair"}
+{"input":{"nums":[0,0,0]},"expected":[[0,0],[0,0,0]],"note":"Deduplicate equal-index choices"}
+{"input":{"nums":[3,2,1]},"expected":[],"note":"No increasing pair"}
+{"input":{"nums":[-100,0,100]},"expected":[[-100,0],[-100,0,100],[-100,100],[0,100]],"note":"Full value range"}
+{"input":{"nums":[1,3,2]},"expected":[[1,3],[1,2]],"note":"Preserve subsequence index order"}
+{"input":{"nums":[2,1,2,1]},"expected":[[2,2],[1,2],[1,1]],"note":"Repeated values in noncontiguous positions"}
+{"input":{"nums":[-1,-1,0,0]},"expected":[[-1,-1],[-1,-1,0],[-1,-1,0,0],[-1,0],[-1,0,0],[0,0]],"note":"Repeated negatives and zero"}
+{"input":{"nums":[1,2,1,2,1,2]},"expected":[[1,2],[1,2,2],[1,2,2,2],[1,1],[1,1,2],[1,1,2,2],[1,1,1],[1,1,1,2],[2,2],[2,2,2]],"note":"Alternating duplicates"}
+{"input":{"nums":[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]},"expected":[[5,5],[5,5,5],[5,5,5,5],[5,5,5,5,5],[5,5,5,5,5,5],[5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5,5,5,5,5],[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]],"note":"Maximum duplicate length; only lengths 2..15"}
+{"input":{"nums":[15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]},"expected":[],"note":"Maximum descending array"}
+{"input":{"nums":[100,-100,100,-100]},"expected":[[100,100],[-100,100],[-100,-100]],"note":"Boundary-value alternation"}
+{"input":{"nums":[0,-1,0,-1,0]},"expected":[[0,0],[0,0,0],[-1,0],[-1,0,0],[-1,-1],[-1,-1,0]],"note":"Overlapping duplicates"}
+{"input":{"nums":[3,1,2,3]},"expected":[[3,3],[1,2],[1,2,3],[1,3],[2,3]],"note":"Later copy enables another prefix"}
+{"input":{"nums":[2,2,1,2,2]},"expected":[[2,2],[2,2,2],[2,2,2,2],[1,2],[1,2,2]],"note":"Same values at multiple depths"}
+{"input":{"nums":[-2,-1,-3,0]},"expected":[[-2,-1],[-2,-1,0],[-2,0],[-1,0],[-3,0]],"note":"Negative order must not be sorted"}
+{"input":{"nums":[3,2,3,4,1]},"expected":[[3,3],[3,3,4],[3,4],[2,3],[2,3,4],[2,4]],"note":"Duplicate-rich small array sample 0"}
+{"input":{"nums":[-2,4,2,-1,3,-1]},"expected":[[-2,4],[-2,2],[-2,2,3],[-2,-1],[-2,-1,3],[-2,-1,-1],[-2,3],[2,3],[-1,3],[-1,-1]],"note":"Duplicate-rich small array sample 1"}
+{"input":{"nums":[1,3,-3,1,2,3,1]},"expected":[[1,3],[1,3,3],[1,1],[1,1,2],[1,1,2,3],[1,1,3],[1,1,1],[1,2],[1,2,3],[3,3],[-3,1],[-3,1,2],[-3,1,2,3],[-3,1,3],[-3,1,1],[-3,2],[-3,2,3],[-3,3],[2,3]],"note":"Duplicate-rich small array sample 2"}
+{"input":{"nums":[-3,3,-2,-1,4,-4,0,0]},"expected":[[-3,3],[-3,3,4],[-3,-2],[-3,-2,-1],[-3,-2,-1,4],[-3,-2,-1,0],[-3,-2,-1,0,0],[-3,-2,4],[-3,-2,0],[-3,-2,0,0],[-3,-1],[-3,-1,4],[-3,-1,0],[-3,-1,0,0],[-3,4],[-3,0],[-3,0,0],[3,4],[-2,-1],[-2,-1,4],[-2,-1,0],[-2,-1,0,0],[-2,4],[-2,0],[-2,0,0],[-1,4],[-1,0],[-1,0,0],[-4,0],[-4,0,0],[0,0]],"note":"Duplicate-rich small array sample 3"}
+{"input":{"nums":[4,-1,-1,1,-4,0,-1,4,3]},"expected":[[4,4],[-1,-1],[-1,-1,1],[-1,-1,1,4],[-1,-1,1,3],[-1,-1,0],[-1,-1,0,4],[-1,-1,0,3],[-1,-1,-1],[-1,-1,-1,4],[-1,-1,-1,3],[-1,-1,4],[-1,-1,3],[-1,1],[-1,1,4],[-1,1,3],[-1,0],[-1,0,4],[-1,0,3],[-1,4],[-1,3],[1,4],[1,3],[-4,0],[-4,0,4],[-4,0,3],[-4,-1],[-4,-1,4],[-4,-1,3],[-4,4],[-4,3],[0,4],[0,3]],"note":"Duplicate-rich small array sample 4"}
+{"input":{"nums":[1,0,1,-4,4]},"expected":[[1,1],[1,1,4],[1,4],[0,1],[0,1,4],[0,4],[-4,4]],"note":"Duplicate-rich small array sample 5"}
+{"input":{"nums":[2,-3,-4,-1,2,-1]},"expected":[[2,2],[-3,-1],[-3,-1,2],[-3,-1,-1],[-3,2],[-4,-1],[-4,-1,2],[-4,-1,-1],[-4,2],[-1,2],[-1,-1]],"note":"Duplicate-rich small array sample 6"}
+{"input":{"nums":[-4,-2,1,2,4,2,2]},"expected":[[-4,-2],[-4,-2,1],[-4,-2,1,2],[-4,-2,1,2,4],[-4,-2,1,2,2],[-4,-2,1,2,2,2],[-4,-2,1,4],[-4,-2,2],[-4,-2,2,4],[-4,-2,2,2],[-4,-2,2,2,2],[-4,-2,4],[-4,1],[-4,1,2],[-4,1,2,4],[-4,1,2,2],[-4,1,2,2,2],[-4,1,4],[-4,2],[-4,2,4],[-4,2,2],[-4,2,2,2],[-4,4],[-2,1],[-2,1,2],[-2,1,2,4],[-2,1,2,2],[-2,1,2,2,2],[-2,1,4],[-2,2],[-2,2,4],[-2,2,2],[-2,2,2,2],[-2,4],[1,2],[1,2,4],[1,2,2],[1,2,2,2],[1,4],[2,4],[2,2],[2,2,2]],"note":"Duplicate-rich small array sample 7"}
+{"input":{"nums":[1,-1,-4,3,-1,-2,4,4]},"expected":[[1,3],[1,3,4],[1,3,4,4],[1,4],[1,4,4],[-1,3],[-1,3,4],[-1,3,4,4],[-1,-1],[-1,-1,4],[-1,-1,4,4],[-1,4],[-1,4,4],[-4,3],[-4,3,4],[-4,3,4,4],[-4,-1],[-4,-1,4],[-4,-1,4,4],[-4,-2],[-4,-2,4],[-4,-2,4,4],[-4,4],[-4,4,4],[3,4],[3,4,4],[-2,4],[-2,4,4],[4,4]],"note":"Duplicate-rich small array sample 8"}
+{"input":{"nums":[4,-4,3,2,2,0,3,1,-4]},"expected":[[-4,3],[-4,3,3],[-4,2],[-4,2,2],[-4,2,2,3],[-4,2,3],[-4,0],[-4,0,3],[-4,0,1],[-4,1],[-4,-4],[3,3],[2,2],[2,2,3],[2,3],[0,3],[0,1]],"note":"Duplicate-rich small array sample 9"}
+{"generate":{"name":"increasing","args":{"n":15,"start":-7},"seed":7},"digest":"sha256:7f331ba39b5dcc3abc18149caba2fdc0704a24804209d6f1360e9af43e289536","note":"Maximum distinct increasing input; 32752 answers generated instead of storing megabytes"}
+{"generate":{"name":"increasing","args":{"n":15,"start":86},"seed":7},"digest":"sha256:c1e377582ae2822657ba19b5eab0fa712c9a05be8213620a3dafedebd2ad2a3d","note":"Maximum output count including upper value bound"}

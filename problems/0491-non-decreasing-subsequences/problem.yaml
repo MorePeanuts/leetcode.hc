@@ -1,0 +1,23 @@
+id: "491"
+slug: non-decreasing-subsequences
+title: Non-decreasing Subsequences
+titles:
+  zh-CN: 非递减子序列
+difficulty: medium
+tags:
+  - bit-manipulation
+  - array
+  - hash-table
+  - backtracking
+kind: function
+function:
+  name: findSubsequences
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/non-decreasing-subsequences/
+judge:
+  compare: unordered

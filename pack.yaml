@@ -204,6 +204,7 @@ groups:
       - letter-combinations-of-a-phone-number
       - n-queens
       - reconstruct-itinerary
+      - non-decreasing-subsequences
   - name: tries
     title: Tries
     problems:
