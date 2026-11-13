@@ -1,0 +1,22 @@
+id: "17"
+slug: letter-combinations-of-a-phone-number
+title: Letter Combinations of a Phone Number
+titles:
+  zh-CN: 电话号码的字母组合
+difficulty: medium
+tags:
+  - hash-table
+  - string
+  - backtracking
+kind: function
+function:
+  name: letterCombinations
+  params:
+    - name: digits
+      type: string
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
+judge:
+  compare: unordered
