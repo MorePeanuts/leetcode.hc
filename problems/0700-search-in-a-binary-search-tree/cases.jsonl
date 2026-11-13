@@ -1,0 +1,33 @@
+{"input":{"root":[4,2,7,1,3],"val":2},"expected":[2,1,3],"example":true}
+{"input":{"root":[4,2,7,1,3],"val":5},"expected":[],"example":true}
+{"input":{"root":[1],"val":1},"expected":[1],"note":"minimum node and target"}
+{"input":{"root":[1],"val":2},"expected":[],"note":"absent above singleton"}
+{"input":{"root":[10000000],"val":1},"expected":[],"note":"absent below maximum singleton"}
+{"input":{"root":[10000000],"val":10000000},"expected":[10000000],"note":"maximum node and target"}
+{"input":{"root":[5,3,7,2,4,6,8],"val":5},"expected":[5,3,7,2,4,6,8],"note":"matching root retains whole subtree"}
+{"input":{"root":[5,3,7,2,4,6,8],"val":3},"expected":[3,2,4],"note":"left internal subtree"}
+{"input":{"root":[5,3,7,2,4,6,8],"val":7},"expected":[7,6,8],"note":"right internal subtree"}
+{"input":{"root":[5,3,7,2,4,6,8],"val":1},"expected":[],"note":"below minimum"}
+{"input":{"root":[5,3,7,2,4,6,8],"val":9},"expected":[],"note":"above maximum"}
+{"input":{"root":[8,3,12,1,6,10,14,null,null,4,7],"val":4},"expected":[4],"note":"alternating left/right search"}
+{"input":{"root":[8,3,12,1,6,10,14,null,null,4,7],"val":5},"expected":[],"note":"missing within range"}
+{"input":{"root":[171,null,925,197,null,null,459,null,717],"val":1001},"expected":[],"note":"irregular BST 0: absent value"}
+{"input":{"root":[221,null,855,544,871,332,630,null,null,null,null,null,811],"val":855},"expected":[855,544,871,332,630,null,null,null,null,null,811],"note":"irregular BST 1: present subtree"}
+{"input":{"root":[6,null,622,565,862,91,601,845,null,null,163,null,null,null,null,null,247],"val":862},"expected":[862,845],"note":"irregular BST 2: present subtree"}
+{"input":{"root":[860,343,925,296,652,null,959,183,301,637,850,null,null,null,null,null,null,628],"val":1001},"expected":[],"note":"irregular BST 3: absent value"}
+{"input":{"root":[333,245,744,92,null,340,950,63,95,null,722,null,null,null,null,null,null,407,null,373,539,null,null,null,566],"val":407},"expected":[407,373,539,null,null,null,566],"note":"irregular BST 4: present subtree"}
+{"input":{"root":[409,35,857,null,62,761,903,null,82,687,845,null,938,null,null,581,null,null,null,null,null,442,668,null,482,614],"val":581},"expected":[581,442,668,null,482,614],"note":"irregular BST 5: present subtree"}
+{"input":{"root":[171,109,538,50,null,442,894,null,null,389,null,696,897,224,432,null,810,null,957,null,320,418,null,718,862],"val":1001},"expected":[],"note":"irregular BST 6: absent value"}
+{"input":{"root":[590,361,647,61,380,605,671,null,309,null,587,null,625,666,null,168,null,504,null,null,null,null,null,159,187,501,567,154,null,null,null,407],"val":671},"expected":[671,666],"note":"irregular BST 7: present subtree"}
+{"input":{"root":[428,22,988,3,399,444,null,null,null,59,null,null,845,null,274,461,974,200,null,447,563,918,null,null,215,null,null,null,836,null,947,null,null,660,null,null,null,604,715],"val":563},"expected":[563,null,836,660,null,604,715],"note":"irregular BST 8: present subtree"}
+{"input":{"root":[548,152,652,14,409,null,998,null,77,234,494,677,null,null,null,205,296,null,null,669,942,173,null,null,389,655,null,750,957,null,null,354,394,null,null,null,778,null,null,null,null,null,null,null,803],"val":1001},"expected":[],"note":"irregular BST 9: absent value"}
+{"input":{"root":[5,null,37,null,442,430,834,120,null,628,969,46,386,458,650,963,null,null,72,335,418,null,484,null,666,null,null,71,null,171,368,null,null,null,576,null,729,null,null,null,178,null,null,null,null,null,744],"val":729},"expected":[729,null,744],"note":"irregular BST 10: present subtree"}
+{"input":{"root":[18,7,249,null,null,135,416,28,139,267,424,null,88,null,null,null,355,420,696,null,null,282,369,null,null,688,894,null,null,null,null,435,null,863,911,null,684,700,869,null,970,null,null,null,733,null,null,962,null,null,null,922],"val":700},"expected":[700,null,733],"note":"irregular BST 11: present subtree"}
+{"input":{"root":[894,838,998,565,856,null,null,552,619,null,889,505,556,null,777,882,null,320,519,null,null,650,null,null,null,243,479,null,null,null,730,140,258,439,491,null,null,98,161,null,267,389,null,null,null,null,null,null,183,null,304,null,null,null,204],"val":1001},"expected":[],"note":"irregular BST 12: absent value"}
+{"input":{"root":[380,69,563,34,142,474,936,null,null,100,242,399,null,870,975,78,null,160,248,null,473,600,933,null,993,null,null,null,187,null,303,449,null,573,764,null,null,null,null,null,null,296,null,null,null,null,null,753,816,null,null,713,null,784,null,643,null,null,null,null,692],"val":870},"expected":[870,600,933,573,764,null,null,null,null,753,816,713,null,784,null,643,null,null,null,null,692],"note":"irregular BST 13: present subtree"}
+{"input":{"root":[537,516,775,232,null,758,841,8,486,711,null,795,982,null,86,367,509,659,null,null,null,976,null,33,134,338,428,null,null,630,689,919,null,null,null,107,160,null,null,381,434,577,652,675,null,910,930,null,null,null,null,null,null,null,null,null,null,null,null,null,null,901],"val":86},"expected":[86,33,134,null,null,107,160],"note":"irregular BST 14: present subtree"}
+{"generate":{"name":"chain","args":{"n":5000},"seed":7},"digest":"sha256:d6bc19872a21f129faac131383957d8a4bb5dd453e3fe5038bb26daed4241b3b","note":"maximum right chain, deepest node"}
+{"generate":{"name":"chain","args":{"left":true,"n":5000},"seed":7},"digest":"sha256:347a82ca518fe84fc977448be918072fa984d6470ce9e53c8b6c0a077f3ca2c5","note":"maximum left chain, deepest node"}
+{"generate":{"name":"chain","args":{"absent":true,"n":5000},"seed":7},"digest":"sha256:c396265e2b94f4dc0062f2d01c9a1e93bc1ff7bacdaff0327f0cd527b0c99e7e","note":"maximum chain, absent target"}
+{"generate":{"name":"balanced","args":{"n":5000},"seed":7},"digest":"sha256:cf340c4630c874c9db442a627a20dc60bd0995f440c67286ceeb5981f09fed1c","note":"maximum balanced tree, return whole root subtree"}
+{"generate":{"name":"balanced","args":{"n":5000,"target":4999},"seed":7},"digest":"sha256:ee756d9e01b00cd33d5b1dafd8382a9a3f34784cca1c7c638663ae6b74e0529f","note":"maximum balanced tree, near-maximum target"}
