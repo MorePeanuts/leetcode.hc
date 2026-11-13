@@ -124,6 +124,7 @@ groups:
       - minimum-depth-of-binary-tree
       - binary-tree-preorder-traversal
       - search-in-a-binary-search-tree
+      - populating-next-right-pointers-in-each-node-ii
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
