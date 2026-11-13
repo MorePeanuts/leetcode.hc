@@ -266,6 +266,7 @@ groups:
       - jump-game-ii
       - counting-bits
       - perfect-squares
+      - longest-valid-parentheses
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
