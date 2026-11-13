@@ -144,6 +144,7 @@ groups:
       - implement-trie-prefix-tree
       - design-add-and-search-words-data-structure
       - word-search-ii
+      - word-break
   - name: graphs
     title: Graphs
     problems:
@@ -174,6 +175,7 @@ groups:
       - palindromic-substrings
       - decode-ways
       - maximum-product-subarray
+      - word-break
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:

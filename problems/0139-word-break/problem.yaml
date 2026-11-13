@@ -1,0 +1,28 @@
+id: "139"
+slug: word-break
+title: Word Break
+titles:
+  zh-CN: 单词拆分
+difficulty: medium
+tags:
+  - trie
+  - memoization
+  - array
+  - hash-table
+  - string
+  - dynamic-programming
+  - brute-force-search
+kind: function
+function:
+  name: wordBreak
+  params:
+    - name: s
+      type: string
+    - name: wordDict
+      type: string[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/word-break/
+judge:
+  compare: exact

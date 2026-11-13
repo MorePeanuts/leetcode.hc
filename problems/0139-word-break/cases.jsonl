@@ -1,0 +1,34 @@
+{"input":{"s":"leetcode","wordDict":["leet","code"]},"expected":true,"example":true}
+{"input":{"s":"applepenapple","wordDict":["apple","pen"]},"expected":true,"example":true}
+{"input":{"s":"catsandog","wordDict":["cats","dog","sand","and","cat"]},"expected":false,"example":true}
+{"input":{"s":"a","wordDict":["a"]},"expected":true,"note":"single matching word"}
+{"input":{"s":"a","wordDict":["b"]},"expected":false,"note":"single absent word"}
+{"input":{"s":"aa","wordDict":["a"]},"expected":true,"note":"dictionary word can be reused"}
+{"input":{"s":"aa","wordDict":["aa"]},"expected":true,"note":"one whole word"}
+{"input":{"s":"ab","wordDict":["a","b"]},"expected":true,"note":"two words"}
+{"input":{"s":"ab","wordDict":["b","a"]},"expected":true,"note":"dictionary order irrelevant"}
+{"input":{"s":"ab","wordDict":["ba"]},"expected":false,"note":"character order matters"}
+{"input":{"s":"aaaaaaa","wordDict":["aaaa","aaa"]},"expected":true,"note":"greedy longer prefix may fail"}
+{"input":{"s":"cars","wordDict":["car","ca","rs"]},"expected":true,"note":"must reconsider longer prefix"}
+{"input":{"s":"abcd","wordDict":["ab","abc","cd"]},"expected":true,"note":"shorter prefix succeeds"}
+{"input":{"s":"abcd","wordDict":["a","b","c"]},"expected":false,"note":"missing suffix"}
+{"input":{"s":"abcd","wordDict":["abcd","x"]},"expected":true,"note":"whole word succeeds"}
+{"input":{"s":"abc","wordDict":["ab","bc"]},"expected":false,"note":"overlap does not make segmentation"}
+{"input":{"s":"abababab","wordDict":["ab"]},"expected":true,"note":"repeated multi-character word"}
+{"input":{"s":"aaaaab","wordDict":["a","aa","aaa","aaaa"]},"expected":false,"note":"ambiguous prefix ends in failure"}
+{"input":{"s":"aaaaab","wordDict":["a","aa","aaa","b"]},"expected":true,"note":"ambiguous prefix with valid ending"}
+{"input":{"s":"a","wordDict":["aaaaaaaaaaaaaaaaaaaa"]},"expected":false,"note":"dictionary longer than source"}
+{"input":{"s":"goalspecial","wordDict":["go","goal","goals","special"]},"expected":true,"note":"overlapping word starts"}
+{"input":{"s":"aaaa","wordDict":["a","aa","aaa","aaaa"]},"expected":true,"note":"multiple valid segmentations"}
+{"input":{"s":"abcabc","wordDict":["abc","ab","c"]},"expected":true,"note":"several chunk sizes"}
+{"input":{"s":"abcabc","wordDict":["a","bc"]},"expected":true,"note":"repeat two-word segment"}
+{"input":{"s":"abcabc","wordDict":["abcab","c"]},"expected":true,"note":"uneven chunks"}
+{"input":{"s":"pineapplepenapple","wordDict":["apple","pen","applepen","pine","pineapple"]},"expected":true,"note":"many valid segmentations"}
+{"input":{"s":"catsanddog","wordDict":["cat","cats","and","sand","dog"]},"expected":true,"note":"ambiguous prefixes both succeed"}
+{"input":{"s":"abcdef","wordDict":["ab","cd","ef"]},"expected":true,"note":"exact two-character chunks"}
+{"input":{"s":"abcdef","wordDict":["abc","de","fg"]},"expected":false,"note":"final mismatch"}
+{"input":{"s":"z","wordDict":["z","zz"]},"expected":true,"note":"alphabet upper boundary"}
+{"input":{"s":"zzzzzz","wordDict":["zz","zzz"]},"expected":true,"note":"shared word reuse"}
+{"generate":{"name":"ambiguous","args":{"n":300},"seed":40},"digest":"sha256:39279c58c6985122fbf5d914375e78631743c1a70548d6b987f38be49012379a","note":"maximum ambiguous prefix with final failure"}
+{"generate":{"name":"ambiguous","args":{"n":300,"valid":true},"seed":40},"digest":"sha256:26b1734c4a4a4ace53bd7f2beff0f0c388529449280610f56d00297e4ee32744","note":"maximum valid reused words"}
+{"generate":{"name":"full_dictionary","args":{"n":300},"seed":40},"digest":"sha256:c21114a91da6accf7dbaa83f58a24c9709e2cdfd1851204603d6c2a2f3e87479","note":"maximum unique dictionary and unsegmentable suffix"}
