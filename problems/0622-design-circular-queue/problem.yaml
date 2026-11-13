@@ -1,0 +1,43 @@
+id: "622"
+slug: design-circular-queue
+title: Design Circular Queue
+titles:
+  zh-CN: 设计循环队列
+difficulty: medium
+tags:
+  - design
+  - queue
+  - array
+  - linked-list
+kind: class
+class:
+  name: MyCircularQueue
+  constructor:
+    - name: k
+      type: integer
+  methods:
+    - name: enQueue
+      params:
+        - name: value
+          type: integer
+      returns: boolean
+    - name: deQueue
+      params: []
+      returns: boolean
+    - name: Front
+      params: []
+      returns: integer
+    - name: Rear
+      params: []
+      returns: integer
+    - name: isEmpty
+      params: []
+      returns: boolean
+    - name: isFull
+      params: []
+      returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/design-circular-queue/
+judge:
+  compare: exact
