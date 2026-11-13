@@ -1,0 +1,36 @@
+{"input":{"a":1,"b":2},"expected":3,"example":true}
+{"input":{"a":2,"b":3},"expected":5,"example":true}
+{"input":{"a":0,"b":0},"expected":0,"note":"Signed addition (0, 0): zero, carry chain, cancellation or boundary."}
+{"input":{"a":0,"b":1000},"expected":1000,"note":"Signed addition (0, 1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1000,"b":0},"expected":1000,"note":"Signed addition (1000, 0): zero, carry chain, cancellation or boundary."}
+{"input":{"a":0,"b":-1000},"expected":-1000,"note":"Signed addition (0, -1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1000,"b":0},"expected":-1000,"note":"Signed addition (-1000, 0): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1000,"b":1000},"expected":2000,"note":"Signed addition (1000, 1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1000,"b":-1000},"expected":-2000,"note":"Signed addition (-1000, -1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1000,"b":-1000},"expected":0,"note":"Signed addition (1000, -1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1000,"b":1000},"expected":0,"note":"Signed addition (-1000, 1000): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1,"b":1},"expected":0,"note":"Signed addition (-1, 1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1,"b":-1},"expected":0,"note":"Signed addition (1, -1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1,"b":-1},"expected":-2,"note":"Signed addition (-1, -1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1,"b":1},"expected":2,"note":"Signed addition (1, 1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":511,"b":1},"expected":512,"note":"Signed addition (511, 1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1,"b":511},"expected":512,"note":"Signed addition (1, 511): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-512,"b":-1},"expected":-513,"note":"Signed addition (-512, -1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1,"b":-512},"expected":-513,"note":"Signed addition (-1, -512): zero, carry chain, cancellation or boundary."}
+{"input":{"a":999,"b":1},"expected":1000,"note":"Signed addition (999, 1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-999,"b":-1},"expected":-1000,"note":"Signed addition (-999, -1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":1000,"b":-999},"expected":1,"note":"Signed addition (1000, -999): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-1000,"b":999},"expected":-1,"note":"Signed addition (-1000, 999): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-7,"b":3},"expected":-4,"note":"Signed addition (-7, 3): zero, carry chain, cancellation or boundary."}
+{"input":{"a":7,"b":-3},"expected":4,"note":"Signed addition (7, -3): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-7,"b":-3},"expected":-10,"note":"Signed addition (-7, -3): zero, carry chain, cancellation or boundary."}
+{"input":{"a":255,"b":256},"expected":511,"note":"Signed addition (255, 256): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-255,"b":-256},"expected":-511,"note":"Signed addition (-255, -256): zero, carry chain, cancellation or boundary."}
+{"input":{"a":341,"b":682},"expected":1023,"note":"Signed addition (341, 682): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-341,"b":-682},"expected":-1023,"note":"Signed addition (-341, -682): zero, carry chain, cancellation or boundary."}
+{"input":{"a":512,"b":-1},"expected":511,"note":"Signed addition (512, -1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-512,"b":1},"expected":-511,"note":"Signed addition (-512, 1): zero, carry chain, cancellation or boundary."}
+{"input":{"a":255,"b":-256},"expected":-1,"note":"Signed addition (255, -256): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-255,"b":256},"expected":1,"note":"Signed addition (-255, 256): zero, carry chain, cancellation or boundary."}
+{"input":{"a":998,"b":999},"expected":1997,"note":"Signed addition (998, 999): zero, carry chain, cancellation or boundary."}
+{"input":{"a":-998,"b":-999},"expected":-1997,"note":"Signed addition (-998, -999): zero, carry chain, cancellation or boundary."}

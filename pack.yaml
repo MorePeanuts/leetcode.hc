@@ -258,6 +258,7 @@ groups:
       - counting-bits
       - reverse-bits
       - missing-number
+      - sum-of-two-integers
   - name: math-geometry
     title: Math & Geometry
     problems:
@@ -273,3 +274,4 @@ groups:
       - detect-squares
       - min-cost-to-connect-all-points
       - missing-number
+      - sum-of-two-integers
