@@ -237,6 +237,7 @@ groups:
       - satisfiability-of-equality-equations
       - keys-and-rooms
       - nearest-exit-from-entrance-in-maze
+      - shortest-path-in-binary-matrix
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
