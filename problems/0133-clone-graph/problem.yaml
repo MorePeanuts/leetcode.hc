@@ -1,0 +1,24 @@
+id: "133"
+slug: clone-graph
+title: Clone Graph
+titles:
+  zh-CN: 克隆图
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - hash-table
+kind: function
+function:
+  name: cloneGraph
+  params:
+    - name: node
+      type: GraphNode
+  returns: GraphNode
+  returns_copy: node
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/clone-graph/
+judge:
+  compare: checker
