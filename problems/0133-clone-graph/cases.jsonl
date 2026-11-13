@@ -1,0 +1,31 @@
+{"input":{"node":[[2,4],[1,3],[2,4],[1,3]]},"expected":[[2,4],[1,3],[2,4],[1,3]],"example":true}
+{"input":{"node":[[]]},"expected":[[]],"example":true}
+{"input":{"node":[]},"expected":[],"example":true}
+{"input":{"node":[[2,3],[1,3],[1,2,4],[3,5,6],[4,6],[4,5]]},"expected":[[2,3],[1,3],[1,2,4],[3,5,6],[4,6],[4,5]],"note":"Two cyclic components joined by one bridge; shared vertex identities survive"}
+{"input":{"node":[[3],[4],[1,4],[2,3]]},"expected":[[3],[4],[1,4],[2,3]],"note":"Node labels are not BFS discovery order"}
+{"input":{"node":[[2],[1]]},"expected":[[2],[1]],"note":"Two vertices must both be newly allocated"}
+{"input":{"node":[[3,2],[3,1],[2,1]]},"expected":[[3,2],[3,1],[2,1]],"note":"Triangle with non-sorted adjacency"}
+{"input":{"node":[[2,3,4],[1],[1],[1]]},"expected":[[2,3,4],[1],[1],[1]],"note":"High-degree center"}
+{"input":{"node":[[2],[3,1],[4,2],[3]]},"expected":[[2],[3,1],[4,2],[3]],"note":"Long chain and backward references"}
+{"input":{"node":[[2],[3,1],[2]]},"expected":[[2],[3,1],[2]],"note":"Connected cyclic graph 1; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2],[3,1],[4,2],[3]]},"expected":[[2],[3,1],[4,2],[3]],"note":"Connected cyclic graph 2; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,4,2,5],[1,4],[1,4],[3,5,1,2],[4,1]]},"expected":[[3,4,2,5],[1,4],[1,4],[3,5,1,2],[4,1]],"note":"Connected cyclic graph 3; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2],[3,4,1],[2,5],[6,2],[6,3],[5,4]]},"expected":[[2],[3,4,1],[2,5],[6,2],[6,3],[5,4]],"note":"Connected cyclic graph 4; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2,4,3,5],[7,1,6,4],[7,5,6,1],[2,7,1],[6,1,3],[2,3,5],[4,3,2]]},"expected":[[2,4,3,5],[7,1,6,4],[7,5,6,1],[2,7,1],[6,1,3],[2,3,5],[4,3,2]],"note":"Connected cyclic graph 5; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[4,2,7,3],[1,3,6,5],[7,8,1,2,4],[1,3,6],[2],[2,4,8],[1,8,3],[7,3,6]]},"expected":[[4,2,7,3],[1,3,6,5],[7,8,1,2,4],[1,3,6],[2],[2,4,8],[1,8,3],[7,3,6]],"note":"Connected cyclic graph 6; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,7,2,4],[1,8],[4,1,9,5,6],[7,1,3],[3],[8,9,3],[9,4,8,1],[7,9,6,2],[7,3,6,8]]},"expected":[[3,7,2,4],[1,8],[4,1,9,5,6],[7,1,3],[3],[8,9,3],[9,4,8,1],[7,9,6,2],[7,3,6,8]],"note":"Connected cyclic graph 7; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,6,5,2],[1,3,4,5],[7,4,1,2],[3,6,5,2,10,8,7],[4,2,8,1,9],[7,4,1],[4,6,10,3],[4,5],[10,5],[4,9,7]]},"expected":[[3,6,5,2],[1,3,4,5],[7,4,1,2],[3,6,5,2,10,8,7],[4,2,8,1,9],[7,4,1],[4,6,10,3],[4,5],[10,5],[4,9,7]],"note":"Connected cyclic graph 8; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,8,4,2,9],[9,5,4,6,1],[11,7,8,9,1,5,6],[5,2,11,8,10,9,1],[7,11,4,3,2],[9,7,2,10,3],[3,10,6,5,11],[1,3,4],[1,3,2,10,6,4],[6,9,7,4],[5,3,4,7]]},"expected":[[3,8,4,2,9],[9,5,4,6,1],[11,7,8,9,1,5,6],[5,2,11,8,10,9,1],[7,11,4,3,2],[9,7,2,10,3],[3,10,6,5,11],[1,3,4],[1,3,2,10,6,4],[6,9,7,4],[5,3,4,7]],"note":"Connected cyclic graph 9; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,2],[1],[1]]},"expected":[[3,2],[1],[1]],"note":"Connected cyclic graph 10; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2,3],[1],[4,1],[3]]},"expected":[[2,3],[1],[4,1],[3]],"note":"Connected cyclic graph 11; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2,4,3],[3,1,4],[5,2,1],[2,5,1],[3,4]]},"expected":[[2,4,3],[3,1,4],[5,2,1],[2,5,1],[3,4]],"note":"Connected cyclic graph 12; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[5,2,3],[1,4,3,5],[5,4,2,1],[5,2,3,6],[3,6,1,4,2],[5,4]]},"expected":[[5,2,3],[1,4,3,5],[5,4,2,1],[5,2,3,6],[3,6,1,4,2],[5,4]],"note":"Connected cyclic graph 13; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[3,6,2],[7,1],[6,5,4,1],[6,3],[6,3,7],[3,4,5,1],[2,5]]},"expected":[[3,6,2],[7,1],[6,5,4,1],[6,3],[6,3,7],[3,4,5,1],[2,5]],"note":"Connected cyclic graph 14; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[8,2,6,3],[6,1,3,7],[8,1,4,2],[8,3,5],[4,7],[2,1,7,8],[6,2,5],[6,1,4,3]]},"expected":[[8,2,6,3],[6,1,3,7],[8,1,4,2],[8,3,5],[4,7],[2,1,7,8],[6,2,5],[6,1,4,3]],"note":"Connected cyclic graph 15; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[9,2,4],[7,4,3,1],[4,2,6],[5,3,8,1,6,2,7],[8,9,4],[4,9,3],[2,9,4],[5,4,9],[1,6,8,7,5]]},"expected":[[9,2,4],[7,4,3,1],[4,2,6],[5,3,8,1,6,2,7],[8,9,4],[4,9,3],[2,9,4],[5,4,9],[1,6,8,7,5]],"note":"Connected cyclic graph 16; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[5,10,7,2,9],[1,10,5,4,8,3],[2,5],[6,10,7,2],[9,1,8,2,3,6],[8,5,4],[8,4,1],[6,7,2,5,9,10],[5,10,1,8],[9,2,8,1,4]]},"expected":[[5,10,7,2,9],[1,10,5,4,8,3],[2,5],[6,10,7,2],[9,1,8,2,3,6],[8,5,4],[8,4,1],[6,7,2,5,9,10],[5,10,1,8],[9,2,8,1,4]],"note":"Connected cyclic graph 17; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2,5,7,4,9,6,10,11],[3,6,7,1,5],[2,11],[1,10,9],[1,8,2],[1,10,2],[1,2,11,9],[9,11,5,10],[8,7,4,11,10,1],[8,1,9,6,4],[9,1,8,3,7]]},"expected":[[2,5,7,4,9,6,10,11],[3,6,7,1,5],[2,11],[1,10,9],[1,8,2],[1,10,2],[1,2,11,9],[9,11,5,10],[8,7,4,11,10,1],[8,1,9,6,4],[9,1,8,3,7]],"note":"Connected cyclic graph 18; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2],[1,3],[2]]},"expected":[[2],[1,3],[2]],"note":"Connected cyclic graph 19; preserve shared neighbors without aliasing input"}
+{"input":{"node":[[2,4],[4,3,1],[2],[2,1]]},"expected":[[2,4],[4,3,1],[2],[2,1]],"note":"Connected cyclic graph 20; preserve shared neighbors without aliasing input"}
+{"generate":{"name":"connected","args":{"dense":true,"n":100}},"digest":"sha256:725c8df2b3f8378c8cae0c0496881612069b292f08ea0ac3796a9bb880f416cd","note":"Maximum complete graph; all edges copied once"}
+{"generate":{"name":"connected","args":{"n":100},"seed":133},"digest":"sha256:b1bfc6cd7e07afd8a7c68cd1a410210d12f3fff7a81047dc76e3e2df01f242ef","note":"Maximum connected graph with shuffled neighbor order"}
