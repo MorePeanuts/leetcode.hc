@@ -1,0 +1,23 @@
+id: "662"
+slug: maximum-width-of-binary-tree
+title: Maximum Width of Binary Tree
+titles:
+  zh-CN: 二叉树最大宽度
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: widthOfBinaryTree
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/maximum-width-of-binary-tree/
+judge:
+  compare: exact

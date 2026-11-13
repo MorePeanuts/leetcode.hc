@@ -1,0 +1,32 @@
+{"input":{"root":[1,3,2,5,3,null,9]},"expected":4,"example":true}
+{"input":{"root":[1,3,2,5,null,null,9,6,null,7]},"expected":7,"example":true}
+{"input":{"root":[1,3,2,5]},"expected":2,"example":true}
+{"input":{"root":[0]},"expected":1,"note":"single node"}
+{"input":{"root":[-100]},"expected":1,"note":"minimum value"}
+{"input":{"root":[100]},"expected":1,"note":"maximum value"}
+{"input":{"root":[1,2]},"expected":1,"note":"left child"}
+{"input":{"root":[1,null,2]},"expected":1,"note":"right child"}
+{"input":{"root":[1,2,3]},"expected":2,"note":"width two"}
+{"input":{"root":[1,2,3,4,null,null,5]},"expected":4,"note":"two nodes separated by gaps"}
+{"input":{"root":[1,2,3,null,4,5]},"expected":2,"note":"inner nodes"}
+{"input":{"root":[1,2,3,4,5,6,7]},"expected":4,"note":"perfect tree"}
+{"input":{"root":[1,2,3,4,5]},"expected":2,"note":"last partial level"}
+{"input":{"root":[1,2,3,null,null,4,5]},"expected":2,"note":"maximum width before last level"}
+{"input":{"root":[0,0,0,0,null,null,0]},"expected":4,"note":"duplicate values"}
+{"input":{"root":[1,null,2,3,null,null,4]},"expected":1,"note":"zigzag chain"}
+{"input":{"root":[62,-39,99,18,68,null,null,null,40,28,3,null,-21,null,null,97,70,null,-20,-6,-60,null,-48,null,null,-69,null,63,null,78,null,null,null,97,null,null,null,null,-89]},"expected":9,"note":"sparse positional-width topology 1"}
+{"input":{"root":[35,-64,-41,82,null,-66,-94,-41,1,60,null,78,35,null,44,-2,-27,-26,13,null,null,-5,88,-83,-23,null,-67,73,null,83]},"expected":15,"note":"sparse positional-width topology 2"}
+{"input":{"root":[16,-98,27,null,null,null,-87,22,-41,-25,null,-97,-42,-37,-20,null,-26,36,null,-55,-70,43,20,-72,null,-5,null,null,-59,-2,76,30,83,-30,35]},"expected":13,"note":"sparse positional-width topology 3"}
+{"input":{"root":[62,-15,-49,88,95,-80,null,-99,null,3,null,61,null,76,-53,-47,-58,64,90,-85,null,58,null,null,-56,-55,null,-40,18,70,null,83,-21,-37,48,36,null,80,-78]},"expected":22,"note":"sparse positional-width topology 4"}
+{"input":{"root":[-20,66,7,null,null,1,49,null,null,-60,16,null,79,-98,48,-64,85,-79,40,null,null,2,null,null,-8,-65,-88,4,null,6,40,-87,-26,64,null,88,null,15,null,null,77,-51,null,null,44,null,null,-99,98,-54]},"expected":20,"note":"sparse positional-width topology 5"}
+{"input":{"root":[-61,-71,-55,85,60,null,78,null,39,94,16,-55,-2,null,null,-46,66,29,59,null,null,-26,-59,null,null,39,89,99,-11,-37,-40,-86,null,26,-11,null,null,-4,-96,-99,-52,62,-68,null,-93,52,-47]},"expected":22,"note":"sparse positional-width topology 6"}
+{"input":{"root":[71,null,29,72,91,16,-24,null,null,null,2,-21,8,5,-39,null,-32,52,81,null,null,null,-39,53,-51,32,48,-42,-16,-21,95,-59,55,-86,92,null,null,null,null,25,-86,null,null,80,-51,45,-59,null,-15,null,null,-74,-60,72,85]},"expected":20,"note":"sparse positional-width topology 7"}
+{"input":{"root":[-4,93,-56,91,-50,0,66,48,null,null,-95,-90,null,-78,53,null,35,-2,-95,-74,null,53,null,90,null,null,-24,57,-39,-48,5,null,null,33,71,33,null,-24,null,-61,80,-23,null,-13,null,null,-23,18,-82,2,27,null,-1,46,29,null,49,-72]},"expected":52,"note":"sparse positional-width topology 8"}
+{"input":{"root":[43,null,52,-40,-91,null,61,48,38,-76,-96,88,null,-95,-87,null,19,-26,85,-43,-93,89,17,11,-93,null,-41,-97,-69,-57,null,null,-71,null,-26,63,45,null,null,null,null,-85,-37,-35,76,-54,-85,49,-58,15,79,-22,98,52,73,null,1]},"expected":28,"note":"sparse positional-width topology 9"}
+{"input":{"root":[-96,-41,89,18,83,null,null,null,null,8,-50,null,null,null,94,29,-90,78,null,null,32,-13,10,null,95,27,-3,-63,null,-65,null,-86,null,69,5,-21,null,-72,-12,null,-81,19,-44,90,null,67,null,null,null,null,-69,-74,46,null,-85,null,-76,-20,30,96,null,-73,33,53,25,-17,89,null,null,24,10,null,null,-98]},"expected":118,"note":"sparse positional-width topology 10"}
+{"generate":{"name":"complete","args":{"n":3000},"seed":662},"digest":"sha256:24e2d1b0d6bfe937452b8fbc8183339781e6a72b5e81ac13c0dc62f174209684","note":"maximum dense input"}
+{"generate":{"name":"chain","args":{"n":3000,"right":false},"seed":663},"digest":"sha256:6673137f04f329487683ee0bc0ef1efa87ee0bb2fadcb041722554bdee43fcc1","note":"maximum left depth"}
+{"generate":{"name":"chain","args":{"n":3000,"right":true},"seed":664},"digest":"sha256:af49d8e139c0d13c7ee1b5f0b115eb0747c5ec69270ba878a72a8ff7b0e21f33","note":"maximum right depth"}
+{"generate":{"name":"two_spines","args":{"depth":30,"prefix":0},"seed":665},"digest":"sha256:a5fdc88de33d2f8f8eafd08236bdf2666b628fc9a1b82059a2e1dea1fa110680","note":"large width with only 61 nodes"}
+{"generate":{"name":"two_spines","args":{"depth":31,"near_limit":true,"prefix":0},"seed":666},"digest":"sha256:c37a5cef6b884bc1ef4afe30adf9a695fb83d0840fd6150f3347493f6e91c8ba","note":"width exactly 2147483647"}
+{"generate":{"name":"two_spines","args":{"depth":14,"prefix":2970},"seed":667},"digest":"sha256:d624d30751224523f9712e9555eeb245d22ab8a495b5637b9b33bbef2f3fabbd","note":"deep prefix before a wide sparse fork"}
