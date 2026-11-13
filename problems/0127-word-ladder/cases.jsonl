@@ -1,0 +1,32 @@
+{"input":{"beginWord":"hit","endWord":"cog","wordList":["hot","dot","dog","lot","log","cog"]},"expected":5,"example":true}
+{"input":{"beginWord":"hit","endWord":"cog","wordList":["hot","dot","dog","lot","log"]},"expected":0,"example":true}
+{"input":{"beginWord":"a","endWord":"b","wordList":["b"]},"expected":2,"note":"One transformation counts two words"}
+{"input":{"beginWord":"a","endWord":"c","wordList":["a","b","c"]},"expected":2,"note":"Begin word may already be in dictionary"}
+{"input":{"beginWord":"ab","endWord":"ac","wordList":["ab"]},"expected":0,"note":"Missing target is impossible"}
+{"input":{"beginWord":"ab","endWord":"cd","wordList":["cd"]},"expected":0,"note":"Present target can still be unreachable"}
+{"input":{"beginWord":"aaa","endWord":"bbb","wordList":["aab","abb","bbb"]},"expected":4,"note":"Unique chain"}
+{"input":{"beginWord":"aaa","endWord":"bbb","wordList":["aab","aba","abb","bab","bbb"]},"expected":4,"note":"Choose shortest among branches"}
+{"input":{"beginWord":"hit","endWord":"cog","wordList":["hot","dot","dog","lot","log","cog","hit"]},"expected":5,"note":"Begin word included does not add an extra step"}
+{"input":{"beginWord":"aaa","endWord":"aba","wordList":["aba","abb","bbb"]},"expected":2,"note":"Target adjacent to start"}
+{"input":{"beginWord":"abc","endWord":"xyz","wordList":["abd","abe","xyy","xyz"]},"expected":0,"note":"Disconnected components"}
+{"input":{"beginWord":"aaa","endWord":"bbb","wordList":["baa","bba","bbb","aba","abb"]},"expected":4,"note":"Shortest paths merge"}
+{"input":{"beginWord":"za","endWord":"az","wordList":["aa","az","zz"]},"expected":3,"note":"Alternatives with distinct middle words"}
+{"input":{"beginWord":"abc","endWord":"xbc","wordList":["xbc"]},"expected":2,"note":"Change first position"}
+{"input":{"beginWord":"abc","endWord":"abz","wordList":["abz"]},"expected":2,"note":"Change last position"}
+{"input":{"beginWord":"aca","endWord":"bbb","wordList":["aab","cab","caa","cca","aba","aaa","cba","acc"]},"expected":0,"note":"Small dictionary with shared patterns and competing routes 1"}
+{"input":{"beginWord":"bcc","endWord":"cbb","wordList":["acb","baa","cba","cca","ccb","bba","aab","bab","cbb"]},"expected":0,"note":"Small dictionary with shared patterns and competing routes 2"}
+{"input":{"beginWord":"abc","endWord":"cbc","wordList":["ccc","aba","bba","ccb","aac","caa","bac","cac","aaa","cbc"]},"expected":2,"note":"Small dictionary with shared patterns and competing routes 3"}
+{"input":{"beginWord":"acc","endWord":"bac","wordList":["cab","cbb","bac","bba","ccb","baa","aba","bcb","cac","acc","caa"]},"expected":0,"note":"Small dictionary with shared patterns and competing routes 4"}
+{"input":{"beginWord":"ccc","endWord":"ccb","wordList":["bcb","aab","acc","cbb","aca","bbb","baa","cba","cbc","ccb","cca","abc"]},"expected":2,"note":"Small dictionary with shared patterns and competing routes 5"}
+{"input":{"beginWord":"bcc","endWord":"acb","wordList":["caa","cbb","cac","cab","acb","ccb","bbc","aca","bba","abb","aac","cca","bbb"]},"expected":5,"note":"Small dictionary with shared patterns and competing routes 6"}
+{"input":{"beginWord":"cac","endWord":"acb","wordList":["aba","baa","cbb","caa","cba","aca","bbb","cbc","cac","ccc","bba","aaa","acb","aab"]},"expected":5,"note":"Small dictionary with shared patterns and competing routes 7"}
+{"input":{"beginWord":"baa","endWord":"bac","wordList":["aba","bcc","bbb","baa","aca","cbb","aac","bba","abb","caa","cbc","cab","bcb","ccb","bac"]},"expected":2,"note":"Small dictionary with shared patterns and competing routes 8"}
+{"input":{"beginWord":"bcb","endWord":"aab","wordList":["bba","bcc","bbc","aaa","abb","aab","bcb","acb","cab","caa","cba","cbc","aac","abc","bbb","aba"]},"expected":3,"note":"Small dictionary with shared patterns and competing routes 9"}
+{"input":{"beginWord":"bca","endWord":"bab","wordList":["cba","ccb","bab","acc","cbb","cbc","aaa","aab","bcc","aca","cac","aac","bbb","baa","caa","abb","bcb"]},"expected":3,"note":"Small dictionary with shared patterns and competing routes 10"}
+{"input":{"beginWord":"bcc","endWord":"aca","wordList":["bba","bbc","acb","acc","cbc","ccb","bcb","cba","abc","cca","baa","caa","aaa","ccc","cbb","bcc","aab","aca"]},"expected":3,"note":"Small dictionary with shared patterns and competing routes 11"}
+{"input":{"beginWord":"cbc","endWord":"aca","wordList":["acc","cbc","bbb","ccc","aca","bab","cbb","bba","abb","bbc","cca","caa","bac","cba","bcb","aaa","baa","abc","cac"]},"expected":4,"note":"Small dictionary with shared patterns and competing routes 12"}
+{"input":{"beginWord":"bcb","endWord":"aaa","wordList":["bbc","bcc","abb","bbb","aab","caa","aba","acc","aca","cba","bab","bac","cbb","aaa","baa","aac","ccb","acb","cab","cca"]},"expected":4,"note":"Small dictionary with shared patterns and competing routes 13"}
+{"input":{"beginWord":"bbc","endWord":"cbb","wordList":["bac","baa","bbb","ccb","aac","acc","bca","bcc","aca","bab","abb","cbb","abc","aaa","cac","acb","aba","cba","aab","ccc","cab"]},"expected":3,"note":"Small dictionary with shared patterns and competing routes 14"}
+{"input":{"beginWord":"cbc","endWord":"aab","wordList":["bab","abc","ccb","aab","cca","cbc","bcb","bba","cac","aca","abb","bca","aba","cbb","caa","ccc","bac","acb","aaa","cba","cab","bbb"]},"expected":4,"note":"Small dictionary with shared patterns and competing routes 15"}
+{"generate":{"name":"dictionary","args":{"n":5000,"width":10},"seed":127},"digest":"sha256:61f52691734f087edeafaee23c8faa2a173fa3f9c235950f83664addb69e4880","note":"Maximum dictionary; isolated target forces exploring connected component"}
+{"generate":{"name":"dictionary","args":{"n":5000,"reachable":true,"width":10},"seed":271},"digest":"sha256:df8c58d2e4d8b7fa26546160eddd5f7ad7715fe565022a0fd6b91263d330f725","note":"Maximum dictionary with a reachable target"}

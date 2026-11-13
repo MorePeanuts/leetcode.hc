@@ -1,0 +1,27 @@
+id: "127"
+slug: word-ladder
+title: Word Ladder
+titles:
+  zh-CN: 单词接龙
+difficulty: hard
+tags:
+  - breadth-first-search
+  - hash-table
+  - string
+  - bidirectional-search
+kind: function
+function:
+  name: ladderLength
+  params:
+    - name: beginWord
+      type: string
+    - name: endWord
+      type: string
+    - name: wordList
+      type: string[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/word-ladder/
+judge:
+  compare: exact
