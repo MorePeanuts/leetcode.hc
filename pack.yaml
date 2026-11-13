@@ -297,6 +297,7 @@ groups:
       - missing-number
       - sum-of-two-integers
       - reverse-integer
+      - spiral-matrix-ii
   - name: queue
     title: Queue
     problems:
