@@ -1,0 +1,24 @@
+id: "62"
+slug: unique-paths
+title: Unique Paths
+titles:
+  zh-CN: 不同路径
+difficulty: medium
+tags:
+  - math
+  - dynamic-programming
+  - combinatorics
+kind: function
+function:
+  name: uniquePaths
+  params:
+    - name: m
+      type: integer
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/unique-paths/
+judge:
+  compare: exact

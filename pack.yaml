@@ -151,6 +151,7 @@ groups:
     problems:
       - longest-common-subsequence
       - edit-distance
+      - unique-paths
   - name: greedy
     title: Greedy
   - name: intervals
@@ -161,3 +162,5 @@ groups:
     title: Bit Manipulation
   - name: math-geometry
     title: Math & Geometry
+    problems:
+      - unique-paths
