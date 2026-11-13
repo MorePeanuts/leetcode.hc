@@ -35,8 +35,8 @@ jobs:
       # commit the refreshed skills with the bump.
       - name: Install hc
         env:
-          HC_VERSION: 0.1.0-alpha.11
-          HC_SHA256: 43d92149703c47e7577f771a39c1fe46e29006527dfcc119416b50dafc8fa67d
+          HC_VERSION: 0.1.0-alpha.13
+          HC_SHA256: c817c410ef362b153e1b4117d4e8f48489d4a4641f034e30a80dc155640ec837
         run: |
           archive="handcoding_${HC_VERSION}_linux_amd64.tar.gz"
           curl -fsSL -o "$RUNNER_TEMP/$archive" \
