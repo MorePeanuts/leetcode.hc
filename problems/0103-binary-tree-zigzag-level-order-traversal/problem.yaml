@@ -1,0 +1,22 @@
+id: "103"
+slug: binary-tree-zigzag-level-order-traversal
+title: Binary Tree Zigzag Level Order Traversal
+titles:
+  zh-CN: 二叉树的锯齿形层序遍历
+difficulty: medium
+tags:
+  - tree
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: zigzagLevelOrder
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/
+judge:
+  compare: exact
