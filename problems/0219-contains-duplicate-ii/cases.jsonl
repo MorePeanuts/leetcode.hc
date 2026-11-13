@@ -1,0 +1,33 @@
+{"input":{"k":3,"nums":[1,2,3,1]},"expected":true,"example":true}
+{"input":{"k":1,"nums":[1,0,1,1]},"expected":true,"example":true}
+{"input":{"k":2,"nums":[1,2,3,1,2,3]},"expected":false,"example":true}
+{"input":{"k":0,"nums":[1]},"expected":false,"note":"Same index cannot count twice"}
+{"input":{"k":1,"nums":[1]},"expected":false,"note":"Singleton never has distinct pair"}
+{"input":{"k":0,"nums":[1,1]},"expected":false,"note":"Equal values but zero allowed distance"}
+{"input":{"k":1,"nums":[1,1]},"expected":true,"note":"Distance exactly k"}
+{"input":{"k":1,"nums":[1,2,1]},"expected":false,"note":"Duplicate is too far"}
+{"input":{"k":2,"nums":[1,2,1]},"expected":true,"note":"Duplicate at exact window boundary"}
+{"input":{"k":1,"nums":[1,2,3,1,1]},"expected":true,"note":"Must retain newest occurrence"}
+{"input":{"k":2,"nums":[1,2,3,1,2,3]},"expected":false,"note":"All duplicates just outside window"}
+{"input":{"k":3,"nums":[1,2,3,1,2,3]},"expected":true,"note":"All duplicates at window boundary"}
+{"input":{"k":2,"nums":[-1,-2,-1]},"expected":true,"note":"Negative duplicates"}
+{"input":{"k":2,"nums":[-1000000000,1000000000,-1000000000]},"expected":true,"note":"Extreme signed values"}
+{"input":{"k":3,"nums":[0,1,2,0]},"expected":true,"note":"Zero-valued duplicate"}
+{"input":{"k":100000,"nums":[1,2,3,4]},"expected":false,"note":"Budget exceeds length"}
+{"input":{"k":1,"nums":[9,8,7,6,6]},"expected":true,"note":"Only final pair qualifies"}
+{"input":{"k":0,"nums":[1,1,1]},"expected":false,"note":"Multiple duplicates with zero distance limit"}
+{"input":{"k":8,"nums":[0,6,-9,0,-7,-1,3,0,-1,5,-9,-6,-9,10,4,1,9,-6,-6,-6,-9]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":0,"nums":[2,0,7,-8,6,-7,5,0,1,1,0]},"expected":false,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":2,"nums":[-10,-7]},"expected":false,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":5,"nums":[3,10,-10,7,-7,-9,1,1,3,-8,-9,-8,4,1,9,10,10,1]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":4,"nums":[-7,2,2,4,-10,-10,-3,10,10,7,-7]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":3,"nums":[6]},"expected":false,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":9,"nums":[-5,-5,-8,-2,10,9]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":3,"nums":[3,2,9,0,7,-3,3,-3,-3,3,7,-5,-4,-6,-10,1,-6,-8,-3,-9,5]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":9,"nums":[10,9,7,-9,-8,-8,3,9,7,3,1,-4,4,-2]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":6,"nums":[9,8,1]},"expected":false,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":3,"nums":[-9,-9,-3]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"input":{"k":6,"nums":[-4,0,6,-5,2,4,-1,1,8,10,-4,-3,-1,-4,-2,7,-3,0,-1]},"expected":true,"note":"Deterministic duplicates and distance limits"}
+{"generate":{"name":"distinct","args":{"n":100000},"seed":7},"digest":"sha256:1f3b521186800a1665cdf3dd09d262765b68792dfc885749d13a7dc2aac786e4","note":"Maximum length; no pair permits early return"}
+{"generate":{"name":"far_duplicate","args":{"n":100000},"seed":7},"digest":"sha256:49679fda9b02fcb757b9b951e4e0bd79ce073b1999a5a6b36f95639f11fb5958","note":"Only duplicate lies just outside allowed distance"}
+{"generate":{"name":"last_pair","args":{"n":100000},"seed":7},"digest":"sha256:5bd5daab1eea2578df6ec09b3e96b9a8630d0af2d0818797d592f92008210a55","note":"Qualifying duplicate appears at the end"}
