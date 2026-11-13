@@ -27,6 +27,7 @@ groups:
       - kth-smallest-element-in-a-sorted-matrix
       - best-time-to-buy-and-sell-stock-with-cooldown
       - subsets
+      - permutations
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -126,6 +127,7 @@ groups:
       - subsets
       - combination-sum
       - combination-sum-ii
+      - permutations
   - name: tries
     title: Tries
     problems:

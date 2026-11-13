@@ -1,0 +1,21 @@
+id: "46"
+slug: permutations
+title: Permutations
+titles:
+  zh-CN: 全排列
+difficulty: medium
+tags:
+  - array
+  - backtracking
+kind: function
+function:
+  name: permute
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/permutations/
+judge:
+  compare: unordered
