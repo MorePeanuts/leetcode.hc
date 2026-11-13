@@ -51,6 +51,7 @@ groups:
       - car-fleet
       - largest-rectangle-in-histogram
       - binary-tree-inorder-traversal
+      - binary-tree-preorder-traversal
   - name: binary-search
     title: Binary Search
     problems:
@@ -99,6 +100,7 @@ groups:
       - serialize-and-deserialize-binary-tree
       - binary-tree-inorder-traversal
       - minimum-depth-of-binary-tree
+      - binary-tree-preorder-traversal
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
