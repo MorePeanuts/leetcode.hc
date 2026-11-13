@@ -131,6 +131,7 @@ groups:
       - maximum-width-of-binary-tree
       - delete-node-in-a-bst
       - binary-tree-zigzag-level-order-traversal
+      - check-completeness-of-a-binary-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
