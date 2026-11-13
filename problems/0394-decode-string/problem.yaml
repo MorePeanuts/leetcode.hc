@@ -1,0 +1,22 @@
+id: "394"
+slug: decode-string
+title: Decode String
+titles:
+  zh-CN: 字符串解码
+difficulty: medium
+tags:
+  - stack
+  - recursion
+  - string
+kind: function
+function:
+  name: decodeString
+  params:
+    - name: s
+      type: string
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/decode-string/
+judge:
+  compare: exact
