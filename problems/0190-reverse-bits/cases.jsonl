@@ -1,0 +1,36 @@
+{"input":{"n":43261596},"expected":964176192,"example":true}
+{"input":{"n":2147483644},"expected":1073741822,"example":true}
+{"input":{"n":0},"expected":0,"note":"Even 32-bit pattern 0x0; leading zero padding must be retained."}
+{"input":{"n":2},"expected":1073741824,"note":"Even 32-bit pattern 0x2; leading zero padding must be retained."}
+{"input":{"n":4},"expected":536870912,"note":"Even 32-bit pattern 0x4; leading zero padding must be retained."}
+{"input":{"n":6},"expected":1610612736,"note":"Even 32-bit pattern 0x6; leading zero padding must be retained."}
+{"input":{"n":8},"expected":268435456,"note":"Even 32-bit pattern 0x8; leading zero padding must be retained."}
+{"input":{"n":10},"expected":1342177280,"note":"Even 32-bit pattern 0xa; leading zero padding must be retained."}
+{"input":{"n":12},"expected":805306368,"note":"Even 32-bit pattern 0xc; leading zero padding must be retained."}
+{"input":{"n":14},"expected":1879048192,"note":"Even 32-bit pattern 0xe; leading zero padding must be retained."}
+{"input":{"n":16},"expected":134217728,"note":"Even 32-bit pattern 0x10; leading zero padding must be retained."}
+{"input":{"n":30},"expected":2013265920,"note":"Even 32-bit pattern 0x1e; leading zero padding must be retained."}
+{"input":{"n":32},"expected":67108864,"note":"Even 32-bit pattern 0x20; leading zero padding must be retained."}
+{"input":{"n":62},"expected":2080374784,"note":"Even 32-bit pattern 0x3e; leading zero padding must be retained."}
+{"input":{"n":64},"expected":33554432,"note":"Even 32-bit pattern 0x40; leading zero padding must be retained."}
+{"input":{"n":126},"expected":2113929216,"note":"Even 32-bit pattern 0x7e; leading zero padding must be retained."}
+{"input":{"n":128},"expected":16777216,"note":"Even 32-bit pattern 0x80; leading zero padding must be retained."}
+{"input":{"n":254},"expected":2130706432,"note":"Even 32-bit pattern 0xfe; leading zero padding must be retained."}
+{"input":{"n":256},"expected":8388608,"note":"Even 32-bit pattern 0x100; leading zero padding must be retained."}
+{"input":{"n":510},"expected":2139095040,"note":"Even 32-bit pattern 0x1fe; leading zero padding must be retained."}
+{"input":{"n":512},"expected":4194304,"note":"Even 32-bit pattern 0x200; leading zero padding must be retained."}
+{"input":{"n":1022},"expected":2143289344,"note":"Even 32-bit pattern 0x3fe; leading zero padding must be retained."}
+{"input":{"n":1024},"expected":2097152,"note":"Even 32-bit pattern 0x400; leading zero padding must be retained."}
+{"input":{"n":65534},"expected":2147418112,"note":"Even 32-bit pattern 0xfffe; leading zero padding must be retained."}
+{"input":{"n":65536},"expected":32768,"note":"Even 32-bit pattern 0x10000; leading zero padding must be retained."}
+{"input":{"n":65538},"expected":1073774592,"note":"Even 32-bit pattern 0x10002; leading zero padding must be retained."}
+{"input":{"n":1073741824},"expected":2,"note":"Even 32-bit pattern 0x40000000; leading zero padding must be retained."}
+{"input":{"n":1073741826},"expected":1073741826,"note":"Even 32-bit pattern 0x40000002; leading zero padding must be retained."}
+{"input":{"n":2147483646},"expected":2147483646,"note":"Even 32-bit pattern 0x7ffffffe; leading zero padding must be retained."}
+{"input":{"n":1431655764},"expected":715827882,"note":"Even 32-bit pattern 0x55555554; leading zero padding must be retained."}
+{"input":{"n":715827882},"expected":1431655764,"note":"Even 32-bit pattern 0x2aaaaaaa; leading zero padding must be retained."}
+{"input":{"n":1073774594},"expected":1073807362,"note":"Even 32-bit pattern 0x40008002; leading zero padding must be retained."}
+{"input":{"n":1879048192},"expected":14,"note":"Even 32-bit pattern 0x70000000; leading zero padding must be retained."}
+{"input":{"n":16843008},"expected":8421504,"note":"Even 32-bit pattern 0x1010100; leading zero padding must be retained."}
+{"input":{"n":268435472},"expected":134217736,"note":"Even 32-bit pattern 0x10000010; leading zero padding must be retained."}
+{"input":{"n":1114112},"expected":34816,"note":"Even 32-bit pattern 0x110000; leading zero padding must be retained."}
