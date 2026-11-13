@@ -1,0 +1,27 @@
+id: "528"
+slug: random-pick-with-weight
+title: Random Pick with Weight
+titles:
+  zh-CN: 按权重随机选择
+difficulty: medium
+tags:
+  - array
+  - math
+  - binary-search
+  - prefix-sum
+  - randomized
+kind: class
+class:
+  name: Solution
+  constructor:
+    - name: w
+      type: integer[]
+  methods:
+    - name: pickIndex
+      params: []
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/random-pick-with-weight/
+judge:
+  compare: checker

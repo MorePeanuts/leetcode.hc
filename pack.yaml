@@ -306,4 +306,5 @@ groups:
       - sort-an-array
   - name: randomized
     title: Randomized Algorithms
-    problems: []
+    problems:
+      - random-pick-with-weight
