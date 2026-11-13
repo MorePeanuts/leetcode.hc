@@ -1,0 +1,24 @@
+id: "700"
+slug: search-in-a-binary-search-tree
+title: Search in a Binary Search Tree
+titles:
+  zh-CN: 二叉搜索树中的搜索
+difficulty: easy
+tags:
+  - tree
+  - binary-search-tree
+  - binary-tree
+kind: function
+function:
+  name: searchBST
+  params:
+    - name: root
+      type: TreeNode
+    - name: val
+      type: integer
+  returns: TreeNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/search-in-a-binary-search-tree/
+judge:
+  compare: exact
