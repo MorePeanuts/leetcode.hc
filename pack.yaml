@@ -130,6 +130,7 @@ groups:
       - sort-an-array
       - find-k-pairs-with-smallest-sums
       - kth-smallest-element-in-a-sorted-matrix
+      - network-delay-time
   - name: backtracking
     title: Backtracking
     problems:
@@ -165,8 +166,11 @@ groups:
       - redundant-connection
       - word-ladder
       - longest-increasing-path-in-a-matrix
+      - network-delay-time
   - name: advanced-graphs
     title: Advanced Graphs
+    problems:
+      - network-delay-time
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:
