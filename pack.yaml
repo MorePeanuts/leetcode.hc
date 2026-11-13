@@ -66,6 +66,7 @@ groups:
       - binary-tree-inorder-traversal
       - binary-tree-preorder-traversal
       - generate-parentheses
+      - valid-parenthesis-string
   - name: binary-search
     title: Binary Search
     problems:
@@ -200,6 +201,7 @@ groups:
       - burst-balloons
       - regular-expression-matching
       - palindrome-partitioning
+      - valid-parenthesis-string
   - name: greedy
     title: Greedy
     problems:
@@ -210,6 +212,7 @@ groups:
       - hand-of-straights
       - merge-triplets-to-form-target-triplet
       - partition-labels
+      - valid-parenthesis-string
   - name: intervals
     title: Intervals
     problems:

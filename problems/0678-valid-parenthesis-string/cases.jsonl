@@ -1,0 +1,34 @@
+{"input":{"s":"()"},"expected":true,"example":true}
+{"input":{"s":"(*)"},"expected":true,"example":true}
+{"input":{"s":"(*))"},"expected":true,"example":true}
+{"input":{"s":"("},"expected":false,"example":true}
+{"input":{"s":"*"},"expected":true,"note":"star can be empty"}
+{"input":{"s":")"},"expected":false,"note":"single unmatched close"}
+{"input":{"s":"(*"},"expected":true,"note":"star closes opening"}
+{"input":{"s":"*)"},"expected":true,"note":"star opens closing"}
+{"input":{"s":"*("},"expected":false,"note":"star before opening cannot close it"}
+{"input":{"s":")*"},"expected":false,"note":"closing before star impossible"}
+{"input":{"s":"***"},"expected":true,"note":"all stars"}
+{"input":{"s":"(())"},"expected":true,"note":"two nested pairs"}
+{"input":{"s":")("},"expected":false,"note":"wrong order despite balanced counts"}
+{"input":{"s":"(()"},"expected":false,"note":"extra mandatory opening"}
+{"input":{"s":"())"},"expected":false,"note":"extra mandatory closing"}
+{"input":{"s":"(*()*)"},"expected":true,"note":"multiple star roles"}
+{"input":{"s":"**))"},"expected":true,"note":"stars must occur before closes"}
+{"input":{"s":"((**"},"expected":true,"note":"stars can close previous opens"}
+{"input":{"s":"**(("},"expected":false,"note":"late openings cannot use early stars"}
+{"input":{"s":")(**"},"expected":false,"note":"leading closing cannot use later stars"}
+{"input":{"s":"(**)"},"expected":true,"note":"empty interior star"}
+{"input":{"s":"()*()*"},"expected":true,"note":"independent pairs and stars"}
+{"input":{"s":"(*()"},"expected":true,"note":"preserve choices until later"}
+{"input":{"s":"*)))"},"expected":false,"note":"one star cannot satisfy two closes"}
+{"input":{"s":"(((*"},"expected":false,"note":"one star cannot satisfy two opens"}
+{"input":{"s":"(*))*("},"expected":false,"note":"mandatory middle closes"}
+{"input":{"s":"()***"},"expected":true,"note":"star after complete prefix"}
+{"input":{"s":"****************************************************************************************************"},"expected":true,"note":"maximum all stars"}
+{"input":{"s":"(((((((((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))))))))))"},"expected":true,"note":"maximum balance"}
+{"input":{"s":"((((((((((((((((((((((((((((((((((((((((((((((((((**************************************************"},"expected":true,"note":"maximum possible star closures"}
+{"input":{"s":"***************************************************************************************************("},"expected":false,"note":"maximum impossible trailing opening"}
+{"input":{"s":"((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))"},"expected":false,"note":"maximum late closing excess"}
+{"input":{"s":"()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()"},"expected":true,"note":"maximum repeated pairs"}
+{"input":{"s":"***************************************************************************************************)"},"expected":true,"note":"maximum stars then close"}

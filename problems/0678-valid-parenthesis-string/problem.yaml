@@ -1,0 +1,24 @@
+id: "678"
+slug: valid-parenthesis-string
+title: Valid Parenthesis String
+titles:
+  zh-CN: 有效的括号字符串
+difficulty: medium
+tags:
+  - stack
+  - greedy
+  - string
+  - dynamic-programming
+  - bracket-sequences
+kind: function
+function:
+  name: checkValidString
+  params:
+    - name: s
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/valid-parenthesis-string/
+judge:
+  compare: exact
