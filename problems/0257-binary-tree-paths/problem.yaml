@@ -1,0 +1,24 @@
+id: "257"
+slug: binary-tree-paths
+title: Binary Tree Paths
+titles:
+  zh-CN: 二叉树的所有路径
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - string
+  - backtracking
+  - binary-tree
+kind: function
+function:
+  name: binaryTreePaths
+  params:
+    - name: root
+      type: TreeNode
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-tree-paths/
+judge:
+  compare: unordered
