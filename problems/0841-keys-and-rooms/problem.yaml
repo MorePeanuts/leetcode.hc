@@ -1,0 +1,22 @@
+id: "841"
+slug: keys-and-rooms
+title: Keys and Rooms
+titles:
+  zh-CN: 钥匙和房间
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+kind: function
+function:
+  name: canVisitAllRooms
+  params:
+    - name: rooms
+      type: integer[][]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/keys-and-rooms/
+judge:
+  compare: exact
