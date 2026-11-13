@@ -1,0 +1,32 @@
+{"input":{"nums":[-4,-1,0,3,10]},"expected":[0,1,9,16,100],"example":true}
+{"input":{"nums":[-7,-3,2,3,11]},"expected":[4,9,9,49,121],"example":true}
+{"input":{"nums":[0]},"expected":[0],"note":"Sign, absolute-value tie and ordering boundary 1"}
+{"input":{"nums":[1]},"expected":[1],"note":"Sign, absolute-value tie and ordering boundary 2"}
+{"input":{"nums":[-1]},"expected":[1],"note":"Sign, absolute-value tie and ordering boundary 3"}
+{"input":{"nums":[-10000]},"expected":[100000000],"note":"Sign, absolute-value tie and ordering boundary 4"}
+{"input":{"nums":[10000]},"expected":[100000000],"note":"Sign, absolute-value tie and ordering boundary 5"}
+{"input":{"nums":[-1,0]},"expected":[0,1],"note":"Sign, absolute-value tie and ordering boundary 6"}
+{"input":{"nums":[0,1]},"expected":[0,1],"note":"Sign, absolute-value tie and ordering boundary 7"}
+{"input":{"nums":[-1,1]},"expected":[1,1],"note":"Sign, absolute-value tie and ordering boundary 8"}
+{"input":{"nums":[-2,-1]},"expected":[1,4],"note":"Sign, absolute-value tie and ordering boundary 9"}
+{"input":{"nums":[1,2]},"expected":[1,4],"note":"Sign, absolute-value tie and ordering boundary 10"}
+{"input":{"nums":[-10000,10000]},"expected":[100000000,100000000],"note":"Sign, absolute-value tie and ordering boundary 11"}
+{"input":{"nums":[-2,-2,0,2,2]},"expected":[0,4,4,4,4],"note":"Sign, absolute-value tie and ordering boundary 12"}
+{"input":{"nums":[-5,-4,-3]},"expected":[9,16,25],"note":"Sign, absolute-value tie and ordering boundary 13"}
+{"input":{"nums":[-3,-2,-1,0]},"expected":[0,1,4,9],"note":"Sign, absolute-value tie and ordering boundary 14"}
+{"input":{"nums":[0,1,2,3]},"expected":[0,1,4,9],"note":"Sign, absolute-value tie and ordering boundary 15"}
+{"input":{"nums":[-5,-1,0,1,2]},"expected":[0,1,1,4,25],"note":"Sign, absolute-value tie and ordering boundary 16"}
+{"input":{"nums":[-2,-1,0,1,5]},"expected":[0,1,1,4,25],"note":"Sign, absolute-value tie and ordering boundary 17"}
+{"input":{"nums":[0,0,0,0,0,0,0,0]},"expected":[0,0,0,0,0,0,0,0],"note":"Sign, absolute-value tie and ordering boundary 18"}
+{"input":{"nums":[-7,-7,-7,-7,-7,-7,-7,-7]},"expected":[49,49,49,49,49,49,49,49],"note":"Sign, absolute-value tie and ordering boundary 19"}
+{"input":{"nums":[7,7,7,7,7,7,7,7]},"expected":[49,49,49,49,49,49,49,49],"note":"Sign, absolute-value tie and ordering boundary 20"}
+{"input":{"nums":[-9,-9,-9,-1,0,2,2,9]},"expected":[0,1,4,4,81,81,81,81],"note":"Sign, absolute-value tie and ordering boundary 21"}
+{"input":{"nums":[-10000,-9999,0,9999,10000]},"expected":[0,99980001,99980001,100000000,100000000],"note":"Sign, absolute-value tie and ordering boundary 22"}
+{"input":{"nums":[-2,-2,-1,-1,0,0,1,1,2,2]},"expected":[0,0,1,1,1,1,4,4,4,4],"note":"Sign, absolute-value tie and ordering boundary 23"}
+{"input":{"nums":[-18,-7,1,5,10,17,18]},"expected":[1,25,49,100,289,324,324],"note":"Sign, absolute-value tie and ordering boundary 24"}
+{"input":{"nums":[-16,-12,-12,-12,-10,-9,-6,-5,-3,-1,5,6,7,8,13]},"expected":[1,9,25,25,36,36,49,64,81,100,144,144,144,169,256],"note":"Sign, absolute-value tie and ordering boundary 25"}
+{"input":{"nums":[-20,-19,-17,-15,-13,-12,-10,-10,-10,-4,-2,-1,0,1,2,2,2,3,4,5,5,7,7,11,11,13,14,15,15,20]},"expected":[0,1,1,4,4,4,4,9,16,16,25,25,49,49,100,100,100,121,121,144,169,169,196,225,225,225,289,361,400,400],"note":"Sign, absolute-value tie and ordering boundary 26"}
+{"input":{"nums":[-20,-20,-20,-20,-19,-18,-17,-16,-16,-14,-12,-11,-11,-10,-10,-10,-9,-9,-8,-7,-5,-3,-2,-1,-1,1,1,1,1,2,3,4,5,7,9,10,11,11,12,13,14,14,14,14,15,16,18,19,19,20]},"expected":[1,1,1,1,1,1,4,4,9,9,16,25,25,49,49,64,81,81,81,100,100,100,100,121,121,121,121,144,144,169,196,196,196,196,196,225,256,256,256,289,324,324,361,361,361,400,400,400,400,400],"note":"Sign, absolute-value tie and ordering boundary 27"}
+{"generate":{"name":"negative","args":{"n":10000}},"digest":"sha256:05f7fae7d03b15111d494c9859c3fab3566e99c03cccbc1c42a031cee83e9384","note":"Maximum size negative"}
+{"generate":{"name":"mixed","args":{"n":10000}},"digest":"sha256:753295680dcd5bf932ac52d5c3ad93765e0ca2ca99d6d94fd951804fde604365","note":"Maximum size mixed"}
+{"generate":{"name":"ties","args":{"n":10000}},"digest":"sha256:db1a74427bb9bc3bc78941158c54a07c627e02805d8c63d365a59eb1f395eb05","note":"Maximum size ties"}

@@ -50,6 +50,7 @@ groups:
       - remove-duplicates-from-sorted-array-ii
       - sort-colors
       - merge-sorted-array
+      - squares-of-a-sorted-array
   - name: sliding-window
     title: Sliding Window
     problems:

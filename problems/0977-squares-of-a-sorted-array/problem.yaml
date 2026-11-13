@@ -1,0 +1,22 @@
+id: "977"
+slug: squares-of-a-sorted-array
+title: Squares of a Sorted Array
+titles:
+  zh-CN: 有序数组的平方
+difficulty: easy
+tags:
+  - array
+  - two-pointers
+  - sorting
+kind: function
+function:
+  name: sortedSquares
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/squares-of-a-sorted-array/
+judge:
+  compare: exact
