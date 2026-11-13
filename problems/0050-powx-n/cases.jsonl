@@ -1,0 +1,35 @@
+{"input":{"n":10,"x":2.0},"expected":1024,"example":true}
+{"input":{"n":3,"x":2.1},"expected":9.261,"example":true}
+{"input":{"n":-2,"x":2.0},"expected":0.25,"example":true}
+{"input":{"n":0,"x":2},"expected":1.0,"note":"zero exponent"}
+{"input":{"n":1,"x":2},"expected":2.0,"note":"unit exponent"}
+{"input":{"n":1,"x":0},"expected":0.0,"note":"zero base"}
+{"input":{"n":2147483647,"x":0},"expected":0.0,"note":"zero huge positive exponent"}
+{"input":{"n":2147483647,"x":1},"expected":1.0,"note":"maximum exponent"}
+{"input":{"n":-2147483648,"x":1},"expected":1.0,"note":"minimum exponent"}
+{"input":{"n":2147483647,"x":-1},"expected":-1.0,"note":"negative base odd maximum"}
+{"input":{"n":-2147483648,"x":-1},"expected":1.0,"note":"negative base even minimum"}
+{"input":{"n":-2147483647,"x":-1},"expected":-1.0,"note":"negative base odd negative"}
+{"input":{"n":3,"x":-2},"expected":-8.0,"note":"negative odd power"}
+{"input":{"n":4,"x":-2},"expected":16.0,"note":"negative even power"}
+{"input":{"n":-3,"x":-2},"expected":-0.125,"note":"negative reciprocal"}
+{"input":{"n":10,"x":0.5},"expected":0.0009765625,"note":"positive fraction"}
+{"input":{"n":-10,"x":0.5},"expected":1024.0,"note":"reciprocal fraction"}
+{"input":{"n":11,"x":-0.5},"expected":-0.00048828125,"note":"negative fraction odd"}
+{"input":{"n":-10,"x":-0.5},"expected":1024.0,"note":"negative reciprocal even"}
+{"input":{"n":2147483647,"x":1.000000001},"expected":8.563284388972392,"note":"large exponent near one"}
+{"input":{"n":-2147483648,"x":1.000000001},"expected":0.1167776206901071,"note":"large negative exponent near one"}
+{"input":{"n":2147483647,"x":0.999999999},"expected":0.11677764864980435,"note":"fraction near one"}
+{"input":{"n":-2147483648,"x":0.999999999},"expected":8.563284397535678,"note":"inverse near one"}
+{"input":{"n":2,"x":99},"expected":9801.0,"note":"large base within answer bound"}
+{"input":{"n":2,"x":-99},"expected":9801.0,"note":"large negative base"}
+{"input":{"n":-2,"x":99},"expected":0.0001020304050607081,"note":"small reciprocal result"}
+{"input":{"n":2,"x":0.01},"expected":0.0001,"note":"small base"}
+{"input":{"n":-2,"x":0.01},"expected":10000.0,"note":"large reciprocal result"}
+{"input":{"n":-31,"x":2},"expected":4.656612873077393e-10,"note":"small power of two"}
+{"input":{"n":-2147483648,"x":2},"expected":0.0,"note":"underflow tends to zero"}
+{"input":{"n":-100,"x":10},"expected":1.0000000000000108e-100,"note":"tiny answer"}
+{"input":{"n":-101,"x":-10},"expected":-1.0000000000000108e-101,"note":"tiny negative answer"}
+{"input":{"n":12,"x":1.5},"expected":129.746337890625,"note":"fractional positive exponent"}
+{"input":{"n":-12,"x":1.5},"expected":0.007707346629258938,"note":"fractional negative exponent"}
+{"input":{"n":-4,"x":0.1},"expected":10000.0,"note":"rounding in reciprocal"}
