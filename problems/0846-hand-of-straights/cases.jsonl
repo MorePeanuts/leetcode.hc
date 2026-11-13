@@ -1,0 +1,33 @@
+{"input":{"groupSize":3,"hand":[1,2,3,6,2,3,4,7,8]},"expected":true,"example":true}
+{"input":{"groupSize":4,"hand":[1,2,3,4,5]},"expected":false,"example":true}
+{"input":{"groupSize":1,"hand":[0]},"expected":true,"note":"single zero"}
+{"input":{"groupSize":1,"hand":[1000000000]},"expected":true,"note":"single maximum"}
+{"input":{"groupSize":1,"hand":[5,5,0,1000000000]},"expected":true,"note":"all singles"}
+{"input":{"groupSize":3,"hand":[3,1,2]},"expected":true,"note":"one straight"}
+{"input":{"groupSize":3,"hand":[1,2,4]},"expected":false,"note":"gap in straight"}
+{"input":{"groupSize":3,"hand":[1,1,2]},"expected":false,"note":"duplicates cannot be one straight"}
+{"input":{"groupSize":3,"hand":[1,2,3,1,2,3]},"expected":true,"note":"two identical straights"}
+{"input":{"groupSize":3,"hand":[1,2,2,3,3,4]},"expected":true,"note":"overlapping groups"}
+{"input":{"groupSize":3,"hand":[1,1,2,2,2,3]},"expected":false,"note":"unequal duplicate counts"}
+{"input":{"groupSize":2,"hand":[1,2,10,11]},"expected":true,"note":"disjoint groups"}
+{"input":{"groupSize":4,"hand":[0,1,2,3]},"expected":true,"note":"zero based straight"}
+{"input":{"groupSize":3,"hand":[999999998,999999999,1000000000]},"expected":true,"note":"upper boundary straight"}
+{"input":{"groupSize":2,"hand":[1,2,3]},"expected":false,"note":"not divisible"}
+{"input":{"groupSize":2,"hand":[1,1,2,2]},"expected":true,"note":"equal pairs not consecutive"}
+{"input":{"groupSize":2,"hand":[7,7,7,7]},"expected":false,"note":"all equal cannot pair"}
+{"input":{"groupSize":3,"hand":[1,2,4,5,6,7]},"expected":false,"note":"separated missing card"}
+{"input":{"groupSize":3,"hand":[1,2,3,4,5,6]},"expected":true,"note":"multiple starting runs"}
+{"input":{"groupSize":2,"hand":[6,5,4,3,2,1]},"expected":true,"note":"reverse input"}
+{"input":{"groupSize":4,"hand":[1,2,3,4,1,2,3,4]},"expected":true,"note":"long group with duplicates"}
+{"input":{"groupSize":3,"hand":[1,1,2,3,3,4]},"expected":false,"note":"insufficient middle multiplicity"}
+{"input":{"groupSize":2,"hand":[1,3,4,5]},"expected":false,"note":"missing first neighbor"}
+{"input":{"groupSize":3,"hand":[1,2,3,4,5,7]},"expected":false,"note":"last incomplete group"}
+{"input":{"groupSize":3,"hand":[0,0,0,1,1,1,2,2,2]},"expected":true,"note":"multiplicity consumed in batches"}
+{"input":{"groupSize":4,"hand":[2,1,3,2,4,3,5,4]},"expected":true,"note":"must use smallest remaining"}
+{"input":{"groupSize":2,"hand":[0,1,999999999,1000000000]},"expected":true,"note":"large gap groups"}
+{"input":{"groupSize":5,"hand":[5,1,4,2,3]},"expected":true,"note":"whole hand one group"}
+{"input":{"groupSize":1,"hand":[9,9,9]},"expected":true,"note":"same value repeated singles"}
+{"input":{"groupSize":4,"hand":[1,2,3,7,8,9,10,11]},"expected":false,"note":"two runs uneven lengths"}
+{"generate":{"name":"consecutive","args":{"group_size":10,"n":10000},"seed":42},"digest":"sha256:7c625aa226cfd2b749fdb13d61bd218aa6d2f70386db0c4f1c63d3d9fbe6f8d0","note":"Maximum distinct cards in shuffled groups"}
+{"generate":{"name":"repeated","args":{"group_size":100,"n":10000},"seed":42},"digest":"sha256:ed751c118966b97dc0af4f2397f91fe51f504d47ad2d132562cba759bab0bb60","note":"Maximum repeated groups require all multiplicities"}
+{"generate":{"name":"late_gap","args":{"group_size":10,"n":10000},"seed":42},"digest":"sha256:f71d479dcfafa7281df86dc1689bf5dd6ea863701380d4431da58898eac72995","note":"Maximum input with one missing card near the end"}
