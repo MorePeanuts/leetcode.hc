@@ -70,6 +70,7 @@ groups:
       - generate-parentheses
       - valid-parenthesis-string
       - reconstruct-itinerary
+      - flatten-nested-list-iterator
   - name: binary-search
     title: Binary Search
     problems:
@@ -300,6 +301,7 @@ groups:
       - design-linked-list
       - time-based-key-value-store
       - detect-squares
+      - flatten-nested-list-iterator
   - name: divide-and-conquer
     title: Divide & Conquer
     problems:
