@@ -1,0 +1,26 @@
+id: "1658"
+slug: minimum-operations-to-reduce-x-to-zero
+title: Minimum Operations to Reduce X to Zero
+titles:
+  zh-CN: 将 x 减到 0 的最小操作数
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - binary-search
+  - prefix-sum
+  - sliding-window
+kind: function
+function:
+  name: minOperations
+  params:
+    - name: nums
+      type: integer[]
+    - name: x
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/
+judge:
+  compare: exact
