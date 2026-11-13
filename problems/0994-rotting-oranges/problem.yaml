@@ -1,0 +1,22 @@
+id: "994"
+slug: rotting-oranges
+title: Rotting Oranges
+titles:
+  zh-CN: 腐烂的橘子
+difficulty: medium
+tags:
+  - breadth-first-search
+  - array
+  - matrix
+kind: function
+function:
+  name: orangesRotting
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/rotting-oranges/
+judge:
+  compare: exact

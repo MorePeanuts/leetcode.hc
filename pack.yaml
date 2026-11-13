@@ -132,6 +132,7 @@ groups:
       - course-schedule
       - max-area-of-island
       - clone-graph
+      - rotting-oranges
   - name: advanced-graphs
     title: Advanced Graphs
   - name: 1d-dynamic-programming
