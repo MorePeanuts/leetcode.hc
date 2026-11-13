@@ -1,0 +1,34 @@
+{"input":{"intervals":[[1,2],[2,3],[3,4],[1,3]]},"expected":1,"example":true}
+{"input":{"intervals":[[1,2],[1,2],[1,2]]},"expected":2,"example":true}
+{"input":{"intervals":[[1,2],[2,3]]},"expected":0,"example":true}
+{"input":{"intervals":[[0,1]]},"expected":0,"note":"single interval"}
+{"input":{"intervals":[[-50000,50000]]},"expected":0,"note":"full signed range"}
+{"input":{"intervals":[[0,1],[1,2]]},"expected":0,"note":"touching allowed"}
+{"input":{"intervals":[[0,2],[1,3]]},"expected":1,"note":"one overlap"}
+{"input":{"intervals":[[0,2],[0,2]]},"expected":1,"note":"duplicates"}
+{"input":{"intervals":[[0,10],[1,2],[2,3],[3,4]]},"expected":1,"note":"discard long earliest-start interval"}
+{"input":{"intervals":[[1,2],[2,3],[0,10]]},"expected":1,"note":"unsorted long interval last"}
+{"input":{"intervals":[[1,5],[2,3],[3,4]]},"expected":1,"note":"nested short intervals win"}
+{"input":{"intervals":[[0,4],[1,4],[3,4]]},"expected":2,"note":"same finish"}
+{"input":{"intervals":[[0,1],[0,3],[0,5]]},"expected":2,"note":"same start"}
+{"input":{"intervals":[[-5,-4],[-4,-3],[-3,-2]]},"expected":0,"note":"negative touching chain"}
+{"input":{"intervals":[[-3,0],[0,3],[-1,1]]},"expected":1,"note":"cross-zero overlap"}
+{"input":{"intervals":[[3,4],[2,3],[1,2]]},"expected":0,"note":"reverse touching chain"}
+{"input":{"intervals":[[1,2],[4,5],[7,8]]},"expected":0,"note":"separated intervals"}
+{"input":{"intervals":[[1,10],[2,9],[3,8],[4,7]]},"expected":3,"note":"all nested"}
+{"input":{"intervals":[[0,3],[2,5],[4,7],[6,9]]},"expected":2,"note":"alternating compatible intervals"}
+{"input":{"intervals":[[0,2],[1,3],[2,4],[3,5]]},"expected":2,"note":"equal length chain"}
+{"input":{"intervals":[[0,3],[3,6],[1,2],[2,4],[4,5]]},"expected":2,"note":"multiple optimal subsets"}
+{"input":{"intervals":[[-50000,-49999],[49999,50000]]},"expected":0,"note":"both coordinate extremes"}
+{"input":{"intervals":[[0,1],[0,1],[0,1],[0,1],[0,1],[0,1]]},"expected":5,"note":"many duplicates"}
+{"input":{"intervals":[[0,2],[2,4],[0,4]]},"expected":1,"note":"remove enclosing interval"}
+{"input":{"intervals":[[5,8],[1,3],[3,5],[2,7]]},"expected":1,"note":"shuffled touching chain"}
+{"input":{"intervals":[[0,10],[1,2],[3,4],[5,6],[7,8],[9,10]]},"expected":1,"note":"many shorts defeat first interval"}
+{"input":{"intervals":[[0,2],[1,2],[2,3],[2,4]]},"expected":2,"note":"finish ties followed by start ties"}
+{"input":{"intervals":[[-4,-1],[-2,2],[1,4]]},"expected":1,"note":"transitive overlap not same cluster"}
+{"input":{"intervals":[[1,6],[2,5],[5,7],[6,8]]},"expected":2,"note":"choice among nested endpoints"}
+{"input":{"intervals":[[-2,-1],[-1,0],[0,1],[1,2],[-2,2]]},"expected":1,"note":"signed touching chain and envelope"}
+{"generate":{"name":"chain","args":{"mode":"sorted","n":100000},"seed":43},"digest":"sha256:45a2fbabd3309b1a272a514eab6860085c140947a2047f9abab934386f049a46","note":"Maximum chain sorted"}
+{"generate":{"name":"chain","args":{"mode":"reverse","n":100000},"seed":43},"digest":"sha256:321b86234c5c96370772403683fc0806615aefb9a917178969dbe0425d5ea0f9","note":"Maximum chain reverse"}
+{"generate":{"name":"chain","args":{"mode":"shuffle","n":100000},"seed":43},"digest":"sha256:4c797fce1001b1f66dad1aa5255ef5e37ba5e6a88eb5bbe917cb0512c1dd1fbd","note":"Maximum chain shuffle"}
+{"generate":{"name":"nested","args":{"n":100000},"seed":43},"digest":"sha256:e9868c2d288c5df89e5896ea9fa43b95bbc9d64537dbb0b937110542355c4f75","note":"Maximum nested intervals with repeated endpoints"}

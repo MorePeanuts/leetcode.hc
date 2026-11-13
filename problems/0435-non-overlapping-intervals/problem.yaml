@@ -1,0 +1,23 @@
+id: "435"
+slug: non-overlapping-intervals
+title: Non-overlapping Intervals
+titles:
+  zh-CN: 无重叠区间
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - dynamic-programming
+  - sorting
+kind: function
+function:
+  name: eraseOverlapIntervals
+  params:
+    - name: intervals
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/non-overlapping-intervals/
+judge:
+  compare: exact

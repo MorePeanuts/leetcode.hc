@@ -191,6 +191,7 @@ groups:
       - coin-change
       - longest-increasing-subsequence
       - palindrome-partitioning
+      - non-overlapping-intervals
       - climbing-stairs
       - min-cost-climbing-stairs
       - house-robber
@@ -233,11 +234,13 @@ groups:
       - valid-parenthesis-string
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
+      - non-overlapping-intervals
   - name: intervals
     title: Intervals
     problems:
       - merge-intervals
       - insert-interval
+      - non-overlapping-intervals
   - name: bit-manipulation
     title: Bit Manipulation
     problems:
