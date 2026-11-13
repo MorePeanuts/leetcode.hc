@@ -1,0 +1,33 @@
+{"input":{"nums":[1,7,3,6,5,6]},"expected":3,"example":true}
+{"input":{"nums":[1,2,3]},"expected":-1,"example":true}
+{"input":{"nums":[2,1,-1]},"expected":0,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"Zero singleton"}
+{"input":{"nums":[1000]},"expected":0,"note":"Positive singleton"}
+{"input":{"nums":[-1000]},"expected":0,"note":"Negative singleton"}
+{"input":{"nums":[0,0]},"expected":0,"note":"Choose leftmost of multiple pivots"}
+{"input":{"nums":[1,0]},"expected":0,"note":"First index pivot"}
+{"input":{"nums":[0,1]},"expected":1,"note":"Last index pivot"}
+{"input":{"nums":[1,1]},"expected":-1,"note":"No pivot in even equal array"}
+{"input":{"nums":[-1,-1,-1]},"expected":1,"note":"Negative values"}
+{"input":{"nums":[0,0,0,0]},"expected":0,"note":"All indices qualify; choose first"}
+{"input":{"nums":[2,-2,0]},"expected":2,"note":"Cancellation makes the last index a pivot"}
+{"input":{"nums":[1,2,3]},"expected":-1,"note":"No pivot"}
+{"input":{"nums":[1,2,1]},"expected":1,"note":"Central pivot"}
+{"input":{"nums":[-1,-1,0,1,1,0]},"expected":5,"note":"Signed values with end pivot"}
+{"input":{"nums":[1000,-1000,1000,-1000,0]},"expected":4,"note":"Boundary magnitudes cancel"}
+{"input":{"nums":[3,1,2,3]},"expected":-1,"note":"Asymmetric no-pivot layout"}
+{"input":{"nums":[0,1,-1]},"expected":0,"note":"Zero prefix and suffix"}
+{"input":{"nums":[-5,-4,5,-1,-2,1,0,-4,-2,5]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[1,-1,0,1,-1,4,3,0,2,0,2,-5,1,-2,-4,5,-2,4,2]},"expected":16,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[2,-5,0,3,4]},"expected":4,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-3,-4,-4,1,1,3,-3,-5,-1,-5,1,0,-1,-3,-4]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-1,-3,5,3,-1,3,-5]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-1,-4,2,-2,5,5,0]},"expected":5,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-2,-4,-5,-1,4,-1,-3,-1,4,2,-4,2,0,5,2,1,2,-1,4,1]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-2,2,-1,5,-3]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-5,-2,-3]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-2,-2]},"expected":-1,"note":"Deterministic signed values and lengths"}
+{"input":{"nums":[-2,-3,2,2,-1,-2]},"expected":3,"note":"Deterministic signed values and lengths"}
+{"generate":{"name":"equal","args":{"n":10000,"value":1},"seed":7},"digest":"sha256:fd5f8888fa46a5a07c8823e70635a57883bbb064aae773d42287a87d85ce6ca8","note":"Maximum length; even equal positive array has no pivot"}
+{"generate":{"name":"equal","args":{"n":10000,"value":-1000},"seed":7},"digest":"sha256:615412e3452ed3fd866e41690487a5f65ac56b970c8c83750395e51624685ff5","note":"Maximum length; negative values with no pivot"}
+{"generate":{"name":"equal","args":{"n":10000,"value":1000},"seed":7},"digest":"sha256:2457ed780b432d1df65e51099d00e11b247123cfe31ef828fa5563f7b4986487","note":"Maximum magnitude and length with no early return"}
