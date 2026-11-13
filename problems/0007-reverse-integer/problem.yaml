@@ -1,0 +1,20 @@
+id: "7"
+slug: reverse-integer
+title: Reverse Integer
+titles:
+  zh-CN: 整数反转
+difficulty: medium
+tags:
+  - math
+kind: function
+function:
+  name: reverse
+  params:
+    - name: x
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-integer/
+judge:
+  compare: exact
