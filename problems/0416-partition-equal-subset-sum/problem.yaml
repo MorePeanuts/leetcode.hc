@@ -1,0 +1,23 @@
+id: "416"
+slug: partition-equal-subset-sum
+title: Partition Equal Subset Sum
+titles:
+  zh-CN: 分割等和子集
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+  - knapsack-problem
+  - 0-1-knapsack
+kind: function
+function:
+  name: canPartition
+  params:
+    - name: nums
+      type: integer[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/partition-equal-subset-sum/
+judge:
+  compare: exact
