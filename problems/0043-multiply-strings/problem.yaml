@@ -1,0 +1,24 @@
+id: "43"
+slug: multiply-strings
+title: Multiply Strings
+titles:
+  zh-CN: 字符串相乘
+difficulty: medium
+tags:
+  - math
+  - string
+  - simulation
+kind: function
+function:
+  name: multiply
+  params:
+    - name: num1
+      type: string
+    - name: num2
+      type: string
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/multiply-strings/
+judge:
+  compare: exact

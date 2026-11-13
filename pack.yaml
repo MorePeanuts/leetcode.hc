@@ -215,3 +215,4 @@ groups:
       - happy-number
       - plus-one
       - powx-n
+      - multiply-strings
