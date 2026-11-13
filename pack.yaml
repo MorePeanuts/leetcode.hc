@@ -277,3 +277,31 @@ groups:
       - missing-number
       - sum-of-two-integers
       - reverse-integer
+  - name: queue
+    title: Queue
+    problems:
+      - sliding-window-maximum
+  - name: design
+    title: Data Structure Design
+    problems:
+      - lru-cache
+      - min-stack
+      - implement-trie-prefix-tree
+      - design-add-and-search-words-data-structure
+      - find-median-from-data-stream
+      - serialize-and-deserialize-binary-tree
+      - design-twitter
+      - lfu-cache
+      - kth-largest-element-in-a-stream
+      - design-linked-list
+      - time-based-key-value-store
+      - detect-squares
+  - name: divide-and-conquer
+    title: Divide & Conquer
+    problems:
+      - merge-k-sorted-lists
+      - construct-binary-tree-from-preorder-and-inorder-traversal
+      - sort-an-array
+  - name: randomized
+    title: Randomized Algorithms
+    problems: []
