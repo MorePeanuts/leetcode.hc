@@ -1,0 +1,23 @@
+id: "39"
+slug: combination-sum
+title: Combination Sum
+titles:
+  zh-CN: 组合总和
+difficulty: medium
+tags:
+  - array
+  - backtracking
+kind: function
+function:
+  name: combinationSum
+  params:
+    - name: candidates
+      type: integer[]
+    - name: target
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/combination-sum/
+judge:
+  compare: unordered_deep

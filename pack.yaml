@@ -124,6 +124,7 @@ groups:
     problems:
       - target-sum
       - subsets
+      - combination-sum
   - name: tries
     title: Tries
     problems:
