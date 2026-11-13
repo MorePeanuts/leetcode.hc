@@ -1,0 +1,25 @@
+id: "785"
+slug: is-graph-bipartite
+title: Is Graph Bipartite?
+titles:
+  zh-CN: 判断二分图
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - graph
+  - graph-coloring
+  - bipartite-graph
+kind: function
+function:
+  name: isBipartite
+  params:
+    - name: graph
+      type: integer[][]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/is-graph-bipartite/
+judge:
+  compare: exact

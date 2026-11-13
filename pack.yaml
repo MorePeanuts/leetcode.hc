@@ -225,6 +225,7 @@ groups:
       - min-cost-to-connect-all-points
       - swim-in-rising-water
       - cheapest-flights-within-k-stops
+      - is-graph-bipartite
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
