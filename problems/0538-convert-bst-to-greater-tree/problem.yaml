@@ -1,0 +1,23 @@
+id: "538"
+slug: convert-bst-to-greater-tree
+title: Convert BST to Greater Tree
+titles:
+  zh-CN: 把二叉搜索树转换为累加树
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - binary-search-tree
+  - binary-tree
+kind: function
+function:
+  name: convertBST
+  params:
+    - name: root
+      type: TreeNode
+  returns: TreeNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/convert-bst-to-greater-tree/
+judge:
+  compare: exact
