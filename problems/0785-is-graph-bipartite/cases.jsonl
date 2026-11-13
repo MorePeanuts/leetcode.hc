@@ -1,0 +1,34 @@
+{"input":{"graph":[[1,2,3],[0,2],[0,1,3],[0,2]]},"expected":false,"example":true}
+{"input":{"graph":[[1,3],[0,2],[1,3],[0,2]]},"expected":true,"example":true}
+{"input":{"graph":[[]]},"expected":true,"note":"One isolated vertex"}
+{"input":{"graph":[[],[]]},"expected":true,"note":"Two isolated vertices"}
+{"input":{"graph":[[1],[0]]},"expected":true,"note":"Single edge"}
+{"input":{"graph":[[1,2],[0,2],[1,0]]},"expected":false,"note":"3-cycle: odd versus even parity"}
+{"input":{"graph":[[1,3],[0,2],[1,3],[2,0]]},"expected":true,"note":"4-cycle: odd versus even parity"}
+{"input":{"graph":[[1,4],[0,2],[1,3],[2,4],[3,0]]},"expected":false,"note":"5-cycle: odd versus even parity"}
+{"input":{"graph":[[1,5],[0,2],[1,3],[2,4],[3,5],[4,0]]},"expected":true,"note":"6-cycle: odd versus even parity"}
+{"input":{"graph":[[1,6],[0,2],[1,3],[2,4],[3,5],[4,6],[5,0]]},"expected":false,"note":"7-cycle: odd versus even parity"}
+{"input":{"graph":[[1,7],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6,0]]},"expected":true,"note":"8-cycle: odd versus even parity"}
+{"input":{"graph":[[1,8],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6,8],[7,0]]},"expected":false,"note":"9-cycle: odd versus even parity"}
+{"input":{"graph":[[],[],[3,4],[2,4],[3,2],[]]},"expected":false,"note":"Odd component after isolated vertex zero"}
+{"input":{"graph":[[1],[0,2],[1],[],[5],[4,6],[5,7],[6]]},"expected":true,"note":"Multiple tree components and isolated vertex"}
+{"input":{"graph":[[1,2,3,4,5],[0],[0],[0],[0],[0]]},"expected":true,"note":"High degree star remains bipartite"}
+{"input":{"graph":[[2,3],[2,3],[0,1],[0,1]]},"expected":true,"note":"Labels need not alternate between partitions"}
+{"input":{"graph":[[1,3,2],[0,2],[1,3,0],[2,0]]},"expected":false,"note":"Even cycle with odd-cycle chord"}
+{"input":{"graph":[[],[],[]]},"expected":true,"note":"Seeded small graph 1: disconnected and cyclic shapes"}
+{"input":{"graph":[[1],[0]]},"expected":true,"note":"Seeded small graph 2: disconnected and cyclic shapes"}
+{"input":{"graph":[[1,2,3,6,7],[0,2],[0,1],[0,4],[3,5],[4],[0],[0]]},"expected":false,"note":"Seeded small graph 3: disconnected and cyclic shapes"}
+{"input":{"graph":[[5],[4,5],[4],[],[1,2],[0,1]]},"expected":true,"note":"Seeded small graph 4: disconnected and cyclic shapes"}
+{"input":{"graph":[[2,5,6,7],[3,5,6,8],[0,7],[1,5,6,7,8],[7],[0,1,3,6],[0,1,3,5,7,8],[0,2,3,4,6,8],[1,3,6,7]]},"expected":false,"note":"Seeded small graph 5: disconnected and cyclic shapes"}
+{"input":{"graph":[[],[3,5],[],[1,4],[3],[1]]},"expected":true,"note":"Seeded small graph 6: disconnected and cyclic shapes"}
+{"input":{"graph":[[],[2],[1],[],[]]},"expected":true,"note":"Seeded small graph 7: disconnected and cyclic shapes"}
+{"input":{"graph":[[],[3],[3],[1,2]]},"expected":true,"note":"Seeded small graph 8: disconnected and cyclic shapes"}
+{"input":{"graph":[[],[]]},"expected":true,"note":"Seeded small graph 9: disconnected and cyclic shapes"}
+{"input":{"graph":[[3,4,6],[2,4,6],[1],[0,5],[0,1,5,6],[3,4,6],[0,1,4,5]]},"expected":false,"note":"Seeded small graph 10: disconnected and cyclic shapes"}
+{"input":{"graph":[[2,5],[4,5],[0,4],[5],[1,2],[0,1,3]]},"expected":false,"note":"Seeded small graph 11: disconnected and cyclic shapes"}
+{"input":{"graph":[[1,2,6],[0,3],[0,3,4,5,6],[1,2,4,7,8],[2,3,5],[2,4,8],[0,2,7],[3,6,8],[3,5,7]]},"expected":false,"note":"Seeded small graph 12: disconnected and cyclic shapes"}
+{"input":{"graph":[[],[3],[],[1]]},"expected":true,"note":"Seeded small graph 13: disconnected and cyclic shapes"}
+{"generate":{"name":"complete_bipartite","args":{"n":100},"seed":785},"digest":"sha256:7c935a4452742ef68628a5b860a5dfd233b720a265e375fe4fad7f08a00342ff","note":"Maximum dense bipartite graph"}
+{"generate":{"name":"cycle","args":{"n":99},"seed":785},"digest":"sha256:08f15abeb1b098d8865b18f9d8560c02d7b24fe974c12f2ecb8d69db6a95f151","note":"Maximum odd cycle"}
+{"generate":{"name":"cycle","args":{"n":100},"seed":785},"digest":"sha256:1fc935bb7f30bfa0b8964d996c5bc7cccf57c7fdfca1030300935552de1550b4","note":"Maximum even cycle"}
+{"generate":{"name":"isolated","args":{"n":100},"seed":785},"digest":"sha256:cb8510e8de2ee3a0c15af03c7c7667aeb3a8b9b0a1abc2bb375fa997c9bed87b","note":"Maximum isolated vertices"}
