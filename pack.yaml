@@ -125,6 +125,7 @@ groups:
       - target-sum
       - subsets
       - combination-sum
+      - combination-sum-ii
   - name: tries
     title: Tries
     problems:
