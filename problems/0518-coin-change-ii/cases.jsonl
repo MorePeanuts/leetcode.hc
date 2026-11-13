@@ -1,0 +1,33 @@
+{"input":{"amount":5,"coins":[1,2,5]},"expected":4,"example":true}
+{"input":{"amount":3,"coins":[2]},"expected":0,"example":true}
+{"input":{"amount":10,"coins":[10]},"expected":1,"example":true}
+{"input":{"amount":0,"coins":[1]},"expected":1,"note":"empty combination"}
+{"input":{"amount":0,"coins":[5000]},"expected":1,"note":"empty combination with large coin"}
+{"input":{"amount":1,"coins":[1]},"expected":1,"note":"one exact coin"}
+{"input":{"amount":1,"coins":[2]},"expected":0,"note":"unreachable small amount"}
+{"input":{"amount":2,"coins":[1]},"expected":1,"note":"reuse a coin"}
+{"input":{"amount":3,"coins":[1,2]},"expected":2,"note":"combinations not permutations"}
+{"input":{"amount":4,"coins":[1,2,3]},"expected":4,"note":"several coin counts"}
+{"input":{"amount":5,"coins":[5]},"expected":1,"note":"exact denomination"}
+{"input":{"amount":5,"coins":[2]},"expected":0,"note":"parity impossible"}
+{"input":{"amount":6,"coins":[2,3]},"expected":2,"note":"different combination sizes"}
+{"input":{"amount":10,"coins":[10,5,1]},"expected":4,"note":"unsorted denominations"}
+{"input":{"amount":7,"coins":[2,3]},"expected":1,"note":"coprime denominations"}
+{"input":{"amount":8,"coins":[2,4,6]},"expected":4,"note":"common divisor"}
+{"input":{"amount":9,"coins":[2,4,6]},"expected":0,"note":"common divisor impossible"}
+{"input":{"amount":12,"coins":[3,4]},"expected":2,"note":"multiple lcm representations"}
+{"input":{"amount":11,"coins":[1,5,7]},"expected":4,"note":"greedy does not count all"}
+{"input":{"amount":10,"coins":[1,2,5]},"expected":10,"note":"standard denominations"}
+{"input":{"amount":15,"coins":[5,3,1]},"expected":13,"note":"reverse ordered"}
+{"input":{"amount":20,"coins":[2,5,10]},"expected":6,"note":"repeated denominations allowed in result"}
+{"input":{"amount":17,"coins":[17,18,19]},"expected":1,"note":"larger coins ignored"}
+{"input":{"amount":25,"coins":[1,5,10,25]},"expected":13,"note":"quarter denominations"}
+{"input":{"amount":30,"coins":[4,6,9]},"expected":5,"note":"different residue classes"}
+{"input":{"amount":50,"coins":[1,2,5,10]},"expected":341,"note":"many combinations"}
+{"input":{"amount":100,"coins":[1,5,10,25]},"expected":242,"note":"moderate answer"}
+{"input":{"amount":13,"coins":[4,6]},"expected":0,"note":"unreachable odd sum"}
+{"input":{"amount":99,"coins":[99]},"expected":1,"note":"single exact large coin"}
+{"input":{"amount":30,"coins":[1,3,4]},"expected":48,"note":"loop-direction trap"}
+{"input":{"amount":5000,"coins":[100,200,500,1000,2000,2500]},"expected":519,"note":"maximum amount with bounded answer"}
+{"input":{"amount":500,"coins":[1,2,5,10,20,50,100,200,500]},"expected":6295435,"note":"many overlapping subproblems with a 32-bit answer"}
+{"generate":{"name":"large_denominations","args":{"n":5000},"seed":41},"digest":"sha256:3987482bfd10136ea9a2a18b44164c3b157770ca77e501cae7a6d30b05faad17","note":"maximum coin count with no representation"}
