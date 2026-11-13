@@ -1,0 +1,25 @@
+id: "402"
+slug: remove-k-digits
+title: Remove K Digits
+titles:
+  zh-CN: 移掉 K 位数字
+difficulty: medium
+tags:
+  - stack
+  - greedy
+  - string
+  - monotonic-stack
+kind: function
+function:
+  name: removeKdigits
+  params:
+    - name: num
+      type: string
+    - name: k
+      type: integer
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/remove-k-digits/
+judge:
+  compare: exact

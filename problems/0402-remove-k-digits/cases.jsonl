@@ -1,0 +1,34 @@
+{"input":{"k":3,"num":"1432219"},"expected":"1219","example":true}
+{"input":{"k":1,"num":"10200"},"expected":"200","example":true}
+{"input":{"k":2,"num":"10"},"expected":"0","example":true}
+{"input":{"k":1,"num":"0"},"expected":"0","note":"Remove 1 digits from 0: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"1"},"expected":"0","note":"Remove 1 digits from 1: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"9"},"expected":"0","note":"Remove 1 digits from 9: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"10"},"expected":"0","note":"Remove 1 digits from 10: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"11"},"expected":"1","note":"Remove 1 digits from 11: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"12"},"expected":"1","note":"Remove 1 digits from 12: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"21"},"expected":"1","note":"Remove 1 digits from 21: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"112"},"expected":"11","note":"Remove 1 digits from 112: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"1112"},"expected":"111","note":"Remove 1 digits from 1112: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"123456"},"expected":"123","note":"Remove 3 digits from 123456: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"654321"},"expected":"321","note":"Remove 3 digits from 654321: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"111111"},"expected":"111","note":"Remove 3 digits from 111111: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"1000"},"expected":"0","note":"Remove 1 digits from 1000: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"1000"},"expected":"0","note":"Remove 3 digits from 1000: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":4,"num":"1000"},"expected":"0","note":"Remove 4 digits from 1000: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"1001"},"expected":"1","note":"Remove 1 digits from 1001: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":2,"num":"1001"},"expected":"0","note":"Remove 2 digits from 1001: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"1001"},"expected":"0","note":"Remove 3 digits from 1001: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":2,"num":"102030"},"expected":"30","note":"Remove 2 digits from 102030: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"1200"},"expected":"100","note":"Remove 1 digits from 1200: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":2,"num":"1200"},"expected":"0","note":"Remove 2 digits from 1200: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":2,"num":"100200300"},"expected":"300","note":"Remove 2 digits from 100200300: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":5,"num":"9876543210"},"expected":"43210","note":"Remove 5 digits from 9876543210: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":9,"num":"1234567890"},"expected":"0","note":"Remove 9 digits from 1234567890: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":2,"num":"222221"},"expected":"2221","note":"Remove 2 digits from 222221: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":3,"num":"212121"},"expected":"111","note":"Remove 3 digits from 212121: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":4,"num":"765028321"},"expected":"2321","note":"Remove 4 digits from 765028321: equal digits, endpoint deletion, or zero normalization"}
+{"input":{"k":1,"num":"10000000000000000001"},"expected":"1","note":"Remove 1 digits from 10000000000000000001: equal digits, endpoint deletion, or zero normalization"}
+{"generate":{"name":"equal_digits","args":{"digit":"1","k":50000,"n":100000},"seed":7},"digest":"sha256:56b1e81d5f208634cd6af09255c747f78f443557cdcab3c7631dfa75a29f39e1","note":"Maximum equal digits: repeated first-descent rescanning is quadratic"}
+{"generate":{"name":"plateaus","args":{"k":50000,"n":100000},"seed":7},"digest":"sha256:a89f0510abfa79d56de14a6550465f5174d682fef4a1076271866ea8268d6ae6","note":"Maximum nondecreasing plateaus require suffix removals"}
+{"generate":{"name":"leading_zero_result","args":{"n":100000},"seed":7},"digest":"sha256:d9654d6e48818be9ff2dd9e0e75ff0bb186753614395102f10c237a3041f3a5a","note":"Maximum result consisting only of zeros must normalize without integer conversion"}
