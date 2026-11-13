@@ -29,6 +29,7 @@ groups:
       - subsets
       - permutations
       - subsets-ii
+      - word-search
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -132,6 +133,7 @@ groups:
       - permutations
       - subsets-ii
       - generate-parentheses
+      - word-search
   - name: tries
     title: Tries
     problems:
