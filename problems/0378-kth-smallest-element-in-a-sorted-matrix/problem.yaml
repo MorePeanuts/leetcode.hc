@@ -1,0 +1,26 @@
+id: "378"
+slug: kth-smallest-element-in-a-sorted-matrix
+title: Kth Smallest Element in a Sorted Matrix
+titles:
+  zh-CN: 有序矩阵中第 K 小的元素
+difficulty: medium
+tags:
+  - array
+  - binary-search
+  - matrix
+  - sorting
+  - heap-priority-queue
+kind: function
+function:
+  name: kthSmallest
+  params:
+    - name: matrix
+      type: integer[][]
+    - name: k
+      type: integer
+  returns: integer
+judge:
+  compare: exact
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/

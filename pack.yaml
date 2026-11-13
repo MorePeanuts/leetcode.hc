@@ -24,6 +24,7 @@ groups:
       - subarray-sum-equals-k
       - sort-an-array
       - find-k-pairs-with-smallest-sums
+      - kth-smallest-element-in-a-sorted-matrix
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -63,6 +64,7 @@ groups:
       - search-in-rotated-sorted-array
       - time-based-key-value-store
       - median-of-two-sorted-arrays
+      - kth-smallest-element-in-a-sorted-matrix
   - name: linked-list
     title: Linked List
     problems:
@@ -114,6 +116,7 @@ groups:
       - find-median-from-data-stream
       - sort-an-array
       - find-k-pairs-with-smallest-sums
+      - kth-smallest-element-in-a-sorted-matrix
   - name: backtracking
     title: Backtracking
   - name: tries
