@@ -1,0 +1,26 @@
+id: "79"
+slug: word-search
+title: Word Search
+titles:
+  zh-CN: 单词搜索
+difficulty: medium
+tags:
+  - depth-first-search
+  - array
+  - string
+  - backtracking
+  - matrix
+kind: function
+function:
+  name: exist
+  params:
+    - name: board
+      type: character[][]
+    - name: word
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/word-search/
+judge:
+  compare: exact

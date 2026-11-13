@@ -1,0 +1,34 @@
+{"input":{"board":[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"word":"ABCCED"},"expected":true,"example":true}
+{"input":{"board":[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"word":"SEE"},"expected":true,"example":true}
+{"input":{"board":[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"word":"ABCB"},"expected":false,"example":true}
+{"input":{"board":[["A"]],"word":"A"},"expected":true,"note":"single matching cell"}
+{"input":{"board":[["A"]],"word":"B"},"expected":false,"note":"single absent letter"}
+{"input":{"board":[["a"]],"word":"A"},"expected":false,"note":"case-sensitive matching"}
+{"input":{"board":[["A","B"]],"word":"ABA"},"expected":false,"note":"cannot reuse start cell"}
+{"input":{"board":[["A","A"]],"word":"AAA"},"expected":false,"note":"insufficient repeated letters"}
+{"input":{"board":[["A","B"]],"word":"BA"},"expected":true,"note":"reverse horizontal direction"}
+{"input":{"board":[["A"],["B"]],"word":"BA"},"expected":true,"note":"reverse vertical direction"}
+{"input":{"board":[["A","B"],["C","D"]],"word":"AD"},"expected":false,"note":"diagonal is not adjacent"}
+{"input":{"board":[["A","B"],["C","D"]],"word":"ACDB"},"expected":true,"note":"path turns twice"}
+{"input":{"board":[["A","B"],["C","D"]],"word":"ABDC"},"expected":true,"note":"visit all cells"}
+{"input":{"board":[["A","B","C"],["D","E","F"]],"word":"FEDABC"},"expected":true,"note":"must not jump rows"}
+{"input":{"board":[["A","B","C"],["F","E","D"]],"word":"ABCDEF"},"expected":true,"note":"snake through both rows"}
+{"input":{"board":[["A","B","C"],["F","E","D"]],"word":"FEDCBA"},"expected":true,"note":"reverse snake"}
+{"input":{"board":[["A","A","A"],["A","B","A"],["A","A","A"]],"word":"AABAAAAAA"},"expected":true,"note":"backtracking around center"}
+{"input":{"board":[["A","B","C"],["A","B","C"],["A","B","C"]],"word":"CCCBA"},"expected":true,"note":"vertical then horizontal"}
+{"input":{"board":[["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]],"word":"ABCESEEEFS"},"expected":true,"note":"must undo visited marks on failed branch"}
+{"input":{"board":[["A","A","B"],["A","B","A"],["B","A","A"]],"word":"AAAA"},"expected":false,"note":"abundant letters but disconnected"}
+{"input":{"board":[["A","B","A","B"],["B","A","B","A"]],"word":"ABABABAB"},"expected":true,"note":"long alternating path"}
+{"input":{"board":[["A","A","A","A"],["A","A","A","A"]],"word":"AAAAAAAAB"},"expected":false,"note":"missing final character"}
+{"input":{"board":[["A","b","C"],["d","E","f"]],"word":"AbCfEd"},"expected":true,"note":"uppercase and lowercase mixed snake"}
+{"input":{"board":[["Z","X","Y"],["W","V","U"]],"word":"ZXYUVW"},"expected":true,"note":"distinct snake"}
+{"input":{"board":[["A","B","C","D","E","F"]],"word":"FEDCBA"},"expected":true,"note":"maximum row width"}
+{"input":{"board":[["A"],["B"],["C"],["D"],["E"],["F"]],"word":"ABCDEF"},"expected":true,"note":"maximum row height"}
+{"input":{"board":[["A","B","C"],["D","E","F"],["G","H","I"]],"word":"BEHIFC"},"expected":true,"note":"multiple direction changes"}
+{"input":{"board":[["A","B","C"],["D","E","F"],["G","H","I"]],"word":"AEI"},"expected":false,"note":"no diagonal jumps"}
+{"input":{"board":[["A","A","A"],["A","A","A"],["A","A","B"]],"word":"BAAAAAAAA"},"expected":true,"note":"rare endpoint and maximum path"}
+{"input":{"board":[["A","A","A"],["A","A","A"],["A","A","B"]],"word":"AAAAAAAAA"},"expected":false,"note":"letter multiplicity exceeds board"}
+{"input":{"board":[["A","B","C","D"],["H","G","F","E"],["I","J","K","L"],["P","O","N","M"]],"word":"ABCDEFGHIJKLMNO"},"expected":true,"note":"fifteen-letter snake"}
+{"input":{"board":[["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"]],"word":"AAAAAAAB"},"expected":false,"note":"maximum board with a bounded failed search; ordinary visited-cell DFS remains practical"}
+{"input":{"board":[["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"]],"word":"AAAAAAAAAAAAAAA"},"expected":true,"note":"maximum board and word length with valid path"}
+{"input":{"board":[["A","B","C","D","E","F"],["L","K","J","I","H","G"],["M","N","O","P","Q","R"],["X","W","V","U","T","S"],["Y","Z","a","b","c","d"],["j","i","h","g","f","e"]],"word":"ABCDEFGHIJKLMNO"},"expected":true,"note":"maximum board snake with fifteen distinct letters"}
