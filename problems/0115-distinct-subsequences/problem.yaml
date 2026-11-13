@@ -1,0 +1,23 @@
+id: "115"
+slug: distinct-subsequences
+title: Distinct Subsequences
+titles:
+  zh-CN: 不同的子序列
+difficulty: hard
+tags:
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: numDistinct
+  params:
+    - name: s
+      type: string
+    - name: t
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/distinct-subsequences/
+judge:
+  compare: exact

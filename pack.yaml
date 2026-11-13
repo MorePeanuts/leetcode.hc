@@ -161,6 +161,7 @@ groups:
       - target-sum
       - interleaving-string
       - longest-increasing-path-in-a-matrix
+      - distinct-subsequences
   - name: greedy
     title: Greedy
   - name: intervals
