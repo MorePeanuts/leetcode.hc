@@ -226,6 +226,7 @@ groups:
       - swim-in-rising-water
       - cheapest-flights-within-k-stops
       - is-graph-bipartite
+      - number-of-closed-islands
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

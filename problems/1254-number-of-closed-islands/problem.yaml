@@ -1,0 +1,24 @@
+id: "1254"
+slug: number-of-closed-islands
+title: Number of Closed Islands
+titles:
+  zh-CN: 统计封闭岛屿的数目
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - array
+  - matrix
+kind: function
+function:
+  name: closedIsland
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/number-of-closed-islands/
+judge:
+  compare: exact
