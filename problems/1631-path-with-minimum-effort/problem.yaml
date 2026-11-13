@@ -1,0 +1,27 @@
+id: "1631"
+slug: path-with-minimum-effort
+title: Path With Minimum Effort
+titles:
+  zh-CN: 最小体力消耗路径
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - array
+  - binary-search
+  - matrix
+  - dijkstra
+  - heap-priority-queue
+kind: function
+function:
+  name: minimumEffortPath
+  params:
+    - name: heights
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/path-with-minimum-effort/
+judge:
+  compare: exact
