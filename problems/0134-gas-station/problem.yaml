@@ -1,0 +1,23 @@
+id: "134"
+slug: gas-station
+title: Gas Station
+titles:
+  zh-CN: 加油站
+difficulty: medium
+tags:
+  - greedy
+  - array
+kind: function
+function:
+  name: canCompleteCircuit
+  params:
+    - name: gas
+      type: integer[]
+    - name: cost
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/gas-station/
+judge:
+  compare: exact
