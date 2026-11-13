@@ -1,0 +1,33 @@
+{"input":{"s":"abc"},"expected":3,"example":true}
+{"input":{"s":"aaa"},"expected":6,"example":true}
+{"input":{"s":"a"},"expected":1,"note":"singleton"}
+{"input":{"s":"z"},"expected":1,"note":"last alphabet letter"}
+{"input":{"s":"aa"},"expected":3,"note":"even center"}
+{"input":{"s":"ab"},"expected":2,"note":"distinct pair"}
+{"input":{"s":"aba"},"expected":4,"note":"odd center"}
+{"input":{"s":"abb"},"expected":4,"note":"suffix pair"}
+{"input":{"s":"aab"},"expected":4,"note":"prefix pair"}
+{"input":{"s":"abba"},"expected":6,"note":"nested even palindrome"}
+{"input":{"s":"abca"},"expected":4,"note":"equal endpoints do not suffice"}
+{"input":{"s":"aaaa"},"expected":10,"note":"count occurrences not distinct values"}
+{"input":{"s":"aaaaa"},"expected":15,"note":"odd repeated length"}
+{"input":{"s":"abab"},"expected":6,"note":"overlapping odd palindromes"}
+{"input":{"s":"ababa"},"expected":9,"note":"nested and overlapping palindromes"}
+{"input":{"s":"abcba"},"expected":7,"note":"larger odd palindrome"}
+{"input":{"s":"abccba"},"expected":9,"note":"larger even palindrome"}
+{"input":{"s":"aabb"},"expected":6,"note":"two separate pairs"}
+{"input":{"s":"aabbaa"},"expected":11,"note":"nested across duplicate runs"}
+{"input":{"s":"banana"},"expected":10,"note":"several overlapping centers"}
+{"input":{"s":"racecar"},"expected":10,"note":"single large palindrome"}
+{"input":{"s":"abcde"},"expected":5,"note":"all distinct"}
+{"input":{"s":"abcabc"},"expected":6,"note":"repeated letters without adjacent palindrome"}
+{"input":{"s":"zzxyzz"},"expected":8,"note":"distant equal letters"}
+{"input":{"s":"noon"},"expected":6,"note":"even whole string"}
+{"input":{"s":"level"},"expected":7,"note":"odd whole string"}
+{"input":{"s":"mississippi"},"expected":20,"note":"many local centers"}
+{"input":{"s":"abcdedcba"},"expected":13,"note":"symmetric odd string"}
+{"input":{"s":"aaabaaa"},"expected":16,"note":"asymmetric center runs"}
+{"input":{"s":"baaaab"},"expected":13,"note":"even center in repeated run"}
+{"generate":{"name":"repeated","args":{"n":1000},"seed":40},"digest":"sha256:968af06f8397ad3216f293ec90d40d4bde6888f85ad500032e41d3e66cd8c6c3","note":"maximum count and nested center expansions"}
+{"generate":{"name":"alternating","args":{"n":1000},"seed":40},"digest":"sha256:8e9348924559c938dd10d4eee925ea6711c38e7368af0ec0f1071d4cc5ee2fe8","note":"maximum odd-center overlap"}
+{"generate":{"name":"varied","args":{"n":1000},"seed":40},"digest":"sha256:36142def28af33cca287afcdce03756925d97e3dc5f72673e59d3eb394021743","note":"maximum irregular string"}
