@@ -1,0 +1,33 @@
+id: "787"
+slug: cheapest-flights-within-k-stops
+title: Cheapest Flights Within K Stops
+titles:
+  zh-CN: K 站中转内最便宜的航班
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - dynamic-programming
+  - shortest-path
+  - heap-priority-queue
+kind: function
+function:
+  name: findCheapestPrice
+  params:
+    - name: "n"
+      type: integer
+    - name: flights
+      type: integer[][]
+    - name: src
+      type: integer
+    - name: dst
+      type: integer
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/cheapest-flights-within-k-stops/
+judge:
+  compare: exact

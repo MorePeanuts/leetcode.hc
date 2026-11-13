@@ -175,6 +175,7 @@ groups:
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
       - swim-in-rising-water
+      - cheapest-flights-within-k-stops
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
@@ -182,6 +183,7 @@ groups:
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
       - swim-in-rising-water
+      - cheapest-flights-within-k-stops
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:
@@ -217,6 +219,7 @@ groups:
       - regular-expression-matching
       - palindrome-partitioning
       - valid-parenthesis-string
+      - cheapest-flights-within-k-stops
   - name: greedy
     title: Greedy
     problems:
