@@ -1,0 +1,21 @@
+id: "24"
+slug: swap-nodes-in-pairs
+title: Swap Nodes in Pairs
+titles:
+  zh-CN: 两两交换链表中的节点
+difficulty: medium
+tags:
+  - recursion
+  - linked-list
+kind: function
+function:
+  name: swapPairs
+  params:
+    - name: head
+      type: ListNode
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/swap-nodes-in-pairs/
+judge:
+  compare: exact
