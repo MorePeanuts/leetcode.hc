@@ -30,6 +30,7 @@ groups:
       - permutations
       - subsets-ii
       - word-search
+      - detect-squares
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -216,3 +217,4 @@ groups:
       - plus-one
       - powx-n
       - multiply-strings
+      - detect-squares
