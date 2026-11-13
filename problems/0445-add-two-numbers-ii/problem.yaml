@@ -1,0 +1,24 @@
+id: "445"
+slug: add-two-numbers-ii
+title: Add Two Numbers II
+titles:
+  zh-CN: 两数相加 II
+difficulty: medium
+tags:
+  - stack
+  - linked-list
+  - math
+kind: function
+function:
+  name: addTwoNumbers
+  params:
+    - name: l1
+      type: ListNode
+    - name: l2
+      type: ListNode
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/add-two-numbers-ii/
+judge:
+  compare: exact

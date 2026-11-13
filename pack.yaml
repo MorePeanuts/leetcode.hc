@@ -105,6 +105,7 @@ groups:
       - design-linked-list
       - linked-list-random-node
       - remove-duplicates-from-sorted-list-ii
+      - add-two-numbers-ii
   - name: trees
     title: Trees
     problems:
