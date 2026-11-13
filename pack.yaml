@@ -23,6 +23,7 @@ groups:
       - longest-consecutive-sequence
       - subarray-sum-equals-k
       - sort-an-array
+      - find-k-pairs-with-smallest-sums
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -112,6 +113,7 @@ groups:
       - design-twitter
       - find-median-from-data-stream
       - sort-an-array
+      - find-k-pairs-with-smallest-sums
   - name: backtracking
     title: Backtracking
   - name: tries

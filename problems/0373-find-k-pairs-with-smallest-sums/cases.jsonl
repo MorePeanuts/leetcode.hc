@@ -1,0 +1,34 @@
+{"input":{"k":3,"nums1":[1,7,11],"nums2":[2,4,6]},"expected":[[1,2],[1,4],[1,6]],"example":true}
+{"input":{"k":2,"nums1":[1,1,2],"nums2":[1,2,3]},"expected":[[1,1],[1,1]],"example":true}
+{"input":{"k":1,"nums1":[0],"nums2":[0]},"expected":[[0,0]],"note":"Single pair of zeros."}
+{"input":{"k":1,"nums1":[-1000000000],"nums2":[-1000000000]},"expected":[[-1000000000,-1000000000]],"note":"Minimum pair sum."}
+{"input":{"k":1,"nums1":[1000000000],"nums2":[1000000000]},"expected":[[1000000000,1000000000]],"note":"Maximum pair sum."}
+{"input":{"k":1,"nums1":[-1000000000],"nums2":[1000000000]},"expected":[[-1000000000,1000000000]],"note":"Opposite limits sum to zero."}
+{"input":{"k":3,"nums1":[1],"nums2":[2,3,4,5]},"expected":[[1,2],[1,3],[1,4]],"note":"Only one row; advance within it."}
+{"input":{"k":3,"nums1":[1,2,3,4],"nums2":[9]},"expected":[[1,9],[2,9],[3,9]],"note":"Only one column; merge several rows."}
+{"input":{"k":5,"nums1":[-5,-2,0],"nums2":[-4,-1,3]},"expected":[[-5,-4],[-5,-1],[-2,-4],[0,-4],[-2,-1]],"note":"Negative and mixed-sign sums."}
+{"input":{"k":2,"nums1":[1,2],"nums2":[1,2]},"expected":[[1,1],[1,2]],"note":"Tie at the kth boundary permits either cross pair."}
+{"input":{"k":3,"nums1":[1,2],"nums2":[1,2]},"expected":[[1,1],[1,2],[2,1]],"note":"Both distinct pairs at a tied sum are required."}
+{"input":{"k":4,"nums1":[1,1],"nums2":[2,2]},"expected":[[1,2],[1,2],[1,2],[1,2]],"note":"Four index pairs have identical values."}
+{"input":{"k":5,"nums1":[0,0,1],"nums2":[0,1,1]},"expected":[[0,0],[0,0],[0,1],[0,1],[0,1]],"note":"Multiplicity across repeated values."}
+{"input":{"k":2,"nums1":[1,2],"nums2":[100,200]},"expected":[[1,100],[2,100]],"note":"Pair positions must retain array membership."}
+{"input":{"k":4,"nums1":[0,10],"nums2":[0,1,2]},"expected":[[0,0],[0,1],[0,2],[10,0]],"note":"All pairs of the first row precede the second row."}
+{"input":{"k":4,"nums1":[0,1,2],"nums2":[0,10]},"expected":[[0,0],[1,0],[2,0],[0,10]],"note":"Several rows precede the first row next column."}
+{"input":{"k":9,"nums1":[1,4,7],"nums2":[2,5,8]},"expected":[[1,2],[1,5],[4,2],[1,8],[4,5],[7,2],[4,8],[7,5],[7,8]],"note":"Return the entire Cartesian product."}
+{"input":{"k":1,"nums1":[-9,-8,-7],"nums2":[-6,-5,-4]},"expected":[[-9,-6]],"note":"k equals one on all-negative arrays."}
+{"input":{"k":7,"nums1":[0,100,1000],"nums2":[1,2,3,4]},"expected":[[0,1],[0,2],[0,3],[0,4],[100,1],[100,2],[100,3]],"note":"Large gaps defeat diagonal-only enumeration."}
+{"input":{"k":8,"nums1":[-1000000000,0,1000000000],"nums2":[-1000000000,0,1000000000]},"expected":[[-1000000000,-1000000000],[-1000000000,0],[0,-1000000000],[-1000000000,1000000000],[0,0],[1000000000,-1000000000],[0,1000000000],[1000000000,0]],"note":"Extreme sums and ties near the full product."}
+{"input":{"k":2,"nums1":[-7,-5],"nums2":[-5,-2]},"expected":[[-7,-5],[-5,-5]],"note":"Small sorted arrays with duplicates, seed 373; checked against exhaustive pair sums."}
+{"input":{"k":14,"nums1":[-4,2,8],"nums2":[-4,-4,-1,7,8]},"expected":[[-4,-4],[-4,-4],[-4,-1],[2,-4],[2,-4],[2,-1],[-4,7],[-4,8],[8,-4],[8,-4],[8,-1],[2,7],[2,8],[8,7]],"note":"Small sorted arrays with duplicates, seed 374; checked against exhaustive pair sums."}
+{"input":{"k":9,"nums1":[-1,-1,3,5],"nums2":[-3,-3,0]},"expected":[[-1,-3],[-1,-3],[-1,-3],[-1,-3],[-1,0],[-1,0],[3,-3],[3,-3],[5,-3]],"note":"Small sorted arrays with duplicates, seed 375; checked against exhaustive pair sums."}
+{"input":{"k":11,"nums1":[-3,1,4,7,8],"nums2":[-8,-5,-3,4,5,6]},"expected":[[-3,-8],[-3,-5],[1,-8],[-3,-3],[1,-5],[4,-8],[1,-3],[4,-5],[7,-8],[8,-8],[-3,4]],"note":"Small sorted arrays with duplicates, seed 376; checked against exhaustive pair sums."}
+{"input":{"k":21,"nums1":[-8,-6,-5,-1,-1,8],"nums2":[-1,2,7,7]},"expected":[[-8,-1],[-6,-1],[-8,2],[-5,-1],[-6,2],[-5,2],[-1,-1],[-1,-1],[-8,7],[-8,7],[-6,7],[-6,7],[-1,2],[-1,2],[-5,7],[-5,7],[-1,7],[-1,7],[-1,7],[-1,7],[8,-1]],"note":"Small sorted arrays with duplicates, seed 377; checked against exhaustive pair sums."}
+{"input":{"k":2,"nums1":[-8,1],"nums2":[4,6]},"expected":[[-8,4],[-8,6]],"note":"Small sorted arrays with duplicates, seed 378; checked against exhaustive pair sums."}
+{"input":{"k":13,"nums1":[-8,-2,8],"nums2":[2,2,2,6,7]},"expected":[[-8,2],[-8,2],[-8,2],[-8,6],[-8,7],[-2,2],[-2,2],[-2,2],[-2,6],[-2,7],[8,2],[8,2],[8,2]],"note":"Small sorted arrays with duplicates, seed 379; checked against exhaustive pair sums."}
+{"input":{"k":5,"nums1":[-4,2,5,6],"nums2":[-2,-1,8]},"expected":[[-4,-2],[-4,-1],[2,-2],[2,-1],[5,-2]],"note":"Small sorted arrays with duplicates, seed 380; checked against exhaustive pair sums."}
+{"generate":{"name":"arithmetic","args":{"k":10000,"m":100000,"n":100000}},"digest":"sha256:e4de3cdf9bc4d24bcd05f640c0c7f3c7c68acb77eca42df8821a3ec9f8d9058b","note":"Maximum array lengths and k: prohibit enumerating the Cartesian product."}
+{"generate":{"name":"arithmetic","args":{"k":10000,"m":100000,"n":100000,"offset":0,"step1":31,"step2":1}},"digest":"sha256:862b86990e0e3033e7b6e5a56358508b35fdc6c6aad70cda23e3059ff49492df","note":"Maximum lengths with unequal steps, many contributing columns."}
+{"generate":{"name":"arithmetic","args":{"k":10000,"m":100000,"n":100000,"offset":0,"step1":1,"step2":31}},"digest":"sha256:3c6916522f981a60c36bbf1e96dbe24d6f3557c529ccc5db9d88e30ba0182199","note":"Maximum lengths with transposed step sizes, many contributing rows."}
+{"generate":{"name":"repeated","args":{"k":10000,"m":100000,"n":100000,"value1":-1000000000,"value2":1000000000}},"digest":"sha256:5aec43e6dcb8b75876f18025751b33b3f611d87bb300bc122e22fe9ad5e5e4bf","note":"Maximum lengths with identical pair sums and multiplicities."}
+{"generate":{"name":"sorted_random","args":{"k":10000,"m":100000,"n":100000},"seed":373},"digest":"sha256:4daf645df7cbb37e2e63226c585acbd4bf5dc1423883e943b145d0c747570058","note":"Maximum lengths with irregular gaps and k at its limit."}
+{"generate":{"name":"sorted_random","args":{"k":10000,"m":100000,"n":100000},"seed":378},"digest":"sha256:6b504ba5fe41865a2ab9a84cc21d213b704ed7a7fcd9125ebf90acff11aabf71","note":"Second maximum-size irregular input with independent seeded values."}
