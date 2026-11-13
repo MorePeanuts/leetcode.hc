@@ -67,6 +67,7 @@ groups:
       - binary-tree-preorder-traversal
       - generate-parentheses
       - valid-parenthesis-string
+      - reconstruct-itinerary
   - name: binary-search
     title: Binary Search
     problems:
@@ -131,6 +132,7 @@ groups:
       - find-k-pairs-with-smallest-sums
       - kth-smallest-element-in-a-sorted-matrix
       - network-delay-time
+      - reconstruct-itinerary
   - name: backtracking
     title: Backtracking
     problems:
@@ -145,6 +147,7 @@ groups:
       - palindrome-partitioning
       - letter-combinations-of-a-phone-number
       - n-queens
+      - reconstruct-itinerary
   - name: tries
     title: Tries
     problems:
@@ -167,10 +170,12 @@ groups:
       - word-ladder
       - longest-increasing-path-in-a-matrix
       - network-delay-time
+      - reconstruct-itinerary
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
       - network-delay-time
+      - reconstruct-itinerary
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:
@@ -217,6 +222,7 @@ groups:
       - merge-triplets-to-form-target-triplet
       - partition-labels
       - valid-parenthesis-string
+      - reconstruct-itinerary
   - name: intervals
     title: Intervals
     problems:

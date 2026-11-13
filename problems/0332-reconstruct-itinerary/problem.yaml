@@ -1,0 +1,28 @@
+id: "332"
+slug: reconstruct-itinerary
+title: Reconstruct Itinerary
+titles:
+  zh-CN: 重新安排行程
+difficulty: hard
+tags:
+  - depth-first-search
+  - graph
+  - array
+  - string
+  - sorting
+  - eulerian-path
+  - eulerian-circuit
+  - heap-priority-queue
+  - semi-eulerian-graph
+kind: function
+function:
+  name: findItinerary
+  params:
+    - name: tickets
+      type: string[][]
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reconstruct-itinerary/
+judge:
+  compare: exact

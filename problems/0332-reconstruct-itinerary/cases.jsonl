@@ -1,0 +1,33 @@
+{"input":{"tickets":[["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]},"expected":["JFK","MUC","LHR","SFO","SJC"],"example":true}
+{"input":{"tickets":[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]},"expected":["JFK","ATL","JFK","SFO","ATL","SFO"],"example":true}
+{"input":{"tickets":[["JFK","AAA"]]},"expected":["JFK","AAA"],"note":"one ticket"}
+{"input":{"tickets":[["AAA","JFK"],["JFK","AAA"]]},"expected":["JFK","AAA","JFK"],"note":"return to origin"}
+{"input":{"tickets":[["JFK","ZZZ"],["ZZZ","AAA"]]},"expected":["JFK","ZZZ","AAA"],"note":"start is fixed, not lexical minimum"}
+{"input":{"tickets":[["JFK","KUL"],["NRT","JFK"],["JFK","NRT"]]},"expected":["JFK","NRT","JFK","KUL"],"note":"lexical dead-end must be last"}
+{"input":{"tickets":[["JFK","AAA"],["JFK","AAA"],["AAA","JFK"]]},"expected":["JFK","AAA","JFK","AAA"],"note":"duplicate tickets used individually"}
+{"input":{"tickets":[["JFK","BBB"],["AAA","JFK"],["JFK","AAA"],["BBB","JFK"]]},"expected":["JFK","AAA","JFK","BBB","JFK"],"note":"several Euler circuits choose lexical order"}
+{"input":{"tickets":[["AAA","BBB"],["BBB","AAA"],["AAA","CCC"],["JFK","AAA"]]},"expected":["JFK","AAA","BBB","AAA","CCC"],"note":"shared junction"}
+{"input":{"tickets":[["JFK","AAA"],["BBB","JFK"],["AAA","CCC"],["AAA","BBB"],["JFK","AAA"]]},"expected":["JFK","AAA","BBB","JFK","AAA","CCC"],"note":"revisit airport and repeated edge"}
+{"input":{"tickets":[["ZZZ","JFK"],["JFK","ZZZ"],["JFK","AAA"],["BBB","AAA"],["AAA","BBB"]]},"expected":["JFK","ZZZ","JFK","AAA","BBB","AAA"],"note":"terminal component must be postponed"}
+{"input":{"tickets":[["SFO","ATL"],["ATL","SFO"],["JFK","SFO"],["JFK","ATL"],["SFO","JFK"]]},"expected":["JFK","ATL","SFO","JFK","SFO","ATL"],"note":"overlapping cycles"}
+{"input":{"tickets":[["JFK","AAC"],["AAC","AAA"],["AAA","AAC"]]},"expected":["JFK","AAC","AAA","AAC"],"note":"shuffled tickets from guaranteed Euler walk 1"}
+{"input":{"tickets":[["AAC","JFK"],["JFK","AAA"],["AAA","AAC"],["JFK","AAC"]]},"expected":["JFK","AAA","AAC","JFK","AAC"],"note":"shuffled tickets from guaranteed Euler walk 2"}
+{"input":{"tickets":[["AAC","AAA"],["JFK","AAC"],["JFK","BAA"],["AAA","JFK"],["BAA","AAC"]]},"expected":["JFK","AAC","AAA","JFK","BAA","AAC"],"note":"shuffled tickets from guaranteed Euler walk 3"}
+{"input":{"tickets":[["JFK","AAC"],["AAC","JFK"],["JFK","AAC"],["AAC","JFK"],["JFK","AAA"],["AAA","JFK"]]},"expected":["JFK","AAA","JFK","AAC","JFK","AAC","JFK"],"note":"shuffled tickets from guaranteed Euler walk 4"}
+{"input":{"tickets":[["BAA","AAA"],["AAA","BAA"],["AAA","AAC"],["BAA","AAC"],["AAC","BAA"],["AAC","AAA"],["JFK","AAA"]]},"expected":["JFK","AAA","AAC","AAA","BAA","AAC","BAA","AAA"],"note":"shuffled tickets from guaranteed Euler walk 5"}
+{"input":{"tickets":[["BAA","JFK"],["AAA","AAC"],["AAC","BAA"],["BAA","AAC"],["JFK","AAA"],["ZZZ","BAA"],["AAC","ZZZ"],["JFK","AAA"]]},"expected":["JFK","AAA","AAC","BAA","AAC","ZZZ","BAA","JFK","AAA"],"note":"shuffled tickets from guaranteed Euler walk 6"}
+{"input":{"tickets":[["JFK","AAC"],["AAC","JFK"],["AAA","JFK"],["JFK","AAC"],["AAC","AAA"],["JFK","AAA"],["AAC","AAA"],["AAA","AAC"],["AAA","JFK"]]},"expected":["JFK","AAA","AAC","AAA","JFK","AAC","AAA","JFK","AAC","JFK"],"note":"shuffled tickets from guaranteed Euler walk 7"}
+{"input":{"tickets":[["JFK","BAA"],["BAA","JFK"],["JFK","BAA"]]},"expected":["JFK","BAA","JFK","BAA"],"note":"shuffled tickets from guaranteed Euler walk 8"}
+{"input":{"tickets":[["AAA","BAA"],["BAA","AAC"],["AAC","ZZZ"],["JFK","AAA"]]},"expected":["JFK","AAA","BAA","AAC","ZZZ"],"note":"shuffled tickets from guaranteed Euler walk 9"}
+{"input":{"tickets":[["JFK","AAA"],["AAA","JFK"],["AAA","AAC"],["JFK","AAA"],["AAC","JFK"]]},"expected":["JFK","AAA","AAC","JFK","AAA","JFK"],"note":"shuffled tickets from guaranteed Euler walk 10"}
+{"input":{"tickets":[["BAA","AAC"],["AAA","BAA"],["AAC","AAA"],["BAA","AAC"],["JFK","AAA"],["AAA","BAA"]]},"expected":["JFK","AAA","BAA","AAC","AAA","BAA","AAC"],"note":"shuffled tickets from guaranteed Euler walk 11"}
+{"input":{"tickets":[["AAC","BAA"],["JFK","AAC"],["JFK","AAA"],["JFK","AAC"],["AAC","ZZZ"],["AAA","JFK"],["ZZZ","JFK"]]},"expected":["JFK","AAA","JFK","AAC","ZZZ","JFK","AAC","BAA"],"note":"shuffled tickets from guaranteed Euler walk 12"}
+{"input":{"tickets":[["JFK","AAC"],["AAC","JFK"],["AAA","JFK"],["AAC","AAA"],["JFK","AAA"],["AAC","JFK"],["JFK","AAC"],["AAA","AAC"]]},"expected":["JFK","AAA","AAC","AAA","JFK","AAC","JFK","AAC","JFK"],"note":"shuffled tickets from guaranteed Euler walk 13"}
+{"input":{"tickets":[["AAC","JFK"],["JFK","AAC"],["AAA","BAA"],["AAA","AAC"],["BAA","AAA"],["AAA","AAC"],["AAC","AAA"],["BAA","AAA"],["JFK","BAA"]]},"expected":["JFK","AAC","AAA","AAC","JFK","BAA","AAA","BAA","AAA","AAC"],"note":"shuffled tickets from guaranteed Euler walk 14"}
+{"input":{"tickets":[["BAA","AAA"],["JFK","BAA"],["AAA","BAA"]]},"expected":["JFK","BAA","AAA","BAA"],"note":"shuffled tickets from guaranteed Euler walk 15"}
+{"input":{"tickets":[["JFK","AAA"],["JFK","AAC"],["AAA","AAC"],["AAC","JFK"]]},"expected":["JFK","AAA","AAC","JFK","AAC"],"note":"shuffled tickets from guaranteed Euler walk 16"}
+{"input":{"tickets":[["JFK","AAA"],["JFK","BAA"],["BAA","AAC"],["AAC","BAA"],["BAA","JFK"]]},"expected":["JFK","BAA","AAC","BAA","JFK","AAA"],"note":"shuffled tickets from guaranteed Euler walk 17"}
+{"input":{"tickets":[["JFK","BAA"],["AAC","JFK"],["JFK","AAC"],["JFK","AAC"],["ZZZ","JFK"],["BAA","ZZZ"]]},"expected":["JFK","AAC","JFK","BAA","ZZZ","JFK","AAC"],"note":"shuffled tickets from guaranteed Euler walk 18"}
+{"input":{"tickets":[["AAA","JFK"],["AAC","JFK"],["JFK","AAC"],["AAA","JFK"],["JFK","AAA"],["JFK","AAA"],["JFK","AAC"]]},"expected":["JFK","AAA","JFK","AAA","JFK","AAC","JFK","AAC"],"note":"shuffled tickets from guaranteed Euler walk 19"}
+{"generate":{"name":"trapped_cycles","args":{"n":300},"seed":39},"digest":"sha256:b8be9bdbe39ac8d9d24a178ea528cdd98723bf2dff40287b299998cfe6875447","note":"maximum tickets; terminal component has factorial backtracking choices"}
+{"generate":{"name":"repeated","args":{"n":300},"seed":39},"digest":"sha256:20c370ee751217fd82d9da212262af794e6b2ef309f39a93285763229b8b3800","note":"maximum multiplicity of repeated round-trip tickets"}
