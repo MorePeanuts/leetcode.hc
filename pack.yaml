@@ -58,6 +58,7 @@ groups:
       - largest-rectangle-in-histogram
       - binary-tree-inorder-traversal
       - binary-tree-preorder-traversal
+      - generate-parentheses
   - name: binary-search
     title: Binary Search
     problems:
@@ -130,6 +131,7 @@ groups:
       - combination-sum-ii
       - permutations
       - subsets-ii
+      - generate-parentheses
   - name: tries
     title: Tries
     problems:
