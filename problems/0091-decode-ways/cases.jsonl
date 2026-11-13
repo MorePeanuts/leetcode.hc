@@ -1,0 +1,35 @@
+{"input":{"s":"12"},"expected":2,"example":true}
+{"input":{"s":"226"},"expected":3,"example":true}
+{"input":{"s":"06"},"expected":0,"example":true}
+{"input":{"s":"0"},"expected":0,"note":"single zero invalid"}
+{"input":{"s":"1"},"expected":1,"note":"single valid digit"}
+{"input":{"s":"9"},"expected":1,"note":"largest single digit"}
+{"input":{"s":"10"},"expected":1,"note":"zero requires preceding one"}
+{"input":{"s":"20"},"expected":1,"note":"zero requires preceding two"}
+{"input":{"s":"30"},"expected":0,"note":"invalid pair thirty"}
+{"input":{"s":"26"},"expected":2,"note":"largest two-digit code"}
+{"input":{"s":"27"},"expected":1,"note":"two separate digits only"}
+{"input":{"s":"11"},"expected":2,"note":"two decoding choices"}
+{"input":{"s":"00"},"expected":0,"note":"two zeroes"}
+{"input":{"s":"01"},"expected":0,"note":"leading zero"}
+{"input":{"s":"100"},"expected":0,"note":"trailing double zero"}
+{"input":{"s":"101"},"expected":1,"note":"zero blocks two-pair overlap"}
+{"input":{"s":"110"},"expected":1,"note":"pair only at suffix"}
+{"input":{"s":"210"},"expected":1,"note":"zero forces final pair"}
+{"input":{"s":"230"},"expected":0,"note":"invalid final pair"}
+{"input":{"s":"11106"},"expected":2,"note":"mixed zero and pair choices"}
+{"input":{"s":"2611055971756562"},"expected":4,"note":"mixed encoded message"}
+{"input":{"s":"301"},"expected":0,"note":"early invalid pair remains invalid"}
+{"input":{"s":"1001"},"expected":0,"note":"cannot skip invalid zeros"}
+{"input":{"s":"1201234"},"expected":3,"note":"zero separates decoding runs"}
+{"input":{"s":"101010"},"expected":1,"note":"forced pairs"}
+{"input":{"s":"272727"},"expected":1,"note":"all digits separate"}
+{"input":{"s":"262626"},"expected":8,"note":"valid boundary pairs"}
+{"input":{"s":"1111111111"},"expected":89,"note":"many pair decompositions"}
+{"input":{"s":"2222222222"},"expected":89,"note":"repeated twos"}
+{"input":{"s":"3333333333"},"expected":1,"note":"repeated large digits each separate"}
+{"input":{"s":"111111111111111111111111111111111111111111111"},"expected":1836311903,"note":"near signed 32-bit answer limit"}
+{"input":{"s":"1111111111111111111111111111111111111111111133333333333333333333333333333333333333333333333333333333"},"expected":1836311903,"note":"maximum length with bounded positive answer"}
+{"input":{"s":"1010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010"},"expected":1,"note":"maximum length forced pairs"}
+{"input":{"s":"1111111111111111111111111111111111111111307777777777777777777777777777777777777777777777777777777777"},"expected":0,"note":"maximum length ambiguous prefix then impossible pair"}
+{"input":{"s":"0111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"},"expected":0,"note":"maximum length leading zero invalid"}
