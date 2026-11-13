@@ -48,6 +48,7 @@ groups:
       - partition-labels
       - reverse-words-in-a-string
       - remove-duplicates-from-sorted-array-ii
+      - sort-colors
   - name: sliding-window
     title: Sliding Window
     problems:
