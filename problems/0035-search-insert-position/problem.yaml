@@ -1,0 +1,23 @@
+id: "35"
+slug: search-insert-position
+title: Search Insert Position
+titles:
+  zh-CN: 搜索插入位置
+difficulty: easy
+tags:
+  - array
+  - binary-search
+kind: function
+function:
+  name: searchInsert
+  params:
+    - name: nums
+      type: integer[]
+    - name: target
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/search-insert-position/
+judge:
+  compare: exact
