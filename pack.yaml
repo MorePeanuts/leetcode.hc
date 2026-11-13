@@ -238,6 +238,7 @@ groups:
       - keys-and-rooms
       - nearest-exit-from-entrance-in-maze
       - shortest-path-in-binary-matrix
+      - minimum-height-trees
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

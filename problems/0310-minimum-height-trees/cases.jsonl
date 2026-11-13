@@ -1,0 +1,34 @@
+{"input":{"edges":[[1,0],[1,2],[1,3]],"n":4},"expected":[1],"example":true}
+{"input":{"edges":[[3,0],[3,1],[3,2],[3,4],[5,4]],"n":6},"expected":[3,4],"example":true}
+{"input":{"edges":[],"n":1},"expected":[0],"note":"Singleton has center zero despite degree zero"}
+{"input":{"edges":[[0,1]],"n":2},"expected":[0,1],"note":"2-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2]],"n":3},"expected":[1],"note":"3-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3]],"n":4},"expected":[1,2],"note":"4-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4]],"n":5},"expected":[2],"note":"5-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5]],"n":6},"expected":[2,3],"note":"6-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6]],"n":7},"expected":[3],"note":"7-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]],"n":8},"expected":[3,4],"note":"8-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8]],"n":9},"expected":[4],"note":"9-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9]],"n":10},"expected":[4,5],"note":"10-node path: odd/even diameter and one/two centers"}
+{"input":{"edges":[[2,0],[2,1]],"n":3},"expected":[2],"note":"3-node star with high-numbered center"}
+{"input":{"edges":[[3,0],[3,1],[3,2]],"n":4},"expected":[3],"note":"4-node star with high-numbered center"}
+{"input":{"edges":[[4,0],[4,1],[4,2],[4,3]],"n":5},"expected":[4],"note":"5-node star with high-numbered center"}
+{"input":{"edges":[[5,0],[5,1],[5,2],[5,3],[5,4]],"n":6},"expected":[5],"note":"6-node star with high-numbered center"}
+{"input":{"edges":[[6,0],[6,1],[6,2],[6,3],[6,4],[6,5]],"n":7},"expected":[6],"note":"7-node star with high-numbered center"}
+{"input":{"edges":[[7,0],[7,1],[7,2],[7,3],[7,4],[7,5],[7,6]],"n":8},"expected":[7],"note":"8-node star with high-numbered center"}
+{"input":{"edges":[[0,1],[1,2],[2,3],[3,4],[4,5],[4,6],[4,7],[4,8]],"n":9},"expected":[2,3],"note":"Broom: center need not have maximum degree"}
+{"input":{"edges":[[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]],"n":7},"expected":[0],"note":"Balanced binary tree"}
+{"input":{"edges":[[12,0],[9,0],[1,19],[3,14],[7,19],[13,10],[19,12],[0,10],[2,6],[14,10],[18,4],[5,15],[11,3],[16,0],[8,9],[6,11],[4,10],[15,1],[17,19]],"n":20},"expected":[0,10],"note":"Seeded relabeled tree 1"}
+{"input":{"edges":[[3,6],[5,1],[2,6],[0,2],[4,1],[1,0]],"n":7},"expected":[0,2],"note":"Seeded relabeled tree 2"}
+{"input":{"edges":[[3,2],[1,2],[0,1]],"n":4},"expected":[1,2],"note":"Seeded relabeled tree 3"}
+{"input":{"edges":[[9,4],[12,21],[15,4],[13,20],[7,21],[14,0],[22,19],[2,20],[4,10],[18,20],[11,14],[16,2],[19,10],[0,10],[6,15],[1,15],[21,2],[8,13],[10,13],[5,14],[3,5],[17,4]],"n":23},"expected":[10,13],"note":"Seeded relabeled tree 4"}
+{"input":{"edges":[[0,5],[3,1],[2,1],[5,1],[6,3],[4,3]],"n":7},"expected":[1],"note":"Seeded relabeled tree 5"}
+{"input":{"edges":[[13,1],[0,9],[11,8],[4,5],[9,5],[12,13],[2,5],[7,1],[5,7],[8,6],[6,1],[3,1],[10,2]],"n":14},"expected":[1,7],"note":"Seeded relabeled tree 6"}
+{"input":{"edges":[[4,16],[12,10],[2,14],[16,10],[8,13],[11,7],[6,2],[13,10],[0,2],[7,10],[14,7],[9,4],[15,2],[5,7],[1,2],[3,0]],"n":17},"expected":[7],"note":"Seeded relabeled tree 7"}
+{"input":{"edges":[[0,2],[2,1]],"n":3},"expected":[2],"note":"Seeded relabeled tree 8"}
+{"input":{"edges":[[0,3],[1,3],[4,3],[2,1]],"n":5},"expected":[1,3],"note":"Seeded relabeled tree 9"}
+{"input":{"edges":[[10,4],[7,8],[3,10],[6,10],[11,5],[8,5],[12,5],[9,6],[0,3],[1,5],[2,8],[4,5],[13,10]],"n":14},"expected":[4],"note":"Seeded relabeled tree 10"}
+{"generate":{"name":"path","args":{"n":20000},"seed":310},"digest":"sha256:b857bc012e1ce43456c4341f3287e076170c69347abe82d450ae445d5fc59a1e","note":"Maximum even path, both centers required"}
+{"generate":{"name":"path","args":{"n":19999},"seed":310},"digest":"sha256:4162250ccf3ffff6967f0c2db7a27909a3762ed83ba2b8946815addaf63ce07d","note":"Near-maximum odd path, one center"}
+{"generate":{"name":"star","args":{"n":20000},"seed":310},"digest":"sha256:9f7cbe8dcff03a515602f6c0bd73e4ececd2ba96d6c8aa1bc5b3a5388cbb426c","note":"Maximum star with final-label center"}
+{"generate":{"name":"broom","args":{"n":20000},"seed":310},"digest":"sha256:6313085fedec9495dc10bf952a21556db63e5d0332781125a0aa2290e81e11fd","note":"Maximum broom with shuffled edges; highest degree is not center"}
