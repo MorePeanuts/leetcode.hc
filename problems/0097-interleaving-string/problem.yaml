@@ -1,0 +1,25 @@
+id: "97"
+slug: interleaving-string
+title: Interleaving String
+titles:
+  zh-CN: 交错字符串
+difficulty: medium
+tags:
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: isInterleave
+  params:
+    - name: s1
+      type: string
+    - name: s2
+      type: string
+    - name: s3
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/interleaving-string/
+judge:
+  compare: exact
