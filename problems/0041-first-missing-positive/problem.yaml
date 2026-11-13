@@ -1,0 +1,21 @@
+id: "41"
+slug: first-missing-positive
+title: First Missing Positive
+titles:
+  zh-CN: 缺失的第一个正数
+difficulty: hard
+tags:
+  - array
+  - hash-table
+kind: function
+function:
+  name: firstMissingPositive
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/first-missing-positive/
+judge:
+  compare: exact
