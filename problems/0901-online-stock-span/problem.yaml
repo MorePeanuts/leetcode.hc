@@ -1,0 +1,26 @@
+id: "901"
+slug: online-stock-span
+title: Online Stock Span
+titles:
+  zh-CN: 股票价格跨度
+difficulty: medium
+tags:
+  - stack
+  - design
+  - data-stream
+  - monotonic-stack
+kind: class
+class:
+  name: StockSpanner
+  constructor: []
+  methods:
+    - name: next
+      params:
+        - name: price
+          type: integer
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/online-stock-span/
+judge:
+  compare: exact
