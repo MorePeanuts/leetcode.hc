@@ -305,6 +305,7 @@ groups:
       - time-based-key-value-store
       - detect-squares
       - flatten-nested-list-iterator
+      - shuffle-an-array
   - name: divide-and-conquer
     title: Divide & Conquer
     problems:
@@ -315,3 +316,4 @@ groups:
     title: Randomized Algorithms
     problems:
       - random-pick-with-weight
+      - shuffle-an-array
