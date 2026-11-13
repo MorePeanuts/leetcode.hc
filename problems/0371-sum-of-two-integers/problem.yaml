@@ -1,0 +1,23 @@
+id: "371"
+slug: sum-of-two-integers
+title: Sum of Two Integers
+titles:
+  zh-CN: 两整数之和
+difficulty: medium
+tags:
+  - bit-manipulation
+  - math
+kind: function
+function:
+  name: getSum
+  params:
+    - name: a
+      type: integer
+    - name: b
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sum-of-two-integers/
+judge:
+  compare: exact
