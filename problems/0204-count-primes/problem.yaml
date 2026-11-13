@@ -1,0 +1,26 @@
+id: "204"
+slug: count-primes
+title: Count Primes
+titles:
+  zh-CN: 计数质数
+difficulty: medium
+tags:
+  - array
+  - math
+  - enumeration
+  - number-theory
+  - primality-test
+  - sieve-theory
+  - prime-number-sieve
+kind: function
+function:
+  name: countPrimes
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/count-primes/
+judge:
+  compare: exact
