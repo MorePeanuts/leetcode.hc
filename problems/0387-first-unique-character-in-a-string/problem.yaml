@@ -1,0 +1,23 @@
+id: "387"
+slug: first-unique-character-in-a-string
+title: First Unique Character in a String
+titles:
+  zh-CN: 字符串中的第一个唯一字符
+difficulty: easy
+tags:
+  - queue
+  - hash-table
+  - string
+  - counting
+kind: function
+function:
+  name: firstUniqChar
+  params:
+    - name: s
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/first-unique-character-in-a-string/
+judge:
+  compare: exact
