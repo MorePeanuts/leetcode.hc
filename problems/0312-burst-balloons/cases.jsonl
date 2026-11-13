@@ -1,0 +1,32 @@
+{"input":{"nums":[3,1,5,8]},"expected":167,"example":true}
+{"input":{"nums":[1,5]},"expected":10,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"single zero"}
+{"input":{"nums":[1]},"expected":1,"note":"single one"}
+{"input":{"nums":[100]},"expected":100,"note":"single maximum"}
+{"input":{"nums":[1,1]},"expected":2,"note":"two ones"}
+{"input":{"nums":[0,0]},"expected":0,"note":"two zeros"}
+{"input":{"nums":[0,5]},"expected":5,"note":"zero before value"}
+{"input":{"nums":[5,0]},"expected":5,"note":"zero after value"}
+{"input":{"nums":[2,3]},"expected":9,"note":"choose last balloon"}
+{"input":{"nums":[3,2]},"expected":9,"note":"reversed pair"}
+{"input":{"nums":[1,5]},"expected":10,"note":"boundary multipliers"}
+{"input":{"nums":[3,1,5,8]},"expected":167,"note":"greedy trap"}
+{"input":{"nums":[1,2,3]},"expected":12,"note":"increasing values"}
+{"input":{"nums":[3,2,1]},"expected":12,"note":"decreasing values"}
+{"input":{"nums":[5,1,5]},"expected":55,"note":"preserve endpoints"}
+{"input":{"nums":[0,5,0]},"expected":5,"note":"zero surroundings"}
+{"input":{"nums":[5,0,5]},"expected":30,"note":"zero between large values"}
+{"input":{"nums":[1,1,1,1]},"expected":4,"note":"all ones"}
+{"input":{"nums":[2,2,2,2]},"expected":22,"note":"equal values"}
+{"input":{"nums":[100,100,100]},"expected":1010100,"note":"maximum products"}
+{"input":{"nums":[9,1,9,1]},"expected":180,"note":"alternating peaks"}
+{"input":{"nums":[1,9,1,9]},"expected":180,"note":"alternating valleys"}
+{"input":{"nums":[2,4,3,5]},"expected":115,"note":"middle last choice"}
+{"input":{"nums":[8,2,6,8]},"expected":552,"note":"multiple high values"}
+{"input":{"nums":[0,0,5,0,0]},"expected":5,"note":"single nonzero"}
+{"input":{"nums":[7,0,2,0,7]},"expected":154,"note":"remove zeros first"}
+{"input":{"nums":[1,5,8,3,2]},"expected":170,"note":"irregular ordering"}
+{"input":{"nums":[4,1,2,9,3,5]},"expected":420,"note":"interval dependency order"}
+{"generate":{"name":"uniform","args":{"n":300},"seed":41},"digest":"sha256:a9ceacbc19db98061b86007bde482bb9750a0d15dde4e30c0366e84b8785285f","note":"maximum size and products"}
+{"generate":{"name":"varied","args":{"n":300},"seed":41},"digest":"sha256:a3492e63ef4dc8cc36163cc16b488b8418c5e80d51997a5d85285d6853a28667","note":"maximum size irregular interval optima"}
+{"generate":{"name":"alternating","args":{"n":300},"seed":41},"digest":"sha256:abb3c7deaf066bafde0b1e0c304121300159d52628fbadb053499585746c0c06","note":"maximum zero and high-value alternation"}
