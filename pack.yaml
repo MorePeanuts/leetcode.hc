@@ -228,6 +228,7 @@ groups:
       - cheapest-flights-within-k-stops
       - is-graph-bipartite
       - number-of-closed-islands
+      - satisfiability-of-equality-equations
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

@@ -1,0 +1,23 @@
+id: "990"
+slug: satisfiability-of-equality-equations
+title: Satisfiability of Equality Equations
+titles:
+  zh-CN: 等式方程的可满足性
+difficulty: medium
+tags:
+  - union-find
+  - graph
+  - array
+  - string
+kind: function
+function:
+  name: equationsPossible
+  params:
+    - name: equations
+      type: string[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/satisfiability-of-equality-equations/
+judge:
+  compare: exact

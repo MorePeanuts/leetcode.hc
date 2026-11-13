@@ -1,0 +1,34 @@
+{"input":{"equations":["a==b","b!=a"]},"expected":false,"example":true}
+{"input":{"equations":["b==a","a==b"]},"expected":true,"example":true}
+{"input":{"equations":["a==a"]},"expected":true,"note":"Reflexive equality"}
+{"input":{"equations":["z!=z"]},"expected":false,"note":"Reflexive contradiction"}
+{"input":{"equations":["a!=b"]},"expected":true,"note":"Different variables need not be equal"}
+{"input":{"equations":["a!=b","b==c","a==c"]},"expected":false,"note":"Inequality appears before indirect equalities"}
+{"input":{"equations":["a==b","b==c","a!=c"]},"expected":false,"note":"Transitive contradiction"}
+{"input":{"equations":["a==b","b!=c"]},"expected":true,"note":"Different components remain satisfiable"}
+{"input":{"equations":["a==b","b==a"]},"expected":true,"note":"Reversed duplicate equality"}
+{"input":{"equations":["a!=b","b!=a"]},"expected":true,"note":"Reversed duplicate inequality"}
+{"input":{"equations":["a==a","a==a"]},"expected":true,"note":"Repeated identity"}
+{"input":{"equations":["a!=b","b!=c","a!=c"]},"expected":true,"note":"Three distinct values: not two-coloring"}
+{"input":{"equations":["a==z","z==y","y==a"]},"expected":true,"note":"Equality cycle"}
+{"input":{"equations":["a==b","c==d","b!=c"]},"expected":true,"note":"Separate equal components"}
+{"input":{"equations":["z==y","a==b","z!=b"]},"expected":true,"note":"Distant alphabet endpoints"}
+{"input":{"equations":["a!=b","b==c","c==d","d==a"]},"expected":false,"note":"Late equality closes contradiction"}
+{"input":{"equations":["a==b","a!=c","b!=c"]},"expected":true,"note":"Repeated component inequality"}
+{"input":{"equations":["a==b","b==c","d==e","e==f","c!=f"]},"expected":true,"note":"Two nontrivial components"}
+{"input":{"equations":["a!=z","c!=z","c==e","b!=c","z!=z","f!=e","a!=e","z==e","d==d","a!=b","z!=z","e!=e","e==z","f==e","e==z","f==c","a!=f"]},"expected":false,"note":"Seeded small equation system 1"}
+{"input":{"equations":["a!=e","e==d","a!=c","e==c","a==f","b==b","z==e","e!=c","f!=c","f==b","e!=a"]},"expected":false,"note":"Seeded small equation system 2"}
+{"input":{"equations":["z==b","d==d","e==a","z!=f"]},"expected":true,"note":"Seeded small equation system 3"}
+{"input":{"equations":["d!=c","b!=c","a!=f","d!=a","f==f"]},"expected":true,"note":"Seeded small equation system 4"}
+{"input":{"equations":["f==b","a==z","b==b","d==z","z==b","d!=f","b!=c","b!=b","b!=a","a!=c","b!=c","a==e","f!=a","z!=e","a==e"]},"expected":false,"note":"Seeded small equation system 5"}
+{"input":{"equations":["z==f","d==c","a==a","c==a","z!=b","c!=b","e==e","z!=d","b==d","z==b","d!=e","z==a"]},"expected":false,"note":"Seeded small equation system 6"}
+{"input":{"equations":["e==a","a==d","f==c","d==z","d==d","z!=d","f!=e","b==c","a==d","f!=f","b==z","d==c","d==z","e!=e","z!=f","d!=e","b==a","c!=d"]},"expected":false,"note":"Seeded small equation system 7"}
+{"input":{"equations":["e==d","d==d","b==f"]},"expected":true,"note":"Seeded small equation system 8"}
+{"input":{"equations":["z!=a","b==e","f!=d","f!=z","d==a","f==e","a==d","e!=c","d!=d","z==f"]},"expected":false,"note":"Seeded small equation system 9"}
+{"input":{"equations":["c==b","c==f","e==d","b==c","a!=f"]},"expected":true,"note":"Seeded small equation system 10"}
+{"input":{"equations":["d==b","z!=f","b==c","b==e","d==d"]},"expected":true,"note":"Seeded small equation system 11"}
+{"input":{"equations":["b==f","b!=f","z!=e","f!=e","b!=a","f!=a","f!=a","a==e","e!=d","a==f","d!=d","a==z","c==b","d==d","z!=d","e!=a","c!=e"]},"expected":false,"note":"Seeded small equation system 12"}
+{"input":{"equations":["a==b","d==d","f!=b","c!=d","d==z","c==f"]},"expected":true,"note":"Seeded small equation system 13"}
+{"generate":{"name":"equality_chain","args":{"conflict":false,"n":500},"seed":990},"digest":"sha256:1a531a8d8e788aa24937978a82224fd06caa8942f3925e7455b1a9d687bff1b1","note":"500 equalities over all letters"}
+{"generate":{"name":"equality_chain","args":{"conflict":true,"n":500},"seed":990},"digest":"sha256:71ce273d14251bf6af0cec442d7f5bcad140da3b2d8f5c1cecc423977395d642","note":"500 equations with shuffled transitive contradiction"}
+{"generate":{"name":"separate_groups","args":{"n":500},"seed":990},"digest":"sha256:b12947d1f363b2bda14165074b3c5043896e28a1e216d01a21fa358d1da17b0a","note":"500 equations, two disjoint equivalence classes"}
