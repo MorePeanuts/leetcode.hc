@@ -1,0 +1,32 @@
+{"input":{"nums":[2,0,2,1,1,0]},"expected":[0,0,1,1,2,2],"example":true}
+{"input":{"nums":[2,0,1]},"expected":[0,1,2],"example":true}
+{"input":{"nums":[0]},"expected":[0],"note":"Dutch partition boundary and missing-color case 1"}
+{"input":{"nums":[1]},"expected":[1],"note":"Dutch partition boundary and missing-color case 2"}
+{"input":{"nums":[2]},"expected":[2],"note":"Dutch partition boundary and missing-color case 3"}
+{"input":{"nums":[0,0]},"expected":[0,0],"note":"Dutch partition boundary and missing-color case 4"}
+{"input":{"nums":[1,1]},"expected":[1,1],"note":"Dutch partition boundary and missing-color case 5"}
+{"input":{"nums":[2,2]},"expected":[2,2],"note":"Dutch partition boundary and missing-color case 6"}
+{"input":{"nums":[0,1]},"expected":[0,1],"note":"Dutch partition boundary and missing-color case 7"}
+{"input":{"nums":[1,0]},"expected":[0,1],"note":"Dutch partition boundary and missing-color case 8"}
+{"input":{"nums":[0,2]},"expected":[0,2],"note":"Dutch partition boundary and missing-color case 9"}
+{"input":{"nums":[2,0]},"expected":[0,2],"note":"Dutch partition boundary and missing-color case 10"}
+{"input":{"nums":[1,2]},"expected":[1,2],"note":"Dutch partition boundary and missing-color case 11"}
+{"input":{"nums":[2,1]},"expected":[1,2],"note":"Dutch partition boundary and missing-color case 12"}
+{"input":{"nums":[0,1,2]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 13"}
+{"input":{"nums":[0,2,1]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 14"}
+{"input":{"nums":[1,0,2]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 15"}
+{"input":{"nums":[1,2,0]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 16"}
+{"input":{"nums":[2,0,1]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 17"}
+{"input":{"nums":[2,1,0]},"expected":[0,1,2],"note":"Dutch partition boundary and missing-color case 18"}
+{"input":{"nums":[2,0,2,1,0]},"expected":[0,0,1,2,2],"note":"Dutch partition boundary and missing-color case 19"}
+{"input":{"nums":[1,2,0,1,2,0]},"expected":[0,0,1,1,2,2],"note":"Dutch partition boundary and missing-color case 20"}
+{"input":{"nums":[0,0,0,0,0,0,0,0]},"expected":[0,0,0,0,0,0,0,0],"note":"Dutch partition boundary and missing-color case 21"}
+{"input":{"nums":[1,1,1,1,1,1,1,1]},"expected":[1,1,1,1,1,1,1,1],"note":"Dutch partition boundary and missing-color case 22"}
+{"input":{"nums":[2,2,2,2,2,2,2,2]},"expected":[2,2,2,2,2,2,2,2],"note":"Dutch partition boundary and missing-color case 23"}
+{"input":{"nums":[0,0,1,1,2,2]},"expected":[0,0,1,1,2,2],"note":"Dutch partition boundary and missing-color case 24"}
+{"input":{"nums":[2,2,1,1,0,0]},"expected":[0,0,1,1,2,2],"note":"Dutch partition boundary and missing-color case 25"}
+{"input":{"nums":[2,0,0,0,1]},"expected":[0,0,0,1,2],"note":"Dutch partition boundary and missing-color case 26"}
+{"input":{"nums":[1,1,1,2,0]},"expected":[0,1,1,1,2],"note":"Dutch partition boundary and missing-color case 27"}
+{"generate":{"name":"descending","args":{"n":300},"seed":75},"digest":"sha256:d64bdb4caccbdddcee08eb31a25b4201f2c3bd15cca8aa1570f288a7c6a286a6","note":"Maximum length descending"}
+{"generate":{"name":"alternating","args":{"n":300},"seed":75},"digest":"sha256:cc5cbf916863ea3fa001b9b564c5c7853a98ccb28dda1aa3d442f1db9acae544","note":"Maximum length alternating"}
+{"generate":{"name":"mixed","args":{"n":300},"seed":75},"digest":"sha256:7ca759d21f623915553ded2a86ac53ec82ff47b48406746c907abc9dd330bcab","note":"Maximum length mixed"}

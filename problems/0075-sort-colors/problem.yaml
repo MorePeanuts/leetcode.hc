@@ -1,0 +1,25 @@
+id: "75"
+slug: sort-colors
+title: Sort Colors
+titles:
+  zh-CN: 颜色分类
+difficulty: medium
+tags:
+  - array
+  - two-pointers
+  - bubble-sort
+  - sorting
+  - quicksort
+kind: function
+function:
+  name: sortColors
+  params:
+    - name: nums
+      type: integer[]
+  returns: void
+judge:
+  compare: exact
+  output: nums
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sort-colors/
