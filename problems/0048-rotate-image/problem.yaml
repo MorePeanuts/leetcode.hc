@@ -1,0 +1,23 @@
+id: "48"
+slug: rotate-image
+title: Rotate Image
+titles:
+  zh-CN: 旋转图像
+difficulty: medium
+tags:
+  - array
+  - math
+  - matrix
+kind: function
+function:
+  name: rotate
+  params:
+    - name: matrix
+      type: integer[][]
+  returns: void
+judge:
+  compare: exact
+  output: matrix
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/rotate-image/
