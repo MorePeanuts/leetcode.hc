@@ -1,0 +1,21 @@
+id: "136"
+slug: single-number
+title: Single Number
+titles:
+  zh-CN: 只出现一次的数字
+difficulty: easy
+tags:
+  - bit-manipulation
+  - array
+kind: function
+function:
+  name: singleNumber
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/single-number/
+judge:
+  compare: exact
