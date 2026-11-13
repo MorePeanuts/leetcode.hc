@@ -141,6 +141,7 @@ groups:
       - construct-binary-tree-from-inorder-and-postorder-traversal
       - binary-tree-paths
       - sum-root-to-leaf-numbers
+      - path-sum-iii
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
