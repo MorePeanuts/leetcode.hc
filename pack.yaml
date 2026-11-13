@@ -136,6 +136,7 @@ groups:
       - pacific-atlantic-water-flow
       - surrounded-regions
       - course-schedule-ii
+      - redundant-connection
   - name: advanced-graphs
     title: Advanced Graphs
   - name: 1d-dynamic-programming
