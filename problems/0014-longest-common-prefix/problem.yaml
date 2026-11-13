@@ -1,0 +1,22 @@
+id: "14"
+slug: longest-common-prefix
+title: Longest Common Prefix
+titles:
+  zh-CN: 最长公共前缀
+difficulty: easy
+tags:
+  - trie
+  - array
+  - string
+kind: function
+function:
+  name: longestCommonPrefix
+  params:
+    - name: strs
+      type: string[]
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-common-prefix/
+judge:
+  compare: exact

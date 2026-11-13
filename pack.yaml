@@ -35,6 +35,7 @@ groups:
       - partition-labels
       - single-number
       - missing-number
+      - longest-common-prefix
   - name: two-pointers
     title: Two Pointers
     problems:
