@@ -138,6 +138,7 @@ groups:
       - convert-bst-to-greater-tree
       - unique-binary-search-trees
       - construct-binary-tree-from-inorder-and-postorder-traversal
+      - binary-tree-paths
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
