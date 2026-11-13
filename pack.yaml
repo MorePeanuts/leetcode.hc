@@ -351,6 +351,7 @@ groups:
       - number-of-recent-calls
       - design-circular-queue
       - my-calendar-i
+      - insert-delete-getrandom-o1
   - name: divide-and-conquer
     title: Divide & Conquer
     problems:
@@ -366,3 +367,4 @@ groups:
       - shuffle-an-array
       - linked-list-random-node
       - random-pick-index
+      - insert-delete-getrandom-o1
