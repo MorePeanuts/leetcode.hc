@@ -1,0 +1,33 @@
+{"input":{"s1":"aabcc","s2":"dbbca","s3":"aadbbcbcac"},"expected":true,"example":true}
+{"input":{"s1":"aabcc","s2":"dbbca","s3":"aadbbbaccc"},"expected":false,"example":true}
+{"input":{"s1":"","s2":"","s3":""},"expected":true,"example":true}
+{"input":{"s1":"","s2":"","s3":""},"expected":true,"note":"all empty"}
+{"input":{"s1":"a","s2":"","s3":"a"},"expected":true,"note":"empty second"}
+{"input":{"s1":"","s2":"b","s3":"b"},"expected":true,"note":"empty first"}
+{"input":{"s1":"a","s2":"","s3":"b"},"expected":false,"note":"single mismatch"}
+{"input":{"s1":"a","s2":"b","s3":"ab"},"expected":true,"note":"first then second"}
+{"input":{"s1":"a","s2":"b","s3":"ba"},"expected":true,"note":"second then first"}
+{"input":{"s1":"a","s2":"a","s3":"aa"},"expected":true,"note":"same letter both sources"}
+{"input":{"s1":"a","s2":"b","s3":"aa"},"expected":false,"note":"wrong counts"}
+{"input":{"s1":"ab","s2":"cd","s3":"acbd"},"expected":true,"note":"alternating"}
+{"input":{"s1":"ab","s2":"cd","s3":"abcd"},"expected":true,"note":"concatenated"}
+{"input":{"s1":"ab","s2":"cd","s3":"cdab"},"expected":true,"note":"reverse concatenated"}
+{"input":{"s1":"ab","s2":"cd","s3":"adbc"},"expected":false,"note":"source order violated"}
+{"input":{"s1":"aa","s2":"ab","s3":"aaba"},"expected":true,"note":"ambiguous prefix needs backtracking"}
+{"input":{"s1":"ab","s2":"aa","s3":"aaba"},"expected":true,"note":"symmetric ambiguity"}
+{"input":{"s1":"ab","s2":"ac","s3":"aabc"},"expected":true,"note":"shared prefix"}
+{"input":{"s1":"ab","s2":"ac","s3":"aacb"},"expected":true,"note":"different suffix order"}
+{"input":{"s1":"ab","s2":"cd","s3":"abc"},"expected":false,"note":"short length"}
+{"input":{"s1":"ab","s2":"cd","s3":"abcde"},"expected":false,"note":"long length"}
+{"input":{"s1":"","s2":"","s3":"a"},"expected":false,"note":"nonempty target only"}
+{"input":{"s1":"aaa","s2":"aaa","s3":"aaaaaa"},"expected":true,"note":"all identical"}
+{"input":{"s1":"aaa","s2":"aaa","s3":"aaaaab"},"expected":false,"note":"final mismatch"}
+{"input":{"s1":"abc","s2":"def","s3":"adbcef"},"expected":true,"note":"uneven chunks"}
+{"input":{"s1":"abc","s2":"def","s3":"defabc"},"expected":true,"note":"whole source chunks"}
+{"input":{"s1":"abc","s2":"def","s3":"abdfec"},"expected":false,"note":"violated second source order"}
+{"input":{"s1":"xy","s2":"xy","s3":"xxyy"},"expected":true,"note":"duplicate sources"}
+{"input":{"s1":"xy","s2":"xy","s3":"xyyx"},"expected":false,"note":"duplicate sources wrong order"}
+{"input":{"s1":"abba","s2":"baba","s3":"abababba"},"expected":true,"note":"repeated letter ambiguity"}
+{"generate":{"name":"ambiguous_failure","args":{"n":100},"seed":41},"digest":"sha256:24cecdbf78d47dc7a6abf035eec3ef5e37348aab78b75efccdc255ac01a23db8","note":"maximum ambiguity with final failure"}
+{"generate":{"name":"alternating","args":{"n":100},"seed":41},"digest":"sha256:2cd3dea59b625451db2f3817bd110d9c40db1ad77cfd3db68bd6e6968514c0ab","note":"maximum lengths alternating sources"}
+{"generate":{"name":"competing_prefix","args":{"n":100},"seed":41},"digest":"sha256:ce57d079bb39ae303e070f1957a4df362f72766a7854af1597b761b88bc45379","note":"maximum shared prefix requires preserving alternatives"}
