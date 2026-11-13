@@ -1,0 +1,21 @@
+id: "71"
+slug: simplify-path
+title: Simplify Path
+titles:
+  zh-CN: 简化路径
+difficulty: medium
+tags:
+  - stack
+  - string
+kind: function
+function:
+  name: simplifyPath
+  params:
+    - name: path
+      type: string
+  returns: string
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/simplify-path/
+judge:
+  compare: exact
