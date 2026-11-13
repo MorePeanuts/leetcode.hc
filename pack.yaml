@@ -241,6 +241,7 @@ groups:
       - swim-in-rising-water
       - cheapest-flights-within-k-stops
       - path-with-minimum-effort
+      - path-with-maximum-probability
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:

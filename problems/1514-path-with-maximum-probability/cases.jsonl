@@ -1,0 +1,34 @@
+{"input":{"edges":[[0,1],[1,2],[0,2]],"end_node":2,"n":3,"start_node":0,"succProb":[0.5,0.5,0.2]},"expected":0.25,"example":true}
+{"input":{"edges":[[0,1],[1,2],[0,2]],"end_node":2,"n":3,"start_node":0,"succProb":[0.5,0.5,0.3]},"expected":0.3,"example":true}
+{"input":{"edges":[[0,1]],"end_node":2,"n":3,"start_node":0,"succProb":[0.5]},"expected":0,"example":true}
+{"input":{"edges":[],"end_node":1,"n":2,"start_node":0,"succProb":[]},"expected":0.0,"note":"No edges"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[0.0]},"expected":0.0,"note":"Reversed single edge probability 0.0: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[1.0]},"expected":1.0,"note":"Reversed single edge probability 1.0: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[1e-05]},"expected":1e-05,"note":"Reversed single edge probability 1e-05: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[1.1e-05]},"expected":1.1e-05,"note":"Reversed single edge probability 1.1e-05: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[0.0001]},"expected":0.0001,"note":"Reversed single edge probability 0.0001: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[1e-10]},"expected":1e-10,"note":"Reversed single edge probability 1e-10: endpoint and tolerance boundary"}
+{"input":{"edges":[[1,0]],"end_node":1,"n":2,"start_node":0,"succProb":[0.999999]},"expected":0.999999,"note":"Reversed single edge probability 0.999999: endpoint and tolerance boundary"}
+{"input":{"edges":[[0,1],[1,2]],"end_node":0,"n":3,"start_node":2,"succProb":[0.5,0.5]},"expected":0.25,"note":"Must traverse both undirected edges backward"}
+{"input":{"edges":[[0,1],[1,2],[0,2],[2,3]],"end_node":3,"n":4,"start_node":0,"succProb":[0.9,0.9,0.7,0.9]},"expected":0.7290000000000001,"note":"Longer path has larger product; stale heap entry"}
+{"input":{"edges":[[0,1],[1,2],[2,0],[2,3]],"end_node":3,"n":4,"start_node":0,"succProb":[1,1,1,0.8]},"expected":0.8,"note":"Unit-probability cycle must terminate"}
+{"input":{"edges":[[0,1],[1,2],[2,3]],"end_node":3,"n":4,"start_node":0,"succProb":[1,0,1]},"expected":0.0,"note":"Zero probability disconnects positive-probability paths"}
+{"input":{"edges":[[0,1],[2,3]],"end_node":3,"n":4,"start_node":0,"succProb":[1,1]},"expected":0.0,"note":"Disconnected nontrivial components"}
+{"input":{"edges":[[0,1],[1,3],[0,2],[2,3]],"end_node":3,"n":4,"start_node":0,"succProb":[0.5,0.8,0.4,1]},"expected":0.4,"note":"Equal optimal products"}
+{"input":{"edges":[[0,1],[1,2],[0,2]],"end_node":2,"n":3,"start_node":0,"succProb":[0.001,0.001,1e-07]},"expected":1e-06,"note":"Tiny nonzero result below absolute tolerance"}
+{"input":{"edges":[[0,1],[1,4],[0,2],[2,3],[3,4]],"end_node":4,"n":5,"start_node":0,"succProb":[0.99,0.1,0.7,0.7,0.7]},"expected":0.3429999999999999,"note":"Largest immediate edge does not determine best path"}
+{"input":{"edges":[[0,1]],"end_node":0,"n":2,"start_node":1,"succProb":[0.5]},"expected":0.5,"note":"Seeded small probability graph 1"}
+{"input":{"edges":[[3,4],[4,5],[1,2],[2,3]],"end_node":5,"n":6,"start_node":2,"succProb":[0.2,1,0.01,0.01]},"expected":0.002,"note":"Seeded small probability graph 2"}
+{"input":{"edges":[[1,2],[1,5],[2,5],[0,3],[1,3]],"end_node":1,"n":6,"start_node":0,"succProb":[0,0.01,0,0,0]},"expected":0.0,"note":"Seeded small probability graph 3"}
+{"input":{"edges":[[0,1]],"end_node":2,"n":4,"start_node":0,"succProb":[1]},"expected":0.0,"note":"Seeded small probability graph 4"}
+{"input":{"edges":[[0,5],[0,1],[0,6],[1,2],[3,6],[4,6]],"end_node":3,"n":7,"start_node":2,"succProb":[0.2,0.8,0.01,0.01,0.2,0.8]},"expected":1.6000000000000003e-05,"note":"Seeded small probability graph 5"}
+{"input":{"edges":[[4,5],[1,2],[2,5],[3,4],[3,5],[0,3]],"end_node":4,"n":6,"start_node":0,"succProb":[0,0,0.01,0.8,0,0]},"expected":0.0,"note":"Seeded small probability graph 6"}
+{"input":{"edges":[[0,5],[2,5],[0,1],[0,4],[3,4],[1,4]],"end_node":1,"n":6,"start_node":2,"succProb":[1,0.5,0,0.01,0.8,0.2]},"expected":0.001,"note":"Seeded small probability graph 7"}
+{"input":{"edges":[[6,7],[1,2],[0,7],[0,1],[5,7],[2,7],[1,6],[3,6],[4,5]],"end_node":7,"n":8,"start_node":5,"succProb":[0,0.01,0,0.8,0.8,0.8,0.01,0,0]},"expected":0.8,"note":"Seeded small probability graph 8"}
+{"input":{"edges":[[3,5],[2,4],[0,2],[4,5],[2,3],[1,4],[0,5]],"end_node":0,"n":6,"start_node":5,"succProb":[0,1,0,0.01,0.2,0.2,0.5]},"expected":0.5,"note":"Seeded small probability graph 9"}
+{"input":{"edges":[[0,1]],"end_node":0,"n":2,"start_node":1,"succProb":[0.5]},"expected":0.5,"note":"Seeded small probability graph 10"}
+{"generate":{"name":"chain","args":{"n":10000,"probability":0.9999,"reverse":false},"seed":1514},"digest":"sha256:48cbc9b7be4402b39e8f8d9f3ff01e27f31ae9a815a59d99d1aaa19b12991720","note":"Maximum chain, optimum remains significant"}
+{"generate":{"name":"chain","args":{"n":10000,"probability":0.99999,"reverse":true},"seed":1514},"digest":"sha256:a6689ec7fc42283ebb7def7d21838a69cd8f8feddb45c474e69a278b4e8a9eab","note":"Maximum reversed chain tests undirectedness and slow dense scans"}
+{"generate":{"name":"shortcuts","args":{"n":10000},"seed":1514},"digest":"sha256:6989677c2d2cb1cd14aedd03f6762e49ac6f2afccbf7b94f5c140256d79ccfdd","note":"19997 edges: longer high-probability chain beats shortcuts"}
+{"generate":{"name":"chain","args":{"n":10000,"probability":0.5,"reverse":true},"seed":1514},"digest":"sha256:0eda75ad8fdbbd14eaedfc3b5039948c4a6917ae14d5749beeb773029f67e492","note":"Very long product underflows to zero within official absolute tolerance"}
+{"generate":{"name":"chain","args":{"n":10000,"probability":1.0,"reverse":false},"seed":1514},"digest":"sha256:ede89e2ce724c9e6b83becd08dd01903150b7688189519a1065dd98c1f7adde7","note":"Maximum chain with exact unit product"}

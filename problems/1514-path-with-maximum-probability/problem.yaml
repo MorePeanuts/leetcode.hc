@@ -1,0 +1,33 @@
+id: "1514"
+slug: path-with-maximum-probability
+title: Path with Maximum Probability
+titles:
+  zh-CN: 概率最大的路径
+difficulty: medium
+tags:
+  - graph
+  - array
+  - shortest-path
+  - dijkstra
+  - heap-priority-queue
+kind: function
+function:
+  name: maxProbability
+  params:
+    - name: "n"
+      type: integer
+    - name: edges
+      type: integer[][]
+    - name: succProb
+      type: double[]
+    - name: start_node
+      type: integer
+    - name: end_node
+      type: integer
+  returns: double
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/path-with-maximum-probability/
+judge:
+  compare: exact
+  tolerance: 1e-05
