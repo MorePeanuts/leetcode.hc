@@ -1,0 +1,32 @@
+{"input":{"k":2,"root":[3,5,1,6,2,0,8,null,null,7,4],"target":5},"expected":[7,4,1],"example":true}
+{"input":{"k":3,"root":[1],"target":1},"expected":[],"example":true}
+{"input":{"k":0,"root":[0],"target":0},"expected":[0],"note":"zero distance single node"}
+{"input":{"k":1000,"root":[500],"target":500},"expected":[],"note":"maximum value and unreachable distance"}
+{"input":{"k":1,"root":[1,2],"target":2},"expected":[1],"note":"walk from child to parent"}
+{"input":{"k":1,"root":[1,null,2],"target":1},"expected":[2],"note":"right child"}
+{"input":{"k":1,"root":[1,2,3],"target":1},"expected":[2,3],"note":"both children"}
+{"input":{"k":2,"root":[1,2,3],"target":2},"expected":[3],"note":"cross through ancestor"}
+{"input":{"k":4,"root":[1,2,3,4,5,6,7],"target":4},"expected":[6,7],"note":"opposite far leaf"}
+{"input":{"k":2,"root":[1,2,3,4,5,6,7],"target":2},"expected":[3],"note":"uncle at exact distance"}
+{"input":{"k":0,"root":[1,2,3,4,5,6,7],"target":2},"expected":[2],"note":"non-root target distance zero"}
+{"input":{"k":3,"root":[0,500,1,null,2,3],"target":500},"expected":[3],"note":"sparse ancestors and gaps"}
+{"input":{"k":3,"root":[1,null,2,null,3,null,4],"target":4},"expected":[1],"note":"right chain whole length"}
+{"input":{"k":4,"root":[1,2,null,3,null,4],"target":1},"expected":[],"note":"distance beyond left chain"}
+{"input":{"k":0,"root":[297,null,437,438,141,276,457,491,369,220,406],"target":297},"expected":[297],"note":"irregular tree and target position 1"}
+{"input":{"k":1,"root":[148,203,8,null,267,null,196,null,315,156,499,488,78,316,null,234,null,195],"target":499},"expected":[234,196],"note":"irregular tree and target position 2"}
+{"input":{"k":2,"root":[459,21,478,463,null,460,325,null,null,345,131,53,null,416,262,19,149,null,null,121,null,110,93],"target":110},"expected":[93,345],"note":"irregular tree and target position 3"}
+{"input":{"k":3,"root":[294,300,41,null,242,null,29,500,69,424,456,393,352,null,59,null,null,377,null,397,371,283,216,382,130],"target":41},"expected":[377,242],"note":"irregular tree and target position 4"}
+{"input":{"k":4,"root":[104,208,414,192,null,75,null,null,128,null,141,null,65,null,205,111,null,null,null,382,467,136,44,280,null,261,156,313,432,81,116,null,null,null,null,93],"target":141},"expected":[208],"note":"irregular tree and target position 5"}
+{"input":{"k":5,"root":[185,null,153,310,null,128,368,425,null,80,23,218,395,147,478,207,424,null,403,370,485,497,373,170,null,222,349,null,214,172,119],"target":147},"expected":[222,349,214,425,185],"note":"irregular tree and target position 6"}
+{"input":{"k":6,"root":[262,84,null,null,58,441,309,168,53,null,null,null,436,242,416,298,7,127,null,453,235,378,192,256,13,null,222,380,215,333,244,171,210,19,null,457],"target":235},"expected":[298,7,262],"note":"irregular tree and target position 7"}
+{"input":{"k":7,"root":[1,44,null,228,316,8,77,null,303,null,272,379,241,278,371,null,265,326,null,425,380,58,427,130,21,352,404,null,415,null,91,28,146,null,261,27,313,137,null,478],"target":130},"expected":[272,379,241],"note":"irregular tree and target position 8"}
+{"input":{"k":0,"root":[415,186,236,154,115,301,458,70,173,112,null,450,279,6,376,392,158,208,103,140,102,39,471,131,null,128,76,437,null,46,null,355,196,null,245,229,132,463,null,333],"target":131},"expected":[131],"note":"irregular tree and target position 9"}
+{"input":{"k":1,"root":[270,463,374,null,null,482,95,139,null,339,489,null,null,345,273,33,null,213,null,67,338,268,382,447,493,255,355,226,124,264,363,83,65,381,null,null,348,456,129,110,278,null,277,null,358,199,274,null,null,276],"target":381},"expected":[447],"note":"irregular tree and target position 10"}
+{"input":{"k":2,"root":[496,103,276,471,20,null,414,null,242,214,120,null,94,84,371,null,200,115,116,454,null,null,312,70,494,420,423,null,235,212,472,448,null,282,null,403,86,397,485,60,null,455,459,349,null,424,null,348,490,null,61,233,null,318],"target":60},"expected":[200],"note":"irregular tree and target position 11"}
+{"input":{"k":3,"root":[214,null,12,null,216,383,19,129,64,438,null,491,228,50,199,210,null,null,null,47,null,null,null,94,7,137,null,107,182,null,10,53,null,96,256,null,28,419,null,473,316,142,null,93,470,34,null,24,440,null,136,193,109,null,385,326,123,274,421,463,null,null,33],"target":193},"expected":[316,94],"note":"irregular tree and target position 12"}
+{"generate":{"name":"tree","args":{"k":8,"n":500,"shape":"complete","target_index":0},"seed":863},"digest":"sha256:6d7fe9224b5a5b28c6265ae3fc70c2712f69083f2504cdd3411a3d23b3ec01a1","note":"maximum 500 nodes: complete, target index 0, distance 8"}
+{"generate":{"name":"tree","args":{"k":8,"n":500,"shape":"complete","target_index":248},"seed":864},"digest":"sha256:7fe9ac4e41203b348670d290769d6cd79106bb489b7b56cc8b6dd06e770843e5","note":"maximum 500 nodes: complete, target index 248, distance 8"}
+{"generate":{"name":"tree","args":{"k":499,"n":500,"shape":"left","target_index":499},"seed":865},"digest":"sha256:a50537770eb2f0ba7bcf295ed37a6d8bf450420da4097380013c9ee63b516390","note":"maximum 500 nodes: left, target index 499, distance 499"}
+{"generate":{"name":"tree","args":{"k":249,"n":500,"shape":"right","target_index":250},"seed":866},"digest":"sha256:38b8a4243058b9132046883bb6162232112d9c4ddce12f329fd99de18d52bfa2","note":"maximum 500 nodes: right, target index 250, distance 249"}
+{"generate":{"name":"tree","args":{"k":0,"n":500,"shape":"alternating","target_index":250},"seed":867},"digest":"sha256:35d4b5f006f996ea838a55f14720a2cebedbc1e37c7197e7c77a02e8b161b8b0","note":"maximum 500 nodes: alternating, target index 250, distance 0"}
+{"generate":{"name":"tree","args":{"k":1000,"n":500,"shape":"complete","target_index":499},"seed":868},"digest":"sha256:d3823df937c12f9d0a9408cbd2f2c918099b235699a4163d42f29d779b2f7a34","note":"maximum 500 nodes: complete, target index 499, distance 1000"}

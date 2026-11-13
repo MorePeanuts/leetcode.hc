@@ -125,6 +125,7 @@ groups:
       - binary-tree-preorder-traversal
       - search-in-a-binary-search-tree
       - populating-next-right-pointers-in-each-node-ii
+      - all-nodes-distance-k-in-binary-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
