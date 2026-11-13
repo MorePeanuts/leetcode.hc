@@ -1,0 +1,20 @@
+id: "172"
+slug: factorial-trailing-zeroes
+title: Factorial Trailing Zeroes
+titles:
+  zh-CN: 阶乘后的零
+difficulty: medium
+tags:
+  - math
+kind: function
+function:
+  name: trailingZeroes
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/factorial-trailing-zeroes/
+judge:
+  compare: exact

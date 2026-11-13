@@ -321,6 +321,7 @@ groups:
   - name: math-geometry
     title: Math & Geometry
     problems:
+      - factorial-trailing-zeroes
       - unique-paths
       - climbing-stairs
       - rotate-image

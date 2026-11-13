@@ -1,0 +1,32 @@
+{"input":{"n":3},"expected":0,"example":true}
+{"input":{"n":5},"expected":1,"example":true}
+{"input":{"n":0},"expected":0,"example":true}
+{"input":{"n":1},"expected":0,"note":"Boundary near a multiple or power of five; n=1"}
+{"input":{"n":2},"expected":0,"note":"Boundary near a multiple or power of five; n=2"}
+{"input":{"n":4},"expected":0,"note":"Boundary near a multiple or power of five; n=4"}
+{"input":{"n":6},"expected":1,"note":"Boundary near a multiple or power of five; n=6"}
+{"input":{"n":9},"expected":1,"note":"Boundary near a multiple or power of five; n=9"}
+{"input":{"n":10},"expected":2,"note":"Boundary near a multiple or power of five; n=10"}
+{"input":{"n":14},"expected":2,"note":"Boundary near a multiple or power of five; n=14"}
+{"input":{"n":15},"expected":3,"note":"Boundary near a multiple or power of five; n=15"}
+{"input":{"n":20},"expected":4,"note":"Boundary near a multiple or power of five; n=20"}
+{"input":{"n":24},"expected":4,"note":"Boundary near a multiple or power of five; n=24"}
+{"input":{"n":25},"expected":6,"note":"Boundary near a multiple or power of five; n=25"}
+{"input":{"n":26},"expected":6,"note":"Boundary near a multiple or power of five; n=26"}
+{"input":{"n":49},"expected":10,"note":"Boundary near a multiple or power of five; n=49"}
+{"input":{"n":50},"expected":12,"note":"Boundary near a multiple or power of five; n=50"}
+{"input":{"n":99},"expected":22,"note":"Boundary near a multiple or power of five; n=99"}
+{"input":{"n":100},"expected":24,"note":"Boundary near a multiple or power of five; n=100"}
+{"input":{"n":124},"expected":28,"note":"Boundary near a multiple or power of five; n=124"}
+{"input":{"n":125},"expected":31,"note":"Boundary near a multiple or power of five; n=125"}
+{"input":{"n":126},"expected":31,"note":"Boundary near a multiple or power of five; n=126"}
+{"input":{"n":249},"expected":59,"note":"Boundary near a multiple or power of five; n=249"}
+{"input":{"n":250},"expected":62,"note":"Boundary near a multiple or power of five; n=250"}
+{"input":{"n":624},"expected":152,"note":"Boundary near a multiple or power of five; n=624"}
+{"input":{"n":625},"expected":156,"note":"Boundary near a multiple or power of five; n=625"}
+{"input":{"n":626},"expected":156,"note":"Boundary near a multiple or power of five; n=626"}
+{"input":{"n":3124},"expected":776,"note":"Boundary near a multiple or power of five; n=3124"}
+{"input":{"n":3125},"expected":781,"note":"Boundary near a multiple or power of five; n=3125"}
+{"input":{"n":3126},"expected":781,"note":"Boundary near a multiple or power of five; n=3126"}
+{"input":{"n":9999},"expected":2495,"note":"Boundary near a multiple or power of five; n=9999"}
+{"input":{"n":10000},"expected":2499,"note":"Boundary near a multiple or power of five; n=10000"}
