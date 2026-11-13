@@ -1,0 +1,32 @@
+{"input":{"matrix":[[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]],"target":5},"expected":true,"example":true}
+{"input":{"matrix":[[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]],"target":20},"expected":false,"example":true}
+{"input":{"matrix":[[0]],"target":-1},"expected":false,"note":"singleton"}
+{"input":{"matrix":[[0]],"target":0},"expected":true,"note":"singleton"}
+{"input":{"matrix":[[0]],"target":1},"expected":false,"note":"singleton"}
+{"input":{"matrix":[[-1000000000,0,1000000000]],"target":-1000000000},"expected":true,"note":"single row bounds"}
+{"input":{"matrix":[[-1000000000,0,1000000000]],"target":0},"expected":true,"note":"single row bounds"}
+{"input":{"matrix":[[-1000000000,0,1000000000]],"target":1},"expected":false,"note":"single row bounds"}
+{"input":{"matrix":[[-1000000000,0,1000000000]],"target":1000000000},"expected":true,"note":"single row bounds"}
+{"input":{"matrix":[[-10],[0],[10]],"target":-10},"expected":true,"note":"single column"}
+{"input":{"matrix":[[-10],[0],[10]],"target":-1},"expected":false,"note":"single column"}
+{"input":{"matrix":[[-10],[0],[10]],"target":10},"expected":true,"note":"single column"}
+{"input":{"matrix":[[-10],[0],[10]],"target":11},"expected":false,"note":"single column"}
+{"input":{"matrix":[[1,4],[2,5]],"target":1},"expected":true,"note":"overlapping row ranges"}
+{"input":{"matrix":[[1,4],[2,5]],"target":2},"expected":true,"note":"overlapping row ranges"}
+{"input":{"matrix":[[1,4],[2,5]],"target":3},"expected":false,"note":"overlapping row ranges"}
+{"input":{"matrix":[[1,4],[2,5]],"target":4},"expected":true,"note":"overlapping row ranges"}
+{"input":{"matrix":[[1,4],[2,5]],"target":5},"expected":true,"note":"overlapping row ranges"}
+{"input":{"matrix":[[2,2],[2,2]],"target":1},"expected":false,"note":"equal entries"}
+{"input":{"matrix":[[2,2],[2,2]],"target":2},"expected":true,"note":"equal entries"}
+{"input":{"matrix":[[2,2],[2,2]],"target":3},"expected":false,"note":"equal entries"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":-9},"expected":true,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":-7},"expected":true,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":-3},"expected":true,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":0},"expected":true,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":4},"expected":true,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":5},"expected":false,"note":"negative rectangular matrix"}
+{"input":{"matrix":[[-9,-3,4],[-7,0,6]],"target":6},"expected":true,"note":"negative rectangular matrix"}
+{"generate":{"name":"staircase","args":{"n":300,"offset":0,"present":false},"seed":42},"digest":"sha256:c6c2d1cac7a33c878ff54c4675fd21f05014313797cec8f8e9cb6b0747b570b4","note":"Maximum square; long staircase search"}
+{"generate":{"name":"staircase","args":{"n":300,"offset":-100000,"present":false},"seed":42},"digest":"sha256:d978639b43428e3f1086eeacfaa08fc194dbe5416c5faa942af2cd9341470d19","note":"Maximum square; long staircase search"}
+{"generate":{"name":"staircase","args":{"n":300,"offset":999998000,"present":false},"seed":42},"digest":"sha256:f432d9020c8e449c493539357762261b782d275f8d714ea10bc6c2fb9a4d2073","note":"Maximum square; long staircase search"}
+{"generate":{"name":"staircase","args":{"n":300,"offset":0,"present":true},"seed":42},"digest":"sha256:657b7c765f5ff0c021b52b89fcf833c70fd93208d8196b4bf7cfd7996c020f84","note":"Maximum square; long staircase search"}

@@ -86,6 +86,7 @@ groups:
       - swim-in-rising-water
       - minimum-interval-to-include-each-query
       - missing-number
+      - search-a-2d-matrix-ii
   - name: linked-list
     title: Linked List
     problems:
