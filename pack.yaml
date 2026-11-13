@@ -39,6 +39,7 @@ groups:
       - container-with-most-water
       - trapping-rain-water
       - palindromic-substrings
+      - happy-number
   - name: sliding-window
     title: Sliding Window
     problems:
@@ -211,3 +212,4 @@ groups:
       - rotate-image
       - spiral-matrix
       - set-matrix-zeroes
+      - happy-number

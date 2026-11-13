@@ -1,0 +1,23 @@
+id: "202"
+slug: happy-number
+title: Happy Number
+titles:
+  zh-CN: 快乐数
+difficulty: easy
+tags:
+  - hash-table
+  - math
+  - two-pointers
+  - floyds-cycle-finding-algorithm
+kind: function
+function:
+  name: isHappy
+  params:
+    - name: "n"
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/happy-number/
+judge:
+  compare: exact
