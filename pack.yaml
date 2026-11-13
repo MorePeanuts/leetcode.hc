@@ -180,6 +180,7 @@ groups:
       - word-break
       - partition-equal-subset-sum
       - maximum-subarray
+      - jump-game
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
@@ -199,6 +200,7 @@ groups:
     title: Greedy
     problems:
       - maximum-subarray
+      - jump-game
   - name: intervals
     title: Intervals
     problems:
