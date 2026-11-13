@@ -1,0 +1,33 @@
+{"input":{"s":"leetcode"},"expected":0,"example":true}
+{"input":{"s":"loveleetcode"},"expected":2,"example":true}
+{"input":{"s":"aabb"},"expected":-1,"example":true}
+{"input":{"s":"a"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 1"}
+{"input":{"s":"z"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 2"}
+{"input":{"s":"aa"},"expected":-1,"note":"Unique-position, repeated alphabet or no unique character 3"}
+{"input":{"s":"ab"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 4"}
+{"input":{"s":"ba"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 5"}
+{"input":{"s":"aba"},"expected":1,"note":"Unique-position, repeated alphabet or no unique character 6"}
+{"input":{"s":"abb"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 7"}
+{"input":{"s":"aab"},"expected":2,"note":"Unique-position, repeated alphabet or no unique character 8"}
+{"input":{"s":"aabbc"},"expected":4,"note":"Unique-position, repeated alphabet or no unique character 10"}
+{"input":{"s":"caabb"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 11"}
+{"input":{"s":"abbac"},"expected":4,"note":"Unique-position, repeated alphabet or no unique character 12"}
+{"input":{"s":"abcabc"},"expected":-1,"note":"Unique-position, repeated alphabet or no unique character 13"}
+{"input":{"s":"abacabad"},"expected":3,"note":"Unique-position, repeated alphabet or no unique character 14"}
+{"input":{"s":"zzxyyx"},"expected":-1,"note":"Unique-position, repeated alphabet or no unique character 15"}
+{"input":{"s":"abcdefghijklmnopqrstuvwxyz"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 16"}
+{"input":{"s":"zyxwvutsrqponmlkjihgfedcba"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 17"}
+{"input":{"s":"aabbccddeeff"},"expected":-1,"note":"Unique-position, repeated alphabet or no unique character 18"}
+{"input":{"s":"aabbccddeeffg"},"expected":12,"note":"Unique-position, repeated alphabet or no unique character 19"}
+{"input":{"s":"gaabbccddeeff"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 20"}
+{"input":{"s":"abcab"},"expected":2,"note":"Unique-position, repeated alphabet or no unique character 21"}
+{"input":{"s":"aaaabbbbcccd"},"expected":11,"note":"Unique-position, repeated alphabet or no unique character 22"}
+{"input":{"s":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"},"expected":99,"note":"Unique-position, repeated alphabet or no unique character 23"}
+{"input":{"s":"baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 24"}
+{"input":{"s":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},"expected":50,"note":"Unique-position, repeated alphabet or no unique character 25"}
+{"input":{"s":"aabbcczzxxq"},"expected":10,"note":"Unique-position, repeated alphabet or no unique character 26"}
+{"input":{"s":"qwertyqwert"},"expected":5,"note":"Unique-position, repeated alphabet or no unique character 27"}
+{"input":{"s":"mississippi"},"expected":0,"note":"Unique-position, repeated alphabet or no unique character 28"}
+{"input":{"s":"aabbccddxxyyzz"},"expected":-1,"note":"Unique-position, repeated alphabet or no unique character 29"}
+{"generate":{"name":"repeated_prefix","args":{"char":"a","n":100000},"seed":7},"digest":"sha256:5164c5dcd36b0a79f4cec5cfb9fb3e031d1b15c5b8a6397eb8720ac2afd95005","note":"Unique character at final index; quadratic repeated-count trap"}
+{"generate":{"name":"repeated_prefix","args":{"char":"y","n":99999},"seed":7},"digest":"sha256:891f609acb7c9f0298ad2d4ab222676b05408868febcbe6b06f4dee939452d32","note":"Long repeated prefix with another letter"}
