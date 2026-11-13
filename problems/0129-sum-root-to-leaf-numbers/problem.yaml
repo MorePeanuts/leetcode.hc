@@ -1,0 +1,22 @@
+id: "129"
+slug: sum-root-to-leaf-numbers
+title: Sum Root to Leaf Numbers
+titles:
+  zh-CN: 求根节点到叶节点数字之和
+difficulty: medium
+tags:
+  - tree
+  - depth-first-search
+  - binary-tree
+kind: function
+function:
+  name: sumNumbers
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sum-root-to-leaf-numbers/
+judge:
+  compare: exact
