@@ -238,6 +238,7 @@ groups:
       - min-cost-to-connect-all-points
       - swim-in-rising-water
       - cheapest-flights-within-k-stops
+      - path-with-minimum-effort
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:

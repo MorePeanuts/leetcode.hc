@@ -1,0 +1,34 @@
+{"input":{"heights":[[1,2,2],[3,8,2],[5,3,5]]},"expected":2,"example":true}
+{"input":{"heights":[[1,2,3],[3,8,4],[5,3,5]]},"expected":1,"example":true}
+{"input":{"heights":[[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]},"expected":0,"example":true}
+{"input":{"heights":[[1]]},"expected":0,"note":"One cell has zero effort"}
+{"input":{"heights":[[1000000]]},"expected":0,"note":"Maximum single-cell height"}
+{"input":{"heights":[[1,1000000]]},"expected":999999,"note":"Maximum adjacent jump"}
+{"input":{"heights":[[7,7,7]]},"expected":0,"note":"Flat single row"}
+{"input":{"heights":[[1],[8],[3],[10]]},"expected":7,"note":"Single column"}
+{"input":{"heights":[[1,2,3,4,5]]},"expected":1,"note":"Increasing row uses maximum edge, not total difference"}
+{"input":{"heights":[[1,2],[3,8]]},"expected":5,"note":"Choose smaller bottleneck route"}
+{"input":{"heights":[[1,100],[2,3]]},"expected":1,"note":"Cheapest path begins downward"}
+{"input":{"heights":[[1,2],[100,3]]},"expected":1,"note":"Cheapest path begins rightward"}
+{"input":{"heights":[[5,5],[5,5]]},"expected":0,"note":"Flat rectangle"}
+{"input":{"heights":[[1,9,1],[1,9,1],[1,1,1]]},"expected":0,"note":"Longer route avoids high ridge"}
+{"input":{"heights":[[1,3,5],[2,8,6],[3,4,7]]},"expected":2,"note":"Minimax differs from additive shortest path"}
+{"input":{"heights":[[10,1,10],[9,2,9]]},"expected":7,"note":"Rectangular landscape"}
+{"input":{"heights":[[1,1000000,1],[1000000,1,1000000],[1,1000000,1]]},"expected":999999,"note":"Diagonal moves are forbidden"}
+{"input":{"heights":[[6,26,12]]},"expected":20,"note":"Seeded small terrain 1"}
+{"input":{"heights":[[13,1,27],[18,3,22],[1,2,22],[10,25,22]]},"expected":15,"note":"Seeded small terrain 2"}
+{"input":{"heights":[[22],[22],[25],[24],[8]]},"expected":16,"note":"Seeded small terrain 3"}
+{"input":{"heights":[[24,24,16],[22,9,30],[10,14,21],[1,22,22],[7,4,26]]},"expected":12,"note":"Seeded small terrain 4"}
+{"input":{"heights":[[16,12,28,7],[13,25,21,30]]},"expected":12,"note":"Seeded small terrain 5"}
+{"input":{"heights":[[16],[4]]},"expected":12,"note":"Seeded small terrain 6"}
+{"input":{"heights":[[2,2,3,26],[16,26,8,17],[10,22,9,27],[20,20,28,29],[10,1,25,4]]},"expected":21,"note":"Seeded small terrain 7"}
+{"input":{"heights":[[6,4,20,25,24],[26,11,27,19,2],[11,15,11,25,13],[16,22,6,21,7],[25,6,12,7,12]]},"expected":7,"note":"Seeded small terrain 8"}
+{"input":{"heights":[[19,7,12,15,11],[1,4,11,7,15]]},"expected":12,"note":"Seeded small terrain 9"}
+{"input":{"heights":[[8,20,7,6,28],[23,1,6,15,14],[17,21,16,28,11]]},"expected":13,"note":"Seeded small terrain 10"}
+{"input":{"heights":[[12,13,5,9],[10,11,22,29],[23,21,1,8],[13,12,7,9],[1,27,12,25]]},"expected":13,"note":"Seeded small terrain 11"}
+{"input":{"heights":[[23,4],[10,27],[20,4],[18,18],[25,14]]},"expected":13,"note":"Seeded small terrain 12"}
+{"generate":{"name":"snake","args":{"n":99},"seed":1631},"digest":"sha256:5ffc48fa859c46c30a5c96f4eac06873035b813394521e45f091df94d2d86c57","note":"Long zero-effort winding path defeats synchronous Bellman-Ford"}
+{"generate":{"name":"snake","args":{"n":97},"seed":1631},"digest":"sha256:ab683ed05a547d52fc0690b286f4a2a7f493aa0eb5f0b3c350bb08d3fe668070","note":"Second long winding corridor"}
+{"generate":{"name":"snake","args":{"n":95},"seed":1631},"digest":"sha256:1c900b04e9337b1127f9b44b0e2b825c99a07c2813a78d32894016957e796dbf","note":"Third long winding corridor"}
+{"generate":{"name":"random_heights","args":{"n":100},"seed":1631},"digest":"sha256:b019b4f88c07fedd399d0d8d887b865dce7e1177b2412d544c876acf4f0fe3a1","note":"Maximum 100 by 100 landscape and height range"}
+{"generate":{"name":"line","args":{"n":100},"seed":1631},"digest":"sha256:17e3dc62abc4b85310f06115231b3045fa36ac16ad839ee45c0481dbc084e116","note":"Maximum row width with alternating extrema"}
