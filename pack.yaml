@@ -34,6 +34,7 @@ groups:
       - hand-of-straights
       - partition-labels
       - single-number
+      - missing-number
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -82,6 +83,7 @@ groups:
       - kth-smallest-element-in-a-sorted-matrix
       - swim-in-rising-water
       - minimum-interval-to-include-each-query
+      - missing-number
   - name: linked-list
     title: Linked List
     problems:
@@ -255,6 +257,7 @@ groups:
       - number-of-1-bits
       - counting-bits
       - reverse-bits
+      - missing-number
   - name: math-geometry
     title: Math & Geometry
     problems:
@@ -269,3 +272,4 @@ groups:
       - multiply-strings
       - detect-squares
       - min-cost-to-connect-all-points
+      - missing-number

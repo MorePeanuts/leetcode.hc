@@ -1,0 +1,36 @@
+{"input":{"nums":[3,0,1]},"expected":2,"example":true}
+{"input":{"nums":[0,1]},"expected":2,"example":true}
+{"input":{"nums":[9,6,4,2,3,5,7,0,1]},"expected":8,"example":true}
+{"input":{"nums":[1]},"expected":0,"note":"n=1, missing 0; descending distinct range."}
+{"input":{"nums":[0]},"expected":1,"note":"n=1, missing 1; descending distinct range."}
+{"input":{"nums":[2,1]},"expected":0,"note":"n=2, missing 0; descending distinct range."}
+{"input":{"nums":[2,0]},"expected":1,"note":"n=2, missing 1; descending distinct range."}
+{"input":{"nums":[1,0]},"expected":2,"note":"n=2, missing 2; descending distinct range."}
+{"input":{"nums":[3,2,1]},"expected":0,"note":"n=3, missing 0; descending distinct range."}
+{"input":{"nums":[3,2,0]},"expected":1,"note":"n=3, missing 1; descending distinct range."}
+{"input":{"nums":[2,1,0]},"expected":3,"note":"n=3, missing 3; descending distinct range."}
+{"input":{"nums":[4,3,2,1]},"expected":0,"note":"n=4, missing 0; descending distinct range."}
+{"input":{"nums":[4,3,1,0]},"expected":2,"note":"n=4, missing 2; descending distinct range."}
+{"input":{"nums":[3,2,1,0]},"expected":4,"note":"n=4, missing 4; descending distinct range."}
+{"input":{"nums":[5,4,3,2,1]},"expected":0,"note":"n=5, missing 0; descending distinct range."}
+{"input":{"nums":[5,4,3,1,0]},"expected":2,"note":"n=5, missing 2; descending distinct range."}
+{"input":{"nums":[4,3,2,1,0]},"expected":5,"note":"n=5, missing 5; descending distinct range."}
+{"input":{"nums":[8,7,6,5,4,3,2,1]},"expected":0,"note":"n=8, missing 0; descending distinct range."}
+{"input":{"nums":[8,7,6,5,3,2,1,0]},"expected":4,"note":"n=8, missing 4; descending distinct range."}
+{"input":{"nums":[7,6,5,4,3,2,1,0]},"expected":8,"note":"n=8, missing 8; descending distinct range."}
+{"input":{"nums":[16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]},"expected":0,"note":"n=16, missing 0; descending distinct range."}
+{"input":{"nums":[16,15,14,13,12,11,10,9,7,6,5,4,3,2,1,0]},"expected":8,"note":"n=16, missing 8; descending distinct range."}
+{"input":{"nums":[15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]},"expected":16,"note":"n=16, missing 16; descending distinct range."}
+{"input":{"nums":[31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]},"expected":0,"note":"n=31, missing 0; descending distinct range."}
+{"input":{"nums":[31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]},"expected":15,"note":"n=31, missing 15; descending distinct range."}
+{"input":{"nums":[30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]},"expected":31,"note":"n=31, missing 31; descending distinct range."}
+{"input":{"nums":[32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]},"expected":0,"note":"n=32, missing 0; descending distinct range."}
+{"input":{"nums":[32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]},"expected":16,"note":"n=32, missing 16; descending distinct range."}
+{"input":{"nums":[31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]},"expected":32,"note":"n=32, missing 32; descending distinct range."}
+{"input":{"nums":[0,3,5,7,9,2,4,6,8]},"expected":1,"note":"Unsorted n=9, missing interior value 1."}
+{"input":{"nums":[0,2,5,7,9,1,3,6,8]},"expected":4,"note":"Unsorted n=9, missing interior value 4."}
+{"input":{"nums":[0,2,4,6,8,1,3,5,7,10]},"expected":9,"note":"Unsorted n=10, missing interior value 9."}
+{"generate":{"name":"missing_value","args":{"layout":"ascending","missing":10000,"n":10000},"seed":45},"digest":"sha256:8655c55e8cdbd24c98b26abdabc7f810de39b115850c66ed84211f11fa24aa63","note":"Maximum n; missing value late in a repeated-membership scan."}
+{"generate":{"name":"missing_value","args":{"layout":"descending","missing":10000,"n":10000},"seed":46},"digest":"sha256:b51a2ea3cbcbefe55c4ca3545e02a6bfd912fcda3b568985eb9c88be595df9d8","note":"Maximum n; missing value late in a repeated-membership scan."}
+{"generate":{"name":"missing_value","args":{"layout":"shuffled","missing":9999,"n":10000},"seed":47},"digest":"sha256:de438f46c2ce3fce058d965b3751ee342d6507a8d7bba524231b9304213d4283","note":"Maximum n; missing value late in a repeated-membership scan."}
+{"generate":{"name":"missing_value","args":{"layout":"shuffled","missing":5000,"n":10000},"seed":48},"digest":"sha256:91269acbe9658e633d8362cf0b16065f15db582ea06547d950deb6c8914212ba","note":"Maximum n; missing value late in a repeated-membership scan."}

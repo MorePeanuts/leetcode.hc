@@ -1,0 +1,25 @@
+id: "268"
+slug: missing-number
+title: Missing Number
+titles:
+  zh-CN: 丢失的数字
+difficulty: easy
+tags:
+  - bit-manipulation
+  - array
+  - hash-table
+  - math
+  - binary-search
+  - sorting
+kind: function
+function:
+  name: missingNumber
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/missing-number/
+judge:
+  compare: exact
