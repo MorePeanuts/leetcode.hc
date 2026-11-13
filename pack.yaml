@@ -323,3 +323,4 @@ groups:
       - random-pick-with-weight
       - shuffle-an-array
       - linked-list-random-node
+      - random-pick-index
