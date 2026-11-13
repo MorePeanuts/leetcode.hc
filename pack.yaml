@@ -25,6 +25,7 @@ groups:
       - sort-an-array
       - find-k-pairs-with-smallest-sums
       - kth-smallest-element-in-a-sorted-matrix
+      - best-time-to-buy-and-sell-stock-with-cooldown
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -152,6 +153,7 @@ groups:
       - longest-common-subsequence
       - edit-distance
       - unique-paths
+      - best-time-to-buy-and-sell-stock-with-cooldown
   - name: greedy
     title: Greedy
   - name: intervals
