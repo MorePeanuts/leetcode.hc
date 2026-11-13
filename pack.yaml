@@ -203,6 +203,7 @@ groups:
       - maximum-subarray
       - jump-game
       - jump-game-ii
+      - gas-station
   - name: intervals
     title: Intervals
     problems:

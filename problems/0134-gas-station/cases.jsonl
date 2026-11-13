@@ -1,0 +1,34 @@
+{"input":{"cost":[3,4,5,1,2],"gas":[1,2,3,4,5]},"expected":3,"example":true}
+{"input":{"cost":[3,4,3],"gas":[2,3,4]},"expected":-1,"example":true}
+{"input":{"cost":[0],"gas":[0]},"expected":0,"note":"single equal zero"}
+{"input":{"cost":[1],"gas":[0]},"expected":-1,"note":"single insufficient"}
+{"input":{"cost":[0],"gas":[10000]},"expected":0,"note":"single surplus"}
+{"input":{"cost":[10000],"gas":[10000]},"expected":0,"note":"single boundary equal"}
+{"input":{"cost":[1,0],"gas":[0,1]},"expected":1,"note":"unique last station"}
+{"input":{"cost":[0,1],"gas":[1,0]},"expected":0,"note":"unique first station"}
+{"input":{"cost":[0,2,2],"gas":[3,0,0]},"expected":-1,"note":"insufficient total despite positive station"}
+{"input":{"cost":[1,1,1],"gas":[0,0,0]},"expected":-1,"note":"no station has enough"}
+{"input":{"cost":[0,0,1],"gas":[1,0,0]},"expected":0,"note":"equality must not restart candidate"}
+{"input":{"cost":[0,1,0],"gas":[0,0,1]},"expected":2,"note":"wraparound only start"}
+{"input":{"cost":[0,9999,1],"gas":[10000,0,0]},"expected":0,"note":"large bounded quantities"}
+{"input":{"cost":[4,6,4],"gas":[8,3,3]},"expected":0,"note":"Unique circular start with zero-sum budget, rotation 0"}
+{"input":{"cost":[5,15,6,7],"gas":[13,10,1,9]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 1"}
+{"input":{"cost":[3,18,4,2,6],"gas":[4,4,0,16,9]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 2"}
+{"input":{"cost":[8,13,3,4,5,0],"gas":[1,7,0,13,10,2]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 3"}
+{"input":{"cost":[8,11,8,10,8,13,9],"gas":[8,0,0,13,18,2,26]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 4"}
+{"input":{"cost":[0,14,21,4,17,6,6,12],"gas":[4,6,10,16,8,17,10,9]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 5"}
+{"input":{"cost":[10,13,10,6,9,8,10,1,15],"gas":[17,3,3,24,2,2,23,1,7]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 6"}
+{"input":{"cost":[18,9,6,4,2,7,10,10,8,9],"gas":[3,9,4,7,11,9,0,17,15,8]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 7"}
+{"input":{"cost":[12,5,17],"gas":[3,21,10]},"expected":1,"note":"Unique circular start with zero-sum budget, rotation 8"}
+{"input":{"cost":[3,3,26,2],"gas":[12,4,8,10]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 9"}
+{"input":{"cost":[5,13,0,3,18],"gas":[14,6,15,2,2]},"expected":0,"note":"Unique circular start with zero-sum budget, rotation 10"}
+{"input":{"cost":[18,8,18,7,0,1],"gas":[2,28,5,15,2,0]},"expected":1,"note":"Unique circular start with zero-sum budget, rotation 11"}
+{"input":{"cost":[6,19,6,3,7,13,9],"gas":[6,3,11,13,10,5,15]},"expected":2,"note":"Unique circular start with zero-sum budget, rotation 12"}
+{"input":{"cost":[6,6,18,1,5,12,7,15],"gas":[9,10,8,4,9,10,12,8]},"expected":3,"note":"Unique circular start with zero-sum budget, rotation 13"}
+{"input":{"cost":[10,8,15,11,1,22,9,1,12],"gas":[18,4,9,3,19,5,24,2,5]},"expected":4,"note":"Unique circular start with zero-sum budget, rotation 14"}
+{"input":{"cost":[2,8,15,5,22,4,6,10,6,19],"gas":[9,17,9,10,6,6,16,17,7,0]},"expected":5,"note":"Unique circular start with zero-sum budget, rotation 15"}
+{"input":{"cost":[22,10,3],"gas":[10,3,22]},"expected":2,"note":"Unique circular start with zero-sum budget, rotation 16"}
+{"generate":{"name":"late_start","args":{"amount":1,"n":100000},"seed":42},"digest":"sha256:5c1d3da5f5ca5ff9fbd6395e52d1c3a77ecd0eb67edcec307a1eac860d62f3ff","note":"Unique final start; naive trials fail only near the end"}
+{"generate":{"name":"late_start","args":{"amount":10000,"n":100000},"seed":42},"digest":"sha256:b15dd6ecb79af5a2fef4bf6c2e7cdf4ac0fdbe410606bd0341645432ee54e628","note":"Maximum station budget and long zero net runs"}
+{"generate":{"name":"unique_rotated","args":{"n":100000,"start":76543},"seed":42},"digest":"sha256:2681a9eaf18fea8ad97ebf4c228194b29e9548bfd59bcd3fb9eba888339cfa5d","note":"Large equal budgets and one unique rotated start"}
+{"generate":{"name":"impossible","args":{"n":100000},"seed":42},"digest":"sha256:856b9cd093b65a55860b001c14b0a4dde481164f7099424030fba7edd30ee7e0","note":"One-unit total shortage after maximum zero prefix"}
