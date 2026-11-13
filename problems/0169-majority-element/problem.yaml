@@ -1,0 +1,25 @@
+id: "169"
+slug: majority-element
+title: Majority Element
+titles:
+  zh-CN: 多数元素
+difficulty: easy
+tags:
+  - array
+  - hash-table
+  - divide-and-conquer
+  - counting
+  - sorting
+  - boyer-moore-majority-vote-algorithm
+kind: function
+function:
+  name: majorityElement
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/majority-element/
+judge:
+  compare: exact

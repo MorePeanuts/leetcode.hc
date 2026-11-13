@@ -13,6 +13,7 @@ groups:
   - name: arrays-hashing
     title: Arrays & Hashing
     problems:
+      - majority-element
       - first-unique-character-in-a-string
       - word-pattern
       - two-sum
