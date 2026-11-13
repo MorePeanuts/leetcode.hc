@@ -1,0 +1,21 @@
+id: "338"
+slug: counting-bits
+title: Counting Bits
+titles:
+  zh-CN: 比特位计数
+difficulty: easy
+tags:
+  - bit-manipulation
+  - dynamic-programming
+kind: function
+function:
+  name: countBits
+  params:
+    - name: "n"
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/counting-bits/
+judge:
+  compare: exact
