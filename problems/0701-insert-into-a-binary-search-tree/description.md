@@ -12,8 +12,9 @@ You are given the `root` node of a binary search tree (BST) and a `value` to ins
 Input: root = [4,2,7,1,3], val = 5
 Output: [4,2,7,1,3,5]
 Explanation: Another accepted tree is:
-
 ```
+
+![](assets/bst.jpg)
 
 **Example 2:**
 
