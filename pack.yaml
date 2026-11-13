@@ -163,6 +163,7 @@ groups:
       - longest-increasing-path-in-a-matrix
       - distinct-subsequences
       - burst-balloons
+      - regular-expression-matching
   - name: greedy
     title: Greedy
   - name: intervals
