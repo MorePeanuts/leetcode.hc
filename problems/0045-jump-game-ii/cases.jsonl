@@ -1,0 +1,33 @@
+{"input":{"nums":[2,3,1,1,4]},"expected":2,"example":true}
+{"input":{"nums":[2,3,0,1,4]},"expected":2,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"already at end"}
+{"input":{"nums":[1]},"expected":0,"note":"single nonzero"}
+{"input":{"nums":[1000]},"expected":0,"note":"single maximum"}
+{"input":{"nums":[1,0]},"expected":1,"note":"one step"}
+{"input":{"nums":[2,0,0]},"expected":1,"note":"one jump exact"}
+{"input":{"nums":[1000,0,0]},"expected":1,"note":"overshoot"}
+{"input":{"nums":[1,1,0]},"expected":2,"note":"two steps"}
+{"input":{"nums":[2,3,1,1,0]},"expected":2,"note":"choose smaller first landing"}
+{"input":{"nums":[2,3,0,0,1]},"expected":2,"note":"largest immediate landing dead"}
+{"input":{"nums":[1,1,1,1,1]},"expected":4,"note":"all unit steps"}
+{"input":{"nums":[3,1,1,1,0]},"expected":2,"note":"two-jump cover"}
+{"input":{"nums":[5,0,0,0,0,0]},"expected":1,"note":"one jump longer input"}
+{"input":{"nums":[2,2,2,2,0]},"expected":2,"note":"overlapping frontiers"}
+{"input":{"nums":[3,0,2,0,1,0]},"expected":3,"note":"mixed zeros"}
+{"input":{"nums":[1,2,3,4,0,0,0]},"expected":3,"note":"expanding frontier"}
+{"input":{"nums":[2,0,2,0,2,0,0]},"expected":3,"note":"exact frontier endings"}
+{"input":{"nums":[1,1,4,0,0,0,0]},"expected":3,"note":"late large jump"}
+{"input":{"nums":[2,1,2,1,2,1,0]},"expected":3,"note":"three short frontiers"}
+{"input":{"nums":[1000,1,1,1]},"expected":1,"note":"initial maximum"}
+{"input":{"nums":[3,0,0,3,0,0,0]},"expected":2,"note":"only one intermediate can progress"}
+{"input":{"nums":[1,1]},"expected":1,"note":"do not count final index"}
+{"input":{"nums":[1,1000,0,0,0]},"expected":2,"note":"overshooting second jump"}
+{"input":{"nums":[3,3,1,2,0,0]},"expected":2,"note":"prefer farther reach not larger value"}
+{"input":{"nums":[2,2,1,1,0]},"expected":3,"note":"multiple optimal paths"}
+{"input":{"nums":[3,3,3,3,3,3,3,0]},"expected":3,"note":"flat small jumps"}
+{"input":{"nums":[2,0,3,0,0,2,0,0]},"expected":3,"note":"sparse safe path"}
+{"input":{"nums":[1,1,1000]},"expected":2,"note":"large wasted jump at final"}
+{"input":{"nums":[4,1,1,1,5,0,0,0,0,0]},"expected":2,"note":"must scan whole reachable level"}
+{"generate":{"name":"uniform","args":{"jump":1,"n":10000},"seed":42},"digest":"sha256:3f45e2299667986c485d329893719afbe968bf38dccfb27ec03992df2b6df547","note":"Maximum minimum jump count; quadratic predecessor scan"}
+{"generate":{"name":"uniform","args":{"jump":1000,"n":10000},"seed":42},"digest":"sha256:9fecf057c0745e8d9f8d7dea66c8acc434a86e66ef8102183e81ae5397ec0884","note":"Maximum branching reachable range"}
+{"generate":{"name":"sparse","args":{"n":9999},"seed":42},"digest":"sha256:cc79245179e50407facf7b7d80c097c440c0bd1edb32687f4a1c702400e02cd0","note":"Maximum-length sparse guaranteed reachable route"}

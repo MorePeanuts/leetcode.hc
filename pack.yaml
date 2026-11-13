@@ -181,6 +181,7 @@ groups:
       - partition-equal-subset-sum
       - maximum-subarray
       - jump-game
+      - jump-game-ii
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
@@ -201,6 +202,7 @@ groups:
     problems:
       - maximum-subarray
       - jump-game
+      - jump-game-ii
   - name: intervals
     title: Intervals
     problems:
