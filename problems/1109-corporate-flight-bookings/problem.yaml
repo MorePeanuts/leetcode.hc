@@ -1,0 +1,23 @@
+id: "1109"
+slug: corporate-flight-bookings
+title: Corporate Flight Bookings
+titles:
+  zh-CN: 航班预订统计
+difficulty: medium
+tags:
+  - array
+  - prefix-sum
+kind: function
+function:
+  name: corpFlightBookings
+  params:
+    - name: bookings
+      type: integer[][]
+    - name: "n"
+      type: integer
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/corporate-flight-bookings/
+judge:
+  compare: exact
