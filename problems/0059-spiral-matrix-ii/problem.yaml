@@ -1,0 +1,22 @@
+id: "59"
+slug: spiral-matrix-ii
+title: Spiral Matrix II
+titles:
+  zh-CN: 螺旋矩阵 II
+difficulty: medium
+tags:
+  - array
+  - matrix
+  - simulation
+kind: function
+function:
+  name: generateMatrix
+  params:
+    - name: "n"
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/spiral-matrix-ii/
+judge:
+  compare: exact
