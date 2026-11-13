@@ -1,0 +1,24 @@
+id: "695"
+slug: max-area-of-island
+title: Max Area of Island
+titles:
+  zh-CN: 岛屿的最大面积
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - array
+  - matrix
+kind: function
+function:
+  name: maxAreaOfIsland
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/max-area-of-island/
+judge:
+  compare: exact
