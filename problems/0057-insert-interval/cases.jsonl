@@ -1,0 +1,34 @@
+{"input":{"intervals":[[1,3],[6,9]],"newInterval":[2,5]},"expected":[[1,5],[6,9]],"example":true}
+{"input":{"intervals":[[1,2],[3,5],[6,7],[8,10],[12,16]],"newInterval":[4,8]},"expected":[[1,2],[3,10],[12,16]],"example":true}
+{"input":{"intervals":[],"newInterval":[0,0]},"expected":[[0,0]],"note":"empty input and zero point"}
+{"input":{"intervals":[],"newInterval":[0,100000]},"expected":[[0,100000]],"note":"empty input full range"}
+{"input":{"intervals":[[0,0]],"newInterval":[0,0]},"expected":[[0,0]],"note":"identical point"}
+{"input":{"intervals":[[5,5]],"newInterval":[4,4]},"expected":[[4,4],[5,5]],"note":"point before"}
+{"input":{"intervals":[[5,5]],"newInterval":[6,6]},"expected":[[5,5],[6,6]],"note":"point after"}
+{"input":{"intervals":[[1,5]],"newInterval":[2,3]},"expected":[[1,5]],"note":"new contained"}
+{"input":{"intervals":[[2,3]],"newInterval":[1,5]},"expected":[[1,5]],"note":"existing contained"}
+{"input":{"intervals":[[1,5]],"newInterval":[1,5]},"expected":[[1,5]],"note":"identical interval"}
+{"input":{"intervals":[[1,5]],"newInterval":[5,8]},"expected":[[1,8]],"note":"touch right endpoint"}
+{"input":{"intervals":[[5,8]],"newInterval":[1,5]},"expected":[[1,8]],"note":"touch left endpoint"}
+{"input":{"intervals":[[1,2],[4,5]],"newInterval":[2,4]},"expected":[[1,5]],"note":"bridge touching endpoints"}
+{"input":{"intervals":[[1,2],[4,5]],"newInterval":[3,3]},"expected":[[1,2],[3,3],[4,5]],"note":"insert point in gap"}
+{"input":{"intervals":[[2,3],[6,7]],"newInterval":[0,1]},"expected":[[0,1],[2,3],[6,7]],"note":"insert before all"}
+{"input":{"intervals":[[2,3],[6,7]],"newInterval":[8,9]},"expected":[[2,3],[6,7],[8,9]],"note":"insert after all"}
+{"input":{"intervals":[[2,3],[6,7]],"newInterval":[0,10]},"expected":[[0,10]],"note":"cover all"}
+{"input":{"intervals":[[0,0],[2,2],[4,4]],"newInterval":[0,4]},"expected":[[0,4]],"note":"merge several points"}
+{"input":{"intervals":[[1,9]],"newInterval":[5,5]},"expected":[[1,9]],"note":"point inside interval"}
+{"input":{"intervals":[[1,2],[5,6],[9,10]],"newInterval":[3,8]},"expected":[[1,2],[3,8],[9,10]],"note":"extend one middle interval"}
+{"input":{"intervals":[[1,2],[5,6],[9,10]],"newInterval":[2,5]},"expected":[[1,6],[9,10]],"note":"merge prefix retaining suffix"}
+{"input":{"intervals":[[1,2],[5,6],[9,10]],"newInterval":[6,9]},"expected":[[1,2],[5,10]],"note":"merge suffix retaining prefix"}
+{"input":{"intervals":[[0,100000]],"newInterval":[100000,100000]},"expected":[[0,100000]],"note":"maximum endpoint point"}
+{"input":{"intervals":[[0,0],[100000,100000]],"newInterval":[1,99999]},"expected":[[0,0],[1,99999],[100000,100000]],"note":"separate adjacent integer intervals"}
+{"input":{"intervals":[[1,3],[5,7],[9,11]],"newInterval":[2,10]},"expected":[[1,11]],"note":"merge chain with old end extending result"}
+{"input":{"intervals":[[1,3],[5,7],[9,11]],"newInterval":[3,9]},"expected":[[1,11]],"note":"bridge entire chain"}
+{"input":{"intervals":[[2,6],[8,10]],"newInterval":[4,5]},"expected":[[2,6],[8,10]],"note":"retain old enclosing endpoint"}
+{"input":{"intervals":[[2,6],[8,10]],"newInterval":[1,4]},"expected":[[1,6],[8,10]],"note":"left extension"}
+{"input":{"intervals":[[2,6],[8,10]],"newInterval":[9,12]},"expected":[[2,6],[8,12]],"note":"right extension"}
+{"input":{"intervals":[[0,1],[3,4],[6,7]],"newInterval":[3,4]},"expected":[[0,1],[3,4],[6,7]],"note":"identical middle interval"}
+{"generate":{"name":"spaced","args":{"mode":"cover","n":10000},"seed":43},"digest":"sha256:f9eb8b41017a96d7986a3d3ada6910ac0f9e1093d227170b040ccdd4cb47c87f","note":"Maximum size: cover"}
+{"generate":{"name":"spaced","args":{"mode":"middle","n":10000},"seed":43},"digest":"sha256:7db32766b62e6baf34af43aa015750c628d83bf82ca6b997f30d49ee56f64b25","note":"Maximum size: middle"}
+{"generate":{"name":"spaced","args":{"mode":"before","n":10000},"seed":43},"digest":"sha256:93e928f9ea65e3438f694d4fb685ac4bb0c78c2e7e82dbdd7a21c69c965dfb93","note":"Maximum size: before"}
+{"generate":{"name":"spaced","args":{"mode":"after","n":10000},"seed":43},"digest":"sha256:7e96d51bc07d323c56844289802670f749c5e3fa52713e32753167043dfa7463","note":"Maximum size: after"}

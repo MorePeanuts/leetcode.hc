@@ -237,6 +237,7 @@ groups:
     title: Intervals
     problems:
       - merge-intervals
+      - insert-interval
   - name: bit-manipulation
     title: Bit Manipulation
     problems:
