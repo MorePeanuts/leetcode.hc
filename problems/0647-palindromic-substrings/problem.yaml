@@ -1,0 +1,22 @@
+id: "647"
+slug: palindromic-substrings
+title: Palindromic Substrings
+titles:
+  zh-CN: 回文子串
+difficulty: medium
+tags:
+  - two-pointers
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: countSubstrings
+  params:
+    - name: s
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/palindromic-substrings/
+judge:
+  compare: exact
