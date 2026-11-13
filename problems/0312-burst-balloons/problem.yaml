@@ -1,0 +1,21 @@
+id: "312"
+slug: burst-balloons
+title: Burst Balloons
+titles:
+  zh-CN: 戳气球
+difficulty: hard
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: maxCoins
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/burst-balloons/
+judge:
+  compare: exact

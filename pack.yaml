@@ -162,6 +162,7 @@ groups:
       - interleaving-string
       - longest-increasing-path-in-a-matrix
       - distinct-subsequences
+      - burst-balloons
   - name: greedy
     title: Greedy
   - name: intervals
