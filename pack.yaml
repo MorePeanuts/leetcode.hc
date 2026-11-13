@@ -325,6 +325,7 @@ groups:
   - name: math-geometry
     title: Math & Geometry
     problems:
+      - pascals-triangle
       - count-primes
       - factorial-trailing-zeroes
       - unique-paths

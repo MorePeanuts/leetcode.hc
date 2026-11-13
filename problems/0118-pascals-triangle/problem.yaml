@@ -1,0 +1,21 @@
+id: "118"
+slug: pascals-triangle
+title: Pascal's Triangle
+titles:
+  zh-CN: 杨辉三角
+difficulty: easy
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: generate
+  params:
+    - name: numRows
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/pascals-triangle/
+judge:
+  compare: exact
