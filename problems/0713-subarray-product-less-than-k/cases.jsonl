@@ -1,0 +1,33 @@
+{"input":{"k":100,"nums":[10,5,2,6]},"expected":8,"example":true}
+{"input":{"k":0,"nums":[1,2,3]},"expected":0,"example":true}
+{"input":{"k":0,"nums":[1]},"expected":0,"note":"Zero threshold"}
+{"input":{"k":1,"nums":[1]},"expected":0,"note":"One threshold excludes ones"}
+{"input":{"k":2,"nums":[1]},"expected":1,"note":"One valid singleton"}
+{"input":{"k":1000,"nums":[1000]},"expected":0,"note":"Strict inequality excludes equality"}
+{"input":{"k":1001,"nums":[1000]},"expected":1,"note":"Largest value included"}
+{"input":{"k":6,"nums":[2,3]},"expected":2,"note":"Product equal to threshold excluded"}
+{"input":{"k":1,"nums":[1,1,1]},"expected":0,"note":"All ones with unit threshold"}
+{"input":{"k":2,"nums":[1,1,1]},"expected":6,"note":"Every all-one interval valid"}
+{"input":{"k":2,"nums":[2,1,1,2]},"expected":3,"note":"Only middle one runs valid"}
+{"input":{"k":10,"nums":[10,1,1,10]},"expected":3,"note":"Reset around equal values"}
+{"input":{"k":1000000,"nums":[1000,1000,1000]},"expected":3,"note":"Product threshold equality"}
+{"input":{"k":25,"nums":[1,2,3,4]},"expected":10,"note":"Overlapping intervals counted"}
+{"input":{"k":10,"nums":[9,1,1,1,9]},"expected":14,"note":"Many suffixes for one right endpoint"}
+{"input":{"k":3,"nums":[5,2,1,1]},"expected":6,"note":"Invalid prefix is fully removed"}
+{"input":{"k":9,"nums":[2,2,2,2]},"expected":9,"note":"Repeated shrink"}
+{"input":{"k":2,"nums":[1000,1,1000,1]},"expected":2,"note":"Large factors separate runs"}
+{"input":{"k":1000,"nums":[5,6,8,7,2,5,8,6,2,4,1,4,3]},"expected":50,"note":"Deterministic threshold and product variation"}
+{"input":{"k":0,"nums":[4]},"expected":0,"note":"Deterministic threshold and product variation"}
+{"input":{"k":0,"nums":[2,8,1,6,7,2,2,1,8,2,6,4,6,8,6,3,1]},"expected":0,"note":"Deterministic threshold and product variation"}
+{"input":{"k":50,"nums":[3,7,1]},"expected":6,"note":"Deterministic threshold and product variation"}
+{"input":{"k":1000,"nums":[3,8,3,6,4,3,5,4,4,6,2,7,7]},"expected":48,"note":"Deterministic threshold and product variation"}
+{"input":{"k":0,"nums":[7,1,3,4,7,3,8,7,2,2,1,3,3,2]},"expected":0,"note":"Deterministic threshold and product variation"}
+{"input":{"k":10,"nums":[5,7,7,4,5,1,3,3,2,4,5,6,3,8,7,5,6,4,4,8]},"expected":26,"note":"Deterministic threshold and product variation"}
+{"input":{"k":2,"nums":[6,1,4,4,2,7,3,7,6,2,1,8,8,7,1,6,7]},"expected":3,"note":"Deterministic threshold and product variation"}
+{"input":{"k":0,"nums":[8,6,5,6,2,5]},"expected":0,"note":"Deterministic threshold and product variation"}
+{"input":{"k":2,"nums":[8,2,5,2,6,8,1,7,2,7,2,5,8,2,8,4,7,3]},"expected":1,"note":"Deterministic threshold and product variation"}
+{"input":{"k":50,"nums":[8,6,1,6,3,8,4,1,4,7,4,6]},"expected":29,"note":"Deterministic threshold and product variation"}
+{"input":{"k":2,"nums":[5]},"expected":0,"note":"Deterministic threshold and product variation"}
+{"generate":{"name":"ones","args":{"k":2,"n":30000},"seed":7},"digest":"sha256:24a69340a45481b48da5bd645623da17b5cc6865bc8a8157ed5395ff2cfd0092","note":"Maximum length; every interval valid defeats pair enumeration"}
+{"generate":{"name":"ones","args":{"k":1000000,"n":30000},"seed":7},"digest":"sha256:9c2d6e3649dbb97ae201f4a7ab6e6d36639d2d5e1e7ccd5d9e41af8cad64d47e","note":"Maximum count with large threshold"}
+{"generate":{"name":"sparse_twos","args":{"n":30000},"seed":7},"digest":"sha256:4b9c0bcb1482e259a901781d0bff94ecfb7422356e0c7716db60726d8a8c9ca3","note":"Maximum length; few non-unit factors keep windows long"}
