@@ -1,0 +1,28 @@
+id: "329"
+slug: longest-increasing-path-in-a-matrix
+title: Longest Increasing Path in a Matrix
+titles:
+  zh-CN: 矩阵中的最长递增路径
+difficulty: hard
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - topological-sort
+  - memoization
+  - array
+  - dynamic-programming
+  - directed-acyclic-graph
+  - matrix
+kind: function
+function:
+  name: longestIncreasingPath
+  params:
+    - name: matrix
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/
+judge:
+  compare: exact

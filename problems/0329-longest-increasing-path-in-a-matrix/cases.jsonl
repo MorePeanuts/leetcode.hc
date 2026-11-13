@@ -1,0 +1,33 @@
+{"input":{"matrix":[[9,9,4],[6,6,8],[2,1,1]]},"expected":4,"example":true}
+{"input":{"matrix":[[3,4,5],[3,2,6],[2,2,1]]},"expected":4,"example":true}
+{"input":{"matrix":[[1]]},"expected":1,"example":true}
+{"input":{"matrix":[[0]]},"expected":1,"note":"minimum value singleton"}
+{"input":{"matrix":[[2147483647]]},"expected":1,"note":"maximum value singleton"}
+{"input":{"matrix":[[1,2]]},"expected":2,"note":"one row rising"}
+{"input":{"matrix":[[2,1]]},"expected":2,"note":"one row falling"}
+{"input":{"matrix":[[1],[2]]},"expected":2,"note":"one column rising"}
+{"input":{"matrix":[[2],[1]]},"expected":2,"note":"one column falling"}
+{"input":{"matrix":[[1,1],[1,1]]},"expected":1,"note":"equal cells cannot extend"}
+{"input":{"matrix":[[1,2],[4,3]]},"expected":4,"note":"four-cell snake"}
+{"input":{"matrix":[[4,3],[1,2]]},"expected":4,"note":"reverse snake"}
+{"input":{"matrix":[[1,3],[4,2]]},"expected":2,"note":"diagonal adjacency forbidden"}
+{"input":{"matrix":[[0,1,0],[1,0,1]]},"expected":2,"note":"many local extrema"}
+{"input":{"matrix":[[1,2,3],[6,5,4]]},"expected":6,"note":"two-row snake"}
+{"input":{"matrix":[[1,2,3],[2,3,4],[3,4,5]]},"expected":5,"note":"overlapping increasing paths"}
+{"input":{"matrix":[[9,8,7],[6,5,4],[3,2,1]]},"expected":5,"note":"reverse monotone grid"}
+{"input":{"matrix":[[1,2,2,3]]},"expected":2,"note":"plateau breaks chain"}
+{"input":{"matrix":[[3,2,2,1]]},"expected":2,"note":"reverse plateau"}
+{"input":{"matrix":[[0,2147483647]]},"expected":2,"note":"extreme values"}
+{"input":{"matrix":[[5,4,3,2,1]]},"expected":5,"note":"start at final cell"}
+{"input":{"matrix":[[1,2,3,4,5]]},"expected":5,"note":"maximum row path"}
+{"input":{"matrix":[[1],[3],[2],[4]]},"expected":2,"note":"zigzag column"}
+{"input":{"matrix":[[8,7,6],[1,2,5],[0,3,4]]},"expected":9,"note":"spiral path"}
+{"input":{"matrix":[[1,1,2],[1,1,3]]},"expected":3,"note":"plateau beside chain"}
+{"input":{"matrix":[[5,1,4],[2,3,6]]},"expected":3,"note":"branching choices"}
+{"input":{"matrix":[[2,2,2],[2,3,2]]},"expected":2,"note":"central maximum"}
+{"input":{"matrix":[[3,3,3],[3,2,3]]},"expected":2,"note":"central minimum"}
+{"input":{"matrix":[[1,4,5],[2,3,6]]},"expected":6,"note":"long detour"}
+{"input":{"matrix":[[7,6],[4,5],[3,2]]},"expected":6,"note":"rectangular detour"}
+{"generate":{"name":"snake","args":{"n":200},"seed":41},"digest":"sha256:a6046e7b7d0cca4cbe1678ecd8050d4e3a142b29d5ef227280deb9bbf1e01dfe","note":"maximum 40000-cell path without recursion overflow"}
+{"generate":{"name":"branching","args":{"n":200},"seed":41},"digest":"sha256:e9c4c19358e1c95f753eefd7b959490954e2261683d3fdcd8890864057305337","note":"maximum grid with exponential uncached path exploration"}
+{"generate":{"name":"plateau","args":{"n":200},"seed":41},"digest":"sha256:0f7c582aa1793a09084d7769e75f69e849cd2c7bf4a22602882ffb02788dfcfc","note":"maximum equal grid and strict comparisons"}
