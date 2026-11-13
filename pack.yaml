@@ -33,6 +33,7 @@ groups:
       - detect-squares
       - hand-of-straights
       - partition-labels
+      - single-number
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -249,6 +250,7 @@ groups:
     problems:
       - subsets
       - subsets-ii
+      - single-number
   - name: math-geometry
     title: Math & Geometry
     problems:

@@ -1,0 +1,36 @@
+{"input":{"nums":[2,2,1]},"expected":1,"example":true}
+{"input":{"nums":[4,1,2,1,2]},"expected":4,"example":true}
+{"input":{"nums":[1]},"expected":1,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"Singleton at value 0."}
+{"input":{"nums":[-1]},"expected":-1,"note":"Singleton at value -1."}
+{"input":{"nums":[-30000]},"expected":-30000,"note":"Singleton at value -30000."}
+{"input":{"nums":[30000]},"expected":30000,"note":"Singleton at value 30000."}
+{"input":{"nums":[42]},"expected":42,"note":"Singleton at value 42."}
+{"input":{"nums":[-30000,-29,-2,2,29,29,2,-2,-29]},"expected":-30000,"note":"Singleton -30000 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,-30000,29,2,-2,-29]},"expected":-30000,"note":"Singleton -30000 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,-30000]},"expected":-30000,"note":"Singleton -30000 at position 8; opposite-signed pairs."}
+{"input":{"nums":[-17,-29,-2,2,29,29,2,-2,-29]},"expected":-17,"note":"Singleton -17 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,-17,29,2,-2,-29]},"expected":-17,"note":"Singleton -17 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,-17]},"expected":-17,"note":"Singleton -17 at position 8; opposite-signed pairs."}
+{"input":{"nums":[-1,-29,-2,2,29,29,2,-2,-29]},"expected":-1,"note":"Singleton -1 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,-1,29,2,-2,-29]},"expected":-1,"note":"Singleton -1 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,-1]},"expected":-1,"note":"Singleton -1 at position 8; opposite-signed pairs."}
+{"input":{"nums":[0,-29,-2,2,29,29,2,-2,-29]},"expected":0,"note":"Singleton 0 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,0,29,2,-2,-29]},"expected":0,"note":"Singleton 0 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,0]},"expected":0,"note":"Singleton 0 at position 8; opposite-signed pairs."}
+{"input":{"nums":[1,-29,-2,2,29,29,2,-2,-29]},"expected":1,"note":"Singleton 1 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,1,29,2,-2,-29]},"expected":1,"note":"Singleton 1 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,1]},"expected":1,"note":"Singleton 1 at position 8; opposite-signed pairs."}
+{"input":{"nums":[17,-29,-2,2,29,29,2,-2,-29]},"expected":17,"note":"Singleton 17 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,17,29,2,-2,-29]},"expected":17,"note":"Singleton 17 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,17]},"expected":17,"note":"Singleton 17 at position 8; opposite-signed pairs."}
+{"input":{"nums":[30000,-29,-2,2,29,29,2,-2,-29]},"expected":30000,"note":"Singleton 30000 at position 0; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,30000,29,2,-2,-29]},"expected":30000,"note":"Singleton 30000 at position 4; opposite-signed pairs."}
+{"input":{"nums":[-29,-2,2,29,29,2,-2,-29,30000]},"expected":30000,"note":"Singleton 30000 at position 8; opposite-signed pairs."}
+{"input":{"nums":[0,0,-30000,30000,30000]},"expected":-30000,"note":"Cancellation across distant pairs and extreme/positive singleton."}
+{"input":{"nums":[-30000,-30000,30000,0,0]},"expected":30000,"note":"Cancellation across distant pairs and extreme/positive singleton."}
+{"input":{"nums":[1,2,3,4,5,5,4,3,2]},"expected":1,"note":"Cancellation across distant pairs and extreme/positive singleton."}
+{"generate":{"name":"paired","args":{"layout":"adjacent","n":29999,"singleton":0},"seed":45},"digest":"sha256:be932e0ce703228ae77f83773a098b910c49439f727bdd28c29bc86b960a95bf","note":"Maximum odd length; singleton last, distinct pairs adjacent"}
+{"generate":{"name":"paired","args":{"layout":"distant","n":29999,"singleton":-30000},"seed":46},"digest":"sha256:a31c1c862c07be69156612628e707d50bef4f5d1616508776d62e8c771b04884","note":"Maximum odd length; singleton last, distinct pairs distant"}
+{"generate":{"name":"paired","args":{"layout":"shuffled","n":29999,"singleton":30000},"seed":47},"digest":"sha256:2c1788b4fbc8dabcc8f2fe5aa9501fa9f114eed2b5808b165959295fcfd09312","note":"Maximum odd length; singleton last, distinct pairs shuffled"}
+{"generate":{"name":"paired","args":{"layout":"shuffled","n":29999,"singleton":-12345},"seed":48},"digest":"sha256:520fcbd63b5c7dd0de995036fab3a087ddf501acadd5764ab03a56803f6f2091","note":"Maximum odd length; singleton last, distinct pairs shuffled"}
