@@ -1,0 +1,33 @@
+{"input":{"nums":[3,2,3]},"expected":3,"example":true}
+{"input":{"nums":[2,2,1,1,1,2,2]},"expected":2,"example":true}
+{"input":{"nums":[1]},"expected":1,"note":"Guaranteed strict majority, cancellation or value boundary 1"}
+{"input":{"nums":[-1]},"expected":-1,"note":"Guaranteed strict majority, cancellation or value boundary 2"}
+{"input":{"nums":[0]},"expected":0,"note":"Guaranteed strict majority, cancellation or value boundary 3"}
+{"input":{"nums":[1000000000]},"expected":1000000000,"note":"Guaranteed strict majority, cancellation or value boundary 4"}
+{"input":{"nums":[-1000000000]},"expected":-1000000000,"note":"Guaranteed strict majority, cancellation or value boundary 5"}
+{"input":{"nums":[1,1]},"expected":1,"note":"Guaranteed strict majority, cancellation or value boundary 6"}
+{"input":{"nums":[2,1,2]},"expected":2,"note":"Guaranteed strict majority, cancellation or value boundary 7"}
+{"input":{"nums":[1,2,1,3,1]},"expected":1,"note":"Guaranteed strict majority, cancellation or value boundary 8"}
+{"input":{"nums":[2,2,1,1,1]},"expected":1,"note":"Guaranteed strict majority, cancellation or value boundary 9"}
+{"input":{"nums":[1,1,2,2,2]},"expected":2,"note":"Guaranteed strict majority, cancellation or value boundary 10"}
+{"input":{"nums":[-1,0,-1]},"expected":-1,"note":"Guaranteed strict majority, cancellation or value boundary 11"}
+{"input":{"nums":[0,1,0]},"expected":0,"note":"Guaranteed strict majority, cancellation or value boundary 12"}
+{"input":{"nums":[5,5,5,5,5,5,5,5,5,5]},"expected":5,"note":"Guaranteed strict majority, cancellation or value boundary 13"}
+{"input":{"nums":[3,1,3,2,3,4,3]},"expected":3,"note":"Guaranteed strict majority, cancellation or value boundary 14"}
+{"input":{"nums":[-3,100,-3,-3,101]},"expected":-3,"note":"Guaranteed strict majority, cancellation or value boundary 15"}
+{"input":{"nums":[101,4,100,102,4,4,4]},"expected":4,"note":"Guaranteed strict majority, cancellation or value boundary 16"}
+{"input":{"nums":[100,-5,-5,101,-5,-5,-5,103,102]},"expected":-5,"note":"Guaranteed strict majority, cancellation or value boundary 17"}
+{"input":{"nums":[6,102,101,6,6,104,100,103,6,6,6]},"expected":6,"note":"Guaranteed strict majority, cancellation or value boundary 18"}
+{"input":{"nums":[102,101,-7,-7,104,105,103,-7,-7,100,-7,-7,-7]},"expected":-7,"note":"Guaranteed strict majority, cancellation or value boundary 19"}
+{"input":{"nums":[8,8,8,105,8,104,102,103,8,8,8,100,106,101,8]},"expected":8,"note":"Guaranteed strict majority, cancellation or value boundary 20"}
+{"input":{"nums":[-9,104,101,105,100,-9,103,-9,-9,106,-9,-9,-9,102,107,-9,-9]},"expected":-9,"note":"Guaranteed strict majority, cancellation or value boundary 21"}
+{"input":{"nums":[106,10,104,10,10,107,105,100,102,10,10,10,103,10,10,108,10,101,10]},"expected":10,"note":"Guaranteed strict majority, cancellation or value boundary 22"}
+{"input":{"nums":[-11,104,-11,107,102,103,-11,108,-11,-11,101,-11,109,-11,-11,100,-11,-11,105,106,-11]},"expected":-11,"note":"Guaranteed strict majority, cancellation or value boundary 23"}
+{"input":{"nums":[12,12,12,103,12,109,108,106,101,12,12,104,12,102,110,12,12,107,100,12,105,12,12]},"expected":12,"note":"Guaranteed strict majority, cancellation or value boundary 24"}
+{"input":{"nums":[105,-13,100,-13,101,103,-13,-13,108,-13,-13,102,110,106,-13,104,107,-13,109,-13,-13,-13,-13,-13,111]},"expected":-13,"note":"Guaranteed strict majority, cancellation or value boundary 25"}
+{"input":{"nums":[14,14,105,106,110,14,14,103,14,14,14,108,100,101,14,109,14,111,14,14,14,112,107,104,14,14,102]},"expected":14,"note":"Guaranteed strict majority, cancellation or value boundary 26"}
+{"input":{"nums":[108,105,-15,-15,-15,112,-15,-15,-15,100,109,107,-15,106,111,-15,-15,102,-15,110,101,-15,-15,-15,-15,103,113,104,-15]},"expected":-15,"note":"Guaranteed strict majority, cancellation or value boundary 27"}
+{"input":{"nums":[16,16,106,108,111,16,16,16,16,109,112,102,16,107,101,16,16,16,103,110,16,16,113,114,105,16,16,100,16,16,104]},"expected":16,"note":"Guaranteed strict majority, cancellation or value boundary 28"}
+{"input":{"nums":[-17,108,107,-17,-17,-17,105,102,-17,103,-17,-17,-17,-17,-17,-17,112,110,-17,101,114,109,111,106,-17,-17,-17,115,-17,-17,100,113,104]},"expected":-17,"note":"Guaranteed strict majority, cancellation or value boundary 29"}
+{"generate":{"name":"late_majority","args":{"n":50000,"value":-1000000000},"seed":7},"digest":"sha256:ea099886d570d4ea0a5dd1239c56b503f4de7a479d969943fd47384bc2d7af9b","note":"Many distinct minority values before a strict majority"}
+{"generate":{"name":"late_majority","args":{"n":50000,"value":1000000000},"seed":7},"digest":"sha256:1d5e1f472b3b6f8ea661d308a0acbafd65ccb0f2eef8eabffef44b0fef08e275","note":"Many distinct minority values before a strict majority"}
