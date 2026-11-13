@@ -210,3 +210,4 @@ groups:
       - climbing-stairs
       - rotate-image
       - spiral-matrix
+      - set-matrix-zeroes
