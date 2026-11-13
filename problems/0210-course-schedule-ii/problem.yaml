@@ -1,0 +1,25 @@
+id: "210"
+slug: course-schedule-ii
+title: Course Schedule II
+titles:
+  zh-CN: 课程表 II
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - topological-sort
+kind: function
+function:
+  name: findOrder
+  params:
+    - name: numCourses
+      type: integer
+    - name: prerequisites
+      type: integer[][]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/course-schedule-ii/
+judge:
+  compare: checker

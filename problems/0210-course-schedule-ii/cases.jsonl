@@ -1,0 +1,33 @@
+{"input":{"numCourses":2,"prerequisites":[[1,0]]},"expected":[0,1],"example":true}
+{"input":{"numCourses":4,"prerequisites":[[1,0],[2,0],[3,1],[3,2]]},"expected":[0,2,1,3],"example":true}
+{"input":{"numCourses":1,"prerequisites":[]},"expected":[0],"example":true}
+{"input":{"numCourses":7,"prerequisites":[]},"expected":[0,1,2,3,4,5,6],"note":"Many isolated courses all appear once"}
+{"input":{"numCourses":2,"prerequisites":[]},"expected":[0,1],"note":"Independent courses permit either order"}
+{"input":{"numCourses":3,"prerequisites":[[0,1],[1,2]]},"expected":[2,1,0],"note":"Descending prerequisite order"}
+{"input":{"numCourses":2,"prerequisites":[[0,1],[1,0]]},"expected":[],"note":"Two-course cycle"}
+{"input":{"numCourses":5,"prerequisites":[[1,0],[2,0],[3,1],[3,2]]},"expected":[0,4,1,2,3],"note":"Diamond with isolated course"}
+{"input":{"numCourses":5,"prerequisites":[[1,0],[2,1],[1,2]]},"expected":[],"note":"Cycle after an acyclic prefix"}
+{"input":{"numCourses":6,"prerequisites":[[1,0],[3,2],[4,3],[2,4]]},"expected":[],"note":"Disconnected cyclic component makes entire schedule impossible"}
+{"input":{"numCourses":4,"prerequisites":[[3,0],[3,1],[3,2]]},"expected":[0,1,2,3],"note":"Multiple prerequisites must all be completed"}
+{"input":{"numCourses":4,"prerequisites":[[1,0],[2,0],[3,0]]},"expected":[0,1,2,3],"note":"One prerequisite unlocks several courses"}
+{"input":{"numCourses":6,"prerequisites":[[4,5],[3,4],[1,2],[0,1]]},"expected":[2,5,1,4,0,3],"note":"Independent chains"}
+{"input":{"numCourses":4,"prerequisites":[[2,0],[2,1],[3,1]]},"expected":[0,1,2,3],"note":"Several valid topological orders"}
+{"input":{"numCourses":3,"prerequisites":[[1,0],[2,1],[0,2]]},"expected":[],"note":"Permuted course labels with a guaranteed cycle 1"}
+{"input":{"numCourses":4,"prerequisites":[[2,1],[0,1]]},"expected":[1,3,2,0],"note":"Permuted course labels with an acyclic dependency graph 2"}
+{"input":{"numCourses":5,"prerequisites":[[4,3],[0,2],[0,3]]},"expected":[1,2,3,4,0],"note":"Permuted course labels with an acyclic dependency graph 3"}
+{"input":{"numCourses":6,"prerequisites":[[2,0],[4,1],[1,2],[5,3],[3,4],[0,5]]},"expected":[],"note":"Permuted course labels with a guaranteed cycle 4"}
+{"input":{"numCourses":7,"prerequisites":[[4,2],[0,1],[4,5],[3,5],[6,2],[0,3],[6,4],[6,1],[4,1],[1,3]]},"expected":[2,5,3,1,0,4,6],"note":"Permuted course labels with an acyclic dependency graph 5"}
+{"input":{"numCourses":8,"prerequisites":[[7,6],[0,2],[1,5],[6,5],[0,6],[4,6],[7,5],[0,7]]},"expected":[2,3,5,1,6,7,4,0],"note":"Permuted course labels with an acyclic dependency graph 6"}
+{"input":{"numCourses":9,"prerequisites":[[4,7],[6,0],[8,5],[2,3],[1,2],[0,1],[3,8],[7,6],[5,4]]},"expected":[],"note":"Permuted course labels with a guaranteed cycle 7"}
+{"input":{"numCourses":10,"prerequisites":[[4,6],[2,8],[9,3],[4,7],[9,6],[0,9],[9,2],[0,1],[8,3],[1,9],[9,4],[3,5]]},"expected":[5,6,7,3,4,8,2,9,1,0],"note":"Permuted course labels with an acyclic dependency graph 8"}
+{"input":{"numCourses":3,"prerequisites":[[0,2]]},"expected":[1,2,0],"note":"Permuted course labels with an acyclic dependency graph 9"}
+{"input":{"numCourses":4,"prerequisites":[[0,1],[1,2],[2,3],[3,0]]},"expected":[],"note":"Permuted course labels with a guaranteed cycle 10"}
+{"input":{"numCourses":5,"prerequisites":[[0,2],[4,3],[2,3],[4,1]]},"expected":[1,3,4,2,0],"note":"Permuted course labels with an acyclic dependency graph 11"}
+{"input":{"numCourses":6,"prerequisites":[[0,4],[1,2],[0,1],[4,5],[4,3],[0,5],[5,2],[0,3]]},"expected":[2,3,1,5,4,0],"note":"Permuted course labels with an acyclic dependency graph 12"}
+{"input":{"numCourses":7,"prerequisites":[[3,0],[0,2],[5,6],[2,5],[1,4],[4,3],[6,1]]},"expected":[],"note":"Permuted course labels with a guaranteed cycle 13"}
+{"input":{"numCourses":8,"prerequisites":[[5,6],[4,7],[0,7],[6,3],[6,2],[0,3],[7,2],[4,0],[4,2],[0,5]]},"expected":[1,2,3,7,6,5,0,4],"note":"Permuted course labels with an acyclic dependency graph 14"}
+{"input":{"numCourses":9,"prerequisites":[[7,8],[3,5],[4,2],[7,1],[1,2],[0,3],[0,1],[3,1],[5,4],[8,4],[3,4],[5,8]]},"expected":[2,6,4,1,8,7,5,3,0],"note":"Permuted course labels with an acyclic dependency graph 15"}
+{"generate":{"name":"chain","args":{"n":2000}},"digest":"sha256:6b598a1bb7ef9b98db9cfdae48e65eca30c1d0bc9556c9e8c099676af0e3bfa5","note":"Maximum-depth dependency chain"}
+{"generate":{"name":"chain","args":{"cyclic":true,"n":2000}},"digest":"sha256:d4f54f575b7db88258d24aa6b742905d9b06bdc7ff810f846ceadd6dc0751b55","note":"Long cycle"}
+{"generate":{"name":"wide_dag","args":{"n":2000,"width":30}},"digest":"sha256:90ad03632205333271c33da736de26f4b08f6efb54f2b1fbadeb2ad4237b90e1","note":"Many edges; avoid rescanning all prerequisites per vertex"}
+{"generate":{"name":"independent","args":{"n":2000}},"digest":"sha256:fc91072d47c43ab394198455371dc6b04139fbb4d6acb05cffcb10f655a0b805","note":"Maximum number of valid ordering choices"}
