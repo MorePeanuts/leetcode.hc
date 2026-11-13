@@ -1,0 +1,23 @@
+id: "111"
+slug: minimum-depth-of-binary-tree
+title: Minimum Depth of Binary Tree
+titles:
+  zh-CN: 二叉树的最小深度
+difficulty: easy
+tags:
+  - tree
+  - depth-first-search
+  - breadth-first-search
+  - binary-tree
+kind: function
+function:
+  name: minDepth
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer
+judge:
+  compare: exact
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-depth-of-binary-tree/
