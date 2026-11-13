@@ -1,0 +1,35 @@
+{"input":{"k":2,"n":4,"times":[[2,1,1],[2,3,1],[3,4,1]]},"expected":2,"example":true}
+{"input":{"k":1,"n":2,"times":[[1,2,1]]},"expected":1,"example":true}
+{"input":{"k":2,"n":2,"times":[[1,2,1]]},"expected":-1,"example":true}
+{"input":{"k":1,"n":2,"times":[[1,2,0]]},"expected":0,"note":"zero edge delay"}
+{"input":{"k":1,"n":2,"times":[[1,2,100]]},"expected":100,"note":"maximum edge delay"}
+{"input":{"k":1,"n":3,"times":[[1,2,1]]},"expected":-1,"note":"isolated vertex"}
+{"input":{"k":1,"n":2,"times":[[2,1,5]]},"expected":-1,"note":"directed edge cannot be reversed"}
+{"input":{"k":1,"n":3,"times":[[1,2,10],[1,3,1],[3,2,1]]},"expected":2,"note":"indirect path improves a direct edge"}
+{"input":{"k":1,"n":3,"times":[[1,2,0],[2,3,0],[3,1,0]]},"expected":0,"note":"zero-cost directed cycle"}
+{"input":{"k":1,"n":3,"times":[[1,2,4],[2,3,4],[1,3,1]]},"expected":4,"note":"answer is maximum shortest arrival"}
+{"input":{"k":3,"n":3,"times":[[3,2,2],[2,1,2]]},"expected":4,"note":"source is last vertex"}
+{"input":{"k":1,"n":4,"times":[[1,2,1],[2,1,1],[3,4,1],[4,3,1]]},"expected":-1,"note":"unreachable component with cycle"}
+{"input":{"k":1,"n":4,"times":[[1,2,2],[1,3,2],[2,4,1],[3,4,1]]},"expected":3,"note":"equal-cost competing routes"}
+{"input":{"k":1,"n":4,"times":[[1,2,10],[1,3,2],[3,2,1],[2,4,1],[3,4,20]]},"expected":4,"note":"stale heap entries"}
+{"input":{"k":1,"n":5,"times":[[1,2,1],[2,3,2],[3,4,3],[4,5,4]]},"expected":10,"note":"accumulate edge weights"}
+{"input":{"k":2,"n":3,"times":[[1,3,33]]},"expected":-1,"note":"unique directed graph 1; weighted reachability"}
+{"input":{"k":1,"n":4,"times":[[1,2,28],[2,1,50]]},"expected":-1,"note":"unique directed graph 2; weighted reachability"}
+{"input":{"k":1,"n":5,"times":[[3,1,3],[3,5,37],[2,3,86]]},"expected":-1,"note":"unique directed graph 3; weighted reachability"}
+{"input":{"k":4,"n":6,"times":[[3,2,44],[1,2,54],[1,5,96],[3,5,12]]},"expected":-1,"note":"unique directed graph 4; weighted reachability"}
+{"input":{"k":5,"n":7,"times":[[6,3,58],[7,2,55],[4,2,32],[3,7,73],[1,6,41]]},"expected":-1,"note":"unique directed graph 5; weighted reachability"}
+{"input":{"k":7,"n":8,"times":[[1,2,79],[7,5,79],[7,4,61],[1,4,79],[6,8,96],[2,7,81]]},"expected":-1,"note":"unique directed graph 6; weighted reachability"}
+{"input":{"k":2,"n":3,"times":[[2,1,36]]},"expected":-1,"note":"unique directed graph 7; weighted reachability"}
+{"input":{"k":4,"n":4,"times":[[4,2,86],[2,4,96],[3,2,36],[1,4,30],[3,1,88],[1,2,93],[1,3,89],[3,4,12]]},"expected":-1,"note":"unique directed graph 8; weighted reachability"}
+{"input":{"k":5,"n":5,"times":[[4,5,53],[5,1,0],[1,4,77],[4,2,73],[1,3,75],[1,2,83],[3,5,48],[5,3,89],[3,4,16]]},"expected":83,"note":"unique directed graph 9; weighted reachability"}
+{"input":{"k":2,"n":6,"times":[[4,6,16],[2,4,69],[1,5,11],[4,3,78],[3,6,99],[5,1,62],[2,3,42],[4,2,65],[6,4,35],[5,2,94]]},"expected":-1,"note":"unique directed graph 10; weighted reachability"}
+{"input":{"k":5,"n":7,"times":[[6,3,15],[3,1,27],[7,2,72],[2,5,8],[2,7,28],[2,6,6],[4,7,13],[4,3,83],[4,1,14],[7,4,13],[1,4,58]]},"expected":-1,"note":"unique directed graph 11; weighted reachability"}
+{"input":{"k":8,"n":8,"times":[[5,2,11],[8,4,59],[4,2,8],[3,5,37],[7,1,3],[2,8,68],[2,3,12],[3,8,23],[2,6,26],[3,6,48],[5,8,19],[1,6,85]]},"expected":-1,"note":"unique directed graph 12; weighted reachability"}
+{"input":{"k":1,"n":3,"times":[[1,3,43]]},"expected":-1,"note":"unique directed graph 13; weighted reachability"}
+{"input":{"k":2,"n":4,"times":[[4,2,56],[2,1,89]]},"expected":-1,"note":"unique directed graph 14; weighted reachability"}
+{"input":{"k":2,"n":5,"times":[[3,4,0],[5,4,66],[4,3,87],[3,5,64],[1,3,45],[4,2,3],[2,5,47],[1,5,52],[5,2,29],[2,3,95],[1,2,11],[2,4,72],[4,5,61],[1,4,78],[5,1,7]]},"expected":95,"note":"unique directed graph 15; weighted reachability"}
+{"input":{"k":5,"n":6,"times":[[4,2,31],[6,2,39],[5,3,41],[1,3,13],[5,1,38],[2,5,36],[5,6,65],[4,5,61],[1,4,15],[3,6,18],[6,3,4],[6,4,9],[1,5,44],[1,6,25],[3,1,80],[3,4,68]]},"expected":84,"note":"unique directed graph 16; weighted reachability"}
+{"input":{"k":7,"n":7,"times":[[3,4,93],[7,5,17],[2,6,41],[3,7,45],[5,1,26],[1,2,57],[6,3,47],[1,3,44],[6,5,91],[4,1,9],[6,1,95],[2,1,63],[2,7,72],[5,2,33],[1,7,2],[7,6,1],[4,2,87]]},"expected":141,"note":"unique directed graph 17; weighted reachability"}
+{"input":{"k":5,"n":8,"times":[[4,8,85],[5,3,11],[4,3,72],[8,7,47],[1,3,34],[8,6,72],[5,2,24],[2,8,59],[5,4,72],[6,3,45],[8,4,33],[1,2,97],[2,4,82],[7,1,69],[5,7,15],[6,1,11],[4,2,95],[5,6,21]]},"expected":83,"note":"unique directed graph 18; weighted reachability"}
+{"generate":{"name":"dense","args":{"m":6000,"n":100},"seed":39},"digest":"sha256:d5dd11f5528e90d08431794616c9058c1e379b06ddb7564db9be647316e96dbc","note":"maximum unique directed edges with zero and positive weights"}
+{"generate":{"name":"chain","args":{"n":100},"seed":39},"digest":"sha256:b21ed46a67670fef253101af43fbf0bb86feaff41a65728e5e2010ac09ab7a6d","note":"maximum path delay and reverse edge input order"}

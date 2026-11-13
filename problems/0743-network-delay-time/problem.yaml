@@ -1,0 +1,29 @@
+id: "743"
+slug: network-delay-time
+title: Network Delay Time
+titles:
+  zh-CN: 网络延迟时间
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - shortest-path
+  - dijkstra
+  - heap-priority-queue
+kind: function
+function:
+  name: networkDelayTime
+  params:
+    - name: times
+      type: integer[][]
+    - name: "n"
+      type: integer
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/network-delay-time/
+judge:
+  compare: exact
