@@ -209,3 +209,4 @@ groups:
       - unique-paths
       - climbing-stairs
       - rotate-image
+      - spiral-matrix
