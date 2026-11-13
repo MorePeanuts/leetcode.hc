@@ -1,0 +1,24 @@
+id: "450"
+slug: delete-node-in-a-bst
+title: Delete Node in a BST
+titles:
+  zh-CN: 删除二叉搜索树中的节点
+difficulty: medium
+tags:
+  - tree
+  - binary-search-tree
+  - binary-tree
+kind: function
+function:
+  name: deleteNode
+  params:
+    - name: root
+      type: TreeNode
+    - name: key
+      type: integer
+  returns: TreeNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/delete-node-in-a-bst/
+judge:
+  compare: checker
