@@ -81,6 +81,7 @@ groups:
       - reconstruct-itinerary
       - flatten-nested-list-iterator
       - simplify-path
+      - decode-string
   - name: binary-search
     title: Binary Search
     problems:

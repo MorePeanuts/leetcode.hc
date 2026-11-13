@@ -1,0 +1,34 @@
+{"input":{"s":"3[a]2[bc]"},"expected":"aaabcbc","example":true}
+{"input":{"s":"3[a2[c]]"},"expected":"accaccacc","example":true}
+{"input":{"s":"2[abc]3[cd]ef"},"expected":"abcabccdcdcdef","example":true}
+{"input":{"s":"a"},"expected":"a","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"abc"},"expected":"abc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"1[a]"},"expected":"a","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[a]"},"expected":"aa","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"10[a]"},"expected":"aaaaaaaaaa","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"100[a]"},"expected":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"300[z]"},"expected":"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[ab]"},"expected":"abab","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"3[ab]c"},"expected":"abababc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"a3[b]"},"expected":"abbb","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"a2[bc]d"},"expected":"abcbcd","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[a]3[b]"},"expected":"aabbb","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[3[a]]"},"expected":"aaaaaa","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"3[a2[c]]"},"expected":"accaccacc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[ab3[c]]"},"expected":"abcccabccc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[2[a]b]"},"expected":"aabaab","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[a]b2[c]"},"expected":"aabcc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"abc3[cd]xyz"},"expected":"abccdcdcdxyz","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"1[1[1[a]]]"},"expected":"a","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"9[a]10[b]"},"expected":"aaaaaaaaabbbbbbbbbb","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"12[ab]"},"expected":"abababababababababababab","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[x3[y]z]"},"expected":"xyyyzxyyyz","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[ab]2[cd]2[ef]"},"expected":"ababcdcdefef","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"a1[b]c1[d]e"},"expected":"abcde","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[abc]3[cd]ef"},"expected":"abcabccdcdcdef","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"1[abcdefghijklmnopqrstuvwxyz]"},"expected":"abcdefghijklmnopqrstuvwxyz","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"2[1[a]1[b]]"},"expected":"abab","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"input":{"s":"3[a2[b3[c]]]"},"expected":"abcccbcccabcccbcccabcccbccc","note":"Literal, nesting, adjacent groups, or multi-digit repeat count"}
+{"generate":{"name":"expanded_limit","args":{"mode":0,"n":100},"seed":42},"digest":"sha256:6920dd3beb7886019c996584a0eacada419749071dbeb9b4335aa714a71a628b","note":"Large decoded output (90,000 or 100,000 characters), compact encoded input"}
+{"generate":{"name":"expanded_limit","args":{"mode":1,"n":300},"seed":42},"digest":"sha256:a0f01ca7addcf55648b488545176f4955de49e3e9aafb96dea4ad248fb393b20","note":"Large decoded output (90,000 or 100,000 characters), compact encoded input"}
+{"generate":{"name":"expanded_limit","args":{"mode":2,"n":100},"seed":42},"digest":"sha256:071b25907f7fe09add3b8592019ab00e5887e1ad296559048672c3284e94c47d","note":"Large decoded output (90,000 or 100,000 characters), compact encoded input"}
