@@ -1,0 +1,24 @@
+id: "279"
+slug: perfect-squares
+title: Perfect Squares
+titles:
+  zh-CN: 完全平方数
+difficulty: medium
+tags:
+  - breadth-first-search
+  - math
+  - dynamic-programming
+  - knapsack-problem
+  - complete-knapsack
+kind: function
+function:
+  name: numSquares
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/perfect-squares/
+judge:
+  compare: exact
