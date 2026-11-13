@@ -1,0 +1,23 @@
+id: "645"
+slug: set-mismatch
+title: Set Mismatch
+titles:
+  zh-CN: 错误的集合
+difficulty: easy
+tags:
+  - bit-manipulation
+  - array
+  - hash-table
+  - sorting
+kind: function
+function:
+  name: findErrorNums
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/set-mismatch/
+judge:
+  compare: exact
