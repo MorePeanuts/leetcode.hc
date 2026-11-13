@@ -1,0 +1,32 @@
+{"input":{"nums":[1,2,3,1]},"expected":4,"example":true}
+{"input":{"nums":[2,7,9,3,1]},"expected":12,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"single empty house"}
+{"input":{"nums":[1]},"expected":1,"note":"single occupied house"}
+{"input":{"nums":[400]},"expected":400,"note":"single maximum value"}
+{"input":{"nums":[0,0]},"expected":0,"note":"two empty houses"}
+{"input":{"nums":[1,2]},"expected":2,"note":"choose second house"}
+{"input":{"nums":[2,1]},"expected":2,"note":"choose first house"}
+{"input":{"nums":[400,400]},"expected":400,"note":"cannot rob adjacent maxima"}
+{"input":{"nums":[1,1,1]},"expected":2,"note":"take two endpoints"}
+{"input":{"nums":[2,1,2]},"expected":4,"note":"skip smaller middle"}
+{"input":{"nums":[1,9,1]},"expected":9,"note":"middle larger than endpoints"}
+{"input":{"nums":[0,400,0]},"expected":400,"note":"zero endpoints"}
+{"input":{"nums":[400,0,400]},"expected":800,"note":"both distant maxima"}
+{"input":{"nums":[2,1,1,2]},"expected":4,"note":"optimal selection mixes parity"}
+{"input":{"nums":[1,3,1,3,100]},"expected":103,"note":"do not greedily select local maximum"}
+{"input":{"nums":[4,1,2,7,5,3,1]},"expected":14,"note":"several competing prefixes"}
+{"input":{"nums":[5,5,5,5]},"expected":10,"note":"even equal houses"}
+{"input":{"nums":[5,5,5,5,5]},"expected":15,"note":"odd equal houses"}
+{"input":{"nums":[0,0,0,0,0]},"expected":0,"note":"all zero"}
+{"input":{"nums":[0,0,0,400]},"expected":400,"note":"valuable final house"}
+{"input":{"nums":[400,0,0,0]},"expected":400,"note":"valuable first house"}
+{"input":{"nums":[1,2,3,4,5,6]},"expected":12,"note":"increasing values"}
+{"input":{"nums":[6,5,4,3,2,1]},"expected":12,"note":"decreasing values"}
+{"input":{"nums":[10,1,1,10]},"expected":20,"note":"distant high values"}
+{"input":{"nums":[1,10,10,1]},"expected":11,"note":"adjacent high values"}
+{"input":{"nums":[2,9,2,2,9,2]},"expected":18,"note":"two separated peaks"}
+{"input":{"nums":[9,1,1,9,1,1,9]},"expected":27,"note":"every-third pattern"}
+{"input":{"nums":[400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400]},"expected":20000,"note":"maximum length and values"}
+{"input":{"nums":[400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400]},"expected":20000,"note":"odd near-maximum length"}
+{"input":{"nums":[0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400,0,400]},"expected":20000,"note":"maximum alternating houses"}
+{"input":{"nums":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"expected":0,"note":"maximum zero houses"}
