@@ -1,0 +1,32 @@
+{"input":{"s":"rabbbit","t":"rabbit"},"expected":3,"example":true}
+{"input":{"s":"babgbag","t":"bag"},"expected":5,"example":true}
+{"input":{"s":"a","t":"a"},"expected":1,"note":"same singleton"}
+{"input":{"s":"a","t":"b"},"expected":0,"note":"different singleton"}
+{"input":{"s":"a","t":"aa"},"expected":0,"note":"target longer"}
+{"input":{"s":"aa","t":"a"},"expected":2,"note":"two choices"}
+{"input":{"s":"aaa","t":"aa"},"expected":3,"note":"combination count"}
+{"input":{"s":"abc","t":"abc"},"expected":1,"note":"whole string once"}
+{"input":{"s":"abc","t":"ac"},"expected":1,"note":"skip middle"}
+{"input":{"s":"abc","t":"ca"},"expected":0,"note":"order matters"}
+{"input":{"s":"aaaa","t":"aa"},"expected":6,"note":"multiple repeated positions"}
+{"input":{"s":"aabb","t":"ab"},"expected":4,"note":"independent choices"}
+{"input":{"s":"abab","t":"ab"},"expected":3,"note":"interleaved choices"}
+{"input":{"s":"abba","t":"ab"},"expected":2,"note":"duplicates after first"}
+{"input":{"s":"abcd","t":"d"},"expected":1,"note":"last character"}
+{"input":{"s":"abcd","t":"a"},"expected":1,"note":"first character"}
+{"input":{"s":"abcd","t":"e"},"expected":0,"note":"absent letter"}
+{"input":{"s":"AaAa","t":"Aa"},"expected":3,"note":"case sensitive"}
+{"input":{"s":"AAAA","t":"aa"},"expected":0,"note":"uppercase differs"}
+{"input":{"s":"rabbbit","t":"rabbit"},"expected":3,"note":"duplicate middle choices"}
+{"input":{"s":"babgbag","t":"bag"},"expected":5,"note":"multiple skipped blocks"}
+{"input":{"s":"banana","t":"ban"},"expected":3,"note":"repeated tails"}
+{"input":{"s":"mississippi","t":"issi"},"expected":15,"note":"overlapping repetitions"}
+{"input":{"s":"abcabc","t":"abc"},"expected":4,"note":"source repetitions"}
+{"input":{"s":"aaaaab","t":"aab"},"expected":10,"note":"trailing required letter"}
+{"input":{"s":"aaaaab","t":"aac"},"expected":0,"note":"impossible final letter"}
+{"input":{"s":"xyz","t":"xyzz"},"expected":0,"note":"longer repeated target"}
+{"input":{"s":"aaaaaaaaaa","t":"aaaaa"},"expected":252,"note":"binomial count"}
+{"input":{"s":"aAbBcC","t":"ABC"},"expected":1,"note":"mixed letter case"}
+{"generate":{"name":"almost_full","args":{"n":1000},"seed":41},"digest":"sha256:3348c6bc9e346d610d3bdd5a76bc418dcc49a6e5857c75974bd2a095e89990ef","note":"maximum lengths with final count 1000"}
+{"generate":{"name":"late_failure","args":{"n":1000},"seed":41},"digest":"sha256:7ca69c135de5476b018942286733d741618c523bc90ed659200031e13eab7213","note":"large overlapping subproblems ending in zero matches"}
+{"generate":{"name":"equal_strings","args":{"n":1000},"seed":41},"digest":"sha256:7ec57e344739b264a83b91b7b6e0febf75fbda4af129cb09d33964250762994a","note":"maximum identical strings with one subsequence"}
