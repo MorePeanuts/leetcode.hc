@@ -47,6 +47,7 @@ groups:
       - happy-number
       - partition-labels
       - reverse-words-in-a-string
+      - remove-duplicates-from-sorted-array-ii
   - name: sliding-window
     title: Sliding Window
     problems:

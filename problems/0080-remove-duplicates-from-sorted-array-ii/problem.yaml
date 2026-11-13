@@ -1,0 +1,23 @@
+id: "80"
+slug: remove-duplicates-from-sorted-array-ii
+title: Remove Duplicates from Sorted Array II
+titles:
+  zh-CN: 删除有序数组中的重复项 II
+difficulty: medium
+tags:
+  - array
+  - two-pointers
+kind: function
+function:
+  name: removeDuplicates
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+judge:
+  compare: exact
+  output: nums
+  output_length: return
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/
