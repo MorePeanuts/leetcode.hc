@@ -1,0 +1,34 @@
+{"input":{"entrance":[1,2],"maze":[["+","+",".","+"],[".",".",".","+"],["+","+","+","."]]},"expected":1,"example":true}
+{"input":{"entrance":[1,0],"maze":[["+","+","+"],[".",".","."],["+","+","+"]]},"expected":2,"example":true}
+{"input":{"entrance":[0,0],"maze":[[".","+"]]},"expected":-1,"example":true}
+{"input":{"entrance":[0,0],"maze":[["."]]},"expected":-1,"note":"Only cell is entrance, never an exit"}
+{"input":{"entrance":[0,0],"maze":[[".","."]]},"expected":1,"note":"One-row exit one step away"}
+{"input":{"entrance":[0,0],"maze":[[".","+","."]]},"expected":-1,"note":"Boundary entrance cannot exit through a wall"}
+{"input":{"entrance":[1,0],"maze":[["."],["."]]},"expected":1,"note":"One-column exit"}
+{"input":{"entrance":[1,1],"maze":[["+","+","+"],["+",".","+"],["+","+","+"]]},"expected":-1,"note":"Interior cell completely enclosed"}
+{"input":{"entrance":[0,1],"maze":[["+",".","+"],["+",".","+"],["+","+","+"]]},"expected":-1,"note":"Only reachable boundary cell is entrance"}
+{"input":{"entrance":[1,0],"maze":[["+","+","+"],[".",".","."],["+","+","+"]]},"expected":2,"note":"Boundary entrance must reach other boundary cell"}
+{"input":{"entrance":[1,1],"maze":[[".",".","."],[".",".","."],[".",".","."]]},"expected":1,"note":"Multiple equally near exits"}
+{"input":{"entrance":[1,1],"maze":[[".","+","+"],["+",".","+"],["+","+","."]]},"expected":-1,"note":"Diagonal empty cells are not connected"}
+{"input":{"entrance":[0,0],"maze":[[".","."],["+","."]]},"expected":1,"note":"Corner entrance excluded"}
+{"input":{"entrance":[1,1],"maze":[["+","+","+","+","+"],["+",".",".",".","+"],["+",".","+",".","+"],["+",".",".",".","+"],["+","+","+",".","+"]]},"expected":5,"note":"Cycles and one distant exit"}
+{"input":{"entrance":[1,2],"maze":[["+","+","+","+","+","+"],[".",".",".",".",".","."],["+","+","+","+","+","+"]]},"expected":2,"note":"Nearest of two exits on rectangular grid"}
+{"input":{"entrance":[1,1],"maze":[["+","+","+","+","+"],["+",".",".",".","+"],["+","+","+",".","+"],["+",".",".",".","+"],["+",".","+","+","+"]]},"expected":7,"note":"Winding path requires moving left"}
+{"input":{"entrance":[1,1],"maze":[["+",".","+"],[".",".","."],["+",".","+"]]},"expected":1,"note":"Exit on top bottom or side"}
+{"input":{"entrance":[4,3],"maze":[[".",".",".","+","+","."],[".",".",".",".","+","+"],[".",".",".",".","+","."],["+","+",".",".","+","+"],[".",".",".",".","+","+"],["+",".","+",".",".","."]]},"expected":1,"note":"Seeded maze 1: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[2,3],"maze":[["+",".","+","."],[".","+",".","+"],[".","+","+","."],["+","+","+","+"],["+",".","+","."]]},"expected":-1,"note":"Seeded maze 2: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[0,2],"maze":[[".",".",".","."],[".","+",".","."],[".","+",".","."],["+",".",".","."]]},"expected":1,"note":"Seeded maze 3: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[0,3],"maze":[[".",".",".",".",".","."]]},"expected":1,"note":"Seeded maze 4: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[0,0],"maze":[[".",".","+",".","+","."],["+","+",".",".",".","+"],["+",".","+",".","+","."],["+",".",".","+","+","."],[".","+",".","+",".","+"]]},"expected":1,"note":"Seeded maze 5: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[5,4],"maze":[[".",".","+",".","+"],["+",".",".","+","."],["+","+","+","+","."],[".",".",".","+","."],["+","+",".","+","+"],[".",".","+",".","."]]},"expected":1,"note":"Seeded maze 6: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[1,0],"maze":[["+"],["."],["."],["+"],["+"]]},"expected":1,"note":"Seeded maze 7: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[1,1],"maze":[[".","+"],["+","."],["+","."]]},"expected":1,"note":"Seeded maze 8: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[0,3],"maze":[[".",".","+",".","."]]},"expected":1,"note":"Seeded maze 9: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[1,1],"maze":[[".","+",".",".","."],["+",".",".","+","+"],["+",".",".","+","+"]]},"expected":1,"note":"Seeded maze 10: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[1,2],"maze":[[".",".","+","+","+"],[".","+",".",".","+"],["+",".",".","+","."],[".","+","+",".","."],[".",".",".",".","."],[".","+","+","+","."]]},"expected":-1,"note":"Seeded maze 11: arbitrary boundary/interior entrance"}
+{"input":{"entrance":[5,0],"maze":[["+",".",".","."],[".",".",".","+"],["+","+",".","."],[".",".",".","+"],[".",".","+","+"],[".",".",".","."]]},"expected":1,"note":"Seeded maze 12: arbitrary boundary/interior entrance"}
+{"generate":{"name":"chamber","args":{"exit_open":true,"n":100},"seed":1926},"digest":"sha256:adc885012ba6ca8ae1e3a75a6ebd45365f79e6bcc05370923a882d82304a89f0","note":"Maximum open chamber with far sole exit"}
+{"generate":{"name":"chamber","args":{"exit_open":false,"n":100},"seed":1926},"digest":"sha256:aef85af21591785a34a226079cc1579c5487cc30129cd706d2486e6ac525715b","note":"Maximum sealed chamber: no exit"}
+{"generate":{"name":"snake","args":{"n":100},"seed":1926},"digest":"sha256:19cee51213589f9494c8ce5031c6efcd4582fc02c4ae07a6a5cf2541c991cf80","note":"Maximum winding corridor"}
+{"generate":{"name":"snake","args":{"n":99},"seed":1926},"digest":"sha256:a914c1e4404254c2ae3da90c7aaa8adba7ae1c81da57dc8fc3b0c5bb890ccf3f","note":"Odd-sized winding corridor"}
+{"generate":{"name":"corridor","args":{"n":100},"seed":1926},"digest":"sha256:cd6f0d64ba2b78371c24ff6eef26233f9dc01fb148fb18708bab0fa7d495f9be","note":"Maximum single column; every neighbor is an exit"}
