@@ -1,0 +1,28 @@
+id: "398"
+slug: random-pick-index
+title: Random Pick Index
+titles:
+  zh-CN: 随机数索引
+difficulty: medium
+tags:
+  - reservoir-sampling
+  - hash-table
+  - math
+  - randomized
+kind: class
+class:
+  name: Solution
+  constructor:
+    - name: nums
+      type: integer[]
+  methods:
+    - name: pick
+      params:
+        - name: target
+          type: integer
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/random-pick-index/
+judge:
+  compare: checker
