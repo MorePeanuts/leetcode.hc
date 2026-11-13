@@ -120,6 +120,8 @@ groups:
       - kth-smallest-element-in-a-sorted-matrix
   - name: backtracking
     title: Backtracking
+    problems:
+      - target-sum
   - name: tries
     title: Tries
     problems:
@@ -155,6 +157,7 @@ groups:
       - unique-paths
       - best-time-to-buy-and-sell-stock-with-cooldown
       - coin-change-ii
+      - target-sum
   - name: greedy
     title: Greedy
   - name: intervals
