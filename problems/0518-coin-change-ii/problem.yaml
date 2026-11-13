@@ -1,0 +1,25 @@
+id: "518"
+slug: coin-change-ii
+title: Coin Change II
+titles:
+  zh-CN: 零钱兑换 II
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+  - knapsack-problem
+  - complete-knapsack
+kind: function
+function:
+  name: change
+  params:
+    - name: amount
+      type: integer
+    - name: coins
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/coin-change-ii/
+judge:
+  compare: exact

@@ -154,6 +154,7 @@ groups:
       - edit-distance
       - unique-paths
       - best-time-to-buy-and-sell-stock-with-cooldown
+      - coin-change-ii
   - name: greedy
     title: Greedy
   - name: intervals
