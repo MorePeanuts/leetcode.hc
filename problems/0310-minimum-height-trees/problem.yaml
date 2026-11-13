@@ -1,0 +1,25 @@
+id: "310"
+slug: minimum-height-trees
+title: Minimum Height Trees
+titles:
+  zh-CN: 最小高度树
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - topological-sort
+kind: function
+function:
+  name: findMinHeightTrees
+  params:
+    - name: "n"
+      type: integer
+    - name: edges
+      type: integer[][]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-height-trees/
+judge:
+  compare: unordered
