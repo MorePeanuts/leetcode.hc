@@ -1,0 +1,32 @@
+{"input":{"head":[1,2,2,1]},"expected":true,"example":true}
+{"input":{"head":[1,2]},"expected":false,"example":true}
+{"input":{"head":[0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 1"}
+{"input":{"head":[9]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 2"}
+{"input":{"head":[0,0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 3"}
+{"input":{"head":[9,9]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 4"}
+{"input":{"head":[0,9]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 5"}
+{"input":{"head":[9,0]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 6"}
+{"input":{"head":[1,0,1]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 7"}
+{"input":{"head":[1,0,2]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 8"}
+{"input":{"head":[0,0,0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 9"}
+{"input":{"head":[1,2,2,1]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 10"}
+{"input":{"head":[1,2,3,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 11"}
+{"input":{"head":[1,2,1,2]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 12"}
+{"input":{"head":[1,2,3,2,1]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 13"}
+{"input":{"head":[1,2,3,4,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 14"}
+{"input":{"head":[0,1,2,2,1,0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 15"}
+{"input":{"head":[0,1,2,3,1,0]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 16"}
+{"input":{"head":[9,9,9,9,9,9,9]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 17"}
+{"input":{"head":[9,9,9,9,9,9,9,9]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 18"}
+{"input":{"head":[0,1,0,1,0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 19"}
+{"input":{"head":[0,1,0,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 20"}
+{"input":{"head":[1,2,3,4,4,3,2,1]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 21"}
+{"input":{"head":[1,2,3,4,5,3,2,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 22"}
+{"input":{"head":[0,9,9,0]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 23"}
+{"input":{"head":[9,0,0,9]},"expected":true,"note":"Palindrome parity, center and mismatch boundary 24"}
+{"input":{"head":[1,1,2,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 25"}
+{"input":{"head":[0,0,0,1]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 26"}
+{"input":{"head":[1,0,0,0]},"expected":false,"note":"Palindrome parity, center and mismatch boundary 27"}
+{"generate":{"name":"palindrome","args":{"n":100000}},"digest":"sha256:1db9b3f77276d4c8d81ca2cb57fa69456117c0f67f59923d4b6553a500c9cadb","note":"Near-limit palindrome, n=100000; no early mismatch"}
+{"generate":{"name":"palindrome","args":{"n":99999}},"digest":"sha256:572768d7201685027d7b770f9d5a0bdce80831d44eb78c62f36951125cf107af","note":"Near-limit palindrome, n=99999; no early mismatch"}
+{"generate":{"name":"central_mismatch","args":{"n":100000}},"digest":"sha256:2057ea28d3873157c67e9e136c3ee0687ac2768f5514dfb14fb815b1cbfc4eb8","note":"Near-limit central_mismatch, n=100000; no early mismatch"}

@@ -125,6 +125,7 @@ groups:
       - remove-duplicates-from-sorted-list-ii
       - add-two-numbers-ii
       - swap-nodes-in-pairs
+      - palindrome-linked-list
   - name: trees
     title: Trees
     problems:
