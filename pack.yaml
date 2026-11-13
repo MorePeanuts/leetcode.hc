@@ -65,6 +65,7 @@ groups:
       - minimum-operations-to-reduce-x-to-zero
       - subarray-product-less-than-k
       - max-consecutive-ones-iii
+      - contains-duplicate-ii
   - name: stack
     title: Stack
     problems:

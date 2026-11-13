@@ -1,0 +1,24 @@
+id: "219"
+slug: contains-duplicate-ii
+title: Contains Duplicate II
+titles:
+  zh-CN: 存在重复元素 II
+difficulty: easy
+tags:
+  - array
+  - hash-table
+  - sliding-window
+kind: function
+function:
+  name: containsNearbyDuplicate
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/contains-duplicate-ii/
+judge:
+  compare: exact
