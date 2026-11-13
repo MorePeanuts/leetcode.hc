@@ -64,6 +64,7 @@ groups:
       - sliding-window-maximum
       - minimum-operations-to-reduce-x-to-zero
       - subarray-product-less-than-k
+      - max-consecutive-ones-iii
   - name: stack
     title: Stack
     problems:

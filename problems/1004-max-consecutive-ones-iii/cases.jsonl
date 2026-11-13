@@ -1,0 +1,33 @@
+{"input":{"k":2,"nums":[1,1,1,0,0,0,1,1,1,1,0]},"expected":6,"example":true}
+{"input":{"k":3,"nums":[0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]},"expected":10,"example":true}
+{"input":{"k":0,"nums":[0]},"expected":0,"note":"Zero with no flips"}
+{"input":{"k":1,"nums":[0]},"expected":1,"note":"Flip singleton"}
+{"input":{"k":0,"nums":[1]},"expected":1,"note":"One requires no flip"}
+{"input":{"k":1,"nums":[1]},"expected":1,"note":"Unused flip allowed"}
+{"input":{"k":0,"nums":[0,0,0]},"expected":0,"note":"All zero without flips"}
+{"input":{"k":3,"nums":[0,0,0]},"expected":3,"note":"Flip entire array"}
+{"input":{"k":0,"nums":[1,1,1]},"expected":3,"note":"All one with zero budget"}
+{"input":{"k":0,"nums":[1,0,1]},"expected":1,"note":"Separate one runs"}
+{"input":{"k":1,"nums":[1,0,1]},"expected":3,"note":"Bridge two runs"}
+{"input":{"k":1,"nums":[0,1,0,1,0]},"expected":3,"note":"One flip cannot bridge every gap"}
+{"input":{"k":1,"nums":[1,1,0,0,1,1,1]},"expected":4,"note":"Best window ends at array end"}
+{"input":{"k":1,"nums":[1,1,1,0,0,1]},"expected":4,"note":"Best window starts at array start"}
+{"input":{"k":2,"nums":[0,1,1,0,0,1,1,0]},"expected":6,"note":"Multiple zero removal"}
+{"input":{"k":2,"nums":[0,0,1,1]},"expected":4,"note":"Budget equals zero count"}
+{"input":{"k":4,"nums":[1,0,0,0,1]},"expected":5,"note":"Budget exceeds zero count"}
+{"input":{"k":2,"nums":[0,1,0,1,0,1]},"expected":5,"note":"Alternating values"}
+{"input":{"k":10,"nums":[0,0,0,1,0,0,1,0,0,0,0,0,0,0,0]},"expected":12,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":5,"nums":[1,0,0,1,0,1,0,1,0,0,0,1,1,1,0]},"expected":11,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":10,"nums":[1,1,1,1,0,0,1,0,0,1,0,0,0,1,0,1,0]},"expected":17,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":5,"nums":[1,1,1,1,1,0]},"expected":6,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":3,"nums":[1,0,1,1,1,0,1,0,0,1,1,1,0,0,0,1,0]},"expected":10,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":1,"nums":[1,1,1,1]},"expected":4,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":13,"nums":[0,0,1,0,1,0,0,1,1,0,0,1,0]},"expected":13,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":11,"nums":[1,0,0,0,0,0,0,1,1,1,0,1,1]},"expected":13,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":5,"nums":[0,1,0,1,0,0,0,1,0,0]},"expected":8,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":16,"nums":[0,0,0,0,0,1,1,0,1,0,1,0,1,0,1,1]},"expected":16,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":0,"nums":[1,1]},"expected":2,"note":"Deterministic binary layout and flip budget"}
+{"input":{"k":15,"nums":[0,0,1,1,1,0,1,0,0,1,1,0,0,0,1,1,0,0,1,1,0]},"expected":21,"note":"Deterministic binary layout and flip budget"}
+{"generate":{"name":"all_ones","args":{"n":100000},"seed":7},"digest":"sha256:f33eb1cb4306b55b958a956918602cf24e17a5db858b970db2613bff711d3b1c","note":"Maximum length; all intervals valid for quadratic scan"}
+{"generate":{"name":"alternating","args":{"n":100000},"seed":7},"digest":"sha256:67a8ef64cfbecd077ee4fb885dd5841ff521fc7ea3fffbd589ad04863ab40651","note":"Maximum length; half-length windows"}
+{"generate":{"name":"all_zeros","args":{"n":100000},"seed":7},"digest":"sha256:fa96df88ee547125b5db4700a0cdbbd775a2ade98b17770afa8a4e601500cd2a","note":"Maximum length; many overlapping long windows"}
