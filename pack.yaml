@@ -13,6 +13,7 @@ groups:
   - name: arrays-hashing
     title: Arrays & Hashing
     problems:
+      - first-missing-positive
       - set-mismatch
       - majority-element
       - first-unique-character-in-a-string
