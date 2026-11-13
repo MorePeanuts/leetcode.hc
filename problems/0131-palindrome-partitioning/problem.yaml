@@ -1,0 +1,22 @@
+id: "131"
+slug: palindrome-partitioning
+title: Palindrome Partitioning
+titles:
+  zh-CN: 分割回文串
+difficulty: medium
+tags:
+  - string
+  - dynamic-programming
+  - backtracking
+kind: function
+function:
+  name: partition
+  params:
+    - name: s
+      type: string
+  returns: string[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/palindrome-partitioning/
+judge:
+  compare: unordered
