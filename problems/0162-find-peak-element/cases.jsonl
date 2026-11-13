@@ -1,0 +1,33 @@
+{"input":{"nums":[1,2,3,1]},"expected":2,"example":true}
+{"input":{"nums":[1,2,1,3,5,6,4]},"expected":5,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-2147483648]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[2147483647]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,2]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[2,1]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-2,-1]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-1,-2]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,2,3]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[3,2,1]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,3,2]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[3,1,2]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[2,1,3]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,3,2,4,1]},"expected":3,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,4,2,3,1]},"expected":3,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[5,1,2,1,5]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[0,1,0,1,0]},"expected":3,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,0,1,0,1]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,2,3,4]},"expected":3,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[4,3,2,1]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,2,4,3]},"expected":2,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,4,3,2]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-3,-1,-2]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-2147483648,2147483647]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[-2147483648,0,-2147483648]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[3,2,1,2,3]},"expected":4,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[10,9,8,7,6,7]},"expected":0,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[1,5,3,4,2,8,0]},"expected":1,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"input":{"nums":[4,3,5,2,6,1,7]},"expected":6,"note":"Endpoint or interior peaks, multiple valid peaks, and signed extremes"}
+{"generate":{"name":"slopes","args":{"mode":0,"n":1000},"seed":42},"digest":"sha256:b4083c5679ef690b1ff6de71cfd7f010b5aac5ef315d206a4a629506dd8c6edc","note":"Maximum length monotone slope or many valid peaks"}
+{"generate":{"name":"slopes","args":{"mode":1,"n":1000},"seed":42},"digest":"sha256:766e46d85ba382b2d84c8b8e170395810e1d5c9c8d55274cf245fbc55cda04c9","note":"Maximum length monotone slope or many valid peaks"}
+{"generate":{"name":"slopes","args":{"mode":2,"n":1000},"seed":42},"digest":"sha256:415ff3eea55e3762d1e5bd0a163df8992d3b4673ae10c75cd70a5cc9d363d207","note":"Maximum length monotone slope or many valid peaks"}

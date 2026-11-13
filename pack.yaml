@@ -96,6 +96,7 @@ groups:
       - is-subsequence
       - find-k-closest-elements
       - search-insert-position
+      - find-peak-element
   - name: linked-list
     title: Linked List
     problems:
