@@ -1,0 +1,21 @@
+id: "162"
+slug: find-peak-element
+title: Find Peak Element
+titles:
+  zh-CN: 寻找峰值
+difficulty: medium
+tags:
+  - array
+  - binary-search
+kind: function
+function:
+  name: findPeakElement
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-peak-element/
+judge:
+  compare: checker
