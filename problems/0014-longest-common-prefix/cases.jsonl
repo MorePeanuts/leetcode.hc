@@ -1,0 +1,32 @@
+{"input":{"strs":["flower","flow","flight"]},"expected":"fl","example":true}
+{"input":{"strs":["dog","racecar","car"]},"expected":"","example":true}
+{"input":{"strs":[""]},"expected":"","note":"Prefix length, empty string and late-word mismatch 1"}
+{"input":{"strs":["a"]},"expected":"a","note":"Prefix length, empty string and late-word mismatch 2"}
+{"input":{"strs":["abc"]},"expected":"abc","note":"Prefix length, empty string and late-word mismatch 3"}
+{"input":{"strs":["","a"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 4"}
+{"input":{"strs":["a",""]},"expected":"","note":"Prefix length, empty string and late-word mismatch 5"}
+{"input":{"strs":["",""]},"expected":"","note":"Prefix length, empty string and late-word mismatch 6"}
+{"input":{"strs":["a","a"]},"expected":"a","note":"Prefix length, empty string and late-word mismatch 7"}
+{"input":{"strs":["a","b"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 8"}
+{"input":{"strs":["abc","abc"]},"expected":"abc","note":"Prefix length, empty string and late-word mismatch 9"}
+{"input":{"strs":["abcd","ab"]},"expected":"ab","note":"Prefix length, empty string and late-word mismatch 10"}
+{"input":{"strs":["ab","abcd"]},"expected":"ab","note":"Prefix length, empty string and late-word mismatch 11"}
+{"input":{"strs":["abc","abd","abz"]},"expected":"ab","note":"Prefix length, empty string and late-word mismatch 12"}
+{"input":{"strs":["abc","abc","z"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 13"}
+{"input":{"strs":["abc","abc",""]},"expected":"","note":"Prefix length, empty string and late-word mismatch 14"}
+{"input":{"strs":["a","a","b"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 15"}
+{"input":{"strs":["aaa","aaaa","aa"]},"expected":"aa","note":"Prefix length, empty string and late-word mismatch 16"}
+{"input":{"strs":["zoo","zoom","zoology"]},"expected":"zoo","note":"Prefix length, empty string and late-word mismatch 17"}
+{"input":{"strs":["car","cat","cab"]},"expected":"ca","note":"Prefix length, empty string and late-word mismatch 18"}
+{"input":{"strs":["xabc","yabc"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 19"}
+{"input":{"strs":["abcd","abce","abc"]},"expected":"abc","note":"Prefix length, empty string and late-word mismatch 20"}
+{"input":{"strs":["prefix","pre","prevent"]},"expected":"pre","note":"Prefix length, empty string and late-word mismatch 21"}
+{"input":{"strs":["flower","flow","flown"]},"expected":"flow","note":"Prefix length, empty string and late-word mismatch 22"}
+{"input":{"strs":["ab","a","abc"]},"expected":"a","note":"Prefix length, empty string and late-word mismatch 23"}
+{"input":{"strs":["abc","axc"]},"expected":"a","note":"Prefix length, empty string and late-word mismatch 24"}
+{"input":{"strs":["aaaa","aaab"]},"expected":"aaa","note":"Prefix length, empty string and late-word mismatch 25"}
+{"input":{"strs":["abc","def","ghi"]},"expected":"","note":"Prefix length, empty string and late-word mismatch 26"}
+{"input":{"strs":["longword","longword","longword"]},"expected":"longword","note":"Prefix length, empty string and late-word mismatch 27"}
+{"generate":{"name":"identical","args":{"n":200,"width":200}},"digest":"sha256:bfa90267ef0ce0d8074dfdfedbb2339f7a37d38753fdd541076a36883f3d20e1","note":"Maximum word count/width: identical"}
+{"generate":{"name":"late_mismatch","args":{"n":200,"width":200}},"digest":"sha256:77b11c015361f119a850f5686c2d031d88c870a50b98a5063a7cadc4666ba5d7","note":"Maximum word count/width: late_mismatch"}
+{"generate":{"name":"last_empty","args":{"n":200,"width":200}},"digest":"sha256:449c4655d681cdc2492c98aa68d6e53149440b1e9464b171f0b52d37ca1433cb","note":"Maximum word count/width: last_empty"}
