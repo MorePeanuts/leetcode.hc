@@ -80,6 +80,7 @@ groups:
       - valid-parenthesis-string
       - reconstruct-itinerary
       - flatten-nested-list-iterator
+      - simplify-path
   - name: binary-search
     title: Binary Search
     problems:

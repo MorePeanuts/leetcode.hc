@@ -1,0 +1,36 @@
+{"input":{"path":"/home/"},"expected":"/home","example":true}
+{"input":{"path":"/home//foo/"},"expected":"/home/foo","example":true}
+{"input":{"path":"/home/user/Documents/../Pictures"},"expected":"/home/user/Pictures","example":true}
+{"input":{"path":"/../"},"expected":"/","example":true}
+{"input":{"path":"/.../a/../b/c/../d/./"},"expected":"/.../b/d","example":true}
+{"input":{"path":"/"},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"//"},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"////"},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/."},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/.."},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/../.."},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a"},"expected":"/a","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/"},"expected":"/a","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a//b///c"},"expected":"/a/b/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/."},"expected":"/a","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/.."},"expected":"/","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/b/../c"},"expected":"/a/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/b/../../c"},"expected":"/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/b/../../../c"},"expected":"/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/..."},"expected":"/...","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/...."},"expected":"/....","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/.hidden"},"expected":"/.hidden","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/.../.."},"expected":"/a","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/..hidden/b"},"expected":"/a/..hidden/b","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a_b/9/../X"},"expected":"/a_b/X","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/b/././c/../"},"expected":"/a/b","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/../../b/../c"},"expected":"/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a//..//b//.//c"},"expected":"/b/c","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/././a/./b/."},"expected":"/a/b","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a/../a/../a"},"expected":"/a","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/UPPER/lower/123"},"expected":"/UPPER/lower/123","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/..name/.../../.x"},"expected":"/..name/.x","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"input":{"path":"/a.../b..c/.d"},"expected":"/a.../b..c/.d","note":"Root clamping, repeated separators, dot commands or literal dot names"}
+{"generate":{"name":"long_path","args":{"mode":0,"n":3000},"seed":42},"digest":"sha256:1b2a0fbef4de0c679c154ecb2a53b4a547ea2710974553e11451d74fd66d00af","note":"Maximum path length: component, stack churn or root clamping"}
+{"generate":{"name":"long_path","args":{"mode":1,"n":3000},"seed":42},"digest":"sha256:4a437f248ea85c24acc596221fa699ad450f94b3ae0dc999529bd0114c999fb6","note":"Maximum path length: component, stack churn or root clamping"}
+{"generate":{"name":"long_path","args":{"mode":2,"n":3000},"seed":42},"digest":"sha256:9f13aca21dbabba852a8c8bdea9639aca3b8731cc65158710d785cc7d4b201dd","note":"Maximum path length: component, stack churn or root clamping"}
