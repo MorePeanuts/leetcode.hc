@@ -254,6 +254,7 @@ groups:
       - single-number
       - number-of-1-bits
       - counting-bits
+      - reverse-bits
   - name: math-geometry
     title: Math & Geometry
     problems:

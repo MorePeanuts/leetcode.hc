@@ -1,0 +1,21 @@
+id: "190"
+slug: reverse-bits
+title: Reverse Bits
+titles:
+  zh-CN: 颠倒二进制位
+difficulty: easy
+tags:
+  - bit-manipulation
+  - divide-and-conquer
+kind: function
+function:
+  name: reverseBits
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-bits/
+judge:
+  compare: exact
