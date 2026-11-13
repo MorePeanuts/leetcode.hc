@@ -2,7 +2,7 @@
 protocol: 1
 name: leetcode
 title: LeetCode
-version: 0.5.0
+version: 0.5.1
 description: LeetCode problems with Go and Python references, statements in English and Chinese. Not affiliated with LeetCode.
 authors: [MorePeanuts]
 license: MIT
