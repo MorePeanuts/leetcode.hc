@@ -298,6 +298,7 @@ groups:
     problems:
       - sliding-window-maximum
       - number-of-recent-calls
+      - design-circular-queue
   - name: design
     title: Data Structure Design
     problems:
@@ -316,6 +317,7 @@ groups:
       - flatten-nested-list-iterator
       - shuffle-an-array
       - number-of-recent-calls
+      - design-circular-queue
   - name: divide-and-conquer
     title: Divide & Conquer
     problems:
