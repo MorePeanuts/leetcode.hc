@@ -98,6 +98,7 @@ groups:
       - binary-tree-maximum-path-sum
       - serialize-and-deserialize-binary-tree
       - binary-tree-inorder-traversal
+      - minimum-depth-of-binary-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
