@@ -31,6 +31,7 @@ groups:
       - subsets-ii
       - word-search
       - detect-squares
+      - hand-of-straights
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -204,6 +205,7 @@ groups:
       - jump-game
       - jump-game-ii
       - gas-station
+      - hand-of-straights
   - name: intervals
     title: Intervals
     problems:

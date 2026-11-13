@@ -1,0 +1,25 @@
+id: "846"
+slug: hand-of-straights
+title: Hand of Straights
+titles:
+  zh-CN: 一手顺子
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - hash-table
+  - sorting
+kind: function
+function:
+  name: isNStraightHand
+  params:
+    - name: hand
+      type: integer[]
+    - name: groupSize
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/hand-of-straights/
+judge:
+  compare: exact
