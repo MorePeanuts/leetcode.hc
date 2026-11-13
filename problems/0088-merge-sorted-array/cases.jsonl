@@ -1,0 +1,33 @@
+{"input":{"m":3,"n":3,"nums1":[1,2,3,0,0,0],"nums2":[2,5,6]},"expected":[1,2,2,3,5,6],"example":true}
+{"input":{"m":1,"n":0,"nums1":[1],"nums2":[]},"expected":[1],"example":true}
+{"input":{"m":0,"n":1,"nums1":[0],"nums2":[1]},"expected":[1],"example":true}
+{"input":{"m":0,"n":1,"nums1":[0],"nums2":[-1]},"expected":[-1],"note":"Merge overlap, exhaustion, zero padding boundary 1"}
+{"input":{"m":1,"n":0,"nums1":[0],"nums2":[]},"expected":[0],"note":"Merge overlap, exhaustion, zero padding boundary 2"}
+{"input":{"m":1,"n":1,"nums1":[0,0],"nums2":[0]},"expected":[0,0],"note":"Merge overlap, exhaustion, zero padding boundary 3"}
+{"input":{"m":1,"n":1,"nums1":[1,0],"nums2":[2]},"expected":[1,2],"note":"Merge overlap, exhaustion, zero padding boundary 4"}
+{"input":{"m":1,"n":1,"nums1":[2,0],"nums2":[1]},"expected":[1,2],"note":"Merge overlap, exhaustion, zero padding boundary 5"}
+{"input":{"m":1,"n":1,"nums1":[-1,0],"nums2":[-2]},"expected":[-2,-1],"note":"Merge overlap, exhaustion, zero padding boundary 6"}
+{"input":{"m":1,"n":1,"nums1":[-2,0],"nums2":[-1]},"expected":[-2,-1],"note":"Merge overlap, exhaustion, zero padding boundary 7"}
+{"input":{"m":0,"n":3,"nums1":[0,0,0],"nums2":[-2,0,2]},"expected":[-2,0,2],"note":"Merge overlap, exhaustion, zero padding boundary 8"}
+{"input":{"m":3,"n":0,"nums1":[-2,0,2],"nums2":[]},"expected":[-2,0,2],"note":"Merge overlap, exhaustion, zero padding boundary 9"}
+{"input":{"m":2,"n":2,"nums1":[0,0,0,0],"nums2":[0,0]},"expected":[0,0,0,0],"note":"Merge overlap, exhaustion, zero padding boundary 10"}
+{"input":{"m":2,"n":3,"nums1":[1,1,0,0,0],"nums2":[1,1,1]},"expected":[1,1,1,1,1],"note":"Merge overlap, exhaustion, zero padding boundary 11"}
+{"input":{"m":1,"n":1,"nums1":[-1000000000,0],"nums2":[1000000000]},"expected":[-1000000000,1000000000],"note":"Merge overlap, exhaustion, zero padding boundary 12"}
+{"input":{"m":1,"n":1,"nums1":[1000000000,0],"nums2":[-1000000000]},"expected":[-1000000000,1000000000],"note":"Merge overlap, exhaustion, zero padding boundary 13"}
+{"input":{"m":3,"n":3,"nums1":[-5,-3,-1,0,0,0],"nums2":[-4,-2,0]},"expected":[-5,-4,-3,-2,-1,0],"note":"Merge overlap, exhaustion, zero padding boundary 14"}
+{"input":{"m":3,"n":3,"nums1":[1,2,3,0,0,0],"nums2":[4,5,6]},"expected":[1,2,3,4,5,6],"note":"Merge overlap, exhaustion, zero padding boundary 15"}
+{"input":{"m":3,"n":3,"nums1":[4,5,6,0,0,0],"nums2":[1,2,3]},"expected":[1,2,3,4,5,6],"note":"Merge overlap, exhaustion, zero padding boundary 16"}
+{"input":{"m":3,"n":3,"nums1":[-1,0,0,0,0,0],"nums2":[0,0,1]},"expected":[-1,0,0,0,0,1],"note":"Merge overlap, exhaustion, zero padding boundary 17"}
+{"input":{"m":3,"n":1,"nums1":[1,3,5,0],"nums2":[2]},"expected":[1,2,3,5],"note":"Merge overlap, exhaustion, zero padding boundary 18"}
+{"input":{"m":1,"n":3,"nums1":[2,0,0,0],"nums2":[1,3,5]},"expected":[1,2,3,5],"note":"Merge overlap, exhaustion, zero padding boundary 19"}
+{"input":{"m":4,"n":3,"nums1":[1,1,1,1,0,0,0],"nums2":[1,1,1]},"expected":[1,1,1,1,1,1,1],"note":"Merge overlap, exhaustion, zero padding boundary 20"}
+{"input":{"m":2,"n":3,"nums1":[-1000000000,1000000000,0,0,0],"nums2":[-1000000000,0,1000000000]},"expected":[-1000000000,-1000000000,0,1000000000,1000000000],"note":"Merge overlap, exhaustion, zero padding boundary 21"}
+{"input":{"m":2,"n":9,"nums1":[-3,-1,0,0,0,0,0,0,0,0,0],"nums2":[-4,-4,0,1,2,2,4,4,5]},"expected":[-4,-4,-3,-1,0,1,2,2,4,4,5],"note":"Merge overlap, exhaustion, zero padding boundary 22"}
+{"input":{"m":3,"n":8,"nums1":[-4,-4,-1,0,0,0,0,0,0,0,0],"nums2":[-5,-4,-4,-3,0,2,4,4]},"expected":[-5,-4,-4,-4,-4,-3,-1,0,2,4,4],"note":"Merge overlap, exhaustion, zero padding boundary 23"}
+{"input":{"m":4,"n":7,"nums1":[-3,4,5,5,0,0,0,0,0,0,0],"nums2":[-5,-1,0,2,3,5,5]},"expected":[-5,-3,-1,0,2,3,4,5,5,5,5],"note":"Merge overlap, exhaustion, zero padding boundary 24"}
+{"input":{"m":5,"n":6,"nums1":[-4,-1,-1,0,0,0,0,0,0,0,0],"nums2":[-5,-4,-2,-1,1,4]},"expected":[-5,-4,-4,-2,-1,-1,-1,0,0,1,4],"note":"Merge overlap, exhaustion, zero padding boundary 25"}
+{"input":{"m":6,"n":5,"nums1":[-5,-5,-2,-1,2,5,0,0,0,0,0],"nums2":[-2,-2,-1,0,1]},"expected":[-5,-5,-2,-2,-2,-1,-1,0,1,2,5],"note":"Merge overlap, exhaustion, zero padding boundary 26"}
+{"input":{"m":7,"n":4,"nums1":[-2,-2,0,0,1,1,2,0,0,0,0],"nums2":[3,4,5,5]},"expected":[-2,-2,0,0,1,1,2,3,4,5,5],"note":"Merge overlap, exhaustion, zero padding boundary 27"}
+{"generate":{"name":"interleaved","args":{"n":100}},"digest":"sha256:ee0bcadc4319a54ea9c245f84342a0469877e4a5d1c31e55612f6b5d313e1498","note":"Maximum parameter length interleaved"}
+{"generate":{"name":"right_first","args":{"n":100}},"digest":"sha256:1a7e78b215b4a224686dd9d7bf95d0ef976fad2177d923806dd5f38fe40fce33","note":"Maximum parameter length right_first"}
+{"generate":{"name":"one_empty","args":{"n":200}},"digest":"sha256:709436ff1b5cab560a7328728d7ae46b17fdc4c41cbfa2cb0bb2428975cb345b","note":"Maximum parameter length one_empty"}
