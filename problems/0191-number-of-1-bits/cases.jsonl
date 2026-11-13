@@ -1,0 +1,36 @@
+{"input":{"n":11},"expected":3,"example":true}
+{"input":{"n":128},"expected":1,"example":true}
+{"input":{"n":2147483645},"expected":30,"example":true}
+{"input":{"n":1},"expected":1,"note":"Bit pattern 0x1: power, transition, dense or separated set bits."}
+{"input":{"n":2},"expected":1,"note":"Bit pattern 0x2: power, transition, dense or separated set bits."}
+{"input":{"n":3},"expected":2,"note":"Bit pattern 0x3: power, transition, dense or separated set bits."}
+{"input":{"n":4},"expected":1,"note":"Bit pattern 0x4: power, transition, dense or separated set bits."}
+{"input":{"n":7},"expected":3,"note":"Bit pattern 0x7: power, transition, dense or separated set bits."}
+{"input":{"n":8},"expected":1,"note":"Bit pattern 0x8: power, transition, dense or separated set bits."}
+{"input":{"n":15},"expected":4,"note":"Bit pattern 0xf: power, transition, dense or separated set bits."}
+{"input":{"n":16},"expected":1,"note":"Bit pattern 0x10: power, transition, dense or separated set bits."}
+{"input":{"n":31},"expected":5,"note":"Bit pattern 0x1f: power, transition, dense or separated set bits."}
+{"input":{"n":32},"expected":1,"note":"Bit pattern 0x20: power, transition, dense or separated set bits."}
+{"input":{"n":63},"expected":6,"note":"Bit pattern 0x3f: power, transition, dense or separated set bits."}
+{"input":{"n":64},"expected":1,"note":"Bit pattern 0x40: power, transition, dense or separated set bits."}
+{"input":{"n":127},"expected":7,"note":"Bit pattern 0x7f: power, transition, dense or separated set bits."}
+{"input":{"n":255},"expected":8,"note":"Bit pattern 0xff: power, transition, dense or separated set bits."}
+{"input":{"n":256},"expected":1,"note":"Bit pattern 0x100: power, transition, dense or separated set bits."}
+{"input":{"n":257},"expected":2,"note":"Bit pattern 0x101: power, transition, dense or separated set bits."}
+{"input":{"n":511},"expected":9,"note":"Bit pattern 0x1ff: power, transition, dense or separated set bits."}
+{"input":{"n":512},"expected":1,"note":"Bit pattern 0x200: power, transition, dense or separated set bits."}
+{"input":{"n":1023},"expected":10,"note":"Bit pattern 0x3ff: power, transition, dense or separated set bits."}
+{"input":{"n":1024},"expected":1,"note":"Bit pattern 0x400: power, transition, dense or separated set bits."}
+{"input":{"n":65535},"expected":16,"note":"Bit pattern 0xffff: power, transition, dense or separated set bits."}
+{"input":{"n":65536},"expected":1,"note":"Bit pattern 0x10000: power, transition, dense or separated set bits."}
+{"input":{"n":65537},"expected":2,"note":"Bit pattern 0x10001: power, transition, dense or separated set bits."}
+{"input":{"n":1073741823},"expected":30,"note":"Bit pattern 0x3fffffff: power, transition, dense or separated set bits."}
+{"input":{"n":1073741824},"expected":1,"note":"Bit pattern 0x40000000: power, transition, dense or separated set bits."}
+{"input":{"n":1073741825},"expected":2,"note":"Bit pattern 0x40000001: power, transition, dense or separated set bits."}
+{"input":{"n":2147483647},"expected":31,"note":"Bit pattern 0x7fffffff: power, transition, dense or separated set bits."}
+{"input":{"n":2147483646},"expected":30,"note":"Bit pattern 0x7ffffffe: power, transition, dense or separated set bits."}
+{"input":{"n":1431655765},"expected":16,"note":"Bit pattern 0x55555555: power, transition, dense or separated set bits."}
+{"input":{"n":715827882},"expected":15,"note":"Bit pattern 0x2aaaaaaa: power, transition, dense or separated set bits."}
+{"input":{"n":1073774593},"expected":3,"note":"Bit pattern 0x40008001: power, transition, dense or separated set bits."}
+{"input":{"n":1879048192},"expected":3,"note":"Bit pattern 0x70000000: power, transition, dense or separated set bits."}
+{"input":{"n":16843009},"expected":4,"note":"Bit pattern 0x1010101: power, transition, dense or separated set bits."}

@@ -1,0 +1,21 @@
+id: "191"
+slug: number-of-1-bits
+title: Number of 1 Bits
+titles:
+  zh-CN: 位1的个数
+difficulty: easy
+tags:
+  - bit-manipulation
+  - divide-and-conquer
+kind: function
+function:
+  name: hammingWeight
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/number-of-1-bits/
+judge:
+  compare: exact
