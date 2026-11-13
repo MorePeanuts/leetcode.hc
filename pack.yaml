@@ -172,6 +172,7 @@ groups:
       - house-robber
       - house-robber-ii
       - palindromic-substrings
+      - decode-ways
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
