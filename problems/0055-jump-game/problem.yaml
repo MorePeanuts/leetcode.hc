@@ -1,0 +1,22 @@
+id: "55"
+slug: jump-game
+title: Jump Game
+titles:
+  zh-CN: 跳跃游戏
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: canJump
+  params:
+    - name: nums
+      type: integer[]
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/jump-game/
+judge:
+  compare: exact
