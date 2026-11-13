@@ -1,0 +1,34 @@
+{"input":{"k":8,"matrix":[[1,5,9],[10,11,13],[12,13,15]]},"expected":13,"example":true}
+{"input":{"k":1,"matrix":[[-5]]},"expected":-5,"example":true}
+{"input":{"k":1,"matrix":[[0]]},"expected":0,"note":"Single zero."}
+{"input":{"k":1,"matrix":[[-1000000000]]},"expected":-1000000000,"note":"Minimum value."}
+{"input":{"k":1,"matrix":[[1000000000]]},"expected":1000000000,"note":"Maximum value."}
+{"input":{"k":1,"matrix":[[1,2],[3,4]]},"expected":1,"note":"First rank."}
+{"input":{"k":4,"matrix":[[1,2],[3,4]]},"expected":4,"note":"Last rank."}
+{"input":{"k":2,"matrix":[[1,100],[2,101]]},"expected":2,"note":"Column order interleaves row order."}
+{"input":{"k":3,"matrix":[[1,2],[100,101]]},"expected":100,"note":"Row blocks and the next row boundary."}
+{"input":{"k":3,"matrix":[[1,1],[1,2]]},"expected":1,"note":"Duplicates count toward rank."}
+{"input":{"k":4,"matrix":[[1,1],[1,2]]},"expected":2,"note":"Rank immediately after a plateau."}
+{"input":{"k":2,"matrix":[[5,5],[5,5]]},"expected":5,"note":"All equal: binary-search interval already collapsed."}
+{"input":{"k":3,"matrix":[[-9,-6],[-7,-2]]},"expected":-6,"note":"Negative-only matrix with interleaving."}
+{"input":{"k":3,"matrix":[[-5,0],[0,5]]},"expected":0,"note":"Zero plateau across rows and columns."}
+{"input":{"k":2,"matrix":[[-1000000000,0],[0,1000000000]]},"expected":0,"note":"Wide search range with repeated zero."}
+{"input":{"k":2,"matrix":[[1,100],[50,1000]]},"expected":50,"note":"Answer must be a matrix element, not a search midpoint."}
+{"input":{"k":5,"matrix":[[1,2,3],[2,3,4],[3,4,5]]},"expected":3,"note":"Diagonal ties at middle rank."}
+{"input":{"k":8,"matrix":[[1,1,2],[1,2,2],[2,2,3]]},"expected":2,"note":"Rank near the end of a repeated plateau."}
+{"input":{"k":4,"matrix":[[1,2,3],[1,2,3],[1,2,3]]},"expected":2,"note":"Identical rows."}
+{"input":{"k":6,"matrix":[[1,1,1],[2,2,2],[3,3,3]]},"expected":2,"note":"Identical columns."}
+{"input":{"k":7,"matrix":[[-30,-11,-10],[-13,6,7],[-6,13,14]]},"expected":7,"note":"Sorted additive matrix of side 3, seed 378; checked by flattening."}
+{"input":{"k":11,"matrix":[[-19,-18,-10,-2],[-8,-7,1,9],[12,13,21,29],[14,15,23,31]]},"expected":14,"note":"Sorted additive matrix of side 4, seed 379; checked by flattening."}
+{"input":{"k":17,"matrix":[[-20,-18,-4,5,7],[-7,-5,9,18,20],[-2,0,14,23,25],[7,9,23,32,34],[8,10,24,33,35]]},"expected":20,"note":"Sorted additive matrix of side 5, seed 380; checked by flattening."}
+{"input":{"k":18,"matrix":[[-26,-21,-6,-2,0,0],[-21,-16,-1,3,5,5],[-15,-10,5,9,11,11],[3,8,23,27,29,29],[3,8,23,27,29,29],[9,14,29,33,35,35]]},"expected":8,"note":"Sorted additive matrix of side 6, seed 381; checked by flattening."}
+{"input":{"k":1,"matrix":[[-23,-16,-5],[-18,-11,0],[-10,-3,8]]},"expected":-23,"note":"Sorted additive matrix of side 3, seed 382; checked by flattening."}
+{"input":{"k":10,"matrix":[[-25,-17,-8,-1],[-9,-1,8,15],[-1,7,16,23],[-1,7,16,23]]},"expected":7,"note":"Sorted additive matrix of side 4, seed 383; checked by flattening."}
+{"input":{"k":23,"matrix":[[-32,-24,-24,-16,-11],[-30,-22,-22,-14,-9],[-9,-1,-1,7,12],[1,9,9,17,22],[7,15,15,23,28]]},"expected":22,"note":"Sorted additive matrix of side 5, seed 384; checked by flattening."}
+{"input":{"k":10,"matrix":[[-26,-16,-15,-15,-6,-3],[-23,-13,-12,-12,-3,0],[-8,2,3,3,12,15],[-2,8,9,9,18,21],[4,14,15,15,24,27],[6,16,17,17,26,29]]},"expected":-6,"note":"Sorted additive matrix of side 6, seed 385; checked by flattening."}
+{"generate":{"name":"additive","args":{"k":89999,"n":300,"step_col":1,"step_row":300}},"digest":"sha256:2bc198012c809b9ed7d5680e6584af23e4f061a44607b12a07c13e3736e6145e","note":"Maximum dimensions, rank next to the maximum in row blocks."}
+{"generate":{"name":"additive","args":{"k":89999,"n":300,"step_col":300,"step_row":1}},"digest":"sha256:be7adea018e4d9b6b959758f9023ae1b5975991349e75d2b7085f461b9501a92","note":"Maximum dimensions, interleaved column blocks."}
+{"generate":{"name":"additive","args":{"k":45000,"n":300}},"digest":"sha256:436833a479d321714738e2a48f62abe4d7abcdccf83675ac852491392b0afa58","note":"Maximum dimensions with many diagonal duplicates."}
+{"generate":{"name":"additive","args":{"k":90000,"n":300,"offset":1000000000,"step_col":0,"step_row":0}},"digest":"sha256:95a1b9daf68ac3c372a6335db17166b132544b994097064f520069db17bb58ba","note":"Maximum dimensions, all values at the upper limit."}
+{"generate":{"name":"monotone_random","args":{"k":45000,"n":300},"seed":378},"digest":"sha256:b4abb1755416c9ba1d9af404b06e6f9bad5e014c8cd22b3fd97930c3bec237df","note":"Maximum dimensions and wide value range at the median rank."}
+{"generate":{"name":"monotone_random","args":{"k":89999,"n":300},"seed":379},"digest":"sha256:7faba9e82fce062bb7e07332212faafba4810783547312177d35fa018c6e4850","note":"Maximum dimensions with irregular gaps near the final rank."}
