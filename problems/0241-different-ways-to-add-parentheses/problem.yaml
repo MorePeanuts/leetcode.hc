@@ -1,0 +1,25 @@
+id: "241"
+slug: different-ways-to-add-parentheses
+title: Different Ways to Add Parentheses
+titles:
+  zh-CN: 为运算表达式设计优先级
+difficulty: medium
+tags:
+  - recursion
+  - memoization
+  - math
+  - string
+  - dynamic-programming
+  - bracket-sequences
+kind: function
+function:
+  name: diffWaysToCompute
+  params:
+    - name: expression
+      type: string
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/different-ways-to-add-parentheses/
+judge:
+  compare: unordered

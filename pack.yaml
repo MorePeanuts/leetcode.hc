@@ -353,6 +353,7 @@ groups:
       - construct-binary-tree-from-preorder-and-inorder-traversal
       - sort-an-array
       - construct-binary-tree-from-inorder-and-postorder-traversal
+      - different-ways-to-add-parentheses
   - name: randomized
     title: Randomized Algorithms
     problems:
