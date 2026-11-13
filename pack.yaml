@@ -134,6 +134,7 @@ groups:
       - subsets-ii
       - generate-parentheses
       - word-search
+      - palindrome-partitioning
   - name: tries
     title: Tries
     problems:
@@ -162,6 +163,7 @@ groups:
       - longest-palindromic-substring
       - coin-change
       - longest-increasing-subsequence
+      - palindrome-partitioning
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
@@ -176,6 +178,7 @@ groups:
       - distinct-subsequences
       - burst-balloons
       - regular-expression-matching
+      - palindrome-partitioning
   - name: greedy
     title: Greedy
   - name: intervals
