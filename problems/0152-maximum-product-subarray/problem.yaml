@@ -1,0 +1,21 @@
+id: "152"
+slug: maximum-product-subarray
+title: Maximum Product Subarray
+titles:
+  zh-CN: 乘积最大子数组
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: maxProduct
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/maximum-product-subarray/
+judge:
+  compare: exact
