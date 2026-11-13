@@ -1,0 +1,22 @@
+id: "1091"
+slug: shortest-path-in-binary-matrix
+title: Shortest Path in Binary Matrix
+titles:
+  zh-CN: 二进制矩阵中的最短路径
+difficulty: medium
+tags:
+  - breadth-first-search
+  - array
+  - matrix
+kind: function
+function:
+  name: shortestPathBinaryMatrix
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/shortest-path-in-binary-matrix/
+judge:
+  compare: exact
