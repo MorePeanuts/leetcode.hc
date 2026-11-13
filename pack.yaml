@@ -135,6 +135,7 @@ groups:
       - generate-parentheses
       - word-search
       - palindrome-partitioning
+      - letter-combinations-of-a-phone-number
   - name: tries
     title: Tries
     problems:
