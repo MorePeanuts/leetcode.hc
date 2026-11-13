@@ -137,6 +137,7 @@ groups:
       - symmetric-tree
       - convert-bst-to-greater-tree
       - unique-binary-search-trees
+      - construct-binary-tree-from-inorder-and-postorder-traversal
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
@@ -320,6 +321,7 @@ groups:
       - merge-k-sorted-lists
       - construct-binary-tree-from-preorder-and-inorder-traversal
       - sort-an-array
+      - construct-binary-tree-from-inorder-and-postorder-traversal
   - name: randomized
     title: Randomized Algorithms
     problems:
