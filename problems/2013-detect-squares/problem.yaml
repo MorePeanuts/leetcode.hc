@@ -1,0 +1,32 @@
+id: "2013"
+slug: detect-squares
+title: Detect Squares
+titles:
+  zh-CN: 检测正方形
+difficulty: medium
+tags:
+  - design
+  - array
+  - hash-table
+  - counting
+  - data-stream
+kind: class
+class:
+  name: DetectSquares
+  constructor: []
+  methods:
+    - name: add
+      params:
+        - name: point
+          type: integer[]
+      returns: void
+    - name: count
+      params:
+        - name: point
+          type: integer[]
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/detect-squares/
+judge:
+  compare: exact
