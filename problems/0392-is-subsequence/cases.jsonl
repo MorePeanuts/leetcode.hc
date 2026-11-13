@@ -1,0 +1,33 @@
+{"input":{"s":"abc","t":"ahbgdc"},"expected":true,"example":true}
+{"input":{"s":"axc","t":"ahbgdc"},"expected":false,"example":true}
+{"input":{"s":"","t":""},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"","t":"a"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"a","t":""},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"a","t":"a"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"a","t":"b"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aa","t":"a"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"a","t":"aa"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aa","t":"ababa"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aaa","t":"aba"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"abc","t":"abc"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"abc","t":"cba"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"ac","t":"abc"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"ca","t":"abc"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"ab","t":"ba"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"ab","t":"aaab"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"ba","t":"aaab"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aaa","t":"aaaa"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aaaa","t":"aaa"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"z","t":"abcdefghijklmnopqrstuvwxyz"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"za","t":"abcdefghijklmnopqrstuvwxyz"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"az","t":"abcdefghijklmnopqrstuvwxyz"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"abc","t":"aabbcc"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"cba","t":"ccbbbaa"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"aba","t":"abba"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"bab","t":"abba"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"abcd","t":"abc"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"abc","t":"abx"},"expected":false,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"input":{"s":"xyz","t":"axybzc"},"expected":true,"note":"Empty, repetition, order or endpoint subsequence boundary"}
+{"generate":{"name":"long_scan","args":{"mode":0,"n":10000},"seed":42},"digest":"sha256:02d9e7a161978d336db8e648514f8e85e163f91af660b94e58374d20a2bffc1b","note":"Maximum target length; late success or missing final letter"}
+{"generate":{"name":"long_scan","args":{"mode":1,"n":10000},"seed":42},"digest":"sha256:639bef63a43c1c4feb92e8e5a3d1759555576262544ca6b0ecc9dc94eb84a835","note":"Maximum target length; late success or missing final letter"}
+{"generate":{"name":"long_scan","args":{"mode":2,"n":10000},"seed":42},"digest":"sha256:80c9a84bc7c5fc7f862fed0532e63c2628df60a171c45f71d59ec4c9e64433d2","note":"Maximum target length; late success or missing final letter"}

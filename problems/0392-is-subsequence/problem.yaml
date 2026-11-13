@@ -1,0 +1,24 @@
+id: "392"
+slug: is-subsequence
+title: Is Subsequence
+titles:
+  zh-CN: 判断子序列
+difficulty: easy
+tags:
+  - two-pointers
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: isSubsequence
+  params:
+    - name: s
+      type: string
+    - name: t
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/is-subsequence/
+judge:
+  compare: exact

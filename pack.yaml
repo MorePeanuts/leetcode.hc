@@ -88,6 +88,7 @@ groups:
       - minimum-interval-to-include-each-query
       - missing-number
       - search-a-2d-matrix-ii
+      - is-subsequence
   - name: linked-list
     title: Linked List
     problems:
