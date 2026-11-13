@@ -1,0 +1,34 @@
+{"input":{"nums":[-2,1,-3,4,-1,2,1,-5,4]},"expected":6,"example":true}
+{"input":{"nums":[1]},"expected":1,"example":true}
+{"input":{"nums":[5,4,-1,7,8]},"expected":23,"example":true}
+{"input":{"nums":[-1]},"expected":-1,"note":"single negative"}
+{"input":{"nums":[-10000]},"expected":-10000,"note":"minimum value singleton"}
+{"input":{"nums":[10000]},"expected":10000,"note":"maximum value singleton"}
+{"input":{"nums":[0]},"expected":0,"note":"single zero"}
+{"input":{"nums":[-8,-2,-7]},"expected":-2,"note":"all negative best in middle"}
+{"input":{"nums":[-3,-3,-3]},"expected":-3,"note":"all equal negative"}
+{"input":{"nums":[0,0,0]},"expected":0,"note":"all zeros"}
+{"input":{"nums":[-1,0,-2]},"expected":0,"note":"zero beats negative"}
+{"input":{"nums":[1,2,3,4]},"expected":10,"note":"all positive"}
+{"input":{"nums":[7,-8,-9]},"expected":7,"note":"maximum at first"}
+{"input":{"nums":[-9,-8,7]},"expected":7,"note":"maximum at last"}
+{"input":{"nums":[2,-10,5,4]},"expected":9,"note":"restart after deep negative"}
+{"input":{"nums":[4,-1,5]},"expected":8,"note":"bridge small negative"}
+{"input":{"nums":[4,-10,5]},"expected":5,"note":"do not bridge large negative"}
+{"input":{"nums":[8,-20,9]},"expected":9,"note":"prefix and suffix not circular"}
+{"input":{"nums":[3,-8,3]},"expected":3,"note":"tie between segments"}
+{"input":{"nums":[-5,2,3,4]},"expected":9,"note":"negative prefix discarded"}
+{"input":{"nums":[2,3,4,-5]},"expected":9,"note":"negative suffix discarded"}
+{"input":{"nums":[3,0,0,4]},"expected":7,"note":"zero plateau between gains"}
+{"input":{"nums":[-4,5,-1,6,-7]},"expected":10,"note":"whole sum less than interior"}
+{"input":{"nums":[3,-2,3,-2,3]},"expected":5,"note":"alternating gains"}
+{"input":{"nums":[-3,2,-3,2,-3]},"expected":2,"note":"alternating losses"}
+{"input":{"nums":[-10000,10000,-10000,10000]},"expected":10000,"note":"large signed boundary"}
+{"input":{"nums":[10000,10000,10000]},"expected":30000,"note":"large positive sum"}
+{"input":{"nums":[5,-5,6]},"expected":6,"note":"recover through equal loss"}
+{"input":{"nums":[1,2,-1,3,-10]},"expected":5,"note":"best ends before final loss"}
+{"input":{"nums":[0,-3,0,8,-1]},"expected":8,"note":"best starts after zero"}
+{"input":{"nums":[-2,4,-7,3,2,-1,5,-9]},"expected":9,"note":"several resets"}
+{"generate":{"name":"uniform","args":{"n":100000,"value":10000},"seed":42},"digest":"sha256:7d904eeaff1ecce206e6eed8fe7339144045aae0207d9c421f08e7e5a7c859c1","note":"Maximum length and sum; quadratic enumeration"}
+{"generate":{"name":"uniform","args":{"n":100000,"value":-10000},"seed":42},"digest":"sha256:e0afb2177cbdbd02a811a0dcb3701f8609ad56cc2d16c4c598a20c125aed7fbb","note":"Maximum all-negative input requires nonempty subarray"}
+{"generate":{"name":"alternating","args":{"n":100000},"seed":42},"digest":"sha256:3184cd2eb674512f379e64591b8aa358210480b2f5382b153e64603eafac7ad5","note":"Maximum alternating input with best spanning many elements"}

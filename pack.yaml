@@ -179,6 +179,7 @@ groups:
       - maximum-product-subarray
       - word-break
       - partition-equal-subset-sum
+      - maximum-subarray
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
@@ -196,6 +197,8 @@ groups:
       - palindrome-partitioning
   - name: greedy
     title: Greedy
+    problems:
+      - maximum-subarray
   - name: intervals
     title: Intervals
     problems:
