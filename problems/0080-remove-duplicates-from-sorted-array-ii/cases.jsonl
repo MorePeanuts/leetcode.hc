@@ -1,0 +1,33 @@
+{"input":{"nums":[1,1,1,2,2,3]},"expected":[1,1,2,2,3],"example":true}
+{"input":{"nums":[0,0,1,1,1,1,2,3,3]},"expected":[0,0,1,1,2,3,3],"example":true}
+{"input":{"nums":[0]},"expected":[0],"note":"Duplicate run and retained-prefix boundary 1"}
+{"input":{"nums":[1]},"expected":[1],"note":"Duplicate run and retained-prefix boundary 2"}
+{"input":{"nums":[1,1]},"expected":[1,1],"note":"Duplicate run and retained-prefix boundary 3"}
+{"input":{"nums":[1,1,1]},"expected":[1,1],"note":"Duplicate run and retained-prefix boundary 4"}
+{"input":{"nums":[1,1,1,1,1,1,1,1]},"expected":[1,1],"note":"Duplicate run and retained-prefix boundary 5"}
+{"input":{"nums":[-10000]},"expected":[-10000],"note":"Duplicate run and retained-prefix boundary 6"}
+{"input":{"nums":[10000]},"expected":[10000],"note":"Duplicate run and retained-prefix boundary 7"}
+{"input":{"nums":[-10000,-10000,-10000,10000,10000,10000]},"expected":[-10000,-10000,10000,10000],"note":"Duplicate run and retained-prefix boundary 8"}
+{"input":{"nums":[-2,-1,0,1,2]},"expected":[-2,-1,0,1,2],"note":"Duplicate run and retained-prefix boundary 9"}
+{"input":{"nums":[-3,-3,-3,-3,-2,-2,-2,-1,-1,0]},"expected":[-3,-3,-2,-2,-1,-1,0],"note":"Duplicate run and retained-prefix boundary 10"}
+{"input":{"nums":[0,0,0,1]},"expected":[0,0,1],"note":"Duplicate run and retained-prefix boundary 11"}
+{"input":{"nums":[0,1,1,1]},"expected":[0,1,1],"note":"Duplicate run and retained-prefix boundary 12"}
+{"input":{"nums":[0,0,1,1]},"expected":[0,0,1,1],"note":"Duplicate run and retained-prefix boundary 13"}
+{"input":{"nums":[0,0,0,1,1,1]},"expected":[0,0,1,1],"note":"Duplicate run and retained-prefix boundary 14"}
+{"input":{"nums":[1,2,3,3,3]},"expected":[1,2,3,3],"note":"Duplicate run and retained-prefix boundary 15"}
+{"input":{"nums":[-1,-1,-1,0,0,1,1,1]},"expected":[-1,-1,0,0,1,1],"note":"Duplicate run and retained-prefix boundary 16"}
+{"input":{"nums":[0,1,2,3,4,5,6,7,8,9]},"expected":[0,1,2,3,4,5,6,7,8,9],"note":"Duplicate run and retained-prefix boundary 17"}
+{"input":{"nums":[-2,-2,-1,-1,-1,-1,0,0,1,1,1,1]},"expected":[-2,-2,-1,-1,0,0,1,1],"note":"Duplicate run and retained-prefix boundary 18"}
+{"input":{"nums":[-3,0]},"expected":[-3,0],"note":"Duplicate run and retained-prefix boundary 19"}
+{"input":{"nums":[-1,2,5]},"expected":[-1,2,5],"note":"Duplicate run and retained-prefix boundary 20"}
+{"input":{"nums":[-1,0,1,4]},"expected":[-1,0,1,4],"note":"Duplicate run and retained-prefix boundary 21"}
+{"input":{"nums":[-5,-3,5,5,5]},"expected":[-5,-3,5,5],"note":"Duplicate run and retained-prefix boundary 22"}
+{"input":{"nums":[-4,-3,-2,1,1,5,5]},"expected":[-4,-3,-2,1,1,5,5],"note":"Duplicate run and retained-prefix boundary 23"}
+{"input":{"nums":[-5,-5,-5,-4,-4,-3,-3,-2,0,5]},"expected":[-5,-5,-4,-4,-3,-3,-2,0,5],"note":"Duplicate run and retained-prefix boundary 24"}
+{"input":{"nums":[-3,-2,-2,-2,-1,-1,-1,0,0,1,2,3,3,3,5]},"expected":[-3,-2,-2,-1,-1,0,0,1,2,3,3,5],"note":"Duplicate run and retained-prefix boundary 25"}
+{"input":{"nums":[-5,-5,-5,-5,-5,-4,-4,-3,-3,-3,-2,-1,-1,-1,0,2,2,3,3,4,4,4,5,5,5]},"expected":[-5,-5,-4,-4,-3,-3,-2,-1,-1,0,2,2,3,3,4,4,5,5],"note":"Duplicate run and retained-prefix boundary 26"}
+{"input":{"nums":[-5,-5,-4,-4,-4,-4,-3,-3,-3,-2,-2,-2,-2,-2,-2,-1,-1,0,0,0,1,1,1,1,2,2,2,3,3,3,3,3,4,4,5,5,5,5,5,5]},"expected":[-5,-5,-4,-4,-3,-3,-2,-2,-1,-1,0,0,1,1,2,2,3,3,4,4,5,5],"note":"Duplicate run and retained-prefix boundary 27"}
+{"input":{"nums":[-5,-5,-5,-5,-5,-4,-4,-4,-4,-3,-3,-3,-3,-3,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-1,-1,-1,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5]},"expected":[-5,-5,-4,-4,-3,-3,-2,-2,-1,-1,0,0,1,1,2,2,3,3,4,4,5,5],"note":"Duplicate run and retained-prefix boundary 28"}
+{"generate":{"name":"paired","args":{"n":30000}},"digest":"sha256:b5cc97cab3aa131000e9626462f192e773555ecd6d3da6a60c9c3b039d276ec3","note":"Maximum sorted length: paired"}
+{"generate":{"name":"all_equal","args":{"n":30000}},"digest":"sha256:51fc5d15ca02927f7b06497fb2fe795f88eca8e0da4a91134b448c99bbbe5542","note":"Maximum sorted length: all_equal"}
+{"generate":{"name":"tripled","args":{"n":30000}},"digest":"sha256:f8b0adc4db3158728b7a1e8cab0b66652c20574b4e67a57e8936f2eb6f9a110d","note":"Maximum sorted length: tripled"}
