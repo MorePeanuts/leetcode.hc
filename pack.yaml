@@ -26,6 +26,7 @@ groups:
       - find-k-pairs-with-smallest-sums
       - kth-smallest-element-in-a-sorted-matrix
       - best-time-to-buy-and-sell-stock-with-cooldown
+      - subsets
   - name: two-pointers
     title: Two Pointers
     problems:
@@ -122,6 +123,7 @@ groups:
     title: Backtracking
     problems:
       - target-sum
+      - subsets
   - name: tries
     title: Tries
     problems:
@@ -172,6 +174,8 @@ groups:
       - merge-intervals
   - name: bit-manipulation
     title: Bit Manipulation
+    problems:
+      - subsets
   - name: math-geometry
     title: Math & Geometry
     problems:

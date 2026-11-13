@@ -1,0 +1,22 @@
+id: "78"
+slug: subsets
+title: Subsets
+titles:
+  zh-CN: 子集
+difficulty: medium
+tags:
+  - bit-manipulation
+  - array
+  - backtracking
+kind: function
+function:
+  name: subsets
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/subsets/
+judge:
+  compare: unordered_deep
