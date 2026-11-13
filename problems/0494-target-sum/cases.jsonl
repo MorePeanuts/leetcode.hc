@@ -1,0 +1,32 @@
+{"input":{"nums":[1,1,1,1,1],"target":3},"expected":5,"example":true}
+{"input":{"nums":[1],"target":1},"expected":1,"example":true}
+{"input":{"nums":[0],"target":0},"expected":2,"note":"zero has two signs"}
+{"input":{"nums":[1],"target":1},"expected":1,"note":"positive single"}
+{"input":{"nums":[1],"target":-1},"expected":1,"note":"negative single"}
+{"input":{"nums":[1],"target":0},"expected":0,"note":"parity mismatch"}
+{"input":{"nums":[1000],"target":1000},"expected":1,"note":"sum upper bound"}
+{"input":{"nums":[1000],"target":-1000},"expected":1,"note":"negative boundary"}
+{"input":{"nums":[0],"target":1},"expected":0,"note":"unreachable zero"}
+{"input":{"nums":[0,0],"target":0},"expected":4,"note":"independent zeros"}
+{"input":{"nums":[0,1],"target":1},"expected":2,"note":"zero doubles count"}
+{"input":{"nums":[1,0],"target":-1},"expected":2,"note":"trailing zero doubles count"}
+{"input":{"nums":[1,2],"target":1},"expected":1,"note":"mixed signs"}
+{"input":{"nums":[1,2],"target":-1},"expected":1,"note":"negative mixed signs"}
+{"input":{"nums":[1,2],"target":0},"expected":0,"note":"odd sum cannot reach zero"}
+{"input":{"nums":[1,1],"target":0},"expected":2,"note":"choose either negative"}
+{"input":{"nums":[1,1,1,1],"target":0},"expected":6,"note":"balanced signs"}
+{"input":{"nums":[2,2,2],"target":2},"expected":3,"note":"repeated even numbers"}
+{"input":{"nums":[2,4,6],"target":0},"expected":2,"note":"equal subset totals"}
+{"input":{"nums":[1,2,3,4],"target":0},"expected":2,"note":"multiple balanced partitions"}
+{"input":{"nums":[3,5,7],"target":1},"expected":1,"note":"odd target"}
+{"input":{"nums":[5,5],"target":10},"expected":1,"note":"all plus"}
+{"input":{"nums":[5,5],"target":-10},"expected":1,"note":"all minus"}
+{"input":{"nums":[1,2,3],"target":7},"expected":0,"note":"outside positive range"}
+{"input":{"nums":[1,2,3],"target":-7},"expected":0,"note":"outside negative range"}
+{"input":{"nums":[0,0,0,1],"target":1},"expected":8,"note":"many leading zeros"}
+{"input":{"nums":[2,3,5],"target":0},"expected":2,"note":"subset relation"}
+{"input":{"nums":[1,1,2,3],"target":3},"expected":2,"note":"duplicate subset counts"}
+{"input":{"nums":[100,200,300,400],"target":0},"expected":2,"note":"large sum with four elements"}
+{"input":{"nums":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"target":0},"expected":1048576,"note":"maximum count 2^20"}
+{"input":{"nums":[50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50],"target":0},"expected":184756,"note":"maximum sum and many balanced signs"}
+{"input":{"nums":[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10],"target":10},"expected":27791,"note":"maximum length repeated subset states"}
