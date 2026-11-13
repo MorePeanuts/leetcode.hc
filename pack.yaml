@@ -136,6 +136,7 @@ groups:
       - convert-sorted-array-to-binary-search-tree
       - symmetric-tree
       - convert-bst-to-greater-tree
+      - unique-binary-search-trees
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:

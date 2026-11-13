@@ -1,0 +1,24 @@
+id: "96"
+slug: unique-binary-search-trees
+title: Unique Binary Search Trees
+titles:
+  zh-CN: 不同的二叉搜索树
+difficulty: medium
+tags:
+  - tree
+  - binary-search-tree
+  - math
+  - dynamic-programming
+  - binary-tree
+kind: function
+function:
+  name: numTrees
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/unique-binary-search-trees/
+judge:
+  compare: exact
