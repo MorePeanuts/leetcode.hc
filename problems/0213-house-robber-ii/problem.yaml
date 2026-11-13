@@ -1,0 +1,21 @@
+id: "213"
+slug: house-robber-ii
+title: House Robber II
+titles:
+  zh-CN: 打家劫舍 II
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: rob
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/house-robber-ii/
+judge:
+  compare: exact

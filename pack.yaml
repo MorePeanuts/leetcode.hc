@@ -169,6 +169,7 @@ groups:
       - climbing-stairs
       - min-cost-climbing-stairs
       - house-robber
+      - house-robber-ii
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
