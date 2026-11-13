@@ -1,0 +1,26 @@
+id: "382"
+slug: linked-list-random-node
+title: Linked List Random Node
+titles:
+  zh-CN: 链表随机节点
+difficulty: medium
+tags:
+  - reservoir-sampling
+  - linked-list
+  - math
+  - randomized
+kind: class
+class:
+  name: Solution
+  constructor:
+    - name: head
+      type: ListNode
+  methods:
+    - name: getRandom
+      params: []
+      returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/linked-list-random-node/
+judge:
+  compare: checker

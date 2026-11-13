@@ -103,6 +103,7 @@ groups:
       - merge-k-sorted-lists
       - reverse-nodes-in-k-group
       - design-linked-list
+      - linked-list-random-node
   - name: trees
     title: Trees
     problems:
@@ -318,3 +319,4 @@ groups:
     problems:
       - random-pick-with-weight
       - shuffle-an-array
+      - linked-list-random-node
