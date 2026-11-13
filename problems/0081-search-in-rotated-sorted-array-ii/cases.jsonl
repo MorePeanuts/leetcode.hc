@@ -1,0 +1,34 @@
+{"input":{"nums":[2,5,6,0,0,1,2],"target":0},"expected":true,"example":true}
+{"input":{"nums":[2,5,6,0,0,1,2],"target":3},"expected":false,"example":true}
+{"input":{"nums":[1],"target":0},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1],"target":2},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,1,1],"target":0},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,1,1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,0,1,1,1],"target":0},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,0,1,1,1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,0,1,1,1],"target":2},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,1,1,0,1],"target":0},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[1,1,1,0,1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[3,1,2,3,3],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[3,1,2,3,3],"target":2},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[3,1,2,3,3],"target":3},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[3,1,2,3,3],"target":0},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,2,3,0,0,1],"target":0},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,2,3,0,0,1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,2,3,0,0,1],"target":2},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,2,3,0,0,1],"target":3},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,2,3,0,0,1],"target":4},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[-2,-2,0,3,3],"target":-2},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[-2,-2,0,3,3],"target":0},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[-2,-2,0,3,3],"target":3},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[-2,-2,0,3,3],"target":2},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[10000,-10000,0],"target":-10000},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[10000,-10000,0],"target":0},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[10000,-10000,0],"target":10000},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,1],"target":1},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,1],"target":2},"expected":true,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"input":{"nums":[2,1],"target":3},"expected":false,"note":"Duplicate boundaries obscure pivot; hits on either sorted half or absence"}
+{"generate":{"name":"duplicate_pivot","args":{"mode":0,"n":5000},"seed":42},"digest":"sha256:438faba704aece0fccbc68f72722215424dd2dbb00b8f5204d33e740e071256b","note":"Maximum duplicate array; hidden minimum or absent target"}
+{"generate":{"name":"duplicate_pivot","args":{"mode":1,"n":5000},"seed":42},"digest":"sha256:8dafdbc1d59253ed8560c8da685a5b100c0cd77bd4ce11df4d17dd69f480cbd8","note":"Maximum duplicate array; hidden minimum or absent target"}
+{"generate":{"name":"duplicate_pivot","args":{"mode":2,"n":5000},"seed":42},"digest":"sha256:8501fa9828eb5449f7bb1a552f17ea41c21de44793bfb8e518542c2384a51596","note":"Maximum duplicate array; hidden minimum or absent target"}
