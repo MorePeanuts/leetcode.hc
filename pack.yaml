@@ -167,6 +167,7 @@ groups:
       - longest-increasing-subsequence
       - palindrome-partitioning
       - climbing-stairs
+      - min-cost-climbing-stairs
   - name: 2d-dynamic-programming
     title: 2-D Dynamic Programming
     problems:
