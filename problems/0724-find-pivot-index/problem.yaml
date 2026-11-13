@@ -1,0 +1,21 @@
+id: "724"
+slug: find-pivot-index
+title: Find Pivot Index
+titles:
+  zh-CN: 寻找数组的中心下标
+difficulty: easy
+tags:
+  - array
+  - prefix-sum
+kind: function
+function:
+  name: pivotIndex
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/find-pivot-index/
+judge:
+  compare: exact

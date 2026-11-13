@@ -37,6 +37,7 @@ groups:
       - missing-number
       - longest-common-prefix
       - matrix-block-sum
+      - find-pivot-index
   - name: two-pointers
     title: Two Pointers
     problems:
