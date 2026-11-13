@@ -1,0 +1,33 @@
+{"input":{"arr":[1,2,3,4,5],"k":4,"x":3},"expected":[1,2,3,4],"example":true}
+{"input":{"arr":[1,1,2,3,4,5],"k":4,"x":-1},"expected":[1,1,2,3],"example":true}
+{"input":{"arr":[1],"k":1,"x":-10000},"expected":[1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1],"k":1,"x":1},"expected":[1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1],"k":1,"x":10000},"expected":[1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":1,"x":0},"expected":[1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":1,"x":2},"expected":[2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":1,"x":5},"expected":[4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":2,"x":0},"expected":[1,2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":2,"x":2},"expected":[1,2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":2,"x":3},"expected":[2,3],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":2,"x":5},"expected":[3,4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":4,"x":-1},"expected":[1,2,3,4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":4,"x":3},"expected":[1,2,3,4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,2,3,4],"k":4,"x":9},"expected":[1,2,3,4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,1,2,3,3],"k":3,"x":1},"expected":[1,1,1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,1,2,3,3],"k":3,"x":2},"expected":[1,1,2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,1,2,3,3],"k":3,"x":3},"expected":[2,3,3],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-5,-3,-1,1,3,5],"k":2,"x":-4},"expected":[-5,-3],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-5,-3,-1,1,3,5],"k":2,"x":0},"expected":[-1,1],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-5,-3,-1,1,3,5],"k":2,"x":4},"expected":[3,5],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-10000,0,10000],"k":2,"x":-10000},"expected":[-10000,0],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-10000,0,10000],"k":2,"x":0},"expected":[-10000,0],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[-10000,0,10000],"k":2,"x":10000},"expected":[0,10000],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,2,2,2,3,3],"k":4,"x":0},"expected":[1,1,2,2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,2,2,2,3,3],"k":4,"x":2},"expected":[1,2,2,2],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[1,1,2,2,2,3,3],"k":4,"x":4},"expected":[2,2,3,3],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[0,2,4,6,8],"k":3,"x":3},"expected":[0,2,4],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[0,2,4,6,8],"k":3,"x":4},"expected":[2,4,6],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"input":{"arr":[0,2,4,6,8],"k":3,"x":5},"expected":[2,4,6],"note":"Tie-breaking, sorted result, repeated values or boundary window"}
+{"generate":{"name":"long_array","args":{"k":1,"n":10000,"x":9999},"seed":42},"digest":"sha256:278e0159f929f8005214a74a5c147861111e9a58821846f0981b9f48c65621c6","note":"Maximum sorted array and edge or central window"}
+{"generate":{"name":"long_array","args":{"k":5000,"n":10000,"x":0},"seed":42},"digest":"sha256:c1bd7d3f01e6d2093cdc66ba90df90776cbb34a9db01392b9d2d3cd977255b59","note":"Maximum sorted array and edge or central window"}
+{"generate":{"name":"long_array","args":{"k":10000,"n":10000,"x":-10000},"seed":42},"digest":"sha256:20c01a15bfdc4877f8804b67d11ec2daebefe93254ad09bff9444a0b769eb064","note":"Maximum sorted array and edge or central window"}
