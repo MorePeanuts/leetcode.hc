@@ -1,0 +1,21 @@
+id: "66"
+slug: plus-one
+title: Plus One
+titles:
+  zh-CN: 加一
+difficulty: easy
+tags:
+  - array
+  - math
+kind: function
+function:
+  name: plusOne
+  params:
+    - name: digits
+      type: integer[]
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/plus-one/
+judge:
+  compare: exact

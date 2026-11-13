@@ -213,3 +213,4 @@ groups:
       - spiral-matrix
       - set-matrix-zeroes
       - happy-number
+      - plus-one
