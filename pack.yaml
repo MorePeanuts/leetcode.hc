@@ -136,6 +136,7 @@ groups:
       - word-search
       - palindrome-partitioning
       - letter-combinations-of-a-phone-number
+      - n-queens
   - name: tries
     title: Tries
     problems:
