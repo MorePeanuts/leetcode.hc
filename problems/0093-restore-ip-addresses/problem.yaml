@@ -1,0 +1,21 @@
+id: "93"
+slug: restore-ip-addresses
+title: Restore IP Addresses
+titles:
+  zh-CN: 复原 IP 地址
+difficulty: medium
+tags:
+  - string
+  - backtracking
+kind: function
+function:
+  name: restoreIpAddresses
+  params:
+    - name: s
+      type: string
+  returns: string[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/restore-ip-addresses/
+judge:
+  compare: unordered
