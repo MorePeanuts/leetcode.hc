@@ -1,0 +1,22 @@
+id: "51"
+slug: n-queens
+title: N-Queens
+titles:
+  zh-CN: N 皇后
+difficulty: hard
+tags:
+  - array
+  - backtracking
+  - algorithm-x
+kind: function
+function:
+  name: solveNQueens
+  params:
+    - name: "n"
+      type: integer
+  returns: string[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/n-queens/
+judge:
+  compare: unordered
