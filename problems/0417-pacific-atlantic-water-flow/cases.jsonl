@@ -1,0 +1,31 @@
+{"input":{"heights":[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]},"expected":[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]],"example":true}
+{"input":{"heights":[[1]]},"expected":[[0,0]],"example":true}
+{"input":{"heights":[[0]]},"expected":[[0,0]],"note":"Single cell reaches both oceans"}
+{"input":{"heights":[[100000]]},"expected":[[0,0]],"note":"Maximum height"}
+{"input":{"heights":[[1,2,3,2,1]]},"expected":[[0,0],[0,1],[0,2],[0,3],[0,4]],"note":"Every cell of a single row touches both oceans"}
+{"input":{"heights":[[5],[1],[4]]},"expected":[[0,0],[1,0],[2,0]],"note":"Single column touches both oceans"}
+{"input":{"heights":[[1,1],[1,1]]},"expected":[[0,0],[0,1],[1,0],[1,1]],"note":"Equal heights permit flow"}
+{"input":{"heights":[[9,9,9],[9,0,9],[9,9,9]]},"expected":[[0,0],[0,1],[0,2],[1,0],[1,2],[2,0],[2,1],[2,2]],"note":"Low enclosed basin cannot escape"}
+{"input":{"heights":[[0,0,0],[0,9,0],[0,0,0]]},"expected":[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]],"note":"Central peak reaches every boundary"}
+{"input":{"heights":[[1,2,3],[2,3,4]]},"expected":[[0,2],[1,0],[1,1],[1,2]],"note":"Increasing slope"}
+{"input":{"heights":[[4,3,2],[3,2,1]]},"expected":[[0,0],[0,1],[0,2],[1,0]],"note":"Decreasing slope"}
+{"input":{"heights":[[1,9,1],[9,1,9],[1,9,1]]},"expected":[[0,1],[0,2],[1,0],[1,2],[2,0],[2,1]],"note":"Alternating ridges"}
+{"input":{"heights":[[3,1,2],[2,2,2],[1,3,1]]},"expected":[[0,0],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1]],"note":"Equality connects a channel"}
+{"input":{"heights":[[1,0],[6,4]]},"expected":[[0,0],[0,1],[1,0],[1,1]],"note":"Irregular terrain with tied heights 1"}
+{"input":{"heights":[[0,5,0,7,0],[6,1,0,5,6],[0,4,1,5,4]]},"expected":[[0,3],[0,4],[1,0],[1,3],[1,4],[2,0],[2,1],[2,2],[2,3]],"note":"Irregular terrain with tied heights 2"}
+{"input":{"heights":[[0,5],[6,1],[7,7],[0,6]]},"expected":[[0,1],[1,0],[2,0],[2,1],[3,0],[3,1]],"note":"Irregular terrain with tied heights 3"}
+{"input":{"heights":[[1,6,4,5,2],[2,6,6,4,5],[2,5,4,2,5],[3,1,0,1,6],[4,6,0,7,5]]},"expected":[[0,1],[0,3],[0,4],[1,1],[1,2],[1,4],[2,1],[2,4],[3,0],[3,4],[4,0],[4,1]],"note":"Irregular terrain with tied heights 4"}
+{"input":{"heights":[[3,5],[4,3],[5,0],[1,0],[4,3],[6,6]]},"expected":[[0,1],[1,0],[2,0],[3,0],[4,0],[5,0],[5,1]],"note":"Irregular terrain with tied heights 5"}
+{"input":{"heights":[[1,0,3,1,7],[2,1,4,1,5]]},"expected":[[0,2],[0,3],[0,4],[1,0],[1,1],[1,2],[1,3],[1,4]],"note":"Irregular terrain with tied heights 6"}
+{"input":{"heights":[[7,6],[3,2],[2,0]]},"expected":[[0,0],[0,1],[1,0],[2,0]],"note":"Irregular terrain with tied heights 7"}
+{"input":{"heights":[[1,6,2,1,3],[4,7,6,7,4],[5,7,4,1,7],[2,1,0,6,5]]},"expected":[[0,4],[1,1],[1,2],[1,3],[1,4],[2,0],[2,1],[2,4],[3,0]],"note":"Irregular terrain with tied heights 8"}
+{"input":{"heights":[[0,0],[5,4],[4,3],[3,7],[1,0]]},"expected":[[0,0],[0,1],[1,0],[1,1],[2,0],[3,0],[3,1],[4,0]],"note":"Irregular terrain with tied heights 9"}
+{"input":{"heights":[[5,3,4,2,1],[1,3,6,6,1],[1,4,2,1,1],[0,5,6,5,3],[3,6,2,4,0],[0,2,4,7,1]]},"expected":[[0,2],[0,3],[0,4],[1,2],[1,3],[1,4],[2,1],[2,2],[2,3],[2,4],[3,1],[3,2],[3,3],[3,4],[4,0],[4,1],[5,0],[5,1],[5,2],[5,3]],"note":"Irregular terrain with tied heights 10"}
+{"input":{"heights":[[0,5],[6,0]]},"expected":[[0,1],[1,0]],"note":"Irregular terrain with tied heights 11"}
+{"input":{"heights":[[5,5,7,7,2],[2,5,0,0,5],[2,5,1,0,0]]},"expected":[[0,0],[0,1],[0,2],[0,3],[0,4],[1,0],[1,1],[1,4],[2,0],[2,1]],"note":"Irregular terrain with tied heights 12"}
+{"input":{"heights":[[4,1],[0,4],[7,3],[1,4]]},"expected":[[0,0],[0,1],[1,1],[2,0],[3,0],[3,1]],"note":"Irregular terrain with tied heights 13"}
+{"input":{"heights":[[7,1,1,4,1],[4,3,6,7,1],[5,7,5,2,2],[7,3,6,0,2],[3,7,7,1,0]]},"expected":[[0,3],[0,4],[1,2],[1,3],[1,4],[2,1],[2,2],[2,3],[2,4],[3,0],[3,2],[3,4],[4,0],[4,1],[4,2]],"note":"Irregular terrain with tied heights 14"}
+{"input":{"heights":[[3,2],[2,3],[1,7],[5,0],[1,0],[6,1]]},"expected":[[0,0],[0,1],[1,1],[2,1],[3,0],[4,0],[5,0]],"note":"Irregular terrain with tied heights 15"}
+{"generate":{"name":"plateau","args":{"height":100000,"m":200,"n":200}},"digest":"sha256:d1911cd4b95c7ffdb48ee671347d058ac0c58676860d29d8798df741fefb9acb","note":"Maximum plateau; per-cell reachability repeats a large flood"}
+{"generate":{"name":"slope","args":{"m":200,"n":200}},"digest":"sha256:c81567698c60c1c58880ca2355211b232f362c35351ecd053bfe59a4b75fa598","note":"Maximum monotone terrain"}
+{"generate":{"name":"basin","args":{"m":200,"n":200}},"digest":"sha256:45581bc2ecbd1d3400fa9360d235bfa65681cb5fceff7c6443ec2ed84d05807c","note":"Maximum enclosed low plateau"}
