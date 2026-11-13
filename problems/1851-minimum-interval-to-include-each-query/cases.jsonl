@@ -1,0 +1,33 @@
+{"input":{"intervals":[[1,4],[2,4],[3,6],[4,4]],"queries":[2,3,4,5]},"expected":[3,3,1,4],"example":true}
+{"input":{"intervals":[[2,3],[2,5],[1,8],[20,25]],"queries":[2,19,5,22]},"expected":[2,-1,4,6],"example":true}
+{"input":{"intervals":[[1,1]],"queries":[1]},"expected":[1],"note":"single point"}
+{"input":{"intervals":[[1,1]],"queries":[2]},"expected":[-1],"note":"no containing interval"}
+{"input":{"intervals":[[1,5]],"queries":[1,5,3]},"expected":[5,5,5],"note":"inclusive boundaries"}
+{"input":{"intervals":[[2,5]],"queries":[1,6,2,5]},"expected":[-1,-1,4,4],"note":"outside and boundary queries"}
+{"input":{"intervals":[[1,10000000]],"queries":[1,10000000,5000000]},"expected":[10000000,10000000,10000000],"note":"maximum length"}
+{"input":{"intervals":[[10000000,10000000]],"queries":[10000000,9999999]},"expected":[1,-1],"note":"maximum point"}
+{"input":{"intervals":[[1,5],[2,3]],"queries":[3,1,2,5,4]},"expected":[2,5,2,5,5],"note":"restore unsorted query order"}
+{"input":{"intervals":[[1,5],[2,2]],"queries":[2,2,1,2]},"expected":[1,1,5,1],"note":"duplicate queries"}
+{"input":{"intervals":[[1,4],[1,4]],"queries":[1,4,5]},"expected":[4,4,-1],"note":"duplicate intervals"}
+{"input":{"intervals":[[1,10],[2,9],[3,8]],"queries":[1,2,3,8,9,10]},"expected":[10,8,6,6,8,10],"note":"nested intervals"}
+{"input":{"intervals":[[1,3],[5,7]],"queries":[4,3,5]},"expected":[-1,3,3],"note":"gap between intervals"}
+{"input":{"intervals":[[1,2],[2,3]],"queries":[2,1,3]},"expected":[2,2,2],"note":"shared endpoint"}
+{"input":{"intervals":[[1,9],[2,2],[3,3]],"queries":[2,3,4]},"expected":[1,1,9],"note":"expired small intervals"}
+{"input":{"intervals":[[1,2],[3,4],[5,6]],"queries":[10,9,8]},"expected":[-1,-1,-1],"note":"all expire before queries"}
+{"input":{"intervals":[[5,6],[8,9]],"queries":[1,2,3]},"expected":[-1,-1,-1],"note":"all queries before intervals"}
+{"input":{"intervals":[[1,4],[2,5]],"queries":[2,4,5]},"expected":[4,4,4],"note":"equal lengths and different ends"}
+{"input":{"intervals":[[1,3],[1,7],[1,2]],"queries":[1,2,3,4]},"expected":[2,2,3,7],"note":"same left endpoints"}
+{"input":{"intervals":[[1,7],[4,7],[7,7]],"queries":[7,6,4,3]},"expected":[1,4,4,7],"note":"same right endpoints"}
+{"input":{"intervals":[[2,10],[3,5],[6,8]],"queries":[5,6,9]},"expected":[3,3,9],"note":"small intervals separated inside larger"}
+{"input":{"intervals":[[1,10],[2,3],[4,5],[6,7]],"queries":[8,7,6,5,4,3,2,1]},"expected":[10,2,2,2,2,2,2,10],"note":"descending queries and expirations"}
+{"input":{"intervals":[[4,4],[1,2]],"queries":[4,4,3,1,4]},"expected":[1,1,-1,2,1],"note":"points gaps duplicate queries"}
+{"input":{"intervals":[[1,100],[40,60],[49,51],[50,50]],"queries":[50,49,51,48,61]},"expected":[1,3,3,21,100],"note":"deep nesting"}
+{"input":{"intervals":[[1,2],[10,11]],"queries":[2,2,11,11,5,5]},"expected":[2,2,2,2,-1,-1],"note":"duplicate covered and missing"}
+{"input":{"intervals":[[1,8],[7,9],[3,4]],"queries":[7,3,9,5]},"expected":[3,2,3,8],"note":"length beats earliest start"}
+{"input":{"intervals":[[10,20],[1,30]],"queries":[10,20,21,9]},"expected":[11,11,30,30],"note":"endpoint versus outer interval"}
+{"input":{"intervals":[[1,1],[2,2],[3,3]],"queries":[3,2,1]},"expected":[1,1,1],"note":"consecutive points"}
+{"input":{"intervals":[[1,5],[2,6],[3,7],[4,8]],"queries":[8,7,6,5,4]},"expected":[5,5,5,5,5],"note":"many equal sizes"}
+{"input":{"intervals":[[2,2],[4,4],[6,6]],"queries":[1,3,5,7]},"expected":[-1,-1,-1,-1],"note":"only gaps"}
+{"generate":{"name":"sweep","args":{"mode":"nested","n":100000},"seed":43},"digest":"sha256:aa922e943094a49595b35450be51a097c6790be327290ba03d8c3446fc144c97","note":"Maximum shuffled sweep nested"}
+{"generate":{"name":"sweep","args":{"mode":"expire","n":100000},"seed":43},"digest":"sha256:b4d722700231b693142725ea7f7139e3467da98922428589da77210eb8d23cac","note":"Maximum shuffled sweep expire"}
+{"generate":{"name":"sweep","args":{"mode":"gaps","n":100000},"seed":43},"digest":"sha256:2b9dcbfabb0d58d32f1a90500491383ed18a06337a099000a66883fbc4446a49","note":"Maximum shuffled sweep gaps"}
