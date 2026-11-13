@@ -1,0 +1,33 @@
+{"input":{"k":6,"nums":[23,2,4,6,7]},"expected":true,"example":true}
+{"input":{"k":6,"nums":[23,2,6,4,7]},"expected":true,"example":true}
+{"input":{"k":13,"nums":[23,2,6,4,7]},"expected":false,"example":true}
+{"input":{"k":1,"nums":[0]},"expected":false,"note":"Length-one zero is not good"}
+{"input":{"k":6,"nums":[6]},"expected":false,"note":"Length-one multiple is not good"}
+{"input":{"k":7,"nums":[0,0]},"expected":true,"note":"Zero sum is a multiple for any positive k"}
+{"input":{"k":2,"nums":[0,1]},"expected":false,"note":"Initial zero must not count as length two"}
+{"input":{"k":2,"nums":[1,0]},"expected":false,"note":"Trailing zero does not create multiple"}
+{"input":{"k":6,"nums":[2,4]},"expected":true,"note":"Full array requires initial remainder zero"}
+{"input":{"k":6,"nums":[1,2,3]},"expected":true,"note":"Length-three full-array multiple"}
+{"input":{"k":1,"nums":[1,2]},"expected":true,"note":"Every length-two sum divisible by one"}
+{"input":{"k":2147483647,"nums":[0,0,1]},"expected":true,"note":"Consecutive zeros and maximum k"}
+{"input":{"k":6,"nums":[1,0,0]},"expected":true,"note":"Zero pair away from beginning"}
+{"input":{"k":7,"nums":[5,0,0,1]},"expected":true,"note":"Earliest remainder must be retained"}
+{"input":{"k":13,"nums":[23,2,6,4,7]},"expected":false,"note":"No qualifying interval"}
+{"input":{"k":2147483647,"nums":[1000000000,1000000000,147483647]},"expected":true,"note":"Largest allowed total and k"}
+{"input":{"k":1000000000,"nums":[1000000000,1000000000]},"expected":true,"note":"Large values divisible only as a pair"}
+{"input":{"k":16,"nums":[1,2,4,8]},"expected":false,"note":"No modulo collision"}
+{"input":{"k":7,"nums":[2,3,4]},"expected":true,"note":"Qualifying suffix"}
+{"input":{"k":7,"nums":[3,4,5]},"expected":true,"note":"Qualifying prefix"}
+{"input":{"k":2,"nums":[0,1,0]},"expected":false,"note":"Repeated zero endpoints do not imply zero sum"}
+{"input":{"k":27,"nums":[16,12,5,15,5,17,18,19,17,0]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":26,"nums":[15,11,12,19,15,16,20,8,6,15,8,1,5]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":50,"nums":[0,6,6,7,12,19,19,1,19,19]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":25,"nums":[3,6,1,1,18,4,10,11,5,18]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":40,"nums":[18,9,15,3,15,6,4,10,1,8]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":7,"nums":[17,9,2,11,11,9,3,2,12,2,8,18]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":7,"nums":[20,8,15,5,13,10,19,17,14,20,4,4,7,7,2,17]},"expected":true,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":37,"nums":[6]},"expected":false,"note":"Deterministic zeros and prefix remainder collisions"}
+{"input":{"k":41,"nums":[5,6,12,8,7,9,7,0,4,18,8]},"expected":false,"note":"Deterministic zeros and prefix remainder collisions"}
+{"generate":{"name":"equal","args":{"n":100000,"value":1},"seed":7},"digest":"sha256:d097cf269a5f4a88397d66883e65b426ccd4a247c5a633b1502f3ce6b5b4f64a","note":"Maximum length; every nonempty sum below k"}
+{"generate":{"name":"equal","args":{"n":100000,"value":20000},"seed":7},"digest":"sha256:3d481d2dcd2c278e911ee4d6daa4f59cd6b615183b58e8b70207d5005499c5eb","note":"Large total within signed 32-bit constraint, no early answer"}
+{"generate":{"name":"increasing","args":{"n":100000},"seed":7},"digest":"sha256:f9469fe8f4d21a59e525f45063303ba75458f52c6cf2234371d7544e7f4f8f65","note":"Distinct prefix sums with varied positive inputs below k"}

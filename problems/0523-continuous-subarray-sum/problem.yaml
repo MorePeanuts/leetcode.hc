@@ -1,0 +1,26 @@
+id: "523"
+slug: continuous-subarray-sum
+title: Continuous Subarray Sum
+titles:
+  zh-CN: 连续的子数组和
+difficulty: medium
+tags:
+  - array
+  - hash-table
+  - math
+  - prefix-sum
+  - pigeonhole-principle
+kind: function
+function:
+  name: checkSubarraySum
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/continuous-subarray-sum/
+judge:
+  compare: exact

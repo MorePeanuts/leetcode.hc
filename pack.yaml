@@ -39,6 +39,7 @@ groups:
       - matrix-block-sum
       - find-pivot-index
       - contiguous-array
+      - continuous-subarray-sum
   - name: two-pointers
     title: Two Pointers
     problems:
