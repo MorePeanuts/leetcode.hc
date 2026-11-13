@@ -1,0 +1,32 @@
+{"input":{"nums":[2,3,2]},"expected":3,"example":true}
+{"input":{"nums":[1,2,3,1]},"expected":4,"example":true}
+{"input":{"nums":[1,2,3]},"expected":3,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"single zero house"}
+{"input":{"nums":[1]},"expected":1,"note":"single house is not its own neighbor"}
+{"input":{"nums":[1000]},"expected":1000,"note":"single maximum house"}
+{"input":{"nums":[0,0]},"expected":0,"note":"two empty houses"}
+{"input":{"nums":[1,2]},"expected":2,"note":"two houses choose second"}
+{"input":{"nums":[2,1]},"expected":2,"note":"two houses choose first"}
+{"input":{"nums":[1000,1000]},"expected":1000,"note":"two adjacent maxima"}
+{"input":{"nums":[1,1,1]},"expected":1,"note":"triangle permits only one house"}
+{"input":{"nums":[1000,0,1000]},"expected":1000,"note":"first and last are adjacent"}
+{"input":{"nums":[0,1000,0]},"expected":1000,"note":"only middle valuable"}
+{"input":{"nums":[1,2,1,2]},"expected":4,"note":"even cycle parity"}
+{"input":{"nums":[2,1,1,2]},"expected":3,"note":"cycle prevents taking both endpoints"}
+{"input":{"nums":[10,1,2,10]},"expected":12,"note":"endpoints conflict despite distance in array"}
+{"input":{"nums":[1,10,10,1]},"expected":11,"note":"middle adjacency"}
+{"input":{"nums":[2,3,2,3,2]},"expected":6,"note":"odd cycle"}
+{"input":{"nums":[1000,1,1,1,1000]},"expected":1001,"note":"must exclude one endpoint"}
+{"input":{"nums":[1,1000,1,1000,1]},"expected":2000,"note":"best excludes both endpoints"}
+{"input":{"nums":[0,0,0,0,0]},"expected":0,"note":"all zero"}
+{"input":{"nums":[1,2,3,4,5,6]},"expected":12,"note":"increasing cycle"}
+{"input":{"nums":[6,5,4,3,2,1]},"expected":12,"note":"decreasing cycle"}
+{"input":{"nums":[9,1,1,9,1,1]},"expected":18,"note":"separated high houses"}
+{"input":{"nums":[1,9,1,1,9,1,1]},"expected":19,"note":"mixed parity choices"}
+{"input":{"nums":[5,5,5,5]},"expected":10,"note":"even equal cycle"}
+{"input":{"nums":[5,5,5,5,5]},"expected":10,"note":"odd equal cycle"}
+{"input":{"nums":[1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000]},"expected":50000,"note":"maximum even cycle"}
+{"input":{"nums":[1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000]},"expected":49000,"note":"maximum-near odd cycle"}
+{"input":{"nums":[0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000,0,1000]},"expected":50000,"note":"alternating maximum cycle"}
+{"input":{"nums":[1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1000]},"expected":1000,"note":"maximum-length endpoint conflict"}
+{"input":{"nums":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"expected":0,"note":"maximum-length empty cycle"}
