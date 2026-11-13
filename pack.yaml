@@ -93,6 +93,7 @@ groups:
       - search-a-2d-matrix-ii
       - is-subsequence
       - find-k-closest-elements
+      - search-insert-position
   - name: linked-list
     title: Linked List
     problems:
