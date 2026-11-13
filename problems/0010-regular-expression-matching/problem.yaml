@@ -1,0 +1,24 @@
+id: "10"
+slug: regular-expression-matching
+title: Regular Expression Matching
+titles:
+  zh-CN: 正则表达式匹配
+difficulty: hard
+tags:
+  - recursion
+  - string
+  - dynamic-programming
+kind: function
+function:
+  name: isMatch
+  params:
+    - name: s
+      type: string
+    - name: p
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/regular-expression-matching/
+judge:
+  compare: exact

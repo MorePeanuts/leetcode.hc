@@ -1,0 +1,34 @@
+{"input":{"p":"a","s":"aa"},"expected":false,"example":true}
+{"input":{"p":"a*","s":"aa"},"expected":true,"example":true}
+{"input":{"p":".*","s":"ab"},"expected":true,"example":true}
+{"input":{"p":"a","s":"a"},"expected":true,"note":"exact singleton"}
+{"input":{"p":"b","s":"a"},"expected":false,"note":"singleton mismatch"}
+{"input":{"p":".","s":"a"},"expected":true,"note":"wildcard singleton"}
+{"input":{"p":"a","s":"aa"},"expected":false,"note":"must match entire string"}
+{"input":{"p":"aa","s":"a"},"expected":false,"note":"pattern too long"}
+{"input":{"p":"a*","s":"aa"},"expected":true,"note":"star repetition"}
+{"input":{"p":".*","s":"ab"},"expected":true,"note":"star wildcard"}
+{"input":{"p":"c*a*b","s":"aab"},"expected":true,"note":"zero repetitions and multiple repeats"}
+{"input":{"p":"mis*is*p*.","s":"mississippi"},"expected":false,"note":"classic failing alternatives"}
+{"input":{"p":".*c","s":"ab"},"expected":false,"note":"suffix mismatch"}
+{"input":{"p":"ab*","s":"a"},"expected":true,"note":"zero trailing repetition"}
+{"input":{"p":"b*a","s":"a"},"expected":true,"note":"zero leading repetition"}
+{"input":{"p":"a*a","s":"aaa"},"expected":true,"note":"star followed by same literal"}
+{"input":{"p":"ab*a*c*a","s":"aaa"},"expected":true,"note":"several skipped groups"}
+{"input":{"p":"aaaa","s":"aaa"},"expected":false,"note":"literal longer than input"}
+{"input":{"p":"a*b*","s":"ab"},"expected":true,"note":"two starred groups"}
+{"input":{"p":"a*b*","s":"ba"},"expected":false,"note":"order remains important"}
+{"input":{"p":"...","s":"abc"},"expected":true,"note":"three wildcards"}
+{"input":{"p":"..","s":"abc"},"expected":false,"note":"wildcards do not repeat"}
+{"input":{"p":"d*","s":"abcd"},"expected":false,"note":"cannot skip input"}
+{"input":{"p":".*a*a","s":"bbbba"},"expected":true,"note":"greedy star must leave suffix"}
+{"input":{"p":".*..a*","s":"a"},"expected":false,"note":"mandatory positions cannot vanish"}
+{"input":{"p":".*..","s":"ab"},"expected":true,"note":"wildcard star may be empty"}
+{"input":{"p":"a.*b","s":"ab"},"expected":true,"note":"middle wildcard star empty"}
+{"input":{"p":"ab*","s":"abb"},"expected":true,"note":"star consumes repeated letter"}
+{"input":{"p":"abc.*","s":"abc"},"expected":true,"note":"trailing empty wildcard star"}
+{"input":{"p":"a*a*a*a*a*a*a*a*a*b","s":"aaaaaaaaaaaaaaaaaaaa"},"expected":false,"note":"maximum branching final failure"}
+{"input":{"p":"a*a*a*a*a*a*a*a*a*b","s":"aaaaaaaaaaaaaaaaaaab"},"expected":true,"note":"maximum branching final success"}
+{"input":{"p":".*.*.*.*.*.*.*.*.*b","s":"aaaaaaaaaaaaaaaaaaaa"},"expected":false,"note":"wildcard branching failure"}
+{"input":{"p":"aaaaaaaaaaaaaaaaaaaa","s":"aaaaaaaaaaaaaaaaaaaa"},"expected":true,"note":"maximum literal lengths"}
+{"input":{"p":"b*b*b*b*b*b*b*b*b*b*","s":"aaaaaaaaaaaaaaaaaaaa"},"expected":false,"note":"all starred groups can only match empty"}
