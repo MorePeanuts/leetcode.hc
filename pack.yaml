@@ -301,6 +301,7 @@ groups:
       - sliding-window-maximum
       - number-of-recent-calls
       - design-circular-queue
+      - time-needed-to-buy-tickets
   - name: design
     title: Data Structure Design
     problems:
