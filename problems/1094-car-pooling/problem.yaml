@@ -1,0 +1,26 @@
+id: "1094"
+slug: car-pooling
+title: Car Pooling
+titles:
+  zh-CN: 拼车
+difficulty: medium
+tags:
+  - array
+  - prefix-sum
+  - sorting
+  - simulation
+  - heap-priority-queue
+kind: function
+function:
+  name: carPooling
+  params:
+    - name: trips
+      type: integer[][]
+    - name: capacity
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/car-pooling/
+judge:
+  compare: exact

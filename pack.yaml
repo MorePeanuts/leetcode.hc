@@ -46,6 +46,7 @@ groups:
       - contiguous-array
       - continuous-subarray-sum
       - corporate-flight-bookings
+      - car-pooling
   - name: two-pointers
     title: Two Pointers
     problems:
