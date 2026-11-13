@@ -1,0 +1,33 @@
+{"input":{"nums":[2,3,-2,4]},"expected":6,"example":true}
+{"input":{"nums":[-2,0,-1]},"expected":0,"example":true}
+{"input":{"nums":[0]},"expected":0,"note":"zero singleton"}
+{"input":{"nums":[1]},"expected":1,"note":"positive singleton"}
+{"input":{"nums":[-1]},"expected":-1,"note":"negative singleton"}
+{"input":{"nums":[10]},"expected":10,"note":"positive bound"}
+{"input":{"nums":[-10]},"expected":-10,"note":"negative bound"}
+{"input":{"nums":[-2,-3]},"expected":6,"note":"two negatives"}
+{"input":{"nums":[-2,3]},"expected":3,"note":"negative then positive"}
+{"input":{"nums":[3,-2]},"expected":3,"note":"positive then negative"}
+{"input":{"nums":[-2,-3,-4]},"expected":12,"note":"odd negative count"}
+{"input":{"nums":[-2,3,-4]},"expected":24,"note":"minimum becomes maximum after negative"}
+{"input":{"nums":[0,-2,-3]},"expected":6,"note":"restart after leading zero"}
+{"input":{"nums":[-2,-3,0]},"expected":6,"note":"product before trailing zero"}
+{"input":{"nums":[0,-2,0,-3,0]},"expected":0,"note":"zeros split products"}
+{"input":{"nums":[2,0,3]},"expected":3,"note":"cannot combine across zero"}
+{"input":{"nums":[-1,-1,-1,-1]},"expected":1,"note":"even negative units"}
+{"input":{"nums":[-1,-1,-1]},"expected":1,"note":"odd negative units"}
+{"input":{"nums":[1,2,3,4]},"expected":24,"note":"all positive"}
+{"input":{"nums":[4,3,2,1]},"expected":24,"note":"positive reverse"}
+{"input":{"nums":[-2,0,-3,-4]},"expected":12,"note":"best in later segment"}
+{"input":{"nums":[2,-5,-2,-4,3]},"expected":24,"note":"track both extrema"}
+{"input":{"nums":[6,-3,-10,0,2]},"expected":180,"note":"negative pair dominates"}
+{"input":{"nums":[2,3,-2,4,-1]},"expected":48,"note":"recover after two negative factors"}
+{"input":{"nums":[0,0,0]},"expected":0,"note":"all zero"}
+{"input":{"nums":[10,10,10,10,10,10,10,10,10]},"expected":1000000000,"note":"large product within signed 32-bit"}
+{"input":{"nums":[-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]},"expected":1073741824,"note":"minimum subarray product reaches negative 32-bit bound"}
+{"input":{"nums":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]},"expected":1073741824,"note":"large positive powers"}
+{"input":{"nums":[-10,-10,-10,-10,-10,-10,-10,-10,0,-10]},"expected":100000000,"note":"zero separates bounded power runs"}
+{"input":{"nums":[1,-1,1,-1,1]},"expected":1,"note":"unit factors preserve alternatives"}
+{"generate":{"name":"units","args":{"n":20000},"seed":40},"digest":"sha256:e8be438d78410db77220e5b2e2ef75251723860460cfb9fe4be76db213c2a38f","note":"maximum length without product growth"}
+{"generate":{"name":"bounded_blocks","args":{"n":20000},"seed":40},"digest":"sha256:e291c8d4342043e1f08aa6b64f022c88558133b1d25f837254d7a8351e0df37e","note":"maximum irregular zero-separated bounded products"}
+{"generate":{"name":"extreme_blocks","args":{"n":20000},"seed":40},"digest":"sha256:7345caf50d3be52d8a2f6b5f69daaa1e8a74442e69bf9e23ad632fd4e78519cd","note":"nine factors per block keep all products within 32 bits"}
