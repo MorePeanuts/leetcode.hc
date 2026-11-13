@@ -234,6 +234,7 @@ groups:
       - number-of-closed-islands
       - satisfiability-of-equality-equations
       - keys-and-rooms
+      - nearest-exit-from-entrance-in-maze
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

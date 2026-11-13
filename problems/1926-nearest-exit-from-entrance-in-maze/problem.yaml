@@ -1,0 +1,24 @@
+id: "1926"
+slug: nearest-exit-from-entrance-in-maze
+title: Nearest Exit from Entrance in Maze
+titles:
+  zh-CN: 迷宫中离入口最近的出口
+difficulty: medium
+tags:
+  - breadth-first-search
+  - array
+  - matrix
+kind: function
+function:
+  name: nearestExit
+  params:
+    - name: maze
+      type: character[][]
+    - name: entrance
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/
+judge:
+  compare: exact
