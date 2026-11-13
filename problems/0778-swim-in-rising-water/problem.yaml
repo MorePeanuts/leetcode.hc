@@ -1,0 +1,28 @@
+id: "778"
+slug: swim-in-rising-water
+title: Swim in Rising Water
+titles:
+  zh-CN: 水位上升的泳池中游泳
+difficulty: hard
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - minimax-algorithm
+  - array
+  - binary-search
+  - matrix
+  - dijkstra
+  - heap-priority-queue
+kind: function
+function:
+  name: swimInWater
+  params:
+    - name: grid
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/swim-in-rising-water/
+judge:
+  compare: exact

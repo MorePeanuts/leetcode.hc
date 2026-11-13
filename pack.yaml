@@ -79,6 +79,7 @@ groups:
       - time-based-key-value-store
       - median-of-two-sorted-arrays
       - kth-smallest-element-in-a-sorted-matrix
+      - swim-in-rising-water
   - name: linked-list
     title: Linked List
     problems:
@@ -133,6 +134,7 @@ groups:
       - kth-smallest-element-in-a-sorted-matrix
       - network-delay-time
       - reconstruct-itinerary
+      - swim-in-rising-water
   - name: backtracking
     title: Backtracking
     problems:
@@ -172,12 +174,14 @@ groups:
       - network-delay-time
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
+      - swim-in-rising-water
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
       - network-delay-time
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
+      - swim-in-rising-water
   - name: 1d-dynamic-programming
     title: 1-D Dynamic Programming
     problems:
