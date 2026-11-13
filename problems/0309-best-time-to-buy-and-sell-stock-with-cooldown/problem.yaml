@@ -1,0 +1,21 @@
+id: "309"
+slug: best-time-to-buy-and-sell-stock-with-cooldown
+title: Best Time to Buy and Sell Stock with Cooldown
+titles:
+  zh-CN: 买卖股票的最佳时机含冷冻期
+difficulty: medium
+tags:
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: maxProfit
+  params:
+    - name: prices
+      type: integer[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/
+judge:
+  compare: exact
