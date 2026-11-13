@@ -1,0 +1,23 @@
+id: "763"
+slug: partition-labels
+title: Partition Labels
+titles:
+  zh-CN: 划分字母区间
+difficulty: medium
+tags:
+  - greedy
+  - hash-table
+  - two-pointers
+  - string
+kind: function
+function:
+  name: partitionLabels
+  params:
+    - name: s
+      type: string
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/partition-labels/
+judge:
+  compare: exact
