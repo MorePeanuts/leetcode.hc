@@ -1,0 +1,23 @@
+id: "290"
+slug: word-pattern
+title: Word Pattern
+titles:
+  zh-CN: 单词规律
+difficulty: easy
+tags:
+  - hash-table
+  - string
+kind: function
+function:
+  name: wordPattern
+  params:
+    - name: pattern
+      type: string
+    - name: s
+      type: string
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/word-pattern/
+judge:
+  compare: exact

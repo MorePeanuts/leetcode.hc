@@ -13,6 +13,7 @@ groups:
   - name: arrays-hashing
     title: Arrays & Hashing
     problems:
+      - word-pattern
       - two-sum
       - contains-duplicate
       - valid-anagram
