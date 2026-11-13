@@ -233,6 +233,7 @@ groups:
       - is-graph-bipartite
       - number-of-closed-islands
       - satisfiability-of-equality-equations
+      - keys-and-rooms
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

@@ -1,0 +1,34 @@
+{"input":{"rooms":[[1],[2],[3],[]]},"expected":true,"example":true}
+{"input":{"rooms":[[1,3],[3,0,1],[2],[0]]},"expected":false,"example":true}
+{"input":{"rooms":[[1],[]]},"expected":true,"note":"Minimum connected instance"}
+{"input":{"rooms":[[],[0]]},"expected":false,"note":"Room zero has no key; reverse key cannot be used"}
+{"input":{"rooms":[[0],[]]},"expected":false,"note":"Self key does not unlock room one"}
+{"input":{"rooms":[[1],[0]]},"expected":true,"note":"Two-room cycle"}
+{"input":{"rooms":[[0,1],[1]]},"expected":true,"note":"Self keys mixed with useful keys"}
+{"input":{"rooms":[[1,2,3],[],[],[]]},"expected":true,"note":"Star with sink rooms"}
+{"input":{"rooms":[[1],[],[3],[2]]},"expected":false,"note":"All keys exist globally but one component is unreachable"}
+{"input":{"rooms":[[2],[],[1]]},"expected":true,"note":"Visit rooms in nonnumeric order"}
+{"input":{"rooms":[[1],[2],[3],[]]},"expected":true,"note":"Long dependency chain"}
+{"input":{"rooms":[[1],[0],[3],[2]]},"expected":false,"note":"Two disconnected cycles"}
+{"input":{"rooms":[[1,2],[3],[3],[]]},"expected":true,"note":"Two rooms share a target key"}
+{"input":{"rooms":[[1],[2],[0,3],[]]},"expected":true,"note":"Cycle with exit key"}
+{"input":{"rooms":[[0,2],[0],[2]]},"expected":false,"note":"Missing room despite self/repeated global keys"}
+{"input":{"rooms":[[1,2,3],[0,2,3],[0,1,3],[0,1,2]]},"expected":true,"note":"Dense small directed graph"}
+{"input":{"rooms":[[4],[],[1],[2],[3]]},"expected":true,"note":"Descending dependency chain"}
+{"input":{"rooms":[[0,2],[],[3,6,7],[1,3,5],[3],[3,7],[4,7],[0,2,5]]},"expected":true,"note":"Seeded directed key graph 1"}
+{"input":{"rooms":[[2],[0,5,6],[3,4,6],[4,5,7],[],[3,4,5,6,7],[3,6],[3]]},"expected":false,"note":"Seeded directed key graph 2"}
+{"input":{"rooms":[[3,6],[0,5],[3,5],[1,4,6],[0,3],[1,5,6],[1,6]]},"expected":false,"note":"Seeded directed key graph 3"}
+{"input":{"rooms":[[1,3],[2],[4],[2,3],[0],[]]},"expected":false,"note":"Seeded directed key graph 4"}
+{"input":{"rooms":[[0,1,2],[0,1],[],[1,3]]},"expected":false,"note":"Seeded directed key graph 5"}
+{"input":{"rooms":[[0],[],[]]},"expected":false,"note":"Seeded directed key graph 6"}
+{"input":{"rooms":[[1],[0,1,2,3],[1],[0]]},"expected":true,"note":"Seeded directed key graph 7"}
+{"input":{"rooms":[[],[2],[0]]},"expected":false,"note":"Seeded directed key graph 8"}
+{"input":{"rooms":[[0],[]]},"expected":false,"note":"Seeded directed key graph 9"}
+{"input":{"rooms":[[0,3],[],[3],[]]},"expected":false,"note":"Seeded directed key graph 10"}
+{"input":{"rooms":[[0,1,2,7],[0,1,4],[3],[6],[0,1,2],[0,2,5,8],[3,4,7],[0,4,5],[0,6]]},"expected":true,"note":"Seeded directed key graph 11"}
+{"input":{"rooms":[[0,6],[4],[1,5],[1,4],[3,6],[4],[5]]},"expected":false,"note":"Seeded directed key graph 12"}
+{"input":{"rooms":[[],[0,2],[]]},"expected":false,"note":"Seeded directed key graph 13"}
+{"input":{"rooms":[[0,2,3],[1,3,6],[4,5,6],[],[1,2,3],[2,3],[0,1,2,6]]},"expected":true,"note":"Seeded directed key graph 14"}
+{"generate":{"name":"chain","args":{"n":1000},"seed":841},"digest":"sha256:44d1400884f9f59f97533664d4c55616a375c4d406b69688b4b9853a2c1bcc65","note":"1000-room chain"}
+{"generate":{"name":"reverse_chain","args":{"n":1000},"seed":841},"digest":"sha256:35cd8d3a264f575d260612736fe691dceee360c179309cf1cc522c87f1153dfa","note":"1000-room reverse-label chain"}
+{"generate":{"name":"dense","args":{"n":1000},"seed":841},"digest":"sha256:a22dae4332ff18d9973e282ca6574fc5f94c4b1fdff8ce4ba04f4de2a1f4320b","note":"1000 rooms and exactly 3000 keys with self keys and cycles"}
