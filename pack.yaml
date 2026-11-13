@@ -94,6 +94,7 @@ groups:
       - flatten-nested-list-iterator
       - simplify-path
       - decode-string
+      - online-stock-span
   - name: binary-search
     title: Binary Search
     problems:
