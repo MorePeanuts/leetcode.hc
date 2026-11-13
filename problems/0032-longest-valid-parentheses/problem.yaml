@@ -1,0 +1,23 @@
+id: "32"
+slug: longest-valid-parentheses
+title: Longest Valid Parentheses
+titles:
+  zh-CN: 最长有效括号
+difficulty: hard
+tags:
+  - stack
+  - string
+  - dynamic-programming
+  - bracket-sequences
+kind: function
+function:
+  name: longestValidParentheses
+  params:
+    - name: s
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-valid-parentheses/
+judge:
+  compare: exact

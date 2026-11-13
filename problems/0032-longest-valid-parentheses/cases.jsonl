@@ -1,0 +1,34 @@
+{"input":{"s":"(()"},"expected":2,"example":true}
+{"input":{"s":")()())"},"expected":4,"example":true}
+{"input":{"s":""},"expected":0,"example":true}
+{"input":{"s":"("},"expected":0,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ("}
+{"input":{"s":")"},"expected":0,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: )"}
+{"input":{"s":"()"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()"}
+{"input":{"s":"))"},"expected":0,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ))"}
+{"input":{"s":"(("},"expected":0,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (("}
+{"input":{"s":")("},"expected":0,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: )("}
+{"input":{"s":"(())"},"expected":4,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (())"}
+{"input":{"s":"()()"},"expected":4,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()()"}
+{"input":{"s":"()(())"},"expected":6,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()(())"}
+{"input":{"s":"(()())"},"expected":6,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (()())"}
+{"input":{"s":"())(()"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ())(()"}
+{"input":{"s":"(()(()"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (()(()"}
+{"input":{"s":"((()))"},"expected":6,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ((()))"}
+{"input":{"s":"())(())"},"expected":4,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ())(())"}
+{"input":{"s":"()(()"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()(()"}
+{"input":{"s":"(()))(()"},"expected":4,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (()))(()"}
+{"input":{"s":"))()((()))("},"expected":8,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ))()((()))("}
+{"input":{"s":"()()())()()"},"expected":6,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()()())()()"}
+{"input":{"s":"((((()))))"},"expected":10,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ((((()))))"}
+{"input":{"s":"())()(()())"},"expected":8,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ())()(()())"}
+{"input":{"s":"((())())(()"},"expected":8,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ((())())(()"}
+{"input":{"s":"(((()"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (((()"}
+{"input":{"s":"())))"},"expected":2,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ())))"}
+{"input":{"s":"(()())())(()())"},"expected":8,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (()())())(()())"}
+{"input":{"s":"()((())())"},"expected":10,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ()((())())"}
+{"input":{"s":"())(()())(()"},"expected":6,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ())(()())(()"}
+{"input":{"s":"((()())(()))"},"expected":12,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: ((()())(()))"}
+{"input":{"s":"(()))()(()())"},"expected":8,"note":"Parenthesis boundary, nesting, concatenation, or separated runs: (()))()(()())"}
+{"generate":{"name":"repeated","args":{"n":30000,"pattern":"("},"seed":7},"digest":"sha256:521a690b8f584bcc4ec87d9a46db4f0bc56bdf1c82b5dae096007bb922026fee","note":"Maximum unclosed openings: quadratic substring scan worst case"}
+{"generate":{"name":"repeated","args":{"n":30000,"pattern":"()"},"seed":7},"digest":"sha256:8cbb83abff85fc02c0e11831f45a269bd1790224419b57ed4986013938b750ed","note":"Maximum concatenated valid pairs"}
+{"generate":{"name":"repeated","args":{"n":30000,"pattern":"(()())"},"seed":7},"digest":"sha256:a10369a742be5ab288f9e0c29713d64c7445cc9b1c20dc5ffd624b5c1b7e99aa","note":"Maximum nested valid blocks"}
