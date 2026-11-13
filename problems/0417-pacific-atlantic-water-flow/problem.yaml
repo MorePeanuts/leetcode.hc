@@ -1,0 +1,23 @@
+id: "417"
+slug: pacific-atlantic-water-flow
+title: Pacific Atlantic Water Flow
+titles:
+  zh-CN: 太平洋大西洋水流问题
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - array
+  - matrix
+kind: function
+function:
+  name: pacificAtlantic
+  params:
+    - name: heights
+      type: integer[][]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/pacific-atlantic-water-flow/
+judge:
+  compare: unordered
