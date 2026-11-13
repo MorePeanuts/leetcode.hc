@@ -104,6 +104,7 @@ groups:
       - reverse-nodes-in-k-group
       - design-linked-list
       - linked-list-random-node
+      - remove-duplicates-from-sorted-list-ii
   - name: trees
     title: Trees
     problems:
