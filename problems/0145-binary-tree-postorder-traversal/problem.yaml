@@ -1,0 +1,23 @@
+id: "145"
+slug: binary-tree-postorder-traversal
+title: Binary Tree Postorder Traversal
+titles:
+  zh-CN: 二叉树的后序遍历
+difficulty: easy
+tags:
+  - stack
+  - tree
+  - depth-first-search
+  - binary-tree
+kind: function
+function:
+  name: postorderTraversal
+  params:
+    - name: root
+      type: TreeNode
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/binary-tree-postorder-traversal/
+judge:
+  compare: exact
