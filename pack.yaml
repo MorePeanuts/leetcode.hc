@@ -179,6 +179,7 @@ groups:
       - binary-tree-postorder-traversal
       - n-ary-tree-preorder-traversal
       - n-ary-tree-postorder-traversal
+      - n-ary-tree-level-order-traversal
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:

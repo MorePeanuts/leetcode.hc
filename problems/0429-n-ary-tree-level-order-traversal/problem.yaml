@@ -1,0 +1,21 @@
+id: "429"
+slug: n-ary-tree-level-order-traversal
+title: N-ary Tree Level Order Traversal
+titles:
+  zh-CN: N 叉树的层序遍历
+difficulty: medium
+tags:
+  - tree
+  - breadth-first-search
+kind: function
+function:
+  name: levelOrder
+  params:
+    - name: root
+      type: NaryNode
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/n-ary-tree-level-order-traversal/
+judge:
+  compare: exact
