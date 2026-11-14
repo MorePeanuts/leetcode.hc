@@ -1,0 +1,24 @@
+id: "797"
+slug: all-paths-from-source-to-target
+title: All Paths From Source to Target
+titles:
+  zh-CN: 所有可能的路径
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - backtracking
+  - directed-acyclic-graph
+kind: function
+function:
+  name: allPathsSourceTarget
+  params:
+    - name: graph
+      type: integer[][]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/all-paths-from-source-to-target/
+judge:
+  compare: unordered
