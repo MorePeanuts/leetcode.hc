@@ -1,0 +1,22 @@
+id: "590"
+slug: n-ary-tree-postorder-traversal
+title: N-ary Tree Postorder Traversal
+titles:
+  zh-CN: N 叉树的后序遍历
+difficulty: easy
+tags:
+  - stack
+  - tree
+  - depth-first-search
+kind: function
+function:
+  name: postorder
+  params:
+    - name: root
+      type: NaryNode
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/n-ary-tree-postorder-traversal/
+judge:
+  compare: exact
