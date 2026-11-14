@@ -1,0 +1,22 @@
+id: "589"
+slug: n-ary-tree-preorder-traversal
+title: N-ary Tree Preorder Traversal
+titles:
+  zh-CN: N 叉树的前序遍历
+difficulty: easy
+tags:
+  - stack
+  - tree
+  - depth-first-search
+kind: function
+function:
+  name: preorder
+  params:
+    - name: root
+      type: NaryNode
+  returns: integer[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/n-ary-tree-preorder-traversal/
+judge:
+  compare: exact
