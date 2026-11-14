@@ -1,0 +1,32 @@
+{"input":{"graph":[[1,2],[3],[3],[]]},"expected":[[0,1,3],[0,2,3]],"example":true}
+{"input":{"graph":[[4,3,1],[3,2,4],[3],[4],[]]},"expected":[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]],"example":true}
+{"input":{"graph":[[1],[]]},"expected":[[0,1]],"note":"Minimum connected graph"}
+{"input":{"graph":[[],[]]},"expected":[],"note":"Minimum disconnected graph"}
+{"input":{"graph":[[2],[2],[]]},"expected":[[0,2]],"note":"Unreachable intermediate node"}
+{"input":{"graph":[[1],[],[]]},"expected":[],"note":"Dead end is not target"}
+{"input":{"graph":[[1,2],[],[]]},"expected":[[0,2]],"note":"Direct target path and dead end"}
+{"input":{"graph":[[2],[3],[1],[]]},"expected":[[0,2,1,3]],"note":"Valid path goes from larger to smaller label"}
+{"input":{"graph":[[1,2],[3],[3],[4],[]]},"expected":[[0,1,3,4],[0,2,3,4]],"note":"Shared suffix must be revisited for each prefix"}
+{"input":{"graph":[[1],[3],[1],[]]},"expected":[[0,1,3]],"note":"Unreachable incoming edges do not create paths"}
+{"input":{"graph":[[3,2,1],[3],[3],[]]},"expected":[[0,3],[0,2,3],[0,1,3]],"note":"Unsorted adjacency; short and long paths"}
+{"input":{"graph":[[2],[],[1]]},"expected":[[0,2]],"note":"Target may have outgoing edges; stop at target"}
+{"input":{"graph":[[],[0]]},"expected":[],"note":"Source may have incoming edges"}
+{"input":{"graph":[[1,2],[2],[]]},"expected":[[0,1,2],[0,2]],"note":"Direct and indirect routes"}
+{"input":{"graph":[[1],[2],[3],[]]},"expected":[[0,1,2,3]],"note":"4-node unique chain"}
+{"input":{"graph":[[1],[2],[3],[4],[5],[6],[]]},"expected":[[0,1,2,3,4,5,6]],"note":"7-node unique chain"}
+{"input":{"graph":[[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[]]},"expected":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]],"note":"15-node unique chain"}
+{"input":{"graph":[[1,2,3],[3],[3],[]]},"expected":[[0,1,3],[0,2,3],[0,3]],"note":"4-node fan with shared target"}
+{"input":{"graph":[[1,2,3,4,5,6,7],[7],[7],[7],[7],[7],[7],[]]},"expected":[[0,1,7],[0,2,7],[0,3,7],[0,4,7],[0,5,7],[0,6,7],[0,7]],"note":"8-node fan with shared target"}
+{"input":{"graph":[[1,2,3,4,5,6,7,8,9,10,11,12,13,14],[14],[14],[14],[14],[14],[14],[14],[14],[14],[14],[14],[14],[14],[]]},"expected":[[0,1,14],[0,2,14],[0,3,14],[0,4,14],[0,5,14],[0,6,14],[0,7,14],[0,8,14],[0,9,14],[0,10,14],[0,11,14],[0,12,14],[0,13,14],[0,14]],"note":"15-node fan with shared target"}
+{"input":{"graph":[[4,1,2],[],[4],[2],[]]},"expected":[[0,4],[0,2,4]],"note":"Permuted DAG 0; no assumption that labels are topological"}
+{"input":{"graph":[[1,3],[5],[4],[],[5],[]]},"expected":[[0,1,5]],"note":"Permuted DAG 1; no assumption that labels are topological"}
+{"input":{"graph":[[3],[],[],[],[5],[3,1],[]]},"expected":[],"note":"Permuted DAG 2; no assumption that labels are topological"}
+{"input":{"graph":[[7],[6,3],[],[],[7],[2],[2],[]]},"expected":[[0,7]],"note":"Permuted DAG 3; no assumption that labels are topological"}
+{"input":{"graph":[[1,2],[5,7],[8,6,3],[],[5,3,8,6,2,7],[3],[],[],[]]},"expected":[[0,2,8]],"note":"Permuted DAG 4; no assumption that labels are topological"}
+{"input":{"graph":[[3,6,2,7],[2],[5],[9],[8,6],[],[1,2],[4,9,5,2,8,3],[9],[]]},"expected":[[0,3,9],[0,7,4,8,9],[0,7,9],[0,7,8,9],[0,7,3,9]],"note":"Permuted DAG 5; no assumption that labels are topological"}
+{"input":{"graph":[[5,3,8,1],[4,2],[9,10,3,4,7],[9,7,8,5],[10],[9,7,4],[5,9,7],[4,10],[5],[],[]]},"expected":[[0,5,7,4,10],[0,5,7,10],[0,5,4,10],[0,3,7,4,10],[0,3,7,10],[0,3,8,5,7,4,10],[0,3,8,5,7,10],[0,3,8,5,4,10],[0,3,5,7,4,10],[0,3,5,7,10],[0,3,5,4,10],[0,8,5,7,4,10],[0,8,5,7,10],[0,8,5,4,10],[0,1,4,10],[0,1,2,10],[0,1,2,3,7,4,10],[0,1,2,3,7,10],[0,1,2,3,8,5,7,4,10],[0,1,2,3,8,5,7,10],[0,1,2,3,8,5,4,10],[0,1,2,3,5,7,4,10],[0,1,2,3,5,7,10],[0,1,2,3,5,4,10],[0,1,2,4,10],[0,1,2,7,4,10],[0,1,2,7,10]],"note":"Permuted DAG 6; no assumption that labels are topological"}
+{"input":{"graph":[[8,7,3,5,11,9,10,1],[],[10],[8,1,2],[7,3],[11,7],[2,7,8,5,10],[],[2,7,11],[3],[],[]]},"expected":[[0,8,11],[0,3,8,11],[0,5,11],[0,11],[0,9,3,8,11]],"note":"Permuted DAG 7; no assumption that labels are topological"}
+{"input":{"graph":[[12,6,10,9,4,2],[8,7],[12,8],[2],[3,11,1,12],[2,4,12,8],[],[8,12,10,2],[12],[8,4,1],[6,8,12],[12,6,8],[]]},"expected":[[0,12],[0,10,8,12],[0,10,12],[0,9,8,12],[0,9,4,3,2,12],[0,9,4,3,2,8,12],[0,9,4,11,12],[0,9,4,11,8,12],[0,9,4,1,8,12],[0,9,4,1,7,8,12],[0,9,4,1,7,12],[0,9,4,1,7,10,8,12],[0,9,4,1,7,10,12],[0,9,4,1,7,2,12],[0,9,4,1,7,2,8,12],[0,9,4,12],[0,9,1,8,12],[0,9,1,7,8,12],[0,9,1,7,12],[0,9,1,7,10,8,12],[0,9,1,7,10,12],[0,9,1,7,2,12],[0,9,1,7,2,8,12],[0,4,3,2,12],[0,4,3,2,8,12],[0,4,11,12],[0,4,11,8,12],[0,4,1,8,12],[0,4,1,7,8,12],[0,4,1,7,12],[0,4,1,7,10,8,12],[0,4,1,7,10,12],[0,4,1,7,2,12],[0,4,1,7,2,8,12],[0,4,12],[0,2,12],[0,2,8,12]],"note":"Permuted DAG 8; no assumption that labels are topological"}
+{"generate":{"name":"dense","args":{"n":15,"reachable":true,"reverse":false}},"digest":"sha256:ad477974ca0567fd0a8b2f4706537f5d3f5b21e7aab75ab9f24e1bb6ac4fbc50","note":"Maximum DAG; 8192 paths, varied path lengths and descending labels"}
+{"generate":{"name":"dense","args":{"n":15,"reachable":true,"reverse":true}},"digest":"sha256:b87f5d7a39740dea2eca24621dd6d6453e6fb03bbe890a89cc124ba5d6301ff1","note":"Maximum DAG; 8192 paths, varied path lengths and descending labels"}
+{"generate":{"name":"dense","args":{"n":15,"reachable":false,"reverse":false}},"digest":"sha256:fd952216632876d7a0eca588101b429d42da60de2dfb62231dd0988d2b8870be","note":"Maximum DAG; exponentially many dead-end prefixes; no target path"}
