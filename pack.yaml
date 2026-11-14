@@ -177,6 +177,7 @@ groups:
       - sum-root-to-leaf-numbers
       - path-sum-iii
       - binary-tree-postorder-traversal
+      - n-ary-tree-preorder-traversal
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:
