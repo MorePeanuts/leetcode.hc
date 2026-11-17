@@ -1,0 +1,22 @@
+id: "283"
+slug: move-zeroes
+title: Move Zeroes
+titles:
+  zh-CN: 移动零
+difficulty: easy
+tags:
+  - array
+  - two-pointers
+kind: function
+function:
+  name: moveZeroes
+  params:
+    - name: nums
+      type: integer[]
+  returns: void
+judge:
+  compare: exact
+  output: nums
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/move-zeroes/
