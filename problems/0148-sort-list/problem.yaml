@@ -1,0 +1,24 @@
+id: "148"
+slug: sort-list
+title: Sort List
+titles:
+  zh-CN: 排序链表
+difficulty: medium
+tags:
+  - linked-list
+  - two-pointers
+  - divide-and-conquer
+  - sorting
+  - merge-sort
+kind: function
+function:
+  name: sortList
+  params:
+    - name: head
+      type: ListNode
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sort-list/
+judge:
+  compare: exact
