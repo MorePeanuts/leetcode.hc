@@ -24,3 +24,10 @@ source:
   url: https://leetcode.cn/problems/online-stock-span/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: StockSpanner
+  constructor: stockSpannerCreate
+  destructor: stockSpannerFree
+  methods:
+    next: stockSpannerNext
