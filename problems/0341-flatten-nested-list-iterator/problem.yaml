@@ -29,3 +29,11 @@ source:
   url: https://leetcode.cn/problems/flatten-nested-list-iterator/
 judge:
   compare: exact
+c:
+  object: struct
+  type: NestedIterator
+  constructor: nestedIterCreate
+  destructor: nestedIterFree
+  methods:
+    hasNext: nestedIterHasNext
+    next: nestedIterNext

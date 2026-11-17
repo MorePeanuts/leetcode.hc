@@ -34,3 +34,12 @@ source:
   url: https://leetcode.cn/problems/implement-trie-prefix-tree/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: Trie
+  constructor: trieCreate
+  destructor: trieFree
+  methods:
+    insert: trieInsert
+    search: trieSearch
+    startsWith: trieStartsWith

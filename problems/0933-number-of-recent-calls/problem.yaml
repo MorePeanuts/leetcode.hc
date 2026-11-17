@@ -23,3 +23,10 @@ source:
   url: https://leetcode.cn/problems/number-of-recent-calls/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: RecentCounter
+  constructor: recentCounterCreate
+  destructor: recentCounterFree
+  methods:
+    ping: recentCounterPing

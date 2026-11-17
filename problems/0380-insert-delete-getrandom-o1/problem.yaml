@@ -33,3 +33,12 @@ source:
   url: https://leetcode.cn/problems/insert-delete-getrandom-o1/
 judge:
   compare: checker
+c:
+  object: typedef
+  type: RandomizedSet
+  constructor: randomizedSetCreate
+  destructor: randomizedSetFree
+  methods:
+    getRandom: randomizedSetGetRandom
+    insert: randomizedSetInsert
+    remove: randomizedSetRemove

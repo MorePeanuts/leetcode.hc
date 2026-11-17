@@ -2,14 +2,14 @@
 
 [English](README.md) · 简体中文
 
-供 [handcoding (hc)](https://github.com/MorePeanuts/handcoding) 使用的 LeetCode 题目包，在本地离线判题。每道题都有 Go 和 Python 的参考解，以及中英文题面。
+供 [handcoding (hc)](https://github.com/MorePeanuts/handcoding) 使用的 LeetCode 题目包，在本地离线判题。每道题都有 Go、Python、C、C++、Java、JavaScript 和 TypeScript 的模板与参考解，以及中英文题面。
 
 > [!NOTE]
 > 本题目包与 LeetCode（力扣）无关。题面版权仍归 LeetCode 所有，见 [NOTICE](NOTICE)。
 
 ## 安装
 
-需要 hc v0.1.0-alpha.11 或更高版本，以及 Python 3.12 或更高版本；装有 [uv](https://docs.astral.sh/uv/) 时，hc 会自行配置 Python。
+需要 hc v0.1.0-alpha.17 或更高版本，以及 Python 3.12 或更高版本；装有 [uv](https://docs.astral.sh/uv/) 时，hc 会自行配置 Python。按练习语言安装对应工具链：Go 1.22+、支持 C11 或 C++17 的编译器、Java 17+，或 Node.js 22+（TypeScript 还需要 TypeScript 5.7+）。可用 `hc doctor --lang <language>` 检查。
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # 跟随 main

@@ -8,7 +8,7 @@ Open an issue before starting on anything non-trivial. Problems are added in bat
 
 ## Adding problems
 
-You need hc at the version CI pins (`.github/workflows/check.yml`), Go and Python 3.12+ ([uv](https://docs.astral.sh/uv/) recommended: hc then sets Python up itself).
+You need hc at the version CI pins (`.github/workflows/check.yml`) and the toolchains for every language in `pack.yaml`: Go 1.22+, Python 3.12+, C11, C++17, Java 17+, Node.js 22+ and TypeScript 5.7+. [uv](https://docs.astral.sh/uv/) is recommended: hc then sets Python up itself. Run `hc doctor --lang <language>` to check each toolchain; CI checks the new references on Java 17, Node.js 22 and TypeScript 5.7.
 
 ```sh
 hc fetch --site cn two-sum     # statement in English and Chinese, signature, templates, examples
@@ -17,7 +17,7 @@ hc validate two-sum --run      # every reference passes every case
 hc pack check                  # the whole pack, as CI checks it
 ```
 
-- **What lands.** A problem lands only when `hc pack check` passes: it is ready (`judge.compare` is set), has Go and Python references, and has a statement and a title in every locale of `pack.yaml` (`en` and `zh-CN`). `hc fetch --site cn` writes both; nobody translates one, so a problem LeetCode lacks a statement for stays out. No premium problems, and no LeetCode test data beyond the statements' examples.
+- **What lands.** A problem lands only when `hc pack check` passes: it is ready (`judge.compare` is set), has templates and references for every language in `pack.yaml`, and has a statement and a title in every locale of `pack.yaml` (`en` and `zh-CN`). `hc fetch --site cn` writes both; nobody translates one, so a problem LeetCode lacks a statement for stays out. No premium problems, and no LeetCode test data beyond the statements' examples.
 - **Groups.** Add the slug to its primary topic group in `pack.yaml`, in the same commit as the problem. Minimize overlap: add another group only when the problem clearly belongs to both topics, not merely because an alternative solution or a LeetCode tag fits. Group `name`s are what users filter by, so change a group's `title` or order rather than its `name`.
 - **Topic grouping.** Prefix-sum and difference-array exercises belong in `arrays-hashing`; monotonic-stack exercises belong in `stack`. Use `queue` for queue/deque exercises, `design` for data structure design, `divide-and-conquer` for divide-and-conquer algorithms, and `randomized` for randomized algorithms. Apply the primary-topic rule above; add only problems already present in the pack.
 - **Identity.** `slug` and `id` are LeetCode's, and are frozen once published: never rename a slug or a directory, never change an `id`, never reuse the slug of a removed problem. When a problem has to change that much, it becomes a new problem with a new slug.
@@ -37,6 +37,7 @@ Commit messages and PR titles follow [Conventional Commits](https://www.conventi
 | Change | Message |
 |---|---|
 | A new problem, with its group changes | `feat: add 0001-two-sum` |
+| Support for additional languages in existing problems | `feat: add C, C++, Java, JavaScript and TypeScript support` |
 | New or changed groups | `feat(groups): …` |
 | A fix to a problem's statement, cases, references or judge rule | `fix(0146-lru-cache): …` |
 | Bumping the pinned hc | `chore: bump hc to v0.1.0` |

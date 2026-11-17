@@ -1,0 +1,21 @@
+int countPrimes(int n) {
+    if (n < 3) {
+        return 0;
+    }
+    bool *composite = calloc(n, sizeof(*composite));
+    for (int p = 2; p * p < n; p++) {
+        if (!composite[p]) {
+            for (int q = p * p; q < n; q += p) {
+                composite[q] = true;
+            }
+        }
+    }
+    int count = 0;
+    for (int p = 2; p < n; p++) {
+        if (!composite[p]) {
+            count++;
+        }
+    }
+    free(composite);
+    return count;
+}
