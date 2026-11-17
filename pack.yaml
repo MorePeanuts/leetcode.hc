@@ -65,6 +65,7 @@ groups:
       - squares-of-a-sorted-array
       - next-permutation
       - rotate-array
+      - move-zeroes
   - name: sliding-window
     title: Sliding Window
     problems:

@@ -1,0 +1,32 @@
+{"input":{"nums":[0,1,0,3,12]},"expected":[1,3,12,0,0],"example":true}
+{"input":{"nums":[0]},"expected":[0],"example":true}
+{"input":{"nums":[1]},"expected":[1],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[-1]},"expected":[-1],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0]},"expected":[0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,1]},"expected":[1,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,0]},"expected":[1,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,2]},"expected":[1,2],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0,1]},"expected":[1,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,0,0]},"expected":[1,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,1,0]},"expected":[1,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,0,2]},"expected":[1,2,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,2,1]},"expected":[2,1,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[2,0,1]},"expected":[2,1,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[-1,0,-2,0,3]},"expected":[-1,-2,3,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,-2147483648,0,2147483647]},"expected":[-2147483648,2147483647,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0,0,0,0,0,0,0,0]},"expected":[0,0,0,0,0,0,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[5,5,5,5,5,5,5,5,5]},"expected":[5,5,5,5,5,5,5,5,5],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0,1,2,3]},"expected":[1,2,3,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,2,3,0,0]},"expected":[1,2,3,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,1,0,2,0,3,0]},"expected":[1,2,3,0,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[3,0,2,0,1,0]},"expected":[3,2,1,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,0,1,0,1]},"expected":[1,1,1,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0,-1,-1,0]},"expected":[-1,-1,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,1,2,0,3,4,0]},"expected":[1,2,3,4,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[2147483647,-2147483648,0]},"expected":[2147483647,-2147483648,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,1,0,0,2,0,0,3]},"expected":[1,2,3,0,0,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[1,0,0,0,0,2]},"expected":[1,2,0,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[0,0,1,0,0,2,0,0,3]},"expected":[1,2,3,0,0,0,0,0,0],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"input":{"nums":[9,8,7,6,5,4,3,2,1]},"expected":[9,8,7,6,5,4,3,2,1],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
+{"generate":{"name":"leading_zeroes","args":{"n":10000}},"digest":"sha256:71ba5392044e1a32db80dee31b3720c09ecf17f3e0c5502e86d5129af84432f2","note":"Maximum length: reject quadratic shifting of zeros"}
+{"generate":{"name":"alternating","args":{"n":10000}},"digest":"sha256:c97c3360d92c9c88c22215b4fbbb7e75cbb23a516855962026dd0b4298df0a71","note":"Maximum length: reject quadratic shifting of zeros"}
