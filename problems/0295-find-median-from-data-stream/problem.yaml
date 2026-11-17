@@ -29,3 +29,11 @@ source:
 judge:
   compare: exact
   tolerance: 0.00001
+c:
+  object: typedef
+  type: MedianFinder
+  constructor: medianFinderCreate
+  destructor: medianFinderFree
+  methods:
+    addNum: medianFinderAddNum
+    findMedian: medianFinderFindMedian

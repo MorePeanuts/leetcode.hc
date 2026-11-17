@@ -35,3 +35,11 @@ source:
   url: https://leetcode.cn/problems/time-based-key-value-store/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: TimeMap
+  constructor: timeMapCreate
+  destructor: timeMapFree
+  methods:
+    get: timeMapGet
+    set: timeMapSet

@@ -24,3 +24,10 @@ source:
   url: https://leetcode.cn/problems/linked-list-random-node/
 judge:
   compare: checker
+c:
+  object: typedef
+  type: Solution
+  constructor: solutionCreate
+  destructor: solutionFree
+  methods:
+    getRandom: solutionGetRandom
