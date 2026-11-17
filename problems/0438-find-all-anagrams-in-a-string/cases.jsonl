@@ -1,0 +1,33 @@
+{"input":{"p":"abc","s":"cbaebabacd"},"expected":[0,6],"example":true}
+{"input":{"p":"ab","s":"abab"},"expected":[0,1,2],"example":true}
+{"input":{"p":"a","s":"a"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"b","s":"a"},"expected":[],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aa","s":"a"},"expected":[],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"ba","s":"ab"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"ab","s":"ab"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abd","s":"abc"},"expected":[],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"a","s":"aa"},"expected":[0,1],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aa","s":"aaa"},"expected":[0,1],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aaa","s":"aaaa"},"expected":[0,1],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aa","s":"baa"},"expected":[1],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aa","s":"aab"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"ab","s":"ababab"},"expected":[0,1,2,3,4],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aab","s":"ababab"},"expected":[0,2],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"ab","s":"aaabbb"},"expected":[2],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abc","s":"abcabc"},"expected":[0,1,2,3],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abc","s":"cba"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"cba","s":"abc"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aab","s":"abb"},"expected":[],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"ab","s":"aabb"},"expected":[1],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abc","s":"abacbabc"},"expected":[1,2,3,5],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"zz","s":"zzzz"},"expected":[0,1,2],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"z","s":"xyz"},"expected":[2],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"z","s":"zxy"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abc","s":"abczabc"},"expected":[0,4],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aaaa","s":"aaaaaaaab"},"expected":[0,1,2,3,4],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"zyxwvutsrqponmlkjihgfedcba","s":"abcdefghijklmnopqrstuvwxyz"},"expected":[0],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"abcd","s":"abc"},"expected":[],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"input":{"p":"aab","s":"aacabaa"},"expected":[3,4],"note":"Window boundaries, overlapping matches, repeated multiplicities or longer pattern"}
+{"generate":{"name":"repeated","args":{"missing":false,"n":30000,"width":15000}},"digest":"sha256:7302bcc15b58d04d5dbccb571b937de581a927650ab80cdbb00654c9caf18bdc","note":"Maximum-length strings with long windows; reject rescanning or sorting every window"}
+{"generate":{"name":"repeated","args":{"missing":true,"n":30000,"width":15000}},"digest":"sha256:9ca4afa5fec524ad5dd82168c0260ca51ab8d8ac60505182f5e14a6b55e374fb","note":"Maximum-length strings with long windows; reject rescanning or sorting every window"}
+{"generate":{"name":"alphabet","args":{"n":30000,"width":14976}},"digest":"sha256:1784079c5c06e260c7d70c6d63d6a3852d4510f5dd2666350711d254a1f367e7","note":"Large windows across all 26 letters"}

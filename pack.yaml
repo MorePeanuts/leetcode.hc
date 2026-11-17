@@ -80,6 +80,7 @@ groups:
       - subarray-product-less-than-k
       - max-consecutive-ones-iii
       - contains-duplicate-ii
+      - find-all-anagrams-in-a-string
   - name: stack
     title: Stack
     problems:
