@@ -142,6 +142,7 @@ groups:
       - swap-nodes-in-pairs
       - palindrome-linked-list
       - sort-list
+      - intersection-of-two-linked-lists
   - name: trees
     title: Trees
     problems:
