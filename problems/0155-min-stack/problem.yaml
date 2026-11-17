@@ -31,3 +31,13 @@ source:
   url: https://leetcode.cn/problems/min-stack/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: MinStack
+  constructor: minStackCreate
+  destructor: minStackFree
+  methods:
+    getMin: minStackGetMin
+    pop: minStackPop
+    push: minStackPush
+    top: minStackTop

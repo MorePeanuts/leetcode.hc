@@ -33,3 +33,11 @@ source:
   url: https://leetcode.cn/problems/lru-cache/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: LRUCache
+  constructor: lRUCacheCreate
+  destructor: lRUCacheFree
+  methods:
+    get: lRUCacheGet
+    put: lRUCachePut

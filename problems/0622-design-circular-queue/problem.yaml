@@ -41,3 +41,15 @@ source:
   url: https://leetcode.cn/problems/design-circular-queue/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: MyCircularQueue
+  constructor: myCircularQueueCreate
+  destructor: myCircularQueueFree
+  methods:
+    Front: myCircularQueueFront
+    Rear: myCircularQueueRear
+    deQueue: myCircularQueueDeQueue
+    enQueue: myCircularQueueEnQueue
+    isEmpty: myCircularQueueIsEmpty
+    isFull: myCircularQueueIsFull
