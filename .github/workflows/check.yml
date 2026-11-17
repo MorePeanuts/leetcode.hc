@@ -63,7 +63,14 @@ jobs:
       # environment of hc's.
       - name: Configure hc
         run: |
-          printf 'python:\n  interpreter: python3\nc:\n  command: gcc-13\n  standard: c11\ncpp:\n  command: g++-13\n  standard: c++17\n' > hc.yaml
+          # The wall-clock guard includes decoding entire class-operation batches.
+          # Allow headroom on shared runners; this does not change hc's algorithm
+          # time-limit multiplier or minimum budget.
+          printf 'timeout: 30s\npython:\n  interpreter: python3\nc:\n  command: gcc-13\n  standard: c11\ncpp:\n  command: g++-13\n  standard: c++17\n' > hc.yaml
+      # Exercise a large class-operation batch early, so a runtime guard
+      # failure is visible before the complete seven-language check finishes.
+      - name: Check large class batch
+        run: hc validate lfu-cache --run --jobs 1
       - name: Check the pack
         run: hc pack check
       # --force: the committed copies of hc's skills must be exactly the

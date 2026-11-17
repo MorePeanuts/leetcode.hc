@@ -2,14 +2,14 @@
 
 English · [简体中文](README_zh.md)
 
-LeetCode problems for [handcoding (hc)](https://github.com/MorePeanuts/handcoding), which judges them locally and offline. Every problem has Go and Python reference solutions, and its statement in English and Chinese.
+LeetCode problems for [handcoding (hc)](https://github.com/MorePeanuts/handcoding), which judges them locally and offline. Every problem has Go, Python, C, C++, Java, JavaScript and TypeScript templates and reference solutions, and its statement in English and Chinese.
 
 > [!NOTE]
 > This pack is not affiliated with LeetCode. The statements remain LeetCode's; see [NOTICE](NOTICE).
 
 ## Install
 
-You need hc v0.1.0-alpha.11 or later, and Python 3.12 or later, which hc sets up itself when [uv](https://docs.astral.sh/uv/) is installed.
+You need hc v0.1.0-alpha.17 or later, and Python 3.12 or later, which hc sets up itself when [uv](https://docs.astral.sh/uv/) is installed. Install the toolchain for the language you practice: Go 1.22+, a C11 or C++17 compiler, Java 17+, or Node.js 22+ (with TypeScript 5.7+ for TypeScript). Run `hc doctor --lang <language>` to check it.
 
 ```sh
 hc pack install https://github.com/MorePeanuts/leetcode.hc.git                 # follow main

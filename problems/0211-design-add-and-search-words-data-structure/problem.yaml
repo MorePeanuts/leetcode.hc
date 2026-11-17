@@ -29,3 +29,11 @@ source:
   url: https://leetcode.cn/problems/design-add-and-search-words-data-structure/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: WordDictionary
+  constructor: wordDictionaryCreate
+  destructor: wordDictionaryFree
+  methods:
+    addWord: wordDictionaryAddWord
+    search: wordDictionarySearch
