@@ -186,6 +186,7 @@ groups:
       - n-ary-tree-postorder-traversal
       - n-ary-tree-level-order-traversal
       - flatten-binary-tree-to-linked-list
+      - lowest-common-ancestor-of-a-binary-tree
   - name: heap-priority-queue
     title: Heap / Priority Queue
     problems:

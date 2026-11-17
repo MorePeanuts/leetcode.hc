@@ -1,0 +1,33 @@
+{"input":{"p":5,"q":1,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":3,"example":true}
+{"input":{"p":5,"q":4,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":5,"example":true}
+{"input":{"p":1,"q":2,"root":[1,2]},"expected":1,"example":true}
+{"input":{"p":6,"q":4,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":5,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":7,"q":4,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":2,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":6,"q":7,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":5,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":0,"q":8,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":1,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":7,"q":8,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":3,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":3,"q":4,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":3,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":4,"q":3,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":3,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":2,"q":4,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":2,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":4,"q":2,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":2,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":5,"q":6,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":5,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":1,"q":0,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":1,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":8,"q":6,"root":[3,5,1,6,2,0,8,null,null,7,4]},"expected":3,"note":"General tree, ancestor/self and targets in same or different subtrees"}
+{"input":{"p":1,"q":2,"root":[2,1]},"expected":2,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":1,"q":2,"root":[2,null,1]},"expected":2,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":-1000000000,"q":1000000000,"root":[0,-1000000000,1000000000]},"expected":0,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":8,"q":7,"root":[5,9,1,8,7,3,2]},"expected":9,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":3,"q":2,"root":[5,9,1,8,7,3,2]},"expected":1,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":8,"q":2,"root":[5,9,1,8,7,3,2]},"expected":5,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":3,"q":4,"root":[1,2,null,3,null,4]},"expected":3,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":2,"q":1,"root":[4,null,3,null,2,null,1]},"expected":2,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":-2,"q":2,"root":[0,-1,1,null,-2,2]},"expected":0,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":6,"q":5,"root":[9,8,7,6,null,null,5]},"expected":9,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":40,"q":50,"root":[10,20,30,40,50]},"expected":20,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":20,"q":50,"root":[10,20,30,40,50]},"expected":20,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":50,"q":20,"root":[10,20,30,40,50]},"expected":20,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":-2,"q":-3,"root":[-1,-2,-3]},"expected":-1,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"input":{"p":75,"q":-50,"root":[100,50,0,null,75,-50,25]},"expected":100,"note":"Distinct values with non-BST ordering, sparse branches and value extremes"}
+{"generate":{"name":"chain","args":{"n":100000,"side":"left"}},"digest":"sha256:e134a2d8436868bb96a657ee410b3565cede2880e893b581c06ebd07c39c27ad","note":"Maximum-depth tree: iterative traversal and deep ancestor identity"}
+{"generate":{"name":"chain","args":{"n":100000,"side":"right"}},"digest":"sha256:a4c79838d5e437bbf946a6e11ccf7b0707f57e040a61590551d7056d4d6afa9c","note":"Maximum-depth tree: iterative traversal and deep ancestor identity"}
+{"generate":{"name":"complete","args":{"n":100000},"seed":23},"digest":"sha256:3ca661617217149297f9a6e05b2c40785ae981cc63a929a4323098928857404d","note":"Maximum-size non-BST tree"}
