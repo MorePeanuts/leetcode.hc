@@ -141,6 +141,7 @@ groups:
       - add-two-numbers-ii
       - swap-nodes-in-pairs
       - palindrome-linked-list
+      - sort-list
   - name: trees
     title: Trees
     problems:
