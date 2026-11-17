@@ -117,6 +117,7 @@ groups:
       - search-insert-position
       - find-peak-element
       - search-in-rotated-sorted-array-ii
+      - find-first-and-last-position-of-element-in-sorted-array
   - name: linked-list
     title: Linked List
     problems:
