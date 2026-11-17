@@ -1,0 +1,33 @@
+{"input":{"headA":[4,1,8,4,5],"headB":[5,6,1,8,4,5],"skipA":2,"skipB":3},"expected":2,"example":true}
+{"input":{"headA":[1,9,1,2,4],"headB":[3,2,4],"skipA":3,"skipB":1},"expected":3,"example":true}
+{"input":{"headA":[2,6,4],"headB":[1,5],"skipA":3,"skipB":2},"expected":null,"example":true}
+{"input":{"headA":[1],"headB":[1],"skipA":0,"skipB":0},"expected":0,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1],"headB":[1],"skipA":1,"skipB":1},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1],"headB":[2],"skipA":1,"skipB":1},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[3],"headB":[2,3],"skipA":0,"skipB":1},"expected":0,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[2,3],"headB":[3],"skipA":1,"skipB":0},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,3],"headB":[2,3],"skipA":1,"skipB":1},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2,4,5],"headB":[3,4,5],"skipA":2,"skipB":1},"expected":2,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,4,5],"headB":[2,3,4,5],"skipA":1,"skipB":2},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[7,7,7,7],"headB":[7,7,7],"skipA":2,"skipB":1},"expected":2,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2],"headB":[1,2],"skipA":2,"skipB":2},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2,1,2],"headB":[1,2,1,2],"skipA":2,"skipB":2},"expected":2,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[4],"headB":[1,2,3,4],"skipA":0,"skipB":3},"expected":0,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2,3,4],"headB":[4],"skipA":3,"skipB":0},"expected":3,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[100000,100000],"headB":[99999,100000],"skipA":1,"skipB":1},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,1,1,1,1],"headB":[1,1,1],"skipA":5,"skipB":3},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,1,1,1,1,1],"headB":[1,1,1,1],"skipA":5,"skipB":3},"expected":5,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[2,3,4,8,9],"headB":[5,6,7,8,9],"skipA":3,"skipB":3},"expected":3,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2,3],"headB":[1,2,3],"skipA":0,"skipB":0},"expected":0,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[3,2,1],"headB":[1,2,3],"skipA":3,"skipB":3},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,1,1],"headB":[1,1,1,1,1],"skipA":1,"skipB":3},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,2,3,4,6],"headB":[5,6],"skipA":4,"skipB":1},"expected":4,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[5,6],"headB":[1,2,3,4,6],"skipA":1,"skipB":4},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[9,8,5,4,3,2,1],"headB":[7,6,5,4,3,2,1],"skipA":2,"skipB":2},"expected":2,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[100000],"headB":[100000],"skipA":1,"skipB":1},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,1,2,2],"headB":[2,1,1,2],"skipA":3,"skipB":3},"expected":3,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[8,4,5],"headB":[8,4,5],"skipA":3,"skipB":3},"expected":null,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"input":{"headA":[1,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"headB":[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"skipA":1,"skipB":1},"expected":1,"note":"Shared suffix by identity, including equal-valued disjoint prefixes and head/tail intersection"}
+{"generate":{"name":"disjoint","args":{"n":30000}},"digest":"sha256:04be12b1ff02b360c3e9db3c1eaccd5f3f4b43e7fe4c675810abb1a1ff837bf4","note":"Maximum-length equal-valued disjoint lists: identity matters"}
+{"generate":{"name":"tail_join","args":{"n":30000,"short":29999}},"digest":"sha256:724de3bd04468a3743b23c510cc4d183bb32952b7cb5a2bba7cfae3d339f66b3","note":"Only final node shared, unequal lengths"}
+{"generate":{"name":"tail_join","args":{"n":30000,"short":1}},"digest":"sha256:c3c29419fc1678295a467efa9f80ce6959e121f113f925cb4f962561c819afe0","note":"One head is the other list final node"}
