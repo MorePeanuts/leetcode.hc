@@ -25,3 +25,10 @@ source:
   url: https://leetcode.cn/problems/random-pick-with-weight/
 judge:
   compare: checker
+c:
+  object: typedef
+  type: Solution
+  constructor: solutionCreate
+  destructor: solutionFree
+  methods:
+    pickIndex: solutionPickIndex

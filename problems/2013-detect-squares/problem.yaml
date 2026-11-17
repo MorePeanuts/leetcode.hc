@@ -30,3 +30,11 @@ source:
   url: https://leetcode.cn/problems/detect-squares/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: DetectSquares
+  constructor: detectSquaresCreate
+  destructor: detectSquaresFree
+  methods:
+    add: detectSquaresAdd
+    count: detectSquaresCount

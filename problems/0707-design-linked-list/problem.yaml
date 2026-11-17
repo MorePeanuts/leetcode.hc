@@ -44,3 +44,14 @@ judge:
 source:
   site: leetcode.cn
   url: https://leetcode.cn/problems/design-linked-list/
+c:
+  object: typedef
+  type: MyLinkedList
+  constructor: myLinkedListCreate
+  destructor: myLinkedListFree
+  methods:
+    addAtHead: myLinkedListAddAtHead
+    addAtIndex: myLinkedListAddAtIndex
+    addAtTail: myLinkedListAddAtTail
+    deleteAtIndex: myLinkedListDeleteAtIndex
+    get: myLinkedListGet

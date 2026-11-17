@@ -27,3 +27,10 @@ source:
   url: https://leetcode.cn/problems/my-calendar-i/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: MyCalendar
+  constructor: myCalendarCreate
+  destructor: myCalendarFree
+  methods:
+    book: myCalendarBook

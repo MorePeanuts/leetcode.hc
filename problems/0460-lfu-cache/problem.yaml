@@ -33,3 +33,11 @@ source:
   url: https://leetcode.cn/problems/lfu-cache/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: LFUCache
+  constructor: lFUCacheCreate
+  destructor: lFUCacheFree
+  methods:
+    get: lFUCacheGet
+    put: lFUCachePut

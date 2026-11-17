@@ -35,3 +35,8 @@ judge:
 source:
   site: leetcode.cn
   url: https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/
+c:
+  object: none
+  methods:
+    deserialize: deserialize
+    serialize: serialize

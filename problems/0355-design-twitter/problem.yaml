@@ -45,3 +45,13 @@ source:
   url: https://leetcode.cn/problems/design-twitter/
 judge:
   compare: exact
+c:
+  object: typedef
+  type: Twitter
+  constructor: twitterCreate
+  destructor: twitterFree
+  methods:
+    follow: twitterFollow
+    getNewsFeed: twitterGetNewsFeed
+    postTweet: twitterPostTweet
+    unfollow: twitterUnfollow
