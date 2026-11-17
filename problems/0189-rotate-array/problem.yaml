@@ -1,0 +1,25 @@
+id: "189"
+slug: rotate-array
+title: Rotate Array
+titles:
+  zh-CN: 轮转数组
+difficulty: medium
+tags:
+  - array
+  - math
+  - two-pointers
+kind: function
+function:
+  name: rotate
+  params:
+    - name: nums
+      type: integer[]
+    - name: k
+      type: integer
+  returns: void
+judge:
+  compare: exact
+  output: nums
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/rotate-array/

@@ -1,0 +1,33 @@
+{"input":{"k":3,"nums":[1,2,3,4,5,6,7]},"expected":[5,6,7,1,2,3,4],"example":true}
+{"input":{"k":2,"nums":[-1,-100,3,99]},"expected":[3,99,-1,-100],"example":true}
+{"input":{"k":0,"nums":[1]},"expected":[1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":100000,"nums":[1]},"expected":[1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":0,"nums":[1,2]},"expected":[1,2],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":1,"nums":[1,2]},"expected":[2,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":2,"nums":[1,2]},"expected":[1,2],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":3,"nums":[1,2]},"expected":[2,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":1,"nums":[1,2,3]},"expected":[3,1,2],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":2,"nums":[1,2,3]},"expected":[2,3,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":3,"nums":[1,2,3]},"expected":[1,2,3],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":4,"nums":[1,2,3]},"expected":[3,1,2],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":100000,"nums":[1,2,3]},"expected":[3,1,2],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":2,"nums":[-2147483648,0,2147483647]},"expected":[0,2147483647,-2147483648],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":2,"nums":[0,0,0,0,0]},"expected":[0,0,0,0,0],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":4,"nums":[1,1,2,2,3,3]},"expected":[2,2,3,3,1,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":2,"nums":[1,2,3,4,5,6]},"expected":[5,6,1,2,3,4],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":3,"nums":[1,2,3,4,5,6]},"expected":[4,5,6,1,2,3],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":1,"nums":[-1,-2,-3,-4]},"expected":[-4,-1,-2,-3],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":7,"nums":[1,2,3,4]},"expected":[2,3,4,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":3,"nums":[0,1,0,1,0]},"expected":[0,1,0,0,1],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":4,"nums":[5,4,3,2,1]},"expected":[4,3,2,1,5],"note":"Right rotation: zero/full cycles, k beyond length, gcd cycles or signed bounds"}
+{"input":{"k":3,"nums":[0,1,2,3,4,5,6]},"expected":[4,5,6,0,1,2,3],"note":"Odd/even length reversal boundaries, n=7"}
+{"input":{"k":4,"nums":[0,1,2,3,4,5,6,7]},"expected":[4,5,6,7,0,1,2,3],"note":"Odd/even length reversal boundaries, n=8"}
+{"input":{"k":4,"nums":[0,1,2,3,4,5,6,7,8]},"expected":[5,6,7,8,0,1,2,3,4],"note":"Odd/even length reversal boundaries, n=9"}
+{"input":{"k":5,"nums":[0,1,2,3,4,5,6,7,8,9,10]},"expected":[6,7,8,9,10,0,1,2,3,4,5],"note":"Odd/even length reversal boundaries, n=11"}
+{"input":{"k":6,"nums":[0,1,2,3,4,5,6,7,8,9,10,11]},"expected":[6,7,8,9,10,11,0,1,2,3,4,5],"note":"Odd/even length reversal boundaries, n=12"}
+{"input":{"k":8,"nums":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]},"expected":[8,9,10,11,12,13,14,15,0,1,2,3,4,5,6,7],"note":"Odd/even length reversal boundaries, n=16"}
+{"input":{"k":8,"nums":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]},"expected":[9,10,11,12,13,14,15,16,0,1,2,3,4,5,6,7,8],"note":"Odd/even length reversal boundaries, n=17"}
+{"input":{"k":11,"nums":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]},"expected":[12,13,14,15,16,17,18,19,20,21,22,0,1,2,3,4,5,6,7,8,9,10,11],"note":"Odd/even length reversal boundaries, n=23"}
+{"generate":{"name":"distinct","args":{"k":50001,"n":100000}},"digest":"sha256:46ad6950b87fae7f02a684efac7bd3c0758cac8c184ec650e5a336b2a0a02d1a","note":"Maximum size and large shift: reject repeated one-step rotation"}
+{"generate":{"name":"distinct","args":{"k":50000,"n":99999}},"digest":"sha256:68e91f0afd0bcfcd698d60ec07aeffb4aa8aa70194363c9f1a46a4306d243cd0","note":"Maximum size and large shift: reject repeated one-step rotation"}
+{"generate":{"name":"distinct","args":{"k":99999,"n":100000}},"digest":"sha256:6c59611ccc764da5d8d66c24eb1580b872de9f39441182864b381f61a1f133e5","note":"Maximum size and large shift: reject repeated one-step rotation"}
