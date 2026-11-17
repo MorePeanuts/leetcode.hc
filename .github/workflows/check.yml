@@ -23,11 +23,24 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version: stable
+          cache: false
       # The oldest Python the protocol supports: the pack's references and
       # checkers must run on it.
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+      # Prepare the minimum language versions for incremental reference migration.
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Install TypeScript
+        run: npm install --global --ignore-scripts typescript@5.7.3
+      - name: Install C/C++ compilers and optional GLib
+        run: sudo apt-get update && sudo apt-get install -y gcc-13 g++-13 pkg-config libglib2.0-dev
       # The hc the pack is checked with: its released linux_amd64 binary,
       # checked against the SHA-256 that its release's checksums.txt lists.
       # Bump both on purpose: read what changed with
@@ -35,8 +48,8 @@ jobs:
       # commit the refreshed skills with the bump.
       - name: Install hc
         env:
-          HC_VERSION: 0.1.0-alpha.13
-          HC_SHA256: c817c410ef362b153e1b4117d4e8f48489d4a4641f034e30a80dc155640ec837
+          HC_VERSION: 0.1.0-alpha.17
+          HC_SHA256: 808043b63d5507d3207ef0550e2fb47e6f72cd4bf99490c2cc4eae83d6e524cb
         run: |
           archive="handcoding_${HC_VERSION}_linux_amd64.tar.gz"
           curl -fsSL -o "$RUNNER_TEMP/$archive" \
@@ -50,7 +63,7 @@ jobs:
       # environment of hc's.
       - name: Configure hc
         run: |
-          printf 'python:\n  interpreter: python3\n' > hc.yaml
+          printf 'python:\n  interpreter: python3\nc:\n  command: gcc-13\n  standard: c11\ncpp:\n  command: g++-13\n  standard: c++17\n' > hc.yaml
       - name: Check the pack
         run: hc pack check
       # --force: the committed copies of hc's skills must be exactly the

@@ -1,6 +1,6 @@
 ---
 name: hc-cases
-description: Decide how an hc (handcoding) problem is judged and write its test cases. Use when generating or fixing the test cases (cases.jsonl) of a problem in an hc workspace, choosing its judge rule (judge.compare in problem.yaml), writing or fixing a reference solution (reference/solution.py or .go), writing a checker (checker.py), or generators of large inputs (generator.py); `hc gen` and `hc fix` use it. For the problem's definition itself (signature, structure inputs, statement, templates), use hc-problem instead.
+description: Decide how an hc (handcoding) problem is judged and write its test cases. Use when generating or fixing the test cases (cases.jsonl) of a problem in an hc workspace, choosing its judge rule (judge.compare in problem.yaml), writing or fixing reference solutions in Go, Python, C, C++, Java, JavaScript or TypeScript, writing a checker (checker.py), or generators of large inputs (generator.py); `hc gen` and `hc fix` use it. For the problem's definition itself (signature, structure inputs, statement, templates), use hc-problem instead.
 ---
 
 # handcoding test case authoring
@@ -100,6 +100,42 @@ workspace's own problems; `hc validate <slug>` names a missing reference.
   it) and must build with Go 1.22: no newer language features or standard
   library functions (`slices.Sorted`, `maps.Keys`, range over a function).
   `hc validate --run` checks this and names what is too new.
+
+- A C reference is `reference/solution.c` (`hc docs protocol c-language`).
+  Target C11, preserving the native top-level functions, array size arguments
+  and output size pointers. Follow any explicit `c` symbol bindings in
+  `problem.yaml`; never infer conversions from edited solution code. hc
+  supplies standard headers, judge structures and uthash. Do not write
+  `main` or redefine those structures. Use `int` for `integer`, `long long`
+  for `long`, and no embedded NUL in `string` values. Each case is a fresh
+  process. Use hc extensions only where the C ABI specifies them; local
+  support does not mean LeetCode offers a C template. Declare `c.libraries: [glib]`
+  if the reference needs locally installed GLib. Dependencies are
+  workspace-managed; never vendor them into the pack or solution.
+
+- A C++ reference is `reference/solution.cpp`, using the native public
+  `class Solution` method or design class (`hc docs protocol c`). Target
+  C++17; standard headers and judge-defined types are provided by hc. Do not
+  write `main`, include hc runtime headers, or depend on state from another
+  case: each case runs in its own process. Use `int` for `integer` and
+  `long long` for `long`.
+
+- JavaScript/TypeScript references are `reference/solution.js` and
+  `reference/solution.ts` (`hc docs protocol javascript--typescript`). Preserve
+  native top-level functions/classes and round-trip function pairs. Target
+  Node.js 22 / TypeScript 5.7; the local tsc typechecks TS. Use `number` for
+  `long`, and keep every long input/expected result within ±9007199254740991.
+  LeetCode libraries are prepared in `.hc/node` using local npm on first use.
+  A ready environment works offline; repair with `hc env sync --lang javascript`. Calls must
+  be synchronous. Module globals persist through the ordered batch, so avoid
+  unintended state between cases. Validate references in both languages.
+- A Java reference is `reference/Solution.java` (`hc docs protocol java`).
+  Target Java 17 APIs and syntax, with explicit standard-library imports.
+  Keep native arrays or generic lists and the original design-class name
+  (package-private when it is not `Solution`). hc supplies judge types.
+  Use `int` for `integer`, `long` for `long`. One JVM runs the ordered batch:
+  instances reset per case, but static state persists, so keep references
+  independent of preceding cases. Do not add warm-up or forced GC.
 
 **Prove the rule with the second reference.** When more than one output is
 acceptable, write `reference/solution.go` so that it returns a
@@ -300,7 +336,8 @@ the cases decide whether a solution of a worse complexity fails.
 2. [Decide the judge rule](#decide-the-judge-rule) and write it to
    problem.yaml.
 3. Write `reference/solution.py`, then a reference in every other
-   language the pack is solved in, `reference/solution.go`
+   language the pack is solved in (`reference/solution.go`,
+   `reference/solution.cpp` or `reference/Solution.java`)
    ([Reference solutions](#reference-solutions)). If more than one output
    is acceptable, make the Go one return a different valid answer.
 4. For `checker`, write `checker.py` ([Checkers](#checkers)).

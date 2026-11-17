@@ -171,7 +171,9 @@ The statement users read in the TUI with `hc show <slug>`. Use
 - Start with `# <id>. <title>` (`# <title>` without an id), then the
   statement, the examples and the constraints, as LeetCode shows them.
 - Images go in the problem's `assets/` directory and are linked by relative
-  path, `![](assets/example1.png)`. Never link remote images: hc works
+  path, `![](assets/example1.png)`. Keep diagrams in their explanatory
+  position, including those inside preformatted examples; put image links
+  outside Markdown code fences so they render. Never link remote images: hc works
   offline.
 - **Write an hc note wherever hc's format differs from the statement's**,
   so the user knows what their output is compared with. Put it after the
@@ -193,7 +195,7 @@ The statement users read in the TUI with `hc show <slug>`. Use
 ### Statements in several locales
 
 A pack may declare `locales` (`[en, zh-CN]`; for the workspace's own
-problems, `locales` in `hc.yaml`, `[en]` when unset). Read
+problems, `locales` in `packs/local/pack.yaml`, initially `[en]`). Read
 `hc docs protocol locales`. `description.md` and `title` are in the first,
 the default locale; every other locale has `description.<locale>.md` and
 `titles.<locale>` in problem.yaml.
@@ -213,14 +215,24 @@ the default locale; every other locale has `description.<locale>.md` and
 
 ## Templates
 
-`templates/solution.go` and `templates/solution.py` are optional: without
+`templates/solution.go`, `templates/solution.py`, `templates/solution.c`,
+`templates/solution.cpp`, `templates/solution.js`, `templates/solution.ts`,
+and `templates/Solution.java` are optional: without
 them hc generates the starter from the signature. When the problem is on
 LeetCode, use LeetCode's templates.
 
 - A template must keep the signature exactly (names, parameter order,
   types), because the driver calls it.
 - LeetCode's templates can be copied as they are: hc adds `package main` to
-  a Go template that lacks it, and its import header to a Python one.
+  a Go template that lacks it, and its import header to a Python one. C++
+  templates keep their native class signatures; hc provides headers and
+  judge-defined types without changing the solution source.
+- C templates preserve native functions and size arguments. Read
+  `hc docs protocol c-language` for explicit class bindings and hc extensions.
+  Do not insert hc runtime headers or `main`.
+- Java keeps native array/List signatures, adds its standard import block,
+  and removes public visibility from a non-Solution top-level design class
+  to allow the uniform Solution.java filename. Target Java 17.
 - Do not declare types hc predefines (`ListNode`, `TreeNode`, `Node`,
   `NestedInteger`, `Employee`); keep LeetCode's comment that shows them.
   Read `hc docs protocol solution-abi` for what each language provides.
@@ -258,8 +270,9 @@ LeetCode, use LeetCode's templates.
 not. Read them if you ran it. Then check:
 
 1. **The signature matches the templates.** Compare `function` (or
-   `class`) in problem.yaml with `templates/solution.go` and
-   `templates/solution.py`: names, order and types of the parameters. For
+   `class`) in problem.yaml with every available native template: Go,
+   Python, C, C++, Java, JavaScript and TypeScript. Check names, parameter
+   order and types, including C pointer/size arguments and `c` bindings. For
    LeetCode's judge-defined types hc reads the signature from the Go
    template; check that the `Node` type matches the struct's fields
    ([LeetCode's Node types](#leetcodes-node-types)).
@@ -271,6 +284,9 @@ not. Read them if you ran it. Then check:
    `instances` against the template's comment. Keep `judge.output` and
    `output_length`.
 4. **Examples.** Open `cases.jsonl`:
+   - check warnings about unparsed statement inputs against the statement;
+     keep each example input with its own output, never pair API inputs and
+     statement outputs by position;
    - fill the example outputs it left empty, in hc's encoding: outputs the
      statement writes in another form, such as a `returns_ref` output
      (142's `tail connects to node index 1` is `1`; 160's
@@ -289,6 +305,28 @@ not. Read them if you ran it. Then check:
 
 Never run `hc fetch --force` on a problem that exists: it replaces the
 directory and keeps nothing, cases and references included.
+
+## Workflow: backfill native templates
+
+In a writable pack checkout or for a workspace's own problems, preview with
+`hc fetch --templates-only --site cn --lang c,cpp,java,js,ts --dry-run <slug>...`,
+then apply the same command without `--dry-run`. Omit `--lang` for all supported
+languages. Do not use an installed read-only pack or `--force`.
+
+The command adds only missing native templates and compatible missing C
+bindings. It preserves references, cases, generators/checkers, statements,
+assets, identity, shared signatures, judge rules and pack configuration.
+Review conflicts before continuing: differing existing templates are kept,
+and any template/signature/binding conflict blocks the whole problem's update.
+Unavailable snippets are reported separately from API failures; never invent
+starter code and present it as a native LeetCode template. Independent problems
+in a batch may succeed even when another fails. Repeating a successful migration
+is safe. A preview leaves problem content unchanged.
+
+After migration, review the native ABI as above, especially NestedIterator's
+C symbols and stateless serialize/deserialize bindings. New reference solutions
+and their validation belong to `hc-cases`; do not enable additional
+`pack.yaml` languages merely because their templates are now present.
 
 ## Workflow: fix a problem's definition
 
