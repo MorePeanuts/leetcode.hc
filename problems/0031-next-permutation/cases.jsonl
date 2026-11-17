@@ -1,0 +1,32 @@
+{"input":{"nums":[1,2,3]},"expected":[1,3,2],"example":true}
+{"input":{"nums":[3,2,1]},"expected":[1,2,3],"example":true}
+{"input":{"nums":[1,1,5]},"expected":[1,5,1],"example":true}
+{"input":{"nums":[0]},"expected":[0],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [0]"}
+{"input":{"nums":[100]},"expected":[100],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [100]"}
+{"input":{"nums":[1,2]},"expected":[2,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 2]"}
+{"input":{"nums":[2,1]},"expected":[1,2],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 1]"}
+{"input":{"nums":[1,1]},"expected":[1,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 1]"}
+{"input":{"nums":[0,100]},"expected":[100,0],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [0, 100]"}
+{"input":{"nums":[100,0]},"expected":[0,100],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [100, 0]"}
+{"input":{"nums":[1,5,1]},"expected":[5,1,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 5, 1]"}
+{"input":{"nums":[2,2,1]},"expected":[1,2,2],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 2, 1]"}
+{"input":{"nums":[2,1,2]},"expected":[2,2,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 1, 2]"}
+{"input":{"nums":[1,3,2]},"expected":[2,1,3],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 3, 2]"}
+{"input":{"nums":[2,3,1]},"expected":[3,1,2],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 3, 1]"}
+{"input":{"nums":[3,1,2]},"expected":[3,2,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [3, 1, 2]"}
+{"input":{"nums":[1,2,3,6,5,4]},"expected":[1,2,4,3,5,6],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 2, 3, 6, 5, 4]"}
+{"input":{"nums":[2,3,3,2,1]},"expected":[3,1,2,2,3],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 3, 3, 2, 1]"}
+{"input":{"nums":[0,0,1,0]},"expected":[0,1,0,0],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [0, 0, 1, 0]"}
+{"input":{"nums":[1,4,3,3,2]},"expected":[2,1,3,3,4],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 4, 3, 3, 2]"}
+{"input":{"nums":[2,2,3,3]},"expected":[2,3,2,3],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 2, 3, 3]"}
+{"input":{"nums":[3,3,2,2]},"expected":[2,2,3,3],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [3, 3, 2, 2]"}
+{"input":{"nums":[0,100,100,0]},"expected":[100,0,0,100],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [0, 100, 100, 0]"}
+{"input":{"nums":[5,5,5,5,5,5,5,5,5]},"expected":[5,5,5,5,5,5,5,5,5],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [5, 5, 5, 5, 5, 5, 5, 5, 5]"}
+{"input":{"nums":[1,0,1,0,1]},"expected":[1,0,1,1,0],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 0, 1, 0, 1]"}
+{"input":{"nums":[0,2,1,2,1,0]},"expected":[0,2,2,0,1,1],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [0, 2, 1, 2, 1, 0]"}
+{"input":{"nums":[5,4,7,5,3,2]},"expected":[5,5,2,3,4,7],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [5, 4, 7, 5, 3, 2]"}
+{"input":{"nums":[1,9,8,7,6,5,4,3,2]},"expected":[2,1,3,4,5,6,7,8,9],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 9, 8, 7, 6, 5, 4, 3, 2]"}
+{"input":{"nums":[2,4,3,1]},"expected":[3,1,2,4],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [2, 4, 3, 1]"}
+{"input":{"nums":[1,2,2,1]},"expected":[2,1,1,2],"note":"Pivot/successor and suffix boundaries; duplicates and wraparound: [1, 2, 2, 1]"}
+{"generate":{"name":"descending","args":{"n":100}},"digest":"sha256:7587398a0905aa1ea3e12778065cfb3ead6124c6b7eb9c8dc8f63cff024eb0af","note":"Maximum length: reverse the whole descending permutation"}
+{"generate":{"name":"repeated_suffix","args":{"n":100}},"digest":"sha256:4a1bb9e470b3ed97a6b023806a7f4f7d58e5c181d332b41db2bf58bec7bf5249","note":"Maximum length: pivot at first position with repeated successors"}

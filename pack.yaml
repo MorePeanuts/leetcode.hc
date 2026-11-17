@@ -63,6 +63,7 @@ groups:
       - sort-colors
       - merge-sorted-array
       - squares-of-a-sorted-array
+      - next-permutation
   - name: sliding-window
     title: Sliding Window
     problems:
