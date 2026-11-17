@@ -60,12 +60,28 @@ decide; do not do it on your own.
    a statement and a title in every locale ([Locales](#locales)).
 5. Land one problem per commit (or pull request), whose message names the
    problem, with its group changes in the same commit. Commit only the pack's
-   files: `pack.yaml` and `problems/<dir>/`, never `solutions/`, `.hc/`,
+   files: `pack.yaml` and `problems/<dir>/`, never `solutions/`, `groups/`, `.hc/`,
    `hc.yaml`, `pyrightconfig.json` or `ty.toml`.
 
 To fix a problem that has landed, use `hc-problem` or `hc-cases` the same
 way, then `hc pack check`. Fixing cases, a reference or a statement is not
 breaking; changing a signature is, since users' solutions must follow it.
+
+To extend an existing curated pack to more languages, first follow
+`hc-problem`'s native-template backfill workflow:
+`hc fetch --templates-only --site cn --lang c,cpp,java,js,ts --dry-run <slug>...`,
+then apply without `--dry-run` after reviewing conflicts. This preserves the
+curated content and only adds native templates and compatible C bindings.
+It does not write references or change `pack.yaml`. Use `hc-cases` to write
+and validate references for each new language before enabling it in the pack,
+then run `hc pack check`. Never use `hc fetch --force` for this migration.
+
+If a toolchain prevents validation, `hc doctor --lang <language>` (Go,
+Python, C, C++, Java, JavaScript or TypeScript) reports its configured executable and version
+without setting up environments or changing the workspace. Report missing
+tools to the user; hc does not install Go or Delve. Python's managed
+environment still uses `hc env sync`, which recreates it. Tool paths belong
+in the checkout's personal `hc.yaml`, never in `pack.yaml`.
 
 ## Locales
 
@@ -87,8 +103,15 @@ pack.yaml; the first is the default, the language of `description.md` and
 
 ## Groups
 
-Groups only arrange the problems for display (`hc list --group <name>`).
-Read `hc docs protocol groups`.
+Pack groups in `pack.yaml` arrange problems for display
+(`hc list --group pack:<name>`). Read `hc docs protocol groups`.
+
+Personal review lists are separate: `hc group` manages `groups/<pack>.yaml`,
+even in a pack checkout. These files are not published pack content, and
+personal groups may retain missing references after an update. For pack
+maintenance, edit the groups in `pack.yaml`; do not use `hc group` to change
+them. A practitioner can use `hc group copy pack:<name> <personal-name>`
+to customize a snapshot without editing the manifest.
 
 - **A new problem** goes into every group whose topic it fits, possibly
   none. Keep the order the group follows (difficulty, a study plan's
@@ -107,7 +130,7 @@ Read `hc docs protocol groups`.
 
 Removing a problem is a breaking change: users lose it from the pack, and
 their solutions to it stay behind. Do it only when asked. `hc rm <slug> --yes`
-deletes its directory and removes its slug from every group; note it for the
+deletes its directory and removes its slug from every pack group; note it for the
 next release, and never reuse the slug ([Identity](#identity-never-rename-never-reuse)).
 Removing a language from `languages` is breaking too.
 
