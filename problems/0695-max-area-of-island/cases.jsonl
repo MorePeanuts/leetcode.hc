@@ -30,3 +30,4 @@
 {"generate":{"name":"snake","args":{"m":49,"n":50}},"digest":"sha256:2b5443adf90b794795155bbadd9d2f860f02caf04a10c4362ae8770a48a4a759","note":"Long winding island; avoid recursive depth assumptions"}
 {"input":{"grid":[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]},"expected":50,"note":"Maximum width single row"}
 {"input":{"grid":[[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1]]},"expected":50,"note":"Maximum height single column"}
+{"generate":{"name":"all_land","args":{"m":49,"n":50},"seed":205},"digest":"sha256:94c539416d12613ef6f2d7ba3345e0501fa8135ae8a88f18b69b99bf2e9eecd9","note":"A single rectangular island requires visiting every cell."}
