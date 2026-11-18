@@ -16,3 +16,8 @@ def equal_values(rng, n):
     # n nodes of one value with random pointers: only the nodes' positions
     # tell the pointers apart.
     return {"head": [[5, rng.randint(0, n - 1)] for _ in range(n)]}
+
+
+def shared_tail_target(rng, n):
+    # Every lookup by walking from the head must traverse the entire list.
+    return {"head": [[value, n - 1] for value in range(n)]}
