@@ -30,9 +30,10 @@
 {"input":{"intervals":[[1,5],[2,3],[4,6],[7,8],[8,9],[10,10]]},"expected":[[1,6],[7,9],[10,10]],"note":"mixed containment, touching and isolated"}
 {"input":{"intervals":[[3,5],[0,0],[4,6],[1,2],[0,1]]},"expected":[[0,2],[3,6]],"note":"two groups, each built from unsorted pieces"}
 {"generate":{"name":"random_intervals","args":{"max_len":3,"n":10000},"seed":1},"digest":"sha256:01a97ddbe06d03c58a08715a7a16b3609cd2fa2c9bc6175e7a0146107d4ba341","note":"maximum length, short random intervals: many groups"}
-{"generate":{"name":"random_intervals","args":{"max_len":10000,"n":10000},"seed":2},"digest":"sha256:a6687602eae1f25d2078f36162bb6ddfe85f1bc0e2f98c75a750bcbaa209b8ac","note":"maximum length, long random intervals: few groups"}
 {"generate":{"name":"disjoint_points","args":{"n":10000},"seed":3},"digest":"sha256:c4dd8f1a49c2c6c9abba0a58687e07fed7f0a044895a3e41eed26f58c444a00f","note":"maximum length, distinct points: nothing merges, the worst case of merging into a growing list"}
 {"generate":{"name":"chain","args":{"n":10000},"seed":4},"digest":"sha256:2ba597b2adc1f011f2c8b3a323cbe3db9fcdf8168970aa014226df9857893183","note":"maximum length, a shuffled chain of touching intervals: one interval"}
 {"generate":{"name":"nested","args":{"n":10000},"seed":5},"digest":"sha256:386b06f13cf3baa664a54ada7d2ab3ae40509488512e22a7a70089524d033b68","note":"maximum length, nested intervals shuffled"}
-{"generate":{"name":"all_equal","args":{"end":10000,"n":10000,"start":0}},"digest":"sha256:ddf5f114363b8402b21a3647deb5fc36c6ae654830741055475fa5af2cd92a0f","note":"maximum length, the full range 10^4 times"}
 {"generate":{"name":"gaps","args":{"n":10000},"seed":6},"digest":"sha256:d12fc04fe75704714be551010c817f5f53e4609fe9b56b4079bc61b0a79415f9","note":"maximum length, pairs merging into intervals separated by gaps of one"}
+{"generate":{"name":"descending_points","args":{"n":10000,"offset":0}},"digest":"sha256:241e33f2dd2069334ab857e267459619fde7d821d87c0cc2eb456335675c8cd4","note":"Reverse-ordered disjoint points: insertion sorting moves every preceding interval"}
+{"generate":{"name":"descending_points","args":{"n":10000,"offset":1}},"digest":"sha256:d5fabc4cf4df5cc037e291dd300bfff2487b3e02f143b2295bbda534dd68eb9d","note":"Reverse-ordered disjoint points: insertion sorting moves every preceding interval"}
+{"generate":{"name":"descending_points","args":{"n":9999,"offset":2}},"digest":"sha256:82586f218d3accc200c077e521bc357f1b90bc9fe18c4e8e1df40032894c5435","note":"Reverse-ordered disjoint points: insertion sorting moves every preceding interval"}

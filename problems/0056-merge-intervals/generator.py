@@ -45,3 +45,8 @@ def gaps(rng, n):
         out.append([a + 1, a + 1])
     rng.shuffle(out)
     return {"intervals": out}
+
+
+def descending_points(rng, n, offset=0):
+    # Distinct points cannot merge; reverse order shifts the whole sorted prefix.
+    return {"intervals": [[i + offset, i + offset] for i in range(n - 1, -1, -1)]}
