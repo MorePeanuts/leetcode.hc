@@ -30,3 +30,4 @@
 {"generate":{"name":"chain","args":{"n":2000,"side":"right"},"seed":105},"digest":"sha256:3791487e0c8a10b62c3feb4ede37eab8f025ecbefa585c15aa9fd8dd2e718f54","note":"maximum right depth"}
 {"generate":{"name":"chain","args":{"n":2000,"side":"alternating"},"seed":106},"digest":"sha256:dfa81aac13f6f0d02e6c1653cdd07a36b03c0a181bdccd956c38275f518e382b","note":"maximum alternating chain"}
 {"generate":{"name":"sparse","args":{"n":2000},"seed":107},"digest":"sha256:5416b69450fdfe36f18be97eb58a4667bbbd36007b07d4e343e485b5d4dcb222","note":"maximum sparse breadth"}
+{"generate":{"name":"chain","args":{"n":1999,"side":"alternating"},"seed":117},"digest":"sha256:5b2ee40df24397d7800729e0d3020fbd3c2521c997867bcf6a17ad5a4810a1f3","note":"Near-maximum alternating depth: repeated DFS for each output level"}
