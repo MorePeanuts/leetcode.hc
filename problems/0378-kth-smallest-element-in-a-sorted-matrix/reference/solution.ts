@@ -1,28 +1,22 @@
 function kthSmallest(matrix: number[][], k: number): number {
-    const heap: { value: number; row: number; column: number }[] = [];
-    for (let row = 0; row < Math.min(matrix.length, k); row++) {
-        heap.push({ value: matrix[row][0], row, column: 0 });
-    }
-    function down(i: number) {
-        const root = heap[i];
-        for (let child = 2 * i + 1; child < heap.length; child = 2 * i + 1) {
-            if (child + 1 < heap.length && heap[child + 1].value < heap[child].value) child++;
-            if (root.value <= heap[child].value) break;
-            heap[i] = heap[child];
-            i = child;
+    const n = matrix.length;
+    let lo = matrix[0][0];
+    let hi = matrix[n - 1][n - 1];
+    while (lo < hi) {
+        const mid = lo + Math.floor((hi - lo) / 2);
+        let count = 0;
+        let row = n - 1;
+        let column = 0;
+        while (row >= 0 && column < n) {
+            if (matrix[row][column] <= mid) {
+                count += row + 1;
+                column++;
+            } else {
+                row--;
+            }
         }
-        heap[i] = root;
+        if (count < k) lo = mid + 1;
+        else hi = mid;
     }
-    for (let i = Math.floor(heap.length / 2) - 1; i >= 0; i--) down(i);
-    for (let i = 1; i < k; i++) {
-        const root = heap[0];
-        const column = root.column + 1;
-        if (column < matrix.length) {
-            heap[0] = { value: matrix[root.row][column], row: root.row, column };
-        } else {
-            heap[0] = heap.pop()!;
-        }
-        down(0);
-    }
-    return heap[0].value;
+    return lo;
 }

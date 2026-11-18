@@ -1,19 +1,24 @@
-import java.util.Comparator;
-import java.util.PriorityQueue;
-
 class Solution {
-    private record Entry(int value, int row, int column) {}
-
     public int kthSmallest(int[][] matrix, int k) {
-        PriorityQueue<Entry> heap = new PriorityQueue<>(Comparator.comparingInt(Entry::value));
-        for (int row = 0; row < Math.min(matrix.length, k); row++)
-            heap.add(new Entry(matrix[row][0], row, 0));
-        for (int i = 1; i < k; i++) {
-            Entry root = heap.remove();
-            int column = root.column() + 1;
-            if (column < matrix.length)
-                heap.add(new Entry(matrix[root.row()][column], root.row(), column));
+        int n = matrix.length;
+        int lo = matrix[0][0];
+        int hi = matrix[n - 1][n - 1];
+        while (lo < hi) {
+            int mid = lo + (int)(((long)hi - lo) / 2);
+            int count = 0;
+            int row = n - 1;
+            int column = 0;
+            while (row >= 0 && column < n) {
+                if (matrix[row][column] <= mid) {
+                    count += row + 1;
+                    column++;
+                } else {
+                    row--;
+                }
+            }
+            if (count < k) lo = mid + 1;
+            else hi = mid;
         }
-        return heap.element().value();
+        return lo;
     }
 }
