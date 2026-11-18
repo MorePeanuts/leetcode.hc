@@ -19,3 +19,11 @@ def shuffled_groups(rng, n, groups, length):
         rng.shuffle(s)
         strs.append("".join(s))
     return {"strs": strs}
+
+
+def distinct_signatures(rng, n):
+    from itertools import combinations_with_replacement, islice
+
+    # Common prefixes, but every four-letter suffix has a distinct frequency signature.
+    suffixes = combinations_with_replacement("bcdefghijklmnopqrstuvwxyz", 4)
+    return {"strs": ["aaaaaa" + "".join(s) for s in islice(suffixes, n)]}
