@@ -31,3 +31,5 @@
 {"generate":{"name":"dead_end","args":{"n":10000},"seed":42},"digest":"sha256:20ceb86070c90fba60b12a804ce0dc6b902bac31fdba347c8380f11c6b6b31a8","note":"Maximum branching choices all stop one cell too early"}
 {"generate":{"name":"single_steps","args":{"n":10000},"seed":42},"digest":"sha256:3f45e2299667986c485d329893719afbe968bf38dccfb27ec03992df2b6df547","note":"Maximum depth with only single-step route"}
 {"generate":{"name":"alternating","args":{"n":10000},"seed":42},"digest":"sha256:92ac102763fe9cd40b6235aea013e38e0e9fd53998ae546d910afc4e60a366c1","note":"Maximum alternating zero barriers"}
+{"generate":{"name":"single_step_tail","args":{"n":10000,"tail":1}},"digest":"sha256:fd5f8888fa46a5a07c8823e70635a57883bbb064aae773d42287a87d85ce6ca8","note":"Maximum single-step route with a different final jump: quadratic predecessor scan"}
+{"generate":{"name":"single_step_tail","args":{"n":10000,"tail":100000}},"digest":"sha256:b68b46e9c32f94f47c4a0911a47e3d5c5104da379f72b3aaa5f2d4bea99dbbf9","note":"Maximum single-step route with a different final jump: quadratic predecessor scan"}
