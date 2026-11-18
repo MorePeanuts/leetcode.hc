@@ -12,3 +12,4 @@
 {"generate":{"name":"draws","args":{"calls":10000,"mode":"alternating","n":10000},"seed":528},"digest":"sha256:d568e743730480541f90fd52db1f0b76df1c0bc622666e12506931b0d9c8e3ce","note":"Maximum-scale alternating weights; repeated draws"}
 {"generate":{"name":"draws","args":{"calls":10000,"mode":"ramp","n":10000},"seed":528},"digest":"sha256:242a83ad5a19c04b5df0b889be995535c609917a5c86b7626f6f7bd3f756f778","note":"Maximum-scale ramp weights; repeated draws"}
 {"generate":{"name":"draws","args":{"calls":10000,"mode":"random","n":9999},"seed":528},"digest":"sha256:d42ca2774e2073d9c652b429300e5e1043218f62489d8e39c0e6cc76c315e000","note":"Maximum-scale random weights; repeated draws"}
+{"generate":{"name":"draws","args":{"calls":10000,"mode":"last-heavy","n":9999},"seed":205},"digest":"sha256:3e391bdf20f476861306590b34463cca034ec3f54da4139a30f047c4ee9cfbee","note":"Almost all selections reach the last index in a long prefix scan."}
