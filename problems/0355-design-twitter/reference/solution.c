@@ -10,7 +10,11 @@ typedef struct Tweet {
 typedef struct {
     int time;
     Tweet* tweets[501];
-    bool following[501][501];
+    // Store a compact set of followees per user. Positions are one-based,
+    // so zero means absent and swap-removal takes constant time.
+    int position[501][501];
+    int followed[501][500];
+    int count[501];
 } Twitter;
 
 Twitter* twitterCreate(void) {
@@ -37,9 +41,11 @@ static void siftDown(Tweet** heap, int size, int i) {
 int* twitterGetNewsFeed(Twitter* obj, int userId, int* returnSize) {
     Tweet* heap[500];
     int size = 0;
-    for (int user = 1; user <= 500; user++)
-        if ((user == userId || obj->following[userId][user]) && obj->tweets[user])
-            heap[size++] = obj->tweets[user];
+    if (obj->tweets[userId]) heap[size++] = obj->tweets[userId];
+    for (int i = 0; i < obj->count[userId]; i++) {
+        int user = obj->followed[userId][i];
+        if (user != userId && obj->tweets[user]) heap[size++] = obj->tweets[user];
+    }
     for (int i = size / 2 - 1; i >= 0; i--) siftDown(heap, size, i);
     int* result = malloc(10 * sizeof(*result));
     *returnSize = 0;
@@ -54,11 +60,22 @@ int* twitterGetNewsFeed(Twitter* obj, int userId, int* returnSize) {
 }
 
 void twitterFollow(Twitter* obj, int followerId, int followeeId) {
-    obj->following[followerId][followeeId] = true;
+    if (followerId == followeeId) return;
+    if (!obj->position[followerId][followeeId]) {
+        int i = obj->count[followerId]++;
+        obj->followed[followerId][i] = followeeId;
+        obj->position[followerId][followeeId] = i + 1;
+    }
 }
 
 void twitterUnfollow(Twitter* obj, int followerId, int followeeId) {
-    obj->following[followerId][followeeId] = false;
+    int p = obj->position[followerId][followeeId];
+    if (p) {
+        int last = obj->followed[followerId][--obj->count[followerId]];
+        obj->followed[followerId][p - 1] = last;
+        obj->position[followerId][last] = p;
+        obj->position[followerId][followeeId] = 0;
+    }
 }
 
 void twitterFree(Twitter* obj) {
