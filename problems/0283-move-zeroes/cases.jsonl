@@ -30,3 +30,4 @@
 {"input":{"nums":[9,8,7,6,5,4,3,2,1]},"expected":[9,8,7,6,5,4,3,2,1],"note":"Stable order, adjacent zeros, repeated values and signed integer limits"}
 {"generate":{"name":"leading_zeroes","args":{"n":10000}},"digest":"sha256:71ba5392044e1a32db80dee31b3720c09ecf17f3e0c5502e86d5129af84432f2","note":"Maximum length: reject quadratic shifting of zeros"}
 {"generate":{"name":"alternating","args":{"n":10000}},"digest":"sha256:c97c3360d92c9c88c22215b4fbbb7e75cbb23a516855962026dd0b4298df0a71","note":"Maximum length: reject quadratic shifting of zeros"}
+{"generate":{"name":"leading_zeroes","args":{"n":9999},"seed":205},"digest":"sha256:cfe264dd0b482b7730a8c9c86cbad70c70cf27da181996d540ed7ef25f12dbe1","note":"Odd length with a long leading zero block tests stable compaction."}
