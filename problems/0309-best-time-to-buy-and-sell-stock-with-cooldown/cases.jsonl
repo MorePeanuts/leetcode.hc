@@ -30,3 +30,4 @@
 {"generate":{"name":"oscillating","args":{"n":5000},"seed":41},"digest":"sha256:1548eac0ad701c08e1ee2bf3d0c6d1747bb0f61595d5807118f07e36c30b27ce","note":"maximum length with repeated buy/sell/cooldown"}
 {"generate":{"name":"varied","args":{"n":5000},"seed":41},"digest":"sha256:b9e0581e747755003502dfa9fe3862af8c390553e429f0b4c8424a5018fe20f9","note":"maximum length irregular transitions"}
 {"generate":{"name":"oscillating","args":{"n":4999},"seed":41},"digest":"sha256:2442a23bf3662eec4bd101dbd845a145d74d4f1d91a3d98d915027656aca812f","note":"unfinished final cycle"}
+{"generate":{"name":"oscillating","args":{"n":4998},"seed":205},"digest":"sha256:21ce2b879810d25ddf459bc77deca7f872a52ff4d35d75f100f1573f20e142d5","note":"Long alternating prices exercise repeated examination of trading intervals."}
