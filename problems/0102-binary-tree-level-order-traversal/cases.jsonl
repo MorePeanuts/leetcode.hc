@@ -23,5 +23,6 @@
 {"generate":{"name":"chain","args":{"n":2000,"shape":"right"},"seed":2},"digest":"sha256:8f3a3b13067a455bfa2a81b22ac119bae071c163e4507342553b5e06f17d3d84","note":"a right-skewed path of 2000 nodes"}
 {"generate":{"name":"chain","args":{"n":2000,"shape":"zigzag"},"seed":3},"digest":"sha256:4f55a704ce3f0599ad016680fa31b682a48700cff8b054146de90b83d1d3a8ba","note":"a zigzag path of 2000 nodes"}
 {"generate":{"name":"complete","args":{"n":2000},"seed":4},"digest":"sha256:992594e3b09ae4743bb3592f3365a6732fd83db922320923d493760f15e0922e","note":"a complete tree of 2000 nodes"}
-{"generate":{"name":"random_shape","args":{"n":2000},"seed":5},"digest":"sha256:dc0483e2bee634a4bd77ea49e7c6741494a469e0b994553a7a8bc9ba648aab82","note":"a random tree of 2000 nodes"}
+{"generate":{"name":"chain","args":{"n":1999,"shape":"left"},"seed":17},"digest":"sha256:4fd5d57966402cbba6132d7e5f2310410c29662206bac305537050a8e850b652","note":"Near-maximum left chain: repeated depth-limited traversal"}
 {"generate":{"name":"comb","args":{"depth":1000,"n":2000},"seed":6},"digest":"sha256:8cc8bda695c3b5fc758abc4ecef34d7719c80e47614cb60b258829bbfa1a4930","note":"a complete tree of 1000 nodes with a 1000-node path below its last leaf"}
+{"generate":{"name":"chain","args":{"n":1999,"shape":"zigzag"},"seed":18},"digest":"sha256:949c9dc57a04bda90c7d12daf795d97e07e95c2f6ffebaef522c82491413623c","note":"Near-maximum alternating chain: repeated depth-limited traversal"}
