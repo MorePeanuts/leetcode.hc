@@ -31,3 +31,4 @@
 {"generate":{"name":"paired","args":{"n":30000}},"digest":"sha256:b5cc97cab3aa131000e9626462f192e773555ecd6d3da6a60c9c3b039d276ec3","note":"Maximum sorted length: paired"}
 {"generate":{"name":"all_equal","args":{"n":30000}},"digest":"sha256:51fc5d15ca02927f7b06497fb2fe795f88eca8e0da4a91134b448c99bbbe5542","note":"Maximum sorted length: all_equal"}
 {"generate":{"name":"tripled","args":{"n":30000}},"digest":"sha256:f8b0adc4db3158728b7a1e8cab0b66652c20574b4e67a57e8936f2eb6f9a110d","note":"Maximum sorted length: tripled"}
+{"generate":{"name":"all_equal","args":{"n":29999},"seed":205},"digest":"sha256:66103d334d6a1ea7ea29b1fef10dcaa551f03dbdee699b6f75f606f78d601772","note":"One long duplicate run forces repeated shifts in deletion-based solutions."}
