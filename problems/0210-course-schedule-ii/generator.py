@@ -11,3 +11,10 @@ def wide_dag(rng, n, width):
 
 def independent(rng, n):
     return {"numCourses":n,"prerequisites":[]}
+
+
+def dense_dag(rng, n, width):
+    # Unique prerequisite pairs follow the numeric topological order.
+    edges = [[i, j] for i in range(n)
+             for j in range(max(0, i - width), i)]
+    return {"numCourses": n, "prerequisites": edges}

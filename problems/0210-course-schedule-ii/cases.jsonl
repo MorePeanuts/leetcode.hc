@@ -31,3 +31,4 @@
 {"generate":{"name":"chain","args":{"cyclic":true,"n":2000}},"digest":"sha256:d4f54f575b7db88258d24aa6b742905d9b06bdc7ff810f846ceadd6dc0751b55","note":"Long cycle"}
 {"generate":{"name":"wide_dag","args":{"n":2000,"width":30}},"digest":"sha256:90ad03632205333271c33da736de26f4b08f6efb54f2b1fbadeb2ad4237b90e1","note":"Many edges; avoid rescanning all prerequisites per vertex"}
 {"generate":{"name":"independent","args":{"n":2000}},"digest":"sha256:fc91072d47c43ab394198455371dc6b04139fbb4d6acb05cffcb10f655a0b805","note":"Maximum number of valid ordering choices"}
+{"generate":{"name":"dense_dag","args":{"n":2000,"width":150},"seed":210},"digest":"sha256:5421c9086c82d75c792bec002558986ada1d3d486da7fbec4c62594fafad4771","note":"Maximum course count, each node depends on up to 150 earlier nodes; dense DAG targets repeated whole-edge scans"}
