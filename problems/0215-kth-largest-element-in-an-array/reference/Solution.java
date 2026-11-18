@@ -1,17 +1,11 @@
-import java.util.PriorityQueue;
-
 class Solution {
     public int findKthLargest(int[] nums, int k) {
-        PriorityQueue<Integer> heap = new PriorityQueue<>(k);
-        for (int i = 0; i < k; i++) {
-            heap.add(nums[i]);
+        int[] counts = new int[20001];
+        for (int value : nums) counts[value + 10000]++;
+        for (int value = 20000; value >= 0; value--) {
+            k -= counts[value];
+            if (k <= 0) return value - 10000;
         }
-        for (int i = k; i < nums.length; i++) {
-            if (nums[i] > heap.peek()) {
-                heap.remove();
-                heap.add(nums[i]);
-            }
-        }
-        return heap.peek();
+        return 0;
     }
 }
