@@ -57,7 +57,9 @@ def _parents_depths(left, right):
 def _case(rng, left, right, pick):
     # pick: "deepest" (the deepest node and its parent, the answer at the
     # bottom), "root" (the root and the deepest node), "leaves" (two random
-    # leaves), "random" (two random nodes).
+    # leaves), "random" (two random nodes). Balanced trees with at least seven
+    # nodes also support "split_root" and "split_left": distant descendants
+    # on opposite sides of the root or its left child.
     vals = _bst_values(rng, left, right)
     parent, depth, order = _parents_depths(left, right)
     n = len(left)
@@ -71,6 +73,13 @@ def _case(rng, left, right, pick):
         if len(leaves) < 2:
             raise ValueError("fewer than two leaves")
         a, b = rng.sample(leaves, 2)
+    elif pick in ("split_root", "split_left"):
+        split = 0 if pick == "split_root" else left[0]
+        a, b = left[split], right[split]
+        while left[a] >= 0:
+            a = left[a]
+        while right[b] >= 0:
+            b = right[b]
     elif pick == "random":
         a, b = rng.sample(range(n), 2)
     else:
