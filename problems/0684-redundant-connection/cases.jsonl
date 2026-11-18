@@ -31,3 +31,4 @@
 {"generate":{"name":"chain","args":{"n":1000}},"digest":"sha256:819385f94394d0d47dc7988ddb1eeaee3a8a3922a5f946ed1f55fcc2f81c4b6e","note":"Maximum chain; incremental DFS repeatedly traverses growing component"}
 {"generate":{"name":"chain","args":{"n":1000,"shuffle":true},"seed":684},"digest":"sha256:384537777a6499a865848712a877f554c053016ea424b99f7c855995b03cd518","note":"Maximum shuffled simple cycle"}
 {"generate":{"name":"star","args":{"n":1000},"seed":684},"digest":"sha256:beb810937f1104270e4180c5e993c93bc8d06e674d79de775821f616bd2fabe9","note":"Maximum degree with cycle among leaves"}
+{"generate":{"name":"ordered_star","args":{"n":1000},"seed":205},"digest":"sha256:4d7b61d0d687438946aa35279cbd3aa434a54b329a590f284552919b9776d2fc","note":"A closing edge between the last two leaves of a maximum-size star."}
