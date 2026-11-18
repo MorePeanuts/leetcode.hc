@@ -32,3 +32,4 @@
 {"generate":{"name":"quotes","args":{"n":10000,"shape":"equal"},"seed":7},"digest":"sha256:f461feb30d1040e45b8cb30aea6b6094cc87001e16c9e96c99804fca3a339686","note":"Maximum calls with equal prices and expanding spans"}
 {"generate":{"name":"quotes","args":{"n":10000,"shape":"plateaus"},"seed":7},"digest":"sha256:fb979e7bef85cde3d570d568514cfb9aad934c6df6ea576194991829b2d2b881","note":"Maximum repeated plateaus require inclusive comparison"}
 {"generate":{"name":"quotes","args":{"n":10000,"shape":"decreasing"},"seed":7},"digest":"sha256:1581d963b101c231990863f3e09440d854fc79a801d31be5eceb9d27c10cc5b6","note":"Maximum persistent monotonic stack size"}
+{"generate":{"name":"quotes","args":{"n":9999,"shape":"increasing"},"seed":205},"digest":"sha256:27de3c0ae4b2a9999c3f11fd02de1cb84ac8ec953141dbbd35085dd1ae096028","note":"Long increasing sequence repeatedly spans the full history."}
