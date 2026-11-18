@@ -1,28 +1,25 @@
-#include <algorithm>
-#include <queue>
-#include <vector>
-
 class Solution {
-    struct Entry {
-        int value;
-        int row;
-        int column;
-
-        bool operator<(const Entry& other) const { return value > other.value; }
-    };
-
 public:
-    int kthSmallest(std::vector<std::vector<int>>& matrix, int k) {
+    int kthSmallest(vector<vector<int>>& matrix, int k) {
         int n = static_cast<int>(matrix.size());
-        std::priority_queue<Entry> heap;
-        for (int row = 0; row < std::min(n, k); row++)
-            heap.push({matrix[row][0], row, 0});
-        for (int i = 1; i < k; i++) {
-            Entry root = heap.top();
-            heap.pop();
-            int column = root.column + 1;
-            if (column < n) heap.push({matrix[root.row][column], root.row, column});
+        int lo = matrix[0][0];
+        int hi = matrix[n - 1][n - 1];
+        while (lo < hi) {
+            int mid = lo + static_cast<int>((static_cast<long long>(hi) - lo) / 2);
+            int count = 0;
+            int row = n - 1;
+            int column = 0;
+            while (row >= 0 && column < n) {
+                if (matrix[row][column] <= mid) {
+                    count += row + 1;
+                    column++;
+                } else {
+                    row--;
+                }
+            }
+            if (count < k) lo = mid + 1;
+            else hi = mid;
         }
-        return heap.top().value;
+        return lo;
     }
 };
