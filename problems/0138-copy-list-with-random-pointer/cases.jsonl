@@ -17,3 +17,4 @@
 {"generate":{"name":"random_list","args":{"n":1000,"nulls":20},"seed":1},"digest":"sha256:00254ddbd5f70896da54a0365015deb95faf1a9338d64d43ce913f2f9b675fd8","note":"1000 nodes, random pointers, a fifth of them null"}
 {"generate":{"name":"random_list","args":{"n":1000,"nulls":0},"seed":2},"digest":"sha256:ac62309b71fdce01e85ae67e79b041a4bf8b08a69ff4bed0538cf7e8d4965121","note":"1000 nodes, every random pointer set"}
 {"generate":{"name":"equal_values","args":{"n":1000},"seed":3},"digest":"sha256:1ace715796de4119495e3b72b53b4a76a459ca205a48198a0a8e83a63c4debf9","note":"1000 equal values with random pointers"}
+{"generate":{"name":"shared_tail_target","args":{"n":1000},"seed":205},"digest":"sha256:68d490377001853761200f1de12a1cb1e83f5c2b64ec6a5131ab1e7c0ec828f1","note":"All random pointers alias the last node, including its self-pointer."}
