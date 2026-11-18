@@ -33,3 +33,6 @@
 {"generate":{"name":"traversal","args":{"mode":"deep","n":200},"seed":341},"digest":"sha256:6f83056c28107dfae0e58958ed4db6fe3b22a15b6daecd3b4549d9a511b179c1","note":"deep traversal and repeated exhaustion queries"}
 {"generate":{"name":"traversal","args":{"mode":"random","n":500},"seed":341},"digest":"sha256:d14b1d0f0ed366f4ad95c55d660af7a191820d54170a6f27b0c2df4b7e626bbb","note":"random traversal and repeated exhaustion queries"}
 {"generate":{"name":"traversal","args":{"mode":"wide","n":499},"seed":341},"digest":"sha256:75d9f9d1566cb7e0e4e2f89919388cd87821baa7ea93e4873eba6f2aa0be26e9","note":"wide traversal and repeated exhaustion queries"}
+{"generate":{"name":"wide_values","args":{"mode":"right","n":500},"seed":341},"digest":"sha256:6c751628367eecdb3de54677085f07bf658c53cd9aa740fdaeb9da3f90ca500e","note":"500 top-level lists and 1000 integers, repeated hasNext; right nesting"}
+{"generate":{"name":"wide_values","args":{"mode":"left","n":500},"seed":342},"digest":"sha256:ee35d7ccd9675f98f34af1a3c4432743b6da2a3111341557ac12a64c484a368e","note":"500 top-level lists and 1000 integers, repeated hasNext; left nesting"}
+{"generate":{"name":"wide_values","args":{"mode":"both","n":500},"seed":343},"digest":"sha256:bee26c0b339ecf16d69bcbbc8da9b24fa5aba245de96b0536d257e84a8dc9eb4","note":"500 top-level lists and 1000 integers, repeated hasNext; both nesting"}

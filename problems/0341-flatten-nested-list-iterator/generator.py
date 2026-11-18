@@ -26,3 +26,24 @@ def traversal(rng, n, mode):
     ops.extend(["hasNext", "hasNext"])
     args.extend([[], []])
     return {"ops": ops, "args": args}
+
+
+def wide_values(rng, n, mode):
+    nested = []
+    for i in range(n):
+        a = rng.randint(-1000000, 1000000)
+        b = rng.randint(-1000000, 1000000)
+        if mode == "left":
+            nested.append([[a], [], b, []])
+        elif mode == "both":
+            nested.append([[], [a], [], [b]])
+        else:
+            nested.append([a, [], [b], []])
+    ops = ["NestedIterator"]
+    args = [[nested]]
+    for _ in range(2 * n):
+        ops.extend(["hasNext", "hasNext", "next"])
+        args.extend([[], [], []])
+    ops.extend(["hasNext", "hasNext"])
+    args.extend([[], []])
+    return {"ops": ops, "args": args}
