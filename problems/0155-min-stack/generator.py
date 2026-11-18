@@ -96,3 +96,11 @@ def random_ops(rng, n, lo, hi):
             ops.append("getMin")
             args.append([])
     return _case(ops, args)
+
+
+def full_minimum_queries(rng, n, minimum_at):
+    pushes = n // 2
+    values = [rng.randint(0, _HI) for _ in range(pushes)]
+    values[minimum_at] = _LO
+    return _case(["push"] * pushes + ["getMin"] * (n - pushes),
+                 [[value] for value in values] + [[] for _ in range(n - pushes)])
