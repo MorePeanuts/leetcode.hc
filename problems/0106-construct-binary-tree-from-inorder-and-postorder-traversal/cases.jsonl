@@ -30,3 +30,5 @@
 {"generate":{"name":"traversals","args":{"n":3000,"shape":"left"},"seed":109},"digest":"sha256:18769a5ab81b47bffff70f4154cbec2bcc256360e22ac3da60de377535ab687f","note":"maximum-size left-chain reconstruction with distinct values, variant 4"}
 {"generate":{"name":"traversals","args":{"n":3000,"shape":"left"},"seed":110},"digest":"sha256:c91e689196e720e81429981b4fa3f57c5ff5a9822f05ecafec4aa2494bfde7b3","note":"maximum-size left-chain reconstruction with distinct values, variant 5"}
 {"generate":{"name":"traversals","args":{"n":3000,"shape":"left"},"seed":111},"digest":"sha256:5c22dea5375ea274cf2139d1a43f5531fd4e563e043d008255f726823c920be7","note":"maximum-size left reconstruction 6"}
+{"generate":{"name":"traversals","args":{"n":2999,"shape":"left"},"seed":127},"digest":"sha256:8abd35ac8478a686f7613e4360773049b97a82c33f0215db8f51722214785a63","note":"Near-maximum left reconstruction: linear lookup scans to end of each inorder range"}
+{"generate":{"name":"traversals","args":{"n":3000,"shape":"complete"},"seed":128},"digest":"sha256:fc0126252525a65eddc5451651657220a09d68d382d5497d9a681304018023ca","note":"Maximum balanced reconstruction alongside deep chains"}
