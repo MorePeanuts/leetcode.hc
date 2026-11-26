@@ -146,6 +146,7 @@ groups:
       - palindrome-linked-list
       - sort-list
       - intersection-of-two-linked-lists
+      - partition-list
   - name: trees
     title: Trees
     problems:

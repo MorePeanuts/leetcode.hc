@@ -1,0 +1,32 @@
+{"input":{"head":[1,4,3,2,5,2],"x":3},"expected":[1,2,2,4,3,5],"example":true}
+{"input":{"head":[2,1],"x":2},"expected":[1,2],"example":true}
+{"input":{"head":[],"x":0},"expected":[],"note":"Empty list"}
+{"input":{"head":[-100],"x":0},"expected":[-100],"note":"One node below the pivot"}
+{"input":{"head":[0],"x":0},"expected":[0],"note":"One node equal to the pivot"}
+{"input":{"head":[100],"x":0},"expected":[100],"note":"One node above the pivot"}
+{"input":{"head":[4,1,2],"x":5},"expected":[4,1,2],"note":"All nodes are smaller, in unsorted order"}
+{"input":{"head":[4,1,2],"x":1},"expected":[4,1,2],"note":"No node is smaller, including a pivot match"}
+{"input":{"head":[3,3,3],"x":3},"expected":[3,3,3],"note":"All nodes equal the pivot"}
+{"input":{"head":[1,3,2,4],"x":3},"expected":[1,2,3,4],"note":"Interior pair crosses the partition"}
+{"input":{"head":[2,1,5,4],"x":3},"expected":[2,1,5,4],"note":"Already partitioned with both groups unsorted"}
+{"input":{"head":[8,7,2,1],"x":5},"expected":[2,1,8,7],"note":"Two reversed blocks preserve their internal order"}
+{"input":{"head":[4,3,1],"x":3},"expected":[1,4,3],"note":"Pivot follows a larger node"}
+{"input":{"head":[1,3,4],"x":3},"expected":[1,3,4],"note":"Pivot leads the upper group"}
+{"input":{"head":[3,1,3,2,3],"x":3},"expected":[1,2,3,3,3],"note":"Repeated pivot at both ends"}
+{"input":{"head":[5,1,4,2,3,0],"x":3},"expected":[1,2,0,5,4,3],"note":"Alternating groups end in a small node"}
+{"input":{"head":[0,5,1,4,2,3],"x":3},"expected":[0,1,2,5,4,3],"note":"Alternating groups end in a pivot match"}
+{"input":{"head":[1,5,4,3],"x":2},"expected":[1,5,4,3],"note":"Only the head is smaller"}
+{"input":{"head":[5,4,3,1],"x":2},"expected":[1,5,4,3],"note":"Only the tail is smaller"}
+{"input":{"head":[4,5,1,6,7],"x":3},"expected":[1,4,5,6,7],"note":"Single small node in the interior"}
+{"input":{"head":[9,2,1,0],"x":5},"expected":[2,1,0,9],"note":"Only the head is larger"}
+{"input":{"head":[2,1,0,9],"x":5},"expected":[2,1,0,9],"note":"Only the tail is larger"}
+{"input":{"head":[2,1,9,0],"x":5},"expected":[2,1,0,9],"note":"Single large node in the interior"}
+{"input":{"head":[-3,-1,-4,-2,-5],"x":-2},"expected":[-3,-4,-5,-1,-2],"note":"Negative pivot with smaller and larger negative nodes"}
+{"input":{"head":[0,-1,1,0,-2],"x":0},"expected":[-1,-2,0,1,0],"note":"Zeros belong in the upper group"}
+{"input":{"head":[100,-100,100,-100],"x":100},"expected":[-100,-100,100,100],"note":"Upper value boundary equals pivot"}
+{"input":{"head":[100,-100,0,-100],"x":-100},"expected":[100,-100,0,-100],"note":"Lower value boundary equals pivot"}
+{"input":{"head":[100,-100,0],"x":-200},"expected":[100,-100,0],"note":"Minimum pivot lies below every value"}
+{"input":{"head":[100,-100,0],"x":200},"expected":[100,-100,0],"note":"Maximum pivot lies above every value"}
+{"input":{"head":[2,7,1,7,2,6,1],"x":4},"expected":[2,1,2,1,7,7,6],"note":"Duplicates interleaved in both groups"}
+{"generate":{"name":"alternating","args":{"n":200},"seed":86},"digest":"sha256:aac299ed7fa0eee727a2c357cafdac6635eba1d8a3afd7e1b995c97c48dfafcc","note":"Maximum length with alternating groups"}
+{"generate":{"name":"reversed_blocks","args":{"n":199},"seed":17},"digest":"sha256:46306b97f9fca52aac20965f9d42e61f6878f5a3baed252ae0be386018b91404","note":"Near-maximum length with all upper nodes first"}
