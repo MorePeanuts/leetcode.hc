@@ -147,6 +147,7 @@ groups:
       - sort-list
       - intersection-of-two-linked-lists
       - partition-list
+      - middle-of-the-linked-list
   - name: trees
     title: Trees
     problems:

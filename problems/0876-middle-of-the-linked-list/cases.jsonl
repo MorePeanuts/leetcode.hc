@@ -1,0 +1,20 @@
+{"input":{"head":[1,2,3,4,5]},"expected":2,"example":true}
+{"input":{"head":[1,2,3,4,5,6]},"expected":3,"example":true}
+{"input":{"head":[1]},"expected":0,"note":"Singleton at the lower value bound"}
+{"input":{"head":[100]},"expected":0,"note":"Singleton at the upper value bound"}
+{"input":{"head":[100,1]},"expected":1,"note":"Two nodes in descending order"}
+{"input":{"head":[42,42]},"expected":1,"note":"Two identical values, second node required"}
+{"input":{"head":[3,2,1]},"expected":1,"note":"Descending odd length"}
+{"input":{"head":[4,3,2,1]},"expected":2,"note":"Descending even length"}
+{"input":{"head":[7,7,7]},"expected":1,"note":"All equal, odd length"}
+{"input":{"head":[9,9,9,9,9,9]},"expected":3,"note":"All equal, even length"}
+{"input":{"head":[4,9,4,3,2]},"expected":2,"note":"Middle value also occurs at the head"}
+{"input":{"head":[1,2,8,8,9,10]},"expected":3,"note":"Equal values at both middle positions"}
+{"input":{"head":[1,100,1,100,1,100,1]},"expected":3,"note":"Alternating extremes with odd length"}
+{"input":{"head":[100,1,100,1,100,1,100,1]},"expected":4,"note":"Alternating extremes with even length"}
+{"input":{"head":[99,17,2,1,30,78,5]},"expected":3,"note":"Smallest value in the middle"}
+{"input":{"head":[6,3,9,100,2,8,1]},"expected":3,"note":"Largest value in the middle"}
+{"input":{"head":[4,4,4,3,4,4,4,4]},"expected":4,"note":"Distinctive node just before the second middle"}
+{"input":{"head":[9,8,7,6,5,4,3,2,1,100]},"expected":5,"note":"Even length with distinct middle values"}
+{"generate":{"name":"repeated_values","args":{"n":99},"seed":975},"digest":"sha256:124586f8b28648aa16674922068209afb45d6706d167799f24c0736b9c933f59","note":"99 nodes with many repeated values"}
+{"generate":{"name":"repeated_values","args":{"n":100},"seed":976},"digest":"sha256:1a687f71b1acf2c6d8f8cd001a84320f70fc0103b6325506db74eeab4385ee98","note":"100 nodes with many repeated values"}
