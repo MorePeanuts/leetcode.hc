@@ -1,0 +1,25 @@
+{"input":{"nums":[3,2,2,3],"val":3},"expected":[2,2],"example":true}
+{"input":{"nums":[0,1,2,2,3,0,4,2],"val":2},"expected":[0,1,3,0,4],"example":true}
+{"input":{"nums":[],"val":0},"expected":[],"note":"Empty input"}
+{"input":{"nums":[0],"val":0},"expected":[],"note":"Only element removed"}
+{"input":{"nums":[50],"val":0},"expected":[50],"note":"Only element retained"}
+{"input":{"nums":[0,50],"val":100},"expected":[0,50],"note":"Target above every permitted array value"}
+{"input":{"nums":[1,2],"val":1},"expected":[2],"note":"Remove first of two"}
+{"input":{"nums":[1,2],"val":2},"expected":[1],"note":"Remove last of two"}
+{"input":{"nums":[4,4,4,4],"val":4},"expected":[],"note":"Zero-length retained prefix"}
+{"input":{"nums":[4,4,4,4],"val":5},"expected":[4,4,4,4],"note":"Retain every copy of a non-target"}
+{"input":{"nums":[0,0,0,1],"val":0},"expected":[1],"note":"Only the tail survives"}
+{"input":{"nums":[1,0,0,0],"val":0},"expected":[1],"note":"Only the head survives"}
+{"input":{"nums":[0,0,1,0,0],"val":0},"expected":[1],"note":"Only an interior value survives"}
+{"input":{"nums":[1,0,2,0,3,0],"val":0},"expected":[1,2,3],"note":"Alternating matches ending at the tail"}
+{"input":{"nums":[0,1,0,2,0,3],"val":0},"expected":[1,2,3],"note":"Alternating matches starting at the head"}
+{"input":{"nums":[50,3,50,3,3,50],"val":50},"expected":[3,3,3],"note":"Removing all maxima leaves three copies of the same value"}
+{"input":{"nums":[1,2,3,1,1],"val":1},"expected":[2,3],"note":"Swapping the tail can bring another target to the front"}
+{"input":{"nums":[1,2,2,3,4],"val":2},"expected":[1,3,4],"note":"Consecutive target values in the middle"}
+{"input":{"nums":[0,5,0,5,0],"val":5},"expected":[0,0,0],"note":"Retained zeros must keep their multiplicity"}
+{"input":{"nums":[7,3,9,2,6],"val":0},"expected":[7,3,9,2,6],"note":"Absent target in an unsorted array"}
+{"input":{"nums":[5,4,3,2,1],"val":3},"expected":[5,4,2,1],"note":"Descending input with interior target"}
+{"input":{"nums":[1,2,2,3,1,3,2,1],"val":1},"expected":[2,2,3,3,2],"note":"Two distinct retained values with different multiplicities"}
+{"input":{"nums":[0,1,49,50,50,0],"val":50},"expected":[0,1,49,0],"note":"Array-value boundaries and adjacent maxima"}
+{"generate":{"name":"mixed","args":{"n":100}},"digest":"sha256:ef85d0bc0de71a0fe37fa854ccaf01d41a170cb1207cdf9d106914fb857d16ab","note":"Maximum length with consecutive and isolated matches"}
+{"generate":{"name":"tail_matches","args":{"n":100}},"digest":"sha256:e450d41f3a67fbfe09c82965862218c3ead0eef0cacc1fbe3ea3996b8ccd9f2a","note":"Maximum length with repeated targets at both ends"}
