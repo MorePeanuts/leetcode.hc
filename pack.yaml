@@ -68,6 +68,7 @@ groups:
       - move-zeroes
       - remove-duplicates-from-sorted-array
       - remove-element
+      - reverse-string
   - name: sliding-window
     title: Sliding Window
     problems:

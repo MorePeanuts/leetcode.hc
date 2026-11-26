@@ -1,0 +1,25 @@
+{"input":{"s":["h","e","l","l","o"]},"expected":["o","l","l","e","h"],"example":true}
+{"input":{"s":["H","a","n","n","a","h"]},"expected":["h","a","n","n","a","H"],"example":true}
+{"input":{"s":["a"]},"expected":["a"],"note":"Single letter"}
+{"input":{"s":[" "]},"expected":[" "],"note":"Single space"}
+{"input":{"s":["~"]},"expected":["~"],"note":"Highest printable ASCII byte"}
+{"input":{"s":["a","b"]},"expected":["b","a"],"note":"Two different characters"}
+{"input":{"s":["a","a"]},"expected":["a","a"],"note":"Two identical characters"}
+{"input":{"s":["a","b","a"]},"expected":["a","b","a"],"note":"Odd palindrome"}
+{"input":{"s":["a","b","b","a"]},"expected":["a","b","b","a"],"note":"Even palindrome"}
+{"input":{"s":["a","b","c"]},"expected":["c","b","a"],"note":"Odd length with a fixed middle character"}
+{"input":{"s":["a","b","c","d"]},"expected":["d","c","b","a"],"note":"Even length with distinct inner pair"}
+{"input":{"s":["a","b","c","a"]},"expected":["a","c","b","a"],"note":"Matching ends with different inner characters"}
+{"input":{"s":["a","b","c","a","b","c"]},"expected":["c","b","a","c","b","a"],"note":"Repeated block in the same order"}
+{"input":{"s":["a","a","a","a","a","b"]},"expected":["b","a","a","a","a","a"],"note":"Only the last character differs"}
+{"input":{"s":["b","a","a","a","a","a"]},"expected":["a","a","a","a","a","b"],"note":"Only the first character differs"}
+{"input":{"s":["A","a","B","b"]},"expected":["b","B","a","A"],"note":"Letter case matters"}
+{"input":{"s":["0","1","2","3","4","5","6","7","8","9"]},"expected":["9","8","7","6","5","4","3","2","1","0"],"note":"Numeric characters"}
+{"input":{"s":[" "," ","a"," ","b"]},"expected":["b"," ","a"," "," "],"note":"Leading and interior spaces"}
+{"input":{"s":["x"," "," "]},"expected":[" "," ","x"],"note":"Trailing spaces"}
+{"input":{"s":["\"","a","\\","b"]},"expected":["b","\\","a","\""],"note":"Quote and backslash"}
+{"input":{"s":["!","'","~"," "]},"expected":[" ","~","'","!"],"note":"Punctuation and both ASCII boundaries"}
+{"input":{"s":["a","A","b","B","C","c","d","D"]},"expected":["D","d","c","C","B","b","A","a"],"note":"Case-sensitive inner swaps"}
+{"input":{"s":["!","@","#","$","%","^","&","*","(",")"]},"expected":[")","(","*","&","^","%","$","#","@","!"],"note":"All punctuation"}
+{"generate":{"name":"printable_cycle","args":{"n":100000}},"digest":"sha256:3ba346d36768604920b4831a9e6cbff096dd2b7f59f253065d028f2ee5f1f727","note":"Maximum even length with the full printable alphabet"}
+{"generate":{"name":"printable_cycle","args":{"n":99999}},"digest":"sha256:53bdc87362f21a2f4ab682c4088258b16fc8367da5f1fccc9eb900e15d4eb15b","note":"Near-maximum odd length with the full printable alphabet"}

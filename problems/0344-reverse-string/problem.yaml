@@ -1,0 +1,22 @@
+id: "344"
+slug: reverse-string
+title: Reverse String
+titles:
+  zh-CN: 反转字符串
+difficulty: easy
+tags:
+  - two-pointers
+  - string
+kind: function
+function:
+  name: reverseString
+  params:
+    - name: s
+      type: character[]
+  returns: void
+judge:
+  compare: exact
+  output: s
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/reverse-string/
