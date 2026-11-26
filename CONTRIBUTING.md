@@ -46,7 +46,7 @@ Commit messages and PR titles follow [Conventional Commits](https://www.conventi
 
 - **One problem per commit**, so that the history of a problem is the history of its commits.
 - **A single change** (one problem, one fix) is a PR that is **squash merged**: its title becomes the commit on `main`.
-- **A batch of problems** is one PR with one commit per problem, each conventionally titled and passing `hc pack check` on its own, and is **rebase merged**. CI checks only the PR's last commit, so run `hc pack check` before each commit.
+- **A batch of problems** is one PR with one conventionally titled commit per problem and is **rebase merged**. Run `hc validate <slug> --run` for each problem before committing it with its group changes. Once the batch is complete, run `hc pack check` once locally before pushing the PR.
 - Merge commits are disabled. Link the issue the PR closes (`Closes #N`, or `Part of #N` for part of a batch).
 - Label the PR: `problems` for new problems, `problem-bug` for fixes to them, `breaking` for a breaking change. The release notes are grouped by these labels.
 
