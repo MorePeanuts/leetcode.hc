@@ -66,6 +66,7 @@ groups:
       - next-permutation
       - rotate-array
       - move-zeroes
+      - remove-duplicates-from-sorted-array
   - name: sliding-window
     title: Sliding Window
     problems:
