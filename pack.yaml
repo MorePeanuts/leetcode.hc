@@ -2,7 +2,7 @@
 protocol: 1
 name: leetcode
 title: LeetCode
-version: 0.7.1
+version: 0.7.2
 description: LeetCode problems with Go, Python, C, C++, Java, JavaScript and TypeScript references, statements in English and Chinese. Not affiliated with LeetCode.
 authors: [MorePeanuts]
 license: MIT
