@@ -1,0 +1,26 @@
+{"input":{"nums":[1,1,2]},"expected":[1,2],"example":true}
+{"input":{"nums":[0,0,1,1,1,2,2,3,3,4]},"expected":[0,1,2,3,4],"example":true}
+{"input":{"nums":[0]},"expected":[0],"note":"Single zero"}
+{"input":{"nums":[-100]},"expected":[-100],"note":"Single minimum value"}
+{"input":{"nums":[100]},"expected":[100],"note":"Single maximum value"}
+{"input":{"nums":[-100,100]},"expected":[-100,100],"note":"Two distinct extremes"}
+{"input":{"nums":[-1,-1]},"expected":[-1],"note":"Two equal negatives"}
+{"input":{"nums":[0,0,0,0]},"expected":[0],"note":"Longer run with no distinct successor"}
+{"input":{"nums":[1,2,2]},"expected":[1,2],"note":"Duplicate only at the tail"}
+{"input":{"nums":[-2,-2,-2,0]},"expected":[-2,0],"note":"Run of three at the head"}
+{"input":{"nums":[-2,0,0,0,4]},"expected":[-2,0,4],"note":"Run of three in the middle"}
+{"input":{"nums":[-3,0,2,2,2]},"expected":[-3,0,2],"note":"Run of three at the tail"}
+{"input":{"nums":[-2,-2,1,1]},"expected":[-2,1],"note":"Two runs of equal length"}
+{"input":{"nums":[-100,-100,-100,100,100,100]},"expected":[-100,100],"note":"Both extreme values repeated"}
+{"input":{"nums":[-5,-4,-3,-2,-1]},"expected":[-5,-4,-3,-2,-1],"note":"All distinct negatives"}
+{"input":{"nums":[-2,-1,-1,0,0,1,2]},"expected":[-2,-1,0,1,2],"note":"Runs across zero"}
+{"input":{"nums":[-3,-3,-2,-1,-1,0,1,1,2]},"expected":[-3,-2,-1,0,1,2],"note":"Alternating pairs and singletons"}
+{"input":{"nums":[-4,-4,-4,-3,-3,-2,-1,-1,-1,-1]},"expected":[-4,-3,-2,-1],"note":"Unequal adjacent run lengths"}
+{"input":{"nums":[-2,0,4,9,100]},"expected":[-2,0,4,9,100],"note":"Distinct values with gaps"}
+{"input":{"nums":[-100,0,0,0,0,0,100]},"expected":[-100,0,100],"note":"Two isolated endpoints"}
+{"input":{"nums":[1,1,1,2,2,2,3,3,3]},"expected":[1,2,3],"note":"Three long adjacent runs"}
+{"input":{"nums":[0,1,1,1,1,2,3,3,3]},"expected":[0,1,2,3],"note":"Compaction moves multiple later groups"}
+{"input":{"nums":[99,99,100]},"expected":[99,100],"note":"First group immediately below the upper bound"}
+{"generate":{"name":"equal_run","args":{"n":30000}},"digest":"sha256:02bfd8c54c97a820362337e272a7b098862c2b44120a3aaa84d1244d831a1981","note":"Maximum length, one repeated value"}
+{"generate":{"name":"sorted_runs","args":{"n":30000}},"digest":"sha256:a060d3fbd958952871219cc19fb01048fc52f888bfd9a6d0cfa2d05e8bd6b22d","note":"Maximum length covering all 201 possible values"}
+{"generate":{"name":"long_prefix","args":{"n":30000}},"digest":"sha256:6038ce3a7b3228cae3cc3d72ecaf53f78671d88793fef64881cb6fef65ffbb40","note":"A single distinct value after a maximum-length repeated prefix"}
