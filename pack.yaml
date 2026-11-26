@@ -149,6 +149,7 @@ groups:
       - intersection-of-two-linked-lists
       - partition-list
       - middle-of-the-linked-list
+      - remove-duplicates-from-sorted-list
   - name: trees
     title: Trees
     problems:

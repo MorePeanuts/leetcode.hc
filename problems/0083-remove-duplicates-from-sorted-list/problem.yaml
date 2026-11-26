@@ -1,0 +1,20 @@
+id: "83"
+slug: remove-duplicates-from-sorted-list
+title: Remove Duplicates from Sorted List
+titles:
+  zh-CN: 删除排序链表中的重复元素
+difficulty: easy
+tags:
+  - linked-list
+kind: function
+function:
+  name: deleteDuplicates
+  params:
+    - name: head
+      type: ListNode
+  returns: ListNode
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+judge:
+  compare: exact
