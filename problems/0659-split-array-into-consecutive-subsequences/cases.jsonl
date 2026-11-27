@@ -1,0 +1,35 @@
+{"input":{"nums":[1,2,3,3,4,5]},"expected":true,"example":true}
+{"input":{"nums":[1,2,3,3,4,4,5,5]},"expected":true,"example":true}
+{"input":{"nums":[1,2,3,4,4,5]},"expected":false,"example":true}
+{"input":{"nums":[0]},"expected":false,"note":"Singleton"}
+{"input":{"nums":[-1,0]},"expected":false,"note":"Adjacent pair is too short"}
+{"input":{"nums":[0,0,0]},"expected":false,"note":"Three equal values"}
+{"input":{"nums":[-1,0,1]},"expected":true,"note":"Triple crossing zero"}
+{"input":{"nums":[1,2,3,4]},"expected":true,"note":"One sequence longer than three"}
+{"input":{"nums":[1,2,3,4,5]},"expected":true,"note":"Length need not be divisible by three"}
+{"input":{"nums":[1,2,3,5,6,7]},"expected":true,"note":"Two complete runs separated by a gap"}
+{"input":{"nums":[1,2,3,5,6]},"expected":false,"note":"Gap followed by an unfinished pair"}
+{"input":{"nums":[1,2,4,5,6]},"expected":false,"note":"Unfinished pair before a valid run"}
+{"input":{"nums":[-1000,-999,-998]},"expected":true,"note":"Triple at the minimum value"}
+{"input":{"nums":[998,999,1000]},"expected":true,"note":"Triple at the maximum value"}
+{"input":{"nums":[-1000,-999,-998,998,999,1000]},"expected":true,"note":"Both domain boundaries with a large gap"}
+{"input":{"nums":[1,1,2,2,3,3]},"expected":true,"note":"Two parallel triples"}
+{"input":{"nums":[1,1,2,3]},"expected":false,"note":"Missing a successor for a duplicate start"}
+{"input":{"nums":[1,2,3,3]},"expected":false,"note":"Duplicate final value cannot be left over"}
+{"input":{"nums":[1,1,2,3,3]},"expected":false,"note":"Deficit in the middle"}
+{"input":{"nums":[1,2,2,3,3,4]},"expected":true,"note":"Overlapping triples with different starts"}
+{"input":{"nums":[1,2,2,3,4,5]},"expected":false,"note":"One of two competing chains is stranded"}
+{"input":{"nums":[1,2,3,4,4,5,6]},"expected":true,"note":"An extension and a new triple share a value"}
+{"input":{"nums":[1,2,3,4,5,5,6,7]},"expected":true,"note":"A late duplicate needs two future values"}
+{"input":{"nums":[1,2,3,4,5,5,6]},"expected":false,"note":"A late duplicate has only one successor"}
+{"input":{"nums":[-3,-3,-2,-2,-1,-1,0,1]},"expected":true,"note":"Two negative chains consolidate into one longer chain"}
+{"input":{"nums":[1,1,2,2,3,3,4,4,5]},"expected":true,"note":"Three or more values required in each chain, not equal chain lengths"}
+{"input":{"nums":[1,2,2,3,3,3,4,4,5]},"expected":true,"note":"Multiplicity rises then falls one step at a time"}
+{"input":{"nums":[1,2,2,3,3,3,4,5]},"expected":false,"note":"A sharp drop prevents all short chains from continuing"}
+{"input":{"nums":[0,1,2,4,5,6,8,9,10]},"expected":true,"note":"Three independent valid components"}
+{"input":{"nums":[0,1,2,4,5,6,8]},"expected":false,"note":"Last component contains a singleton"}
+{"input":{"nums":[0,1,2,2,3,4,4,5,6]},"expected":true,"note":"Each new duplicate starts the next triple"}
+{"generate":{"name":"parallel_runs","args":{"copies":3333,"extra":true}},"digest":"sha256:194dc7043eb7a5d598d558acaf081394c1ef6ae5cf757d5b0769992072879adc","note":"10,000 values, thousands of parallel triples and one extension"}
+{"generate":{"name":"short_last_group","args":{"copies":3333}},"digest":"sha256:9ce5218241981424be12defedd6144b183680a13dcd2f23f4f1f1875a5d93bdc","note":"One fewer final value than the number of waiting pairs"}
+{"generate":{"name":"wide_range","args":{"copies":4}},"digest":"sha256:9e78ea436f3863f37e3077a2af3f1011cd5d29c275e3bd9d53359e122f3c0577","note":"Parallel chains span all 2,001 permitted values"}
+{"generate":{"name":"separated_triples","args":{"copies":6,"groups":500}},"digest":"sha256:a26a6938889792a4ff310260dcd3439715e3fa15b2b81e044e8f4bd519da4dcf","note":"Many disjoint components require restarting after gaps"}
