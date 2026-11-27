@@ -273,6 +273,7 @@ groups:
       - 01-matrix
       - accounts-merge
       - evaluate-division
+      - sliding-puzzle
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
