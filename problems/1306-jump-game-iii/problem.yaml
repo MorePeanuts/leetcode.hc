@@ -1,0 +1,24 @@
+id: "1306"
+slug: jump-game-iii
+title: Jump Game III
+titles:
+  zh-CN: 跳跃游戏 III
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - array
+kind: function
+function:
+  name: canReach
+  params:
+    - name: arr
+      type: integer[]
+    - name: start
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/jump-game-iii/
+judge:
+  compare: exact
