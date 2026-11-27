@@ -1,0 +1,33 @@
+{"input":{"arr":[4,2,3,0,3,1,2],"start":5},"expected":true,"example":true}
+{"input":{"arr":[4,2,3,0,3,1,2],"start":0},"expected":true,"example":true}
+{"input":{"arr":[3,0,2,1,2],"start":2},"expected":false,"example":true}
+{"input":{"arr":[0],"start":0},"expected":true,"note":"Only index is a goal"}
+{"input":{"arr":[0,0,0],"start":2},"expected":true,"note":"Start on one of several goals"}
+{"input":{"arr":[1,0],"start":0},"expected":true,"note":"One forward step"}
+{"input":{"arr":[0,1],"start":1},"expected":true,"note":"One backward step"}
+{"input":{"arr":[1,1],"start":0},"expected":false,"note":"Two-index cycle with no goal"}
+{"input":{"arr":[0,1,2],"start":2},"expected":true,"note":"Jump directly from the last index to the first"}
+{"input":{"arr":[2,1,0],"start":0},"expected":true,"note":"Jump directly to the last index"}
+{"input":{"arr":[2,1,0,1,2],"start":1},"expected":true,"note":"Right branch succeeds"}
+{"input":{"arr":[0,2,1,2,2],"start":2},"expected":false,"note":"Only a path that reverses direction succeeds"}
+{"input":{"arr":[2,2,2,0,2],"start":0},"expected":false,"note":"Zero in the opposite parity component"}
+{"input":{"arr":[1,3,0,3],"start":1},"expected":false,"note":"Both neighbors outside the array"}
+{"input":{"arr":[2,0,2],"start":0},"expected":false,"note":"Cannot land on a zero crossed by a jump"}
+{"input":{"arr":[1,2,1,0],"start":0},"expected":true,"note":"Chain requires using the endpoint"}
+{"input":{"arr":[3,0,1,3],"start":0},"expected":false,"note":"Cycle bypasses an adjacent goal"}
+{"input":{"arr":[3,0,1,3],"start":1},"expected":true,"note":"Same board starting on the isolated goal"}
+{"input":{"arr":[4,1,3,0,2],"start":4},"expected":false,"note":"Must jump left from the right edge"}
+{"input":{"arr":[1,1,1,1,0],"start":0},"expected":true,"note":"Forward unit chain"}
+{"input":{"arr":[0,1,1,1,1],"start":4},"expected":true,"note":"Backward unit chain"}
+{"input":{"arr":[1,3,2,0,2,1],"start":2},"expected":false,"note":"Reachable vertices have two incoming paths"}
+{"input":{"arr":[0,3,2,3,0],"start":2},"expected":true,"note":"Both legal directions reach a goal"}
+{"input":{"arr":[4,4,4,4,4],"start":2},"expected":false,"note":"Maximum jump from the middle overshoots both ends"}
+{"input":{"arr":[0,2,4,2,0],"start":1},"expected":false,"note":"Cycle trapped between two zeros"}
+{"input":{"arr":[1,2,1,2,1,0],"start":2},"expected":true,"note":"Must explore past a cycle"}
+{"input":{"arr":[5,1,3,1,3,1],"start":3},"expected":false,"note":"Several branches with no zero"}
+{"input":{"arr":[2,3,1,1,0,1],"start":0},"expected":true,"note":"Change direction before taking a longer jump"}
+{"input":{"arr":[2,1,3,1,0,2],"start":5},"expected":true,"note":"First valid move points toward a branch"}
+{"input":{"arr":[0,1,1,2,1,0],"start":3},"expected":true,"note":"Choose between multiple reachable goals"}
+{"generate":{"name":"unit_chain","args":{"backward":false,"n":50000}},"digest":"sha256:dbafad32cb20f37c6f8381d80a5a5a2735ce5e844a4848ee7199e16810f0ef2c","note":"Maximum length: reach the goal after 49,999 forward jumps"}
+{"generate":{"name":"unit_chain","args":{"backward":true,"n":50000}},"digest":"sha256:1a28954854af13a4637cdac42fd1a0a9d35fbf3cf659c318304d8c0d08881b0f","note":"Maximum length: traverse the chain backwards"}
+{"generate":{"name":"parity_trap","args":{"n":49999}},"digest":"sha256:36cb12488807a665f4fd36c3929fd3f478d6a15ab2a85ca609741db00bdf2abb","note":"The only zero is in the opposite parity component"}
