@@ -1,0 +1,23 @@
+id: "509"
+slug: fibonacci-number
+title: Fibonacci Number
+titles:
+  zh-CN: 斐波那契数
+difficulty: easy
+tags:
+  - recursion
+  - memoization
+  - math
+  - dynamic-programming
+kind: function
+function:
+  name: fib
+  params:
+    - name: "n"
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/fibonacci-number/
+judge:
+  compare: exact
