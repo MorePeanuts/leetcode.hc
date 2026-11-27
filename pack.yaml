@@ -274,6 +274,7 @@ groups:
       - accounts-merge
       - evaluate-division
       - sliding-puzzle
+      - open-the-lock
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

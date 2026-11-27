@@ -1,0 +1,26 @@
+id: "752"
+slug: open-the-lock
+title: Open the Lock
+titles:
+  zh-CN: 打开转盘锁
+difficulty: medium
+tags:
+  - breadth-first-search
+  - array
+  - hash-table
+  - string
+  - bidirectional-search
+kind: function
+function:
+  name: openLock
+  params:
+    - name: deadends
+      type: string[]
+    - name: target
+      type: string
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/open-the-lock/
+judge:
+  compare: exact
