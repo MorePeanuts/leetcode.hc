@@ -1,0 +1,33 @@
+{"input":{"deadends":["0201","0101","0102","1212","2002"],"target":"0202"},"expected":6,"example":true}
+{"input":{"deadends":["8888"],"target":"0009"},"expected":1,"example":true}
+{"input":{"deadends":["8887","8889","8878","8898","8788","8988","7888","9888"],"target":"8888"},"expected":-1,"example":true}
+{"input":{"deadends":["5555"],"target":"0000"},"expected":0,"note":"Start already equals the target"}
+{"input":{"deadends":["0000"],"target":"1234"},"expected":-1,"note":"The starting state is forbidden"}
+{"input":{"deadends":["0000","1111"],"target":"0001"},"expected":-1,"note":"A forbidden start prevents a direct move"}
+{"input":{"deadends":["5555"],"target":"1000"},"expected":1,"note":"One move on wheel 1 from zero to 1"}
+{"input":{"deadends":["5555"],"target":"9000"},"expected":1,"note":"One move on wheel 1 from zero to 9"}
+{"input":{"deadends":["5555"],"target":"0100"},"expected":1,"note":"One move on wheel 2 from zero to 1"}
+{"input":{"deadends":["5555"],"target":"0900"},"expected":1,"note":"One move on wheel 2 from zero to 9"}
+{"input":{"deadends":["5555"],"target":"0010"},"expected":1,"note":"One move on wheel 3 from zero to 1"}
+{"input":{"deadends":["5555"],"target":"0090"},"expected":1,"note":"One move on wheel 3 from zero to 9"}
+{"input":{"deadends":["5555"],"target":"0001"},"expected":1,"note":"One move on wheel 4 from zero to 1"}
+{"input":{"deadends":["0001"],"target":"0002"},"expected":4,"note":"Single blocked state on the direct route"}
+{"input":{"deadends":["0010","0001"],"target":"0011"},"expected":4,"note":"Both geometrically shortest routes are blocked"}
+{"input":{"deadends":["9999"],"target":"1111"},"expected":4,"note":"Choose among many shortest routes"}
+{"input":{"deadends":["9999"],"target":"5555"},"expected":20,"note":"All four digits opposite their start values"}
+{"input":{"deadends":["5555"],"target":"9999"},"expected":4,"note":"All four digits wrap around"}
+{"input":{"deadends":["9999"],"target":"5090"},"expected":6,"note":"Mix halfway and wraparound rotations"}
+{"input":{"deadends":["5555"],"target":"0109"},"expected":2,"note":"Leading zeros with rotations of two different wheels"}
+{"input":{"deadends":["0001","0009"],"target":"0005"},"expected":7,"note":"Both ways out on one wheel are blocked"}
+{"input":{"deadends":["0900"],"target":"0800"},"expected":4,"note":"A blocked wraparound route needs a detour"}
+{"input":{"deadends":["0009"],"target":"9990"},"expected":3,"note":"An unrelated wraparound move is forbidden"}
+{"input":{"deadends":["9000","1000","0900","0100","0090","0010","0009","0001"],"target":"0101"},"expected":-1,"note":"All eight neighbors of the start are forbidden"}
+{"input":{"deadends":["1000","0900","0100","0090","0010","0009","0001"],"target":"1111"},"expected":6,"note":"Exactly one move out of the start"}
+{"input":{"deadends":["9000","1000","0900","0100","0090","0010","0009"],"target":"9999"},"expected":6,"note":"Only a forward start move toward reverse-oriented digits"}
+{"input":{"deadends":["2535","4535","3435","3635","3525","3545","3534","3536"],"target":"3535"},"expected":-1,"note":"Isolated target with a mixed-digit boundary"}
+{"input":{"deadends":["3222","2122","2322","2212","2232","2221","2223"],"target":"2222"},"expected":8,"note":"Only one approach to the target remains"}
+{"input":{"deadends":["0001","0011","0111","1111"],"target":"1112"},"expected":5,"note":"A blocked sequence leaves alternative wheel orders"}
+{"input":{"deadends":["0001","0002","0003","0004"],"target":"0005"},"expected":5,"note":"Opposite direction around the ring remains open"}
+{"input":{"deadends":["1000","9000","0010","0090","0100","0900"],"target":"2000"},"expected":4,"note":"Six first moves blocked and the desired wheel initially unavailable"}
+{"generate":{"name":"scattered","args":{"count":500,"target":"5555"},"seed":7},"digest":"sha256:bafb5e723c543c2e14ceff9c4bfed87680cc34e811e5cf786999f66749f9470d","note":"Maximum dead-end list with distant target 5555"}
+{"generate":{"name":"scattered","args":{"count":500,"target":"3888"},"seed":89},"digest":"sha256:5300e7819ee4f83e411a5b30c9bb3c87c9fe2040dd525510854c91ba122bac41","note":"Maximum dead-end list with distant target 3888"}
