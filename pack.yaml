@@ -231,6 +231,7 @@ groups:
       - non-decreasing-subsequences
       - restore-ip-addresses
       - combinations
+      - permutations-ii
   - name: tries
     title: Tries
     problems:
