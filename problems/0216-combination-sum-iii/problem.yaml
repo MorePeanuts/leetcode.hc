@@ -1,0 +1,23 @@
+id: "216"
+slug: combination-sum-iii
+title: Combination Sum III
+titles:
+  zh-CN: 组合总和 III
+difficulty: medium
+tags:
+  - array
+  - backtracking
+kind: function
+function:
+  name: combinationSum3
+  params:
+    - name: k
+      type: integer
+    - name: "n"
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/combination-sum-iii/
+judge:
+  compare: unordered_deep
