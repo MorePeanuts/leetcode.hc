@@ -1,0 +1,24 @@
+id: "1024"
+slug: video-stitching
+title: Video Stitching
+titles:
+  zh-CN: 视频拼接
+difficulty: medium
+tags:
+  - greedy
+  - array
+  - dynamic-programming
+kind: function
+function:
+  name: videoStitching
+  params:
+    - name: clips
+      type: integer[][]
+    - name: time
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/video-stitching/
+judge:
+  compare: exact

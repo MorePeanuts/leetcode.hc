@@ -1,0 +1,34 @@
+{"input":{"clips":[[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]],"time":10},"expected":3,"example":true}
+{"input":{"clips":[[0,1],[1,2]],"time":5},"expected":-1,"example":true}
+{"input":{"clips":[[0,1],[6,8],[0,2],[5,6],[0,4],[0,3],[6,7],[1,3],[4,7],[1,4],[2,5],[2,6],[3,4],[4,5],[5,7],[6,9]],"time":9},"expected":3,"example":true}
+{"input":{"clips":[[0,1]],"time":1},"expected":1,"note":"Single clip exactly covers the shortest event"}
+{"input":{"clips":[[1,2]],"time":1},"expected":-1,"note":"First clip starts at the target instead of zero"}
+{"input":{"clips":[[0,0]],"time":1},"expected":-1,"note":"Zero-length clip cannot advance"}
+{"input":{"clips":[[0,100]],"time":1},"expected":1,"note":"A long clip can be trimmed to the target"}
+{"input":{"clips":[[0,99]],"time":100},"expected":-1,"note":"Coverage stops just before the maximum target"}
+{"input":{"clips":[[0,100]],"time":100},"expected":1,"note":"Maximum event covered by one clip"}
+{"input":{"clips":[[0,2],[2,5]],"time":5},"expected":2,"note":"Adjacent clips may meet at one endpoint"}
+{"input":{"clips":[[3,7],[0,3]],"time":7},"expected":2,"note":"Input order is the reverse of playback order"}
+{"input":{"clips":[[0,3],[4,8]],"time":8},"expected":-1,"note":"One-second gap between clips"}
+{"input":{"clips":[[2,8],[1,4]],"time":8},"expected":-1,"note":"Later clips cannot compensate for a missing start"}
+{"input":{"clips":[[0,0],[0,1],[1,1],[1,2]],"time":2},"expected":2,"note":"Point clips mixed with a valid chain"}
+{"input":{"clips":[[0,2],[2,2],[3,7]],"time":7},"expected":-1,"note":"Point clip fails to bridge an interior gap"}
+{"input":{"clips":[[0,2],[0,2],[2,5],[2,5]],"time":5},"expected":2,"note":"Repeated copies do not reduce the minimum"}
+{"input":{"clips":[[0,1],[0,3],[0,2],[3,6]],"time":6},"expected":2,"note":"Farthest among clips sharing a start"}
+{"input":{"clips":[[0,3],[1,3],[2,3],[3,6]],"time":6},"expected":2,"note":"Different starts leading to the same endpoint"}
+{"input":{"clips":[[0,2],[1,5],[2,8],[5,7]],"time":8},"expected":2,"note":"Several choices can extend the current cover"}
+{"input":{"clips":[[0,2],[1,4],[2,5],[4,8],[5,8]],"time":8},"expected":3,"note":"Two distinct optimal covers"}
+{"input":{"clips":[[0,4],[1,2],[2,3],[3,4],[4,7]],"time":7},"expected":2,"note":"Contained clips do not help"}
+{"input":{"clips":[[0,3],[2,6],[4,9]],"time":8},"expected":3,"note":"Cuts at overlaps and at the target"}
+{"input":{"clips":[[2,10],[0,4],[0,9],[9,10]],"time":10},"expected":2,"note":"Choose the shortest cover rather than the first available chain"}
+{"input":{"clips":[[0,2],[2,4],[4,6],[0,6]],"time":6},"expected":1,"note":"One clip dominates a complete alternative chain"}
+{"input":{"clips":[[0,3],[3,6],[6,9],[9,9]],"time":10},"expected":-1,"note":"Full chain except the last second"}
+{"input":{"clips":[[0,3],[3,5],[8,10]],"time":4},"expected":2,"note":"Later gap lies outside the requested event"}
+{"input":{"clips":[[0,2],[3,4],[4,9],[1,3]],"time":9},"expected":4,"note":"Late input entry supplies a required bridge"}
+{"input":{"clips":[[1,1],[4,4],[0,0]],"time":4},"expected":-1,"note":"Only zero-duration clips"}
+{"input":{"clips":[[100,100],[50,100],[0,50]],"time":100},"expected":2,"note":"Maximum endpoint and exact midpoint handoff"}
+{"input":{"clips":[[0,5],[0,1],[1,2],[8,10]],"time":5},"expected":1,"note":"Target exactly at cover boundary"}
+{"input":{"clips":[[7,10],[1,7],[0,1],[8,9],[3,5]],"time":10},"expected":3,"note":"Unsorted chain with irrelevant interior clips"}
+{"generate":{"name":"unit_chain","args":{"n":100},"seed":11},"digest":"sha256:690c85711ef659bf3bf079dfea9cbcfdc209ef11bd151fa2d8f03645d802605a","note":"Maximum number of clips, every clip required"}
+{"generate":{"name":"broken_chain","args":{"n":100},"seed":12},"digest":"sha256:3e457b31b4df05e495af39879a35642ff517639483afdc22ccfae69e9210343b","note":"Missing last bridge among 100 shuffled slots"}
+{"generate":{"name":"overlapping","args":{"n":100},"seed":13},"digest":"sha256:39cccb93396c7458bd725c3eb7ca676b35dcf52981b659dcd633d34f6bb362e9","note":"Many overlapping choices and repeated starts"}
