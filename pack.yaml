@@ -341,6 +341,7 @@ groups:
       - reconstruct-itinerary
       - min-cost-to-connect-all-points
       - non-overlapping-intervals
+      - video-stitching
   - name: intervals
     title: Intervals
     problems:
