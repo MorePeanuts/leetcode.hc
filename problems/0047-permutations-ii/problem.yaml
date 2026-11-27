@@ -1,0 +1,22 @@
+id: "47"
+slug: permutations-ii
+title: Permutations II
+titles:
+  zh-CN: 全排列 II
+difficulty: medium
+tags:
+  - array
+  - backtracking
+  - sorting
+kind: function
+function:
+  name: permuteUnique
+  params:
+    - name: nums
+      type: integer[]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/permutations-ii/
+judge:
+  compare: unordered
