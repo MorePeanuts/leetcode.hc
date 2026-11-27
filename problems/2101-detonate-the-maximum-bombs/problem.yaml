@@ -1,0 +1,25 @@
+id: "2101"
+slug: detonate-the-maximum-bombs
+title: Detonate the Maximum Bombs
+titles:
+  zh-CN: 引爆最多的炸弹
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - graph
+  - geometry
+  - array
+  - math
+kind: function
+function:
+  name: maximumDetonation
+  params:
+    - name: bombs
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/detonate-the-maximum-bombs/
+judge:
+  compare: exact

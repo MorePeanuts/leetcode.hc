@@ -1,0 +1,31 @@
+{"input":{"bombs":[[2,1,3],[6,1,4]]},"expected":2,"example":true}
+{"input":{"bombs":[[1,1,5],[10,10,5]]},"expected":1,"example":true}
+{"input":{"bombs":[[1,2,3],[2,3,1],[3,4,2],[4,5,3],[5,6,4]]},"expected":5,"example":true}
+{"input":{"bombs":[[1,1,1]]},"expected":1,"note":"Single point at the lower bounds"}
+{"input":{"bombs":[[100000,100000,100000]]},"expected":1,"note":"Single point at the upper bounds"}
+{"input":{"bombs":[[1,1,1],[1,1,1]]},"expected":2,"note":"Identical rows count as distinct vertices"}
+{"input":{"bombs":[[8,8,1],[8,8,15],[8,8,3],[20,8,1]]},"expected":4,"note":"Coincident centers with different radii"}
+{"input":{"bombs":[[10,10,5],[13,14,1]]},"expected":2,"note":"Diagonal point exactly on the radius"}
+{"input":{"bombs":[[10,10,5],[14,14,1]]},"expected":1,"note":"Diagonal point just outside the disk"}
+{"input":{"bombs":[[10,10,7],[14,14,1]]},"expected":2,"note":"Euclidean distance admits a diagonal neighbor"}
+{"input":{"bombs":[[10,10,4],[13,14,1]]},"expected":1,"note":"Coordinate-wise bounds alone would admit an outside point"}
+{"input":{"bombs":[[100000,100000,100000],[1,1,100000]]},"expected":1,"note":"Sum of squares exceeds either radius squared and 32-bit range"}
+{"input":{"bombs":[[100000,1,100000],[1,1,1]]},"expected":2,"note":"Large squared radius reaches across the x axis"}
+{"input":{"bombs":[[1,1,1],[1,100000,100000]]},"expected":2,"note":"Large squared radius reaches across the y axis"}
+{"input":{"bombs":[[100000,100000,50000],[70000,60000,2]]},"expected":2,"note":"Large 3-4-5 boundary requires wide arithmetic"}
+{"input":{"bombs":[[1,1,50000],[30001,40002,1]]},"expected":1,"note":"One unit outside a large diagonal boundary"}
+{"input":{"bombs":[[1,1,1],[3,1,2],[7,1,4],[15,1,8]]},"expected":4,"note":"Only the last vertex reaches the whole directed chain"}
+{"input":{"bombs":[[1,1,2],[3,1,1],[5,1,2]]},"expected":2,"note":"Two inward edges with a shared sink"}
+{"input":{"bombs":[[1,1,1],[3,1,2],[5,1,1]]},"expected":3,"note":"One source with two outward edges"}
+{"input":{"bombs":[[1,1,3],[4,1,3],[7,1,3],[10,1,3]]},"expected":4,"note":"Several hops required beyond immediate neighbors"}
+{"input":{"bombs":[[5,5,4],[9,5,4],[9,9,4],[5,9,4]]},"expected":4,"note":"Cycle reached by multiple paths"}
+{"input":{"bombs":[[1,1,3],[4,1,3],[20,1,2],[22,1,2],[24,1,2]]},"expected":3,"note":"Largest component appears after a smaller one"}
+{"input":{"bombs":[[1,1,2],[3,1,2],[20,1,2],[22,1,2]]},"expected":2,"note":"Two equal-sized disconnected components"}
+{"input":{"bombs":[[1,1,1],[3,1,1],[1,3,1],[3,3,1]]},"expected":1,"note":"No reachable neighbor from any source"}
+{"input":{"bombs":[[2,2,1],[4,2,1],[8,2,5],[10,2,1],[3,2,1]]},"expected":5,"note":"A one-way bridge into a small cycle"}
+{"input":{"bombs":[[8,4,5],[2,4,1],[14,4,1],[6,4,4],[10,4,4]]},"expected":5,"note":"Split into two branches after the first hop"}
+{"input":{"bombs":[[2,2,2],[4,2,9],[10,2,1],[19,2,9],[20,2,1]]},"expected":3,"note":"Asymmetric links across a shared middle vertex"}
+{"input":{"bombs":[[1,1,10],[11,1,1],[1,11,1],[8,8,1]]},"expected":4,"note":"Mixed boundary and interior points"}
+{"generate":{"name":"chain","args":{"n":100}},"digest":"sha256:55ead59b973005dffbdde1b1e2afff103ea391d0b8a96f060fb71d03b2d54695","note":"Maximum-length chain"}
+{"generate":{"name":"two_clusters","args":{"n":100}},"digest":"sha256:d985b5c4a71fb601396b97de56b8047b43534c0f7d612d975283ba08c4f4a422","note":"Dense component and an isolated point"}
+{"generate":{"name":"isolated","args":{"n":100}},"digest":"sha256:0798eeabb9fc9ecae970c2a11f104fc390e1dec681abc4e7fac29c3893d8a41c","note":"Maximum number of isolated vertices"}

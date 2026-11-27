@@ -266,6 +266,7 @@ groups:
       - all-paths-from-source-to-target
       - jump-game-iii
       - minimum-genetic-mutation
+      - detonate-the-maximum-bombs
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
