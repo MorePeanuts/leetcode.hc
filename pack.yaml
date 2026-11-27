@@ -270,6 +270,7 @@ groups:
       - jump-game-iii
       - minimum-genetic-mutation
       - detonate-the-maximum-bombs
+      - 01-matrix
   - name: advanced-graphs
     title: Advanced Graphs
     problems:

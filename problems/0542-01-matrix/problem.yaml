@@ -1,0 +1,23 @@
+id: "542"
+slug: 01-matrix
+title: 01 Matrix
+titles:
+  zh-CN: 01 矩阵
+difficulty: medium
+tags:
+  - breadth-first-search
+  - array
+  - dynamic-programming
+  - matrix
+kind: function
+function:
+  name: updateMatrix
+  params:
+    - name: mat
+      type: integer[][]
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/01-matrix/
+judge:
+  compare: exact
