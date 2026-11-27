@@ -232,6 +232,7 @@ groups:
       - restore-ip-addresses
       - combinations
       - permutations-ii
+      - combination-sum-iii
   - name: tries
     title: Tries
     problems:
