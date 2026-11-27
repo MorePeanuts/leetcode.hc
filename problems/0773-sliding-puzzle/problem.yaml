@@ -1,0 +1,28 @@
+id: "773"
+slug: sliding-puzzle
+title: Sliding Puzzle
+titles:
+  zh-CN: 滑动谜题
+difficulty: hard
+tags:
+  - breadth-first-search
+  - memoization
+  - array
+  - dynamic-programming
+  - backtracking
+  - matrix
+  - bidirectional-search
+  - a-search
+  - heuristic-search
+kind: function
+function:
+  name: slidingPuzzle
+  params:
+    - name: board
+      type: integer[][]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/sliding-puzzle/
+judge:
+  compare: exact

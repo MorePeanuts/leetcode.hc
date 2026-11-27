@@ -1,0 +1,37 @@
+{"input":{"board":[[1,2,3],[4,0,5]]},"expected":1,"example":true}
+{"input":{"board":[[1,2,3],[5,4,0]]},"expected":-1,"example":true}
+{"input":{"board":[[4,1,2],[5,0,3]]},"expected":5,"example":true}
+{"input":{"board":[[1,2,3],[4,5,0]]},"expected":0,"note":"Shortest solution takes 0 moves"}
+{"input":{"board":[[1,2,0],[4,5,3]]},"expected":1,"note":"Shortest solution takes 1 moves"}
+{"input":{"board":[[1,2,3],[0,4,5]]},"expected":2,"note":"Shortest solution takes 2 moves"}
+{"input":{"board":[[1,5,2],[4,0,3]]},"expected":3,"note":"Shortest solution takes 3 moves"}
+{"input":{"board":[[4,1,3],[0,2,5]]},"expected":4,"note":"Shortest solution takes 4 moves"}
+{"input":{"board":[[4,1,3],[2,0,5]]},"expected":5,"note":"Shortest solution takes 5 moves"}
+{"input":{"board":[[5,0,2],[1,4,3]]},"expected":6,"note":"Shortest solution takes 6 moves"}
+{"input":{"board":[[5,4,2],[1,0,3]]},"expected":7,"note":"Shortest solution takes 7 moves"}
+{"input":{"board":[[5,4,2],[1,3,0]]},"expected":8,"note":"Shortest solution takes 8 moves"}
+{"input":{"board":[[5,4,0],[1,3,2]]},"expected":9,"note":"Shortest solution takes 9 moves"}
+{"input":{"board":[[5,4,1],[0,3,2]]},"expected":10,"note":"Shortest solution takes 10 moves"}
+{"input":{"board":[[5,4,1],[3,0,2]]},"expected":11,"note":"Shortest solution takes 11 moves"}
+{"input":{"board":[[5,4,3],[0,2,1]]},"expected":12,"note":"Shortest solution takes 12 moves"}
+{"input":{"board":[[5,4,3],[2,0,1]]},"expected":13,"note":"Shortest solution takes 13 moves"}
+{"input":{"board":[[5,4,3],[2,1,0]]},"expected":14,"note":"Shortest solution takes 14 moves"}
+{"input":{"board":[[5,3,0],[2,4,1]]},"expected":15,"note":"Shortest solution takes 15 moves"}
+{"input":{"board":[[5,3,1],[2,4,0]]},"expected":16,"note":"Shortest solution takes 16 moves"}
+{"input":{"board":[[5,3,2],[4,0,1]]},"expected":17,"note":"Shortest solution takes 17 moves"}
+{"input":{"board":[[5,3,2],[4,1,0]]},"expected":18,"note":"Shortest solution takes 18 moves"}
+{"input":{"board":[[4,5,3],[1,0,2]]},"expected":19,"note":"Shortest solution takes 19 moves"}
+{"input":{"board":[[4,5,3],[1,2,0]]},"expected":20,"note":"Shortest solution takes 20 moves"}
+{"input":{"board":[[4,5,0],[1,2,3]]},"expected":21,"note":"Shortest solution takes 21 moves"}
+{"input":{"board":[[0,1,2],[3,5,4]]},"expected":-1,"note":"Unsolvable parity with blank at row 1, column 1"}
+{"input":{"board":[[1,0,2],[3,5,4]]},"expected":-1,"note":"Unsolvable parity with blank at row 1, column 2"}
+{"input":{"board":[[1,2,0],[3,5,4]]},"expected":-1,"note":"Unsolvable parity with blank at row 1, column 3"}
+{"input":{"board":[[1,2,3],[0,5,4]]},"expected":-1,"note":"Unsolvable parity with blank at row 2, column 1"}
+{"input":{"board":[[1,2,3],[5,0,4]]},"expected":-1,"note":"Unsolvable parity with blank at row 2, column 2"}
+{"input":{"board":[[1,2,4],[3,5,0]]},"expected":-1,"note":"Unsolvable parity with blank at row 2, column 3"}
+{"input":{"board":[[0,3,2],[5,4,1]]},"expected":19,"note":"Deep reachable position with blank at row 1, column 1"}
+{"input":{"board":[[4,0,5],[1,2,3]]},"expected":20,"note":"Deep reachable position with blank at row 1, column 2"}
+{"input":{"board":[[3,2,0],[5,4,1]]},"expected":19,"note":"Deep reachable position with blank at row 1, column 3"}
+{"input":{"board":[[3,2,1],[0,5,4]]},"expected":20,"note":"Deep reachable position with blank at row 2, column 1"}
+{"input":{"board":[[3,2,1],[5,0,4]]},"expected":19,"note":"Deep reachable position with blank at row 2, column 2"}
+{"input":{"board":[[3,2,1],[5,4,0]]},"expected":20,"note":"Deep reachable position with blank at row 2, column 3"}
