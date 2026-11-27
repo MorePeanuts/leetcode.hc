@@ -1,0 +1,30 @@
+id: "365"
+slug: water-and-jug-problem
+title: Water and Jug Problem
+titles:
+  zh-CN: 水壶问题
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - math
+  - greatest-common-divisor
+  - euclidean-algorithm
+  - extended-euclidean-algorithm
+  - bezouts-lemma
+kind: function
+function:
+  name: canMeasureWater
+  params:
+    - name: x
+      type: integer
+    - name: "y"
+      type: integer
+    - name: target
+      type: integer
+  returns: boolean
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/water-and-jug-problem/
+judge:
+  compare: exact

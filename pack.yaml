@@ -373,6 +373,7 @@ groups:
       - sum-of-two-integers
       - reverse-integer
       - spiral-matrix-ii
+      - water-and-jug-problem
   - name: queue
     title: Queue
     problems:
