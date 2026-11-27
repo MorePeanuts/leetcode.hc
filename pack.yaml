@@ -84,6 +84,7 @@ groups:
       - max-consecutive-ones-iii
       - contains-duplicate-ii
       - find-all-anagrams-in-a-string
+      - longest-substring-with-at-least-k-repeating-characters
   - name: stack
     title: Stack
     problems:
