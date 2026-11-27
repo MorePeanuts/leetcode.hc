@@ -1,0 +1,22 @@
+id: "77"
+slug: combinations
+title: Combinations
+titles:
+  zh-CN: 组合
+difficulty: medium
+tags:
+  - backtracking
+kind: function
+function:
+  name: combine
+  params:
+    - name: "n"
+      type: integer
+    - name: k
+      type: integer
+  returns: integer[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/combinations/
+judge:
+  compare: unordered_deep
