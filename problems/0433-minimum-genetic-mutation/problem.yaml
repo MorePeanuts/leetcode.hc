@@ -1,0 +1,27 @@
+id: "433"
+slug: minimum-genetic-mutation
+title: Minimum Genetic Mutation
+titles:
+  zh-CN: 最小基因变化
+difficulty: medium
+tags:
+  - breadth-first-search
+  - hash-table
+  - string
+  - bidirectional-search
+kind: function
+function:
+  name: minMutation
+  params:
+    - name: startGene
+      type: string
+    - name: endGene
+      type: string
+    - name: bank
+      type: string[]
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/minimum-genetic-mutation/
+judge:
+  compare: exact

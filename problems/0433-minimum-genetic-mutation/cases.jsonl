@@ -1,0 +1,32 @@
+{"input":{"bank":["AACCGGTA"],"endGene":"AACCGGTA","startGene":"AACCGGTT"},"expected":1,"example":true}
+{"input":{"bank":["AACCGGTA","AACCGCTA","AAACGGTA"],"endGene":"AAACGGTA","startGene":"AACCGGTT"},"expected":2,"example":true}
+{"input":{"bank":[],"endGene":"AAAAAAAA","startGene":"AAAAAAAA"},"expected":0,"note":"Already at the target with an empty bank"}
+{"input":{"bank":["AAAAAAAA"],"endGene":"AAAAAAAA","startGene":"AAAAAAAA"},"expected":0,"note":"Already at the target recorded in the bank"}
+{"input":{"bank":[],"endGene":"CAAAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"No bank entry for a one-step target"}
+{"input":{"bank":["AAAAAAAA"],"endGene":"CAAAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"Only the starting state is listed"}
+{"input":{"bank":["CCAAAAAA"],"endGene":"CCAAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"Target listed but unreachable without an intermediate state"}
+{"input":{"bank":["CAAAAAAA","CCAAAAAA"],"endGene":"CCCAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"Valid partial path missing its target"}
+{"input":{"bank":["CAAAAAAA","CCCAAAAA"],"endGene":"CCCAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"Missing the middle of a path"}
+{"input":{"bank":["TAAAAAAA"],"endGene":"TAAAAAAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 1"}
+{"input":{"bank":["ATAAAAAA"],"endGene":"ATAAAAAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 2"}
+{"input":{"bank":["AATAAAAA"],"endGene":"AATAAAAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 3"}
+{"input":{"bank":["AAATAAAA"],"endGene":"AAATAAAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 4"}
+{"input":{"bank":["AAAATAAA"],"endGene":"AAAATAAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 5"}
+{"input":{"bank":["AAAAATAA"],"endGene":"AAAAATAA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 6"}
+{"input":{"bank":["AAAAAATA"],"endGene":"AAAAAATA","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 7"}
+{"input":{"bank":["AAAAAAAT"],"endGene":"AAAAAAAT","startGene":"AAAAAAAA"},"expected":1,"note":"A single substitution at position 8"}
+{"input":{"bank":["CCCAAAAA","CCAAAAAA","CAAAAAAA"],"endGene":"CCCAAAAA","startGene":"AAAAAAAA"},"expected":3,"note":"A chain of 3 substitutions in reverse bank order"}
+{"input":{"bank":["CCCCAAAA","CCCAAAAA","CCAAAAAA","CAAAAAAA"],"endGene":"CCCCAAAA","startGene":"AAAAAAAA"},"expected":4,"note":"A chain of 4 substitutions in reverse bank order"}
+{"input":{"bank":["CCCCCCAA","CCCCCAAA","CCCCAAAA","CCCAAAAA","CCAAAAAA","CAAAAAAA"],"endGene":"CCCCCCAA","startGene":"AAAAAAAA"},"expected":6,"note":"A chain of 6 substitutions in reverse bank order"}
+{"input":{"bank":["CCCCCCCC","CCCCCCCA","CCCCCCAA","CCCCCAAA","CCCCAAAA","CCCAAAAA","CCAAAAAA","CAAAAAAA"],"endGene":"CCCCCCCC","startGene":"AAAAAAAA"},"expected":8,"note":"A chain of 8 substitutions in reverse bank order"}
+{"input":{"bank":["GAAAAAAA","TAAAAAAA","CAAAAAAA","CCAAAAAA","CCCAAAAA","CCCCAAAA","CCCCCAAA","CCCCCCAA","CCCCCCCA","CCCCCCCC"],"endGene":"CCCCCCCC","startGene":"AAAAAAAA"},"expected":8,"note":"A full bank with two dead-end branches"}
+{"input":{"bank":["AAAAAAAA","CAAAAAAA","CCAAAAAA","CCCAAAAA","CCCCAAAA","CCCCCAAA","CCCCCCAA","CCCCCCCA"],"endGene":"AAAAAAAA","startGene":"CCCCCCCC"},"expected":8,"note":"The chain traversed in reverse"}
+{"input":{"bank":["CAAAAAAA","ACAAAAAA","CCAAAAAA"],"endGene":"CCAAAAAA","startGene":"AAAAAAAA"},"expected":2,"note":"Two shortest routes through different intermediate states"}
+{"input":{"bank":["GAAAAAAA","GCAAAAAA","CCAAAAAA"],"endGene":"CCAAAAAA","startGene":"AAAAAAAA"},"expected":3,"note":"A required detour changes one position twice"}
+{"input":{"bank":["GAAAAAAA","GCAAAAAA","CCAAAAAA","CAAAAAAA"],"endGene":"CCAAAAAA","startGene":"AAAAAAAA"},"expected":2,"note":"A shorter route is listed after a detour"}
+{"input":{"bank":["GAAAAAAA","GGAAAAAA","CCCAAAAA","TCCAAAAA"],"endGene":"CCCAAAAA","startGene":"AAAAAAAA"},"expected":-1,"note":"Separate connected components"}
+{"input":{"bank":["TCGTAAAA","TGGTAAAA","TGCTAAAA","TGCAAAAA"],"endGene":"TGCAAAAA","startGene":"ACGTAAAA"},"expected":4,"note":"Path using all four input characters"}
+{"input":{"bank":["AAAAAAAA","CAAAAAAA","CAAAAAAA","CCAAAAAA"],"endGene":"CCAAAAAA","startGene":"AAAAAAAA"},"expected":2,"note":"Repeated bank entry and start listed in the bank"}
+{"input":{"bank":["CAAAAAAA","GAAAAAAA","TAAAAAAA","AAAAAAAA"],"endGene":"TAAAAAAA","startGene":"AAAAAAAA"},"expected":1,"note":"Direct target among several mutually adjacent states"}
+{"input":{"bank":["CCCCAAAA","CCCAAAAA","CCAAAAAA","CAAAAAAA","ACAAAAAA","ACCAAAAA"],"endGene":"CCCCAAAA","startGene":"AAAAAAAA"},"expected":4,"note":"Cycle leading into a shared suffix"}
+{"input":{"bank":["CCCCCCCC","TTTTTTTC","CCCCCCCT"],"endGene":"CCCCCCCC","startGene":"TTTTTTTT"},"expected":-1,"note":"Endpoints in different parts of the bank"}

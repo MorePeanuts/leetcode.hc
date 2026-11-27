@@ -265,6 +265,7 @@ groups:
       - minimum-height-trees
       - all-paths-from-source-to-target
       - jump-game-iii
+      - minimum-genetic-mutation
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
