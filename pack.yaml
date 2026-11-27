@@ -272,6 +272,7 @@ groups:
       - detonate-the-maximum-bombs
       - 01-matrix
       - accounts-merge
+      - evaluate-division
   - name: advanced-graphs
     title: Advanced Graphs
     problems:
