@@ -230,6 +230,7 @@ groups:
       - reconstruct-itinerary
       - non-decreasing-subsequences
       - restore-ip-addresses
+      - combinations
   - name: tries
     title: Tries
     problems:
