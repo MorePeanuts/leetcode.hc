@@ -1,0 +1,33 @@
+{"input":{"target":4,"x":3,"y":5},"expected":true,"example":true}
+{"input":{"target":5,"x":2,"y":6},"expected":false,"example":true}
+{"input":{"target":3,"x":1,"y":2},"expected":true,"example":true}
+{"input":{"target":1,"x":1,"y":1},"expected":true,"note":"Minimum capacities and target"}
+{"input":{"target":2,"x":1,"y":1},"expected":true,"note":"Both identical jugs full"}
+{"input":{"target":3,"x":1,"y":1},"expected":false,"note":"More than the total capacity"}
+{"input":{"target":2,"x":4,"y":4},"expected":false,"note":"Target below the common divisor"}
+{"input":{"target":4,"x":4,"y":4},"expected":true,"note":"Fill one of two identical jugs"}
+{"input":{"target":8,"x":4,"y":4},"expected":true,"note":"Both equal jugs required"}
+{"input":{"target":6,"x":4,"y":4},"expected":false,"note":"Between one fill and two fills"}
+{"input":{"target":4,"x":2,"y":6},"expected":true,"note":"Target equals the difference"}
+{"input":{"target":7,"x":2,"y":6},"expected":false,"note":"Odd target below the sum"}
+{"input":{"target":10,"x":2,"y":6},"expected":false,"note":"Divisible target beyond the sum"}
+{"input":{"target":6,"x":6,"y":2},"expected":true,"note":"First jug alone holds the target"}
+{"input":{"target":6,"x":2,"y":6},"expected":true,"note":"Second jug alone holds the target"}
+{"input":{"target":14,"x":6,"y":10},"expected":true,"note":"Multiple of gcd exceeding either jug"}
+{"input":{"target":15,"x":6,"y":10},"expected":false,"note":"Just below full capacity but not divisible"}
+{"input":{"target":16,"x":6,"y":10},"expected":true,"note":"Total capacity attained"}
+{"input":{"target":2,"x":10,"y":6},"expected":true,"note":"Smallest positive measurable amount"}
+{"input":{"target":6,"x":9,"y":12},"expected":true,"note":"Neither capacity divides the target"}
+{"input":{"target":5,"x":12,"y":9},"expected":false,"note":"Target misses a shared factor"}
+{"input":{"target":9,"x":4,"y":7},"expected":true,"note":"Coprime capacities and a target above both"}
+{"input":{"target":9,"x":7,"y":4},"expected":true,"note":"Same measurement with capacities swapped"}
+{"input":{"target":1000,"x":1,"y":999},"expected":true,"note":"Unit and large jug filled together"}
+{"input":{"target":999,"x":1000,"y":1000},"expected":false,"note":"Maximum equal capacities, unattainable target"}
+{"input":{"target":1,"x":1000,"y":999},"expected":true,"note":"Difference of one at the capacity bound"}
+{"input":{"target":997,"x":998,"y":1000},"expected":false,"note":"Near-maximum even jugs and odd target"}
+{"input":{"target":500,"x":610,"y":987},"expected":true,"note":"Consecutive Fibonacci capacities exercise Euclid"}
+{"input":{"target":1000,"x":987,"y":610},"expected":true,"note":"Largest target with coprime capacities"}
+{"input":{"target":1000,"x":500,"y":500},"expected":true,"note":"Two half-capacity jugs"}
+{"input":{"target":1000,"x":499,"y":500},"expected":false,"note":"Coprime but short of the target by one"}
+{"input":{"target":750,"x":300,"y":450},"expected":true,"note":"Joint capacity at a large common divisor"}
+{"input":{"target":749,"x":300,"y":450},"expected":false,"note":"Adjacent to a reachable total"}
