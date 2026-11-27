@@ -1,0 +1,26 @@
+id: "721"
+slug: accounts-merge
+title: Accounts Merge
+titles:
+  zh-CN: 账户合并
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - array
+  - hash-table
+  - string
+  - sorting
+kind: function
+function:
+  name: accountsMerge
+  params:
+    - name: accounts
+      type: string[][]
+  returns: string[][]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/accounts-merge/
+judge:
+  compare: unordered
