@@ -1,0 +1,32 @@
+id: "399"
+slug: evaluate-division
+title: Evaluate Division
+titles:
+  zh-CN: 除法求值
+difficulty: medium
+tags:
+  - depth-first-search
+  - breadth-first-search
+  - union-find
+  - graph
+  - array
+  - string
+  - shortest-path
+  - floyd-warshall-algorithm
+  - bellman-ford-algorithm
+kind: function
+function:
+  name: calcEquation
+  params:
+    - name: equations
+      type: string[][]
+    - name: values
+      type: double[]
+    - name: queries
+      type: string[][]
+  returns: double[]
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/evaluate-division/
+judge:
+  compare: exact
