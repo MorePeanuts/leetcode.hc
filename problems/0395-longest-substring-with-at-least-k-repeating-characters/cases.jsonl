@@ -1,0 +1,33 @@
+{"input":{"k":3,"s":"aaabb"},"expected":3,"example":true}
+{"input":{"k":2,"s":"ababbc"},"expected":5,"example":true}
+{"input":{"k":1,"s":"a"},"expected":1,"note":"Single letter meets the threshold"}
+{"input":{"k":2,"s":"z"},"expected":0,"note":"Threshold exceeds length"}
+{"input":{"k":1,"s":"abc"},"expected":3,"note":"Every substring is valid at k=1"}
+{"input":{"k":4,"s":"aaaa"},"expected":4,"note":"One character meets k exactly"}
+{"input":{"k":5,"s":"aaaa"},"expected":0,"note":"One character misses k by one"}
+{"input":{"k":2,"s":"abcd"},"expected":0,"note":"Every letter is a separator"}
+{"input":{"k":2,"s":"aabbcc"},"expected":6,"note":"Every letter exactly at threshold"}
+{"input":{"k":3,"s":"aaabbbc"},"expected":6,"note":"Rare letter only at the end"}
+{"input":{"k":3,"s":"caaabbb"},"expected":6,"note":"Rare letter only at the beginning"}
+{"input":{"k":3,"s":"aaacbbb"},"expected":3,"note":"Equal-length answers on either side"}
+{"input":{"k":3,"s":"aaabaaaa"},"expected":4,"note":"Longer valid suffix"}
+{"input":{"k":3,"s":"aaaabaaa"},"expected":4,"note":"Longer valid prefix"}
+{"input":{"k":2,"s":"abacb"},"expected":0,"note":"Global counts suffice for two letters but neither side qualifies"}
+{"input":{"k":2,"s":"aaxabb"},"expected":2,"note":"Removing one separator reveals a new one"}
+{"input":{"k":3,"s":"aaabxbbaaa"},"expected":3,"note":"A globally frequent letter is too rare on each side"}
+{"input":{"k":4,"s":"ababbaba"},"expected":8,"note":"Interleaved letters meet threshold exactly"}
+{"input":{"k":2,"s":"aabbxccddy"},"expected":4,"note":"Two rare separators and disjoint valid blocks"}
+{"input":{"k":3,"s":"azazaza"},"expected":7,"note":"Distant alphabet indices"}
+{"input":{"k":3,"s":"abacabadabacaba"},"expected":0,"note":"Split recursively around multiple rare characters"}
+{"input":{"k":3,"s":"baaabbbac"},"expected":8,"note":"Valid block includes nonconsecutive copies"}
+{"input":{"k":4,"s":"abbaabba"},"expected":8,"note":"Two letter counts at threshold with repeated runs"}
+{"input":{"k":3,"s":"aaabcbbbccc"},"expected":11,"note":"Valid whole range with uneven frequencies"}
+{"input":{"k":3,"s":"zzzyzzzyzzz"},"expected":3,"note":"Same separator in multiple positions"}
+{"input":{"k":2,"s":"xxyxxzxx"},"expected":2,"note":"Separators interrupt qualifying runs"}
+{"input":{"k":4,"s":"abcabcabc"},"expected":0,"note":"Every letter just below the threshold"}
+{"input":{"k":3,"s":"baaacaaab"},"expected":3,"note":"Rare matching endpoints"}
+{"input":{"k":100000,"s":"zzz"},"expected":0,"note":"Maximum allowed threshold"}
+{"input":{"k":1,"s":"abcdefghijklmno"},"expected":15,"note":"All characters distinct with k=1"}
+{"generate":{"name":"rare_middle","args":{"n":10000}},"digest":"sha256:0312b8529c3bfa093aad2931d51c3343f8f13556ed4d0388785453fe269ff574","note":"Maximum length, singleton separator with unequal valid sides"}
+{"generate":{"name":"alphabet_cycle","args":{"k":380,"n":9999}},"digest":"sha256:5d13a0673250411861d845871fdcd54dab3aa859528b604781c59da3b48b96e6","note":"A long interleaved valid block using every letter"}
+{"generate":{"name":"split_runs","args":{"n":10000}},"digest":"sha256:f93ae7ffb7e2428683c1e08fc9b46ca2dfeba43251a1fd55485708b8be7f9f72","note":"Repeated separators break long runs into sub-threshold pieces"}

@@ -1,0 +1,25 @@
+id: "395"
+slug: longest-substring-with-at-least-k-repeating-characters
+title: Longest Substring with At Least K Repeating Characters
+titles:
+  zh-CN: 至少有 K 个重复字符的最长子串
+difficulty: medium
+tags:
+  - hash-table
+  - string
+  - divide-and-conquer
+  - sliding-window
+kind: function
+function:
+  name: longestSubstring
+  params:
+    - name: s
+      type: string
+    - name: k
+      type: integer
+  returns: integer
+source:
+  site: leetcode.cn
+  url: https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/
+judge:
+  compare: exact
