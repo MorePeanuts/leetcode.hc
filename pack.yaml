@@ -342,6 +342,7 @@ groups:
       - min-cost-to-connect-all-points
       - non-overlapping-intervals
       - video-stitching
+      - split-array-into-consecutive-subsequences
   - name: intervals
     title: Intervals
     problems:
